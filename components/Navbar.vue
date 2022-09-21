@@ -9,7 +9,7 @@
         </div>
         <div class="flex space-x-16 items-center font-lato">
           <NuxtLink to="/">Home</NuxtLink>
-          <NuxtLink to="/work">Work</NuxtLink>
+          <NuxtLink to="/tools">Tools</NuxtLink>
           <NuxtLink to="/about">About</NuxtLink>
           <NuxtLink to="/contact" class="px-8 py-2 rounded-3xl cta">Contact</NuxtLink>
         </div>

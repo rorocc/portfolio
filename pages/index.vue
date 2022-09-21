@@ -1,28 +1,26 @@
 <template>
   <div ref="mainDiv" class="container w-3/4 m-auto">
-    <div class="mt-12">
-      <div class="grid grid-rows-2 md:grid-cols-2 md:grid-rows-none">
+    <div class="my-12">
+      <div class="grid grid-rows-2 md:grid-cols-2 md:grid-rows-none my-28">
         <div>
           <img src="../assets/Chris_Doodle.png" class="w-2/3 m-auto" />
         </div>
         <div>
           <h1 class="text-6xl display-font">
-            Lorem ipsum dolor sit amet.
+            Well, hello there.
           </h1>
           <div class="py-8">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus scelerisque sapien justo, sed egestas urna ornare eu. Sed velit neque, tincidunt sit amet sem et, pretium sodales turpis. Integer feugiat, ex et pretium ultrices, ipsum tellus bibendum nulla, ut dictum metus purus ut sem. Quisque dictum lacus dolor, vitae porttitor neque blandit vel. Duis ut magna eget urna laoreet accumsan non in erat. Curabitur hendrerit felis risus, quis convallis lacus vulputate vel.
+            <p class="leading-8 descr">
+              I'm Christopher Rock, a human being that loves to design positive user experiences. Always with the goal in mind to develop <span>human-centered</span>, <span>empowering</span> and <span>accessible</span> technologies. <br /> <br /> Currently, I am in my final media informatics masters year and part of the Engineering Psychology research group at the University of Lübeck.
             </p>
           </div>
         </div>
       </div>
-
-      <hr class="border-black my-4">
       <h2 class="text-2xl font-bold">
         WORK
       </h2>
       <div class="grid auto-rows-auto">
-        <div v-for="work in works" :key="work.id" class="mb-6">
+        <div v-for="work in works" :key="work.id" class="mb-10">
           <workpiece :head-text="work.headText"
                      :title="work.title"
                      :description="work.description"
@@ -70,7 +68,8 @@ export default {
       pos: { x: 0, y: 0 },
       works: [
         { title: 'Mobile Interface for Nutrition Awareness (MINA)', headText: 'Bachelor Thesis Media Informatics', description: 'What is a healthy meal? - A research based design approach to comprehensible in-app rating of meals.', bgColor: '#d2ff77', textColor: '#3b3b3b', imgUrl: '/img/work/screen_mina.png', url: '/projects/mina' },
-        { title: 'AID-Simulation for people with type 1 diabetes mellitus', headText: 'Masters project media informatics', description: 'An interactive simulator with the aim to make the functionality of closed-loop systems more comprehensible.', bgColor: '#e3ecff', textColor: '#001E4B', imgUrl: '/img/work/screen_aid.png', url: '/projects/aid' }
+        { title: 'AID-Simulation for people with type 1 diabetes mellitus', headText: 'Masters project media informatics', description: 'An interactive simulator with the aim to make the functionality of closed-loop systems more comprehensible.', bgColor: '#e3ecff', textColor: '#001E4B', imgUrl: '/img/work/screen_aid.png', url: '/projects/aid' },
+        { title: 'MariData: A comprehensive interface for ship energy management', headText: 'Funded research project', description: 'The MariData decision support system helps vessel crews to not only reduce financial costs, but also the emissions and therefore minimize the negative impact on our environment.', bgColor: '#d6dde3', textColor: '#3E484E', imgUrl: '/img/work/screen_maridata.png', url: '/projects/aid' }
       ]
     }
   },
@@ -149,6 +148,10 @@ export default {
 </script>
 
 <style>
+  .descr span{
+    font-weight: 600;
+  }
+
   .brushCursor{
     user-select: none;
     cursor: url('/img/pigs/pig1.png'), auto;
