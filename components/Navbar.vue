@@ -1,5 +1,5 @@
 <template>
-  <nav>
+  <nav class="mb-6">
     <div class="mx-auto">
       <div class="flex justify-between">
         <div class="flex">

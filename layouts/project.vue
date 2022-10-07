@@ -1,7 +1,9 @@
 <template>
   <div class="mx-auto my-0">
     <Nuxt />
-    <Footer />
+    <div class="w-full bg-white shadow-custom mt-24">
+      <Footer />
+    </div>
   </div>
 </template>
 

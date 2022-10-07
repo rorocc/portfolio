@@ -1,14 +1,20 @@
 <template>
   <a :href="url">
     <div class="workpiece overflow-hidden">
-      <div class="grid grid-cols-8 max-h-80 place-items-center" :style="{backgroundColor: bgColor, color: textColor}">
+      <div class="grid grid-cols-8 h-96 place-items-center" :style="{backgroundColor: bgColor, color: textColor}">
         <div class="col-span-3 h-80 w-full">
           <img :src="imgUrl" class="bottom-0 bg-img"/>
         </div>
         <div class="col-span-5 w-2/3 ml-0">
           <p class="headText">{{ headText }}</p>
           <h1>{{ title }}</h1>
-          <span class="description">{{ description }}</span>
+          <div class="bottom-0 w-full mt-8">
+            <hr class="my-4" :style="{borderColor: textColor, opacity: .25}" />
+            <span>View case study</span>
+            <span class="chevron float-right">
+              <img src="/img/chevron_right.svg" class="h-8" />
+            </span>
+          </div>
         </div>
       </div>
       <div class="bar" :style="{backgroundColor: textColor}" >
@@ -33,6 +39,16 @@ export default {
 </script>
 
 <style scoped>
+.chevron{
+  transform: translateX(0px);
+  transition-duration: .25s;
+}
+
+a:hover .chevron{
+  transform: translateX(10px);
+  transition-duration: .25s;
+}
+
 .headText{
   letter-spacing: 2px;
   @apply uppercase text-sm opacity-50;

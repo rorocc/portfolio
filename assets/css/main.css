@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Inter";
+  src: local("Inter"),
+  url("~assets/fonts/Inter-Regular.ttf") format("truetype");
+}
 
 *{
   --link-color: #6f6f6f;
@@ -9,8 +14,9 @@
 }
 
 body{
-  font-family: Karla, sans-serif;
   background-image: url("/img/bg.png");
+  font-family: 'Inter', sans-serif;
+
 }
 
 .display-font{

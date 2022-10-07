@@ -11,7 +11,12 @@
           </h1>
           <div class="py-8">
             <p class="leading-8 descr">
-              I'm Christopher Rock, a human being that loves to design positive user experiences. Always with the goal in mind to develop <span>human-centered</span>, <span>empowering</span> and <span>accessible</span> technologies. <br /> <br /> Currently, I am in my final media informatics masters year and part of the Engineering Psychology research group at the University of Lübeck.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus scelerisque sapien justo, sed egestas urna ornare eu.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus scelerisque sapien justo, sed egestas urna ornare eu.
+            </p>
+            <br />
+            <p class="leading-8 descr">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus scelerisque sapien justo, sed egestas urna ornare eu.
             </p>
           </div>
         </div>

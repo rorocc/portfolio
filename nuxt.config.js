@@ -19,7 +19,7 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Playfair+Display'}
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Inter:wght@200;400&family=Playfair+Display&display=swap'}
     ]
   },
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -46,7 +46,7 @@ export default {
 
   googleFonts: {
     families: {
-      Roboto: true,
+      Inter: true,
       'Josefin+Sans': true,
       'Playfair+Display': [400],
       Lato: true,
