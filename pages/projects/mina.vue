@@ -28,7 +28,7 @@
     </section>
     <section class="quote bg-lime-200 text-center py-28">
       <p class="text-3xl mx-auto italic font-serif">1.9 billion adults worldwide were overweight in 2016, with 650 million obese</p>
-      <p>— <a href="https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight">World Health Organization</a></p>
+      <p>— <WebLink url="https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight" text="World Health Organization" style="color: black" /></p>
     </section>
     <section class="sectionShort">
       <h1>Background & Motivation</h1>
