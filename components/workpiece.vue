@@ -2,9 +2,7 @@
   <a :href="url">
     <div class="workpiece overflow-hidden">
       <div class="grid grid-cols-8 h-96 place-items-center" :style="{backgroundColor: bgColor, color: textColor}">
-        <div class="col-span-3 h-80 w-full">
-          <img :src="imgUrl" class="bottom-0 bg-img"/>
-        </div>
+        <div class="col-span-3 h-full w-full" :style="{backgroundImage: 'url(' + imgUrl + ')', backgroundSize: 'cover'}" />
         <div class="col-span-5 w-2/3 ml-0">
           <p class="headText">{{ headText }}</p>
           <h1>{{ title }}</h1>

@@ -1,5 +1,60 @@
 <template>
-  <nav class="mb-6">
+  <nav>
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex justify-between">
+        <div class="flex space-x-7">
+          <div>
+            <!-- Website Logo -->
+            <a href="#" class="flex items-center py-4 px-2">
+              <img src="logo.png" alt="Logo" class="h-8 w-8 mr-2">
+              <span class="font-semibold text-gray-500 text-lg">Portfolio</span>
+            </a>
+          </div>
+        </div>
+        <!-- Primary Navbar items -->
+        <div class="hidden md:flex items-center lg:space-x-8 space-x-4">
+          <NuxtLink to="/">Home</NuxtLink>
+          <NuxtLink to="/tools">Tools</NuxtLink>
+          <NuxtLink to="/about">About</NuxtLink>
+          <NuxtLink to="/contact" class="px-8 py-2 rounded-3xl cta">Contact</NuxtLink>
+        </div>
+        <!-- Mobile menu button -->
+        <div class="md:hidden flex items-center">
+          <button class="outline-none mobile-menu-button">
+            <svg class=" w-6 h-6 text-gray-500 hover:text-fuchsia-500 "
+                 x-show="!showMenu"
+                 fill="none"
+                 stroke-linecap="round"
+                 stroke-linejoin="round"
+                 stroke-width="2"
+                 viewBox="0 0 24 24"
+                 stroke="currentColor"
+            >
+              <path d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- mobile menu -->
+    <div class="hidden mobile-menu">
+      <ul class="leading-loose">
+        <li><NuxtLink to="/">Home</NuxtLink></li>
+        <li><NuxtLink to="/tools">Tools</NuxtLink></li>
+        <li><NuxtLink to="/about">About</NuxtLink></li>
+        <li><NuxtLink to="/contact" class="rounded-3xl">Contact</NuxtLink></li>
+      </ul>
+    </div>
+    <script>
+      const btn = document.querySelector("button.mobile-menu-button");
+      const menu = document.querySelector(".mobile-menu");
+
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    </script>
+  </nav>
+<!--  <nav  >
     <div class="mx-auto">
       <div class="flex justify-between">
         <div class="flex">
@@ -16,7 +71,7 @@
       </div>
     </div>
 
-  </nav>
+  </nav>-->
 </template>
 
 <script>
@@ -26,6 +81,10 @@ export default {
 </script>
 
 <style scoped>
+li{
+  @apply my-2;
+}
+
 .cta{
   background-color: #f0daff;
 }
@@ -54,28 +113,5 @@ a:hover{
 a.nuxt-link-exact-active{
   position: relative;
   z-index: 1;
-}
-
-a.nuxt-link-exact-active:after{
-  content: ' ';
-  margin: 0 auto;
-  position: absolute;
-  transform: translate(-20%, 0%);
-  opacity: .25;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 150%;
-  z-index: -1;
-  background-repeat: no-repeat;
-  background-image: url('/img/line.svg');
-  animation-duration: .15s;
-  animation-name: anim-active;
-  animation-timing-function: linear;
-}
-
-@keyframes anim-active {
-  from {width: 0%; opacity: 0; left:-25%}
-  to {width: 150%; opacity: .25; left:0}
 }
 </style>

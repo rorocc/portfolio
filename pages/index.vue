@@ -21,9 +21,7 @@
           </div>
         </div>
       </div>
-      <h2 class="text-2xl font-bold">
-        WORK
-      </h2>
+      <section-heading heading="My recent projects" descr="Feel free to have a look" />
       <div class="grid auto-rows-auto">
         <div v-for="work in works" :key="work.id" class="mb-10">
           <workpiece :head-text="work.headText"
@@ -38,7 +36,14 @@
       </div>
 
     </div>
-    <div ref="toolbox" class="toolbox">
+    <div ref="toolbox" class="pigButton">
+      <div class="grid-flow-col grid text-center">
+        <div @click="startPiggies">
+          <img src="/img/pigs/pig3.png" class="pigIcon">
+        </div>
+      </div>
+    </div>
+    <div ref="toolbox" class="toolbox hidden">
       <div class="grid-flow-col grid text-center">
         <div>
           <a @click="() => { setTool('mouse') }">
@@ -165,7 +170,7 @@ export default {
   .toolIcon{
     transition: .25s;
     transition-timing-function: ease-in-out;
-    @apply w-20 m-auto;
+    @apply w-16 m-auto;
   }
 
   .toolIcon:hover{
@@ -196,6 +201,29 @@ export default {
     100% {transform: translateY(-120vh); opacity: 0}
   }
 
+  .pigIcon{
+    @apply w-16 m-auto;
+    animation-name: pig;
+    transform: rotate(0deg);
+    animation-delay: 2s;
+    animation-duration: 12s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+
+  .pigIcon:hover{
+    cursor: pointer;
+  }
+
+  @keyframes pig {
+    0%{transform: rotate(0deg)}
+    10%{transform: rotate(-20deg)}
+    18%{transform: rotate(5deg)}
+    23%{transform: rotate(-3deg)}
+    26%{transform: rotate(0deg)}
+
+  }
+
   #chris_mouse{
     width: 167px;
     height: 167px;
@@ -208,6 +236,10 @@ export default {
 
   .toolbox{
     @apply w-2/3 p-6 z-10 rounded-3xl bg-white mb-4 fixed bottom-0 shadow-xl mx-auto right-0 left-0;
+  }
+
+  .pigButton{
+    @apply p-4 z-10 rounded-3xl bg-white fixed bottom-0 shadow-xl mx-auto left-0 mx-6 my-6;
   }
 
   .toolbox.close{

@@ -1,8 +1,6 @@
 <template>
-  <div>
-    <p>
-      about
-    </p>
+  <div class="container">
+    <h1>About me</h1>
   </div>
 </template>
 

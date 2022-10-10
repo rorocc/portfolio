@@ -1,7 +1,7 @@
 <template>
-  <section class="w-3/4 mx-auto">
+  <section class="container">
     <div class="mb-8">
-      <h1 class="text-3xl display-font mb-4">
+      <h1>
         What's my favorite tool?
       </h1>
       <p class="leading-relaxed">... and I'm not talking about the amazing band here! <br /> Let me present some of my favorite tools I absolutely love to use.</p>

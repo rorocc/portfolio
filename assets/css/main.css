@@ -4,13 +4,36 @@
 
 @font-face {
   font-family: "Inter";
-  src: local("Inter"),
-  url("~assets/fonts/Inter-Regular.ttf") format("truetype");
+  src: local("Inter"), url("~assets/fonts/Inter-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: local("Inter"), url("~assets/fonts/Inter-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: local("Inter"), url("~assets/fonts/Inter-Medium.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: local("Inter"), url("~assets/fonts/Inter-Medium.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
 }
 
 *{
   --link-color: #6f6f6f;
   --link-color-active: #af53ff;
+  --subheading-gray: #949494;
 }
 
 body{
@@ -20,10 +43,22 @@ body{
 }
 
 .display-font{
-  font-family: 'Syne', sans-serif;
-  font-weight: 700;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
 }
 
-.font-montserrat{
-  font-family: 'Montserrat', serif;
+.container{
+  @apply w-3/4 mx-auto mt-12;
+}
+
+h1{
+  @apply text-3xl display-font mb-4;
+}
+
+h2{
+  @apply text-2xl display-font my-2;
+}
+
+h3{
+  @apply text-xl display-font my-2;
 }
