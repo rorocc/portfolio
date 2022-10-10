@@ -13,12 +13,12 @@
       </div>
     </div>
     <section class="contentContainer container w-3/4 m-auto ">
-      <div class="section flex justify-between mx-auto">
-        <div class="w-3/5 shortDescription">
+      <div class="section md:flex flex-none grid-cols-1 gap-4 justify-between mx-auto">
+        <div class="md:w-3/5 shortDescription">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus scelerisque sapien justo, sed egestas urna ornare eu. </p>
           <p>Sed velit neque, tincidunt sit amet sem et, pretium sodales turpis. Integer feugiat, ex et pretium ultrices, ipsum tellus bibendum nulla, ut dictum metus purus ut sem.</p>
         </div>
-        <div class="bg-white rounded-3xl py-6 px-12 w-1/3">
+        <div class="bg-white rounded-3xl py-6 px-12 md:w-1/3">
           <description-element title="Role" text="UX & Visual Design, Researcher, Developer" />
           <description-element title="Context" text="Media informatics - Bachelor thesis" />
           <description-element title="timespan" text="April - October 2021" />
@@ -31,10 +31,10 @@
       <p>— <WebLink url="https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight" text="World Health Organization" style="color: black" /></p>
     </section>
     <section class="sectionShort">
-      <h1>Background & Motivation</h1>
+      <SectionHeading heading="Background & Motivation" descr="Why did the project happen?" />
     </section>
     <section class="sectionShort">
-      <h1>The Human-centered design process</h1>
+      <SectionHeading heading="The human-centered design process" descr="Methodological approach" />
     </section>
   </div>
 </template>

@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <div class="max-w-6xl mx-auto px-4">
+    <div class="mx-auto px-4">
       <div class="flex justify-between">
         <div class="flex space-x-7">
           <div>

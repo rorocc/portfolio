@@ -1,6 +1,6 @@
 <template>
   <div class="mb-4">
-    <h1>{{ title }}</h1>
+    <h1 class="mb-2">{{ title }}</h1>
     <p class="leading-relaxed">{{ text }}</p>
   </div>
 </template>
@@ -17,6 +17,6 @@ export default {
 
 <style scoped>
 h1{
-  @apply text-gray-400 uppercase tracking-widest font-light pb-2 text-sm;
+  @apply text-gray-400 uppercase tracking-widest font-light text-sm;
 }
 </style>

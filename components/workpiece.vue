@@ -1,9 +1,11 @@
 <template>
   <a :href="url">
     <div class="workpiece overflow-hidden">
-      <div class="grid grid-cols-8 h-96 place-items-center" :style="{backgroundColor: bgColor, color: textColor}">
-        <div class="col-span-3 h-full w-full" :style="{backgroundImage: 'url(' + imgUrl + ')', backgroundSize: 'cover'}" />
-        <div class="col-span-5 w-2/3 ml-0">
+      <div class="grid lg:grid-cols-12 grid-cols-1 lg:h-96 place-items-center gap-4" :style="{backgroundColor: bgColor, color: textColor}">
+        <div class="col-span-5 h-96 bg-red-500 w-full" >
+          <img class="w-full object-cover h-full" :src="imgUrl" />
+        </div>
+        <div class="col-span-7 w-2/3 ml-0">
           <p class="headText">{{ headText }}</p>
           <h1>{{ title }}</h1>
           <div class="bottom-0 w-full mt-8">

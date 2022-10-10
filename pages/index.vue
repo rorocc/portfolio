@@ -36,10 +36,10 @@
       </div>
 
     </div>
-    <div ref="toolbox" class="pigButton">
+    <div ref="toolbox" class="pigButton md:block hidden">
       <div class="grid-flow-col grid text-center">
         <div @click="startPiggies">
-          <img src="/img/pigs/pig3.png" class="pigIcon">
+          <img src="/img/pigs/pig3.svg" class="pigIcon">
         </div>
       </div>
     </div>
@@ -47,7 +47,7 @@
       <div class="grid-flow-col grid text-center">
         <div>
           <a @click="() => { setTool('mouse') }">
-            <img src="/img/pigs/pig3.png" class="toolIcon">
+            <img src="/img/pigs/pig3.svg" class="toolIcon">
           </a>
         </div>
         <div>
@@ -56,10 +56,10 @@
           </a>
         </div>
         <div @click="startPiggies">
-          <img src="/img/pigs/pig3.png" class="toolIcon">
+          <img src="/img/pigs/pig3.svg" class="toolIcon">
         </div>
         <div @click="toggleTools('close')">
-          <img src="/img/pigs/pig3.png" class="toolIcon">
+          <img src="/img/pigs/pig3.svg" class="toolIcon">
         </div>
       </div>
     </div>
@@ -132,15 +132,17 @@ export default {
       this.$refs.particlesBox.appendChild(container)
 
       for (let j = 0; j < 2; j++) {
-        for (let i = 0; i < 20; i++) {
+        for (let i = 0; i < 25; i++) {
           const offset = (Math.floor(Math.random() * 10) / 6) - 0.5
           const type = Math.floor(Math.random() * 3) + 1
           const particleImg = document.createElement("img")
           particleImg.classList.add("particle")
-          particleImg.src = `/img/pigs/pig${type}.png`
+          particleImg.src = `/img/pigs/pig${type}.svg`
           particleImg.style.width = ((offset * window.innerWidth / 10)) + "px"
           particleImg.style.height = "auto"
-          particleImg.style.animationDelay = offset + "s"
+          const delay = Math.max(0, offset)
+          particleImg.style.animationDelay = delay + "s"
+          console.log("delay", delay)
 
           if (j === 0) {
             this.$refs.particlesBox.lastChild.appendChild(particleImg)
@@ -164,7 +166,7 @@ export default {
 
   .brushCursor{
     user-select: none;
-    cursor: url('/img/pigs/pig1.png'), auto;
+    cursor: url('/img/pigs/pig1.svg'), auto;
   }
 
   .toolIcon{
@@ -190,15 +192,15 @@ export default {
 
   .particle{
     animation-name: piggies;
-    animation-duration: 2s;
+    animation-duration: 1.75s;
     animation-timing-function: ease-in;
   }
 
   @keyframes piggies{
-    0%{transform: translateY(0); opacity: 1}
+    0%{transform: translateY(-5vh); opacity: 1}
     50%{opacity: 1; -webkit-filter: blur(0px);}
     90%{opacity: 1; -webkit-filter: blur(4px);}
-    100% {transform: translateY(-120vh); opacity: 0}
+    100% {transform: translateY(-115vh); opacity: 0}
   }
 
   .pigIcon{
