@@ -1,5 +1,5 @@
 <template>
-  <div class="my-12 text-center leading-none">
+  <div class="text-left leading-none">
     <span>{{ descr }}</span>
     <h2 class="my-2">{{ heading }}</h2>
   </div>

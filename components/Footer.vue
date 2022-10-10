@@ -42,6 +42,7 @@
           <h1>Legal</h1>
           <ul>
             <li><a href="/imprint">Imprint</a></li>
+            <li><a href="/privacy">Privacy</a></li>
           </ul>
         </div>
       </div>

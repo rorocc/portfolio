@@ -21,7 +21,7 @@
           </div>
         </div>
       </div>
-      <section-heading heading="My recent projects" descr="Feel free to have a look" />
+      <section-heading class="my-12" heading="My recent projects" descr="Feel free to have a look" />
       <div class="grid auto-rows-auto">
         <div v-for="work in works" :key="work.id" class="mb-10">
           <workpiece :head-text="work.headText"
