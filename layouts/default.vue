@@ -6,7 +6,7 @@
     <div class="mx-auto m-auto">
       <Nuxt />
     </div>
-    <div class="w-full bg-white shadow-custom mt-24">
+    <div class="w-full bg-white shadow-custom">
       <Footer />
     </div>
 
@@ -14,7 +14,4 @@
 </template>
 
 <style scoped>
-.shadow-custom{
-  box-shadow: 0 0 5px 0 rgba(0,0,0,0.1);
-}
 </style>

@@ -1,9 +1,10 @@
 <template>
-  <div ref="mainDiv" class="container w-3/4 m-auto">
+  <div ref="mainDiv" class="m-auto">
     <div class="my-12">
       <div class="grid grid-rows-2 md:grid-cols-2 md:grid-rows-none my-28">
-        <div>
+        <div class="relative">
           <img src="../assets/Chris_Doodle.png" class="w-2/3 m-auto" />
+          <img src="../assets/sticker/star.png" class="top-0 absolute right-1/4 w-1/6 sticker-star" />
         </div>
         <div>
           <h1 class="text-6xl display-font">
@@ -21,19 +22,23 @@
           </div>
         </div>
       </div>
-      <section-heading class="my-12" heading="My recent projects" descr="Feel free to have a look" />
-      <div class="grid auto-rows-auto">
-        <div v-for="work in works" :key="work.id" class="mb-10">
-          <workpiece :head-text="work.headText"
-                     :title="work.title"
-                     :description="work.description"
-                     :bg-color="work.bgColor"
-                     :text-color="work.textColor"
-                     :img-url="work.imgUrl"
-                     :url="work.url"
-          />
+      <section class="bg-white">
+        <div class="container">
+          <section-heading class="my-12 py-8" heading="My recent projects" descr="Feel free to have a look" />
+          <div class="grid auto-rows-auto">
+            <div v-for="work in works" :key="work.id" class="mb-10">
+              <workpiece :head-text="work.headText"
+                         :title="work.title"
+                         :description="work.description"
+                         :bg-color="work.bgColor"
+                         :text-color="work.textColor"
+                         :img-url="work.imgUrl"
+                         :url="work.url"
+              />
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
 
     </div>
     <div ref="toolbox" class="pigButton md:block hidden">
@@ -215,6 +220,21 @@ export default {
 
   .pigIcon:hover{
     cursor: pointer;
+  }
+
+  .sticker-star{
+    animation-name: star;
+    animation-duration: 20s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes star {
+    0%{transform: rotate(0deg)}
+    5%{transform: rotate(20deg)}
+    10%{transform: rotate(-20deg)}
+    15%{transform: rotate(5deg)}
+    17%{transform: rotate(0deg)}
   }
 
   @keyframes pig {

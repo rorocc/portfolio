@@ -62,3 +62,8 @@ h2{
 h3{
   @apply text-xl display-font my-2;
 }
+
+.shadow-custom{
+  box-shadow: 0 0 5px 0 rgba(0,0,0,0.1);
+}
+

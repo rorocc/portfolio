@@ -1,7 +1,7 @@
 <template>
   <div class="text-left leading-none">
-    <span>{{ descr }}</span>
-    <h2 class="my-2">{{ heading }}</h2>
+    <span class="uppercase">{{ descr }}</span>
+    <h1 class="my-2">{{ heading }}</h1>
   </div>
 </template>
 
@@ -18,6 +18,6 @@ export default {
 <style scoped>
   span{
     color: var(--subheading-gray);
-    @apply tracking-widest;
+    @apply tracking-wider;
   }
 </style>

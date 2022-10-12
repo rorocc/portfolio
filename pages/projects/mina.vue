@@ -35,6 +35,34 @@
     </section>
     <section class="sectionShort">
       <SectionHeading heading="The human-centered design process" descr="Methodological approach" />
+      <section class="subsection">
+        <h2>Review of existing systems</h2>
+        <p>aaaa</p>
+      </section>
+      <section class="subsection">
+        <h2>Workshop with potential users</h2>
+        <p>aaaa</p>
+      </section>
+      <section class="subsection">
+        <h2>Low fidelity sketching</h2>
+        <img class="w-full md:w-3/4 mx-auto" src="/img/work/mina/screens_sketch.png">
+      </section>
+      <section class="subsection">
+        <h2>Wireframing & design iterations</h2>
+        <img class="w-full md:w-3/4 mx-auto" src="/img/work/mina/screens_iterations.png">
+      </section>
+    </section>
+    <section class="sectionShort">
+      <SectionHeading heading="Designing" descr="Prototyping" />
+      <img class="w-full md:w-3/4 mx-auto" src="/img/work/mina/screens_final.png">
+    </section>
+    <section class="sectionShort">
+      <SectionHeading heading="Web prototype" descr="Development" />
+      <p>d3js</p>
+    </section>
+    <section class="sectionShort">
+      <SectionHeading heading="User testing" descr="Evaluation" />
+      <p>d3js</p>
     </section>
   </div>
 </template>
@@ -55,7 +83,11 @@ export default {
 }
 
 .sectionShort{
-  @apply w-3/4 mx-auto;
+  @apply w-3/4 mx-auto my-12;
+}
+
+.subsection{
+  @apply mb-8;
 }
 
 section h1{

@@ -1,10 +1,11 @@
 <template>
-  <section class="container">
-    <div class="mb-8">
-      <SectionHeading heading="What's my favorite tool?" descr="Spoiler: not talking about the band" />
-      <p class="mt-4 mb-12">Let me show you some of my favorite tools that I use to be creative.</p>
-    </div>
-    <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-6 md:gap-3 gap-6">
+  <section class="pb-8 bg-white bg-opacity-50">
+    <div class="container">
+      <div class="mb-8">
+        <SectionHeading heading="What's my favorite tool?" descr="Spoiler: not talking about the band" />
+        <p class="mt-4 mb-12">Let me show you some of my favorite tools that I use to be creative.</p>
+      </div>
+      <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-6 md:gap-3 gap-6">
         <ToolBlock title="Figma & FigJam"
                    descr="It's not only about the functionalities of Figma, but also the community - there are virtually an endless amount of community plugins and files. That's why I love Figma since quite a few years now."
                    short="Fg"
