@@ -1,11 +1,7 @@
 <template>
   <div ref="mainDiv" class="m-auto">
-    <div class="my-12">
+    <section class="container">
       <div class="grid grid-rows-2 md:grid-cols-2 md:grid-rows-none my-28">
-        <div class="relative">
-          <img src="../assets/Chris_Doodle.png" class="w-2/3 m-auto" />
-          <img src="../assets/sticker/star.png" class="top-0 absolute right-1/4 w-1/6 sticker-star" />
-        </div>
         <div>
           <h1 class="text-6xl display-font">
             Well, hello there.
@@ -21,8 +17,13 @@
             </p>
           </div>
         </div>
+        <div class="relative">
+          <img src="../assets/Chris_Doodle.png" class="w-3/4 m-auto" />
+          <img src="../assets/sticker/star.png" class="top-0 absolute right-1/4 w-1/6 sticker-star" />
+        </div>
       </div>
-      <section class="bg-white">
+    </section>
+      <section class="bg-white py-8">
         <div class="container">
           <section-heading class="my-12 py-8" heading="My recent projects" descr="Feel free to have a look" />
           <div class="grid auto-rows-auto">
@@ -34,13 +35,12 @@
                          :text-color="work.textColor"
                          :img-url="work.imgUrl"
                          :url="work.url"
+                         :is-available="work.isAvailable"
               />
             </div>
           </div>
         </div>
       </section>
-
-    </div>
     <div ref="toolbox" class="pigButton md:block hidden">
       <div class="grid-flow-col grid text-center">
         <div @click="startPiggies">
@@ -82,9 +82,9 @@ export default {
       vueCanvas: null,
       pos: { x: 0, y: 0 },
       works: [
-        { title: 'Mobile Interface for Nutrition Awareness (MINA)', headText: 'Bachelor Thesis Media Informatics', description: 'What is a healthy meal? - A research based design approach to comprehensible in-app rating of meals.', bgColor: '#d2ff77', textColor: '#3b3b3b', imgUrl: '/img/work/screen_mina.png', url: '/projects/mina' },
-        { title: 'AID-Simulation for people with type 1 diabetes mellitus', headText: 'Masters project media informatics', description: 'An interactive simulator with the aim to make the functionality of closed-loop systems more comprehensible.', bgColor: '#e3ecff', textColor: '#001E4B', imgUrl: '/img/work/screen_aid.png', url: '/projects/aid' },
-        { title: 'MariData: A comprehensive interface for ship energy management', headText: 'Funded research project', description: 'The MariData decision support system helps vessel crews to not only reduce financial costs, but also the emissions and therefore minimize the negative impact on our environment.', bgColor: '#d6dde3', textColor: '#3E484E', imgUrl: '/img/work/screen_maridata.png', url: '/projects/aid' }
+        { title: 'Mobile Interface for Nutrition Awareness (MINA)', headText: 'Bachelor Thesis Media Informatics', description: 'What is a healthy meal? - A research based design approach to comprehensible in-app rating of meals.', bgColor: '#d2ff77', textColor: '#3b3b3b', imgUrl: '/img/work/screen_mina.png', url: '/projects/mina', isAvailable: true },
+        { title: 'AID-Simulation for people with type 1 diabetes mellitus', headText: 'Masters project media informatics', description: 'An interactive simulator with the aim to make the functionality of closed-loop systems more comprehensible.', bgColor: '#e3ecff', textColor: '#001E4B', imgUrl: '/img/work/screen_aid.png', url: '/', isAvailable: false },
+        { title: 'MariData: A comprehensive interface for ship energy management', headText: 'Funded research project', description: 'The MariData decision support system helps vessel crews to not only reduce financial costs, but also the emissions and therefore minimize the negative impact on our environment.', bgColor: '#d6dde3', textColor: '#3E484E', imgUrl: '/img/work/screen_maridata.png', url: '/', isAvailable: false }
       ]
     }
   },
@@ -210,6 +210,7 @@ export default {
 
   .pigIcon{
     @apply w-16 m-auto;
+    user-select: none;
     animation-name: pig;
     transform: rotate(0deg);
     animation-delay: 2s;

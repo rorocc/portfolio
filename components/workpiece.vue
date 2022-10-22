@@ -1,5 +1,5 @@
 <template>
-  <a :href="url">
+  <a :href="url" :class="[isAvailable ? 'cursor-pointer' : 'cursor-default']">
     <div class="workpiece overflow-hidden">
       <div class="grid lg:grid-cols-12 grid-cols-1 lg:h-96 place-items-center gap-4" :style="{backgroundColor: bgColor, color: textColor}">
         <div class="col-span-5 h-96 bg-red-500 w-full" >
@@ -10,10 +10,15 @@
           <h1>{{ title }}</h1>
           <div class="bottom-0 w-full mt-8">
             <hr class="my-4" :style="{borderColor: textColor, opacity: .25}" />
-            <span>View case study</span>
-            <span class="chevron float-right">
-              <img src="/img/chevron_right.svg" class="h-8" />
-            </span>
+            <div v-if="isAvailable">
+              <span>View case study</span>
+              <span class="chevron float-right">
+                <img src="/img/chevron_right.svg" class="h-8" />
+              </span>
+            </div>
+            <div v-else >
+              <span>Case study available soon</span>
+            </div>
           </div>
         </div>
       </div>
@@ -33,7 +38,11 @@ export default {
     bgColor: String,
     textColor: String,
     imgUrl: String,
-    url: String
+    url: String,
+    isAvailable: {
+      type: Boolean,
+      default: true
+    }
   }
 }
 </script>
