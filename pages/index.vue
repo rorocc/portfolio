@@ -15,6 +15,7 @@
             <p class="leading-8 descr">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus scelerisque sapien justo, sed egestas urna ornare eu.
             </p>
+            <CursorChat text="Let's get creative" duration="20" />
           </div>
         </div>
         <div class="relative">

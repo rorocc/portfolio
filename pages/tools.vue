@@ -1,9 +1,14 @@
 <template>
   <section class="pb-8 bg-white bg-opacity-50">
     <div class="container">
-      <div class="mb-8">
-        <SectionHeading heading="What's my favorite tool?" descr="Spoiler: not talking about the band" />
-        <p class="mt-4 mb-12">Let me show you some of my favorite tools that I use to be creative.</p>
+      <div class="flex">
+        <div class="my-8 inline-block">
+          <SectionHeading heading="What's my favorite tool?" />
+          <p class="mt-4 mb-12">Let me show you some of my favorite tools that I use to be creative.</p>
+        </div>
+        <div class="inline-block my-auto mx-auto">
+          <cursor-chat text="Did you mean 'Tool the band'?" name="Clippy 📎" />
+        </div>
       </div>
       <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-6 md:gap-3 gap-6">
         <ToolBlock title="Figma & FigJam"

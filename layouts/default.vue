@@ -16,7 +16,7 @@
 
 <style scoped>
 #pinkBar{
-  background-color: #F0DAFF;
+  background-color: var(--pink-light);
   @apply absolute bottom-0 w-full h-4;
 }
 </style>
