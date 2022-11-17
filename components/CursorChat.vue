@@ -48,7 +48,7 @@ export default {
     60%{ transform: translate(25%, 100%)}
     70%{ transform: translate(55%, 20%)}
     80%{ transform: translate(55%, 20%)}
-    90%{ transform: translate(0%, 55%)}
+    90%{ transform: translate(20%, 55%)}
     100%{ transform: translate(10%, 0%)}
   }
 </style>
