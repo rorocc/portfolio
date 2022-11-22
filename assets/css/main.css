@@ -3,6 +3,20 @@
 @tailwind utilities;
 
 @font-face {
+  font-family: "Cyrene";
+  src: local("Cyrene"), url("~assets/fonts/Cyrene+Regular+Advanced.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "IndieFlower";
+  src: local("IndieFlower"), url("~assets/fonts/IndieFlower-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "Inter";
   src: local("Inter"), url("~assets/fonts/Inter-Regular.ttf") format("truetype");
   font-weight: normal;

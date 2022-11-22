@@ -1,6 +1,9 @@
 <template>
   <div class="container">
-    <h1>About me</h1>
+    <h1></h1>
+    <stickynote>
+      <about-dalek class="w-28" />
+    </stickynote>
   </div>
 </template>
 

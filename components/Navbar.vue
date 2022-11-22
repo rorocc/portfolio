@@ -12,11 +12,19 @@
           </div>
         </div>
         <!-- Primary Navbar items -->
-        <div class="hidden md:flex items-center lg:space-x-8 space-x-4">
-          <NuxtLink to="/">Home</NuxtLink>
-          <NuxtLink to="/tools">Tools</NuxtLink>
-          <NuxtLink to="/about">About</NuxtLink>
-          <NuxtLink to="/contact" class="px-8 py-2 rounded-3xl cta">Contact</NuxtLink>
+        <div class="hidden md:flex items-center lg:space-x-14 space-x-4">
+          <NuxtLink to="/" class="menu__link">
+            Home
+          </NuxtLink>
+          <NuxtLink to="/tools" class="menu__link">
+            Tools
+          </NuxtLink>
+          <NuxtLink to="/about" class="menu__link">
+            About
+          </NuxtLink>
+          <NuxtLink to="/contact" class="menu__link">
+            Contact
+          </NuxtLink>
         </div>
         <!-- Mobile menu button -->
         <div class="md:hidden flex items-center">
@@ -114,4 +122,6 @@ a.nuxt-link-exact-active{
   position: relative;
   z-index: 1;
 }
+
+
 </style>
