@@ -45,7 +45,7 @@
     <div ref="toolbox" class="pigButton md:block hidden">
       <div class="grid-flow-col grid text-center">
         <div @click="startPiggies">
-          <img src="/img/pigs/pig3.svg" class="pigIcon">
+          <img src="../assets/img/pigs/pig3.svg" class="pigIcon">
         </div>
       </div>
     </div>
@@ -53,19 +53,19 @@
       <div class="grid-flow-col grid text-center">
         <div>
           <a @click="() => { setTool('mouse') }">
-            <img src="/img/pigs/pig3.svg" class="toolIcon">
+            <img src="../assets/img/pigs/pig3.svg" class="toolIcon">
           </a>
         </div>
         <div>
           <a @click="() =>{ setTool('brush') }">
-            <img src="/img/brush.png" class="toolIcon">
+            <img src="../assets/brush.png" class="toolIcon">
           </a>
         </div>
         <div @click="startPiggies">
-          <img src="/img/pigs/pig3.svg" class="toolIcon">
+          <img src="../assets/img/pigs/pig3.svg" class="toolIcon">
         </div>
         <div @click="toggleTools('close')">
-          <img src="/img/pigs/pig3.svg" class="toolIcon">
+          <img src="../assets/img/pigs/pig3.svg" class="toolIcon">
         </div>
       </div>
     </div>
@@ -83,9 +83,9 @@ export default {
       vueCanvas: null,
       pos: { x: 0, y: 0 },
       works: [
-        { title: 'Mobile Interface for Nutrition Awareness (MINA)', headText: 'Bachelor Thesis Media Informatics', description: 'What is a healthy meal? - A research based design approach to comprehensible in-app rating of meals.', bgColor: '#d2ff77', textColor: '#3b3b3b', imgUrl: '/img/work/screen_mina.png', url: '/projects/mina', isAvailable: true },
-        { title: 'AID-Simulation for people with type 1 diabetes mellitus', headText: 'Masters project media informatics', description: 'An interactive simulator with the aim to make the functionality of closed-loop systems more comprehensible.', bgColor: '#e3ecff', textColor: '#001E4B', imgUrl: '/img/work/screen_aid.png', url: '/', isAvailable: false },
-        { title: 'MariData: A comprehensive interface for ship energy management', headText: 'Funded research project', description: 'The MariData decision support system helps vessel crews to not only reduce financial costs, but also the emissions and therefore minimize the negative impact on our environment.', bgColor: '#d6dde3', textColor: '#3E484E', imgUrl: '/img/work/screen_maridata.png', url: '/', isAvailable: false }
+        { title: 'Mobile Interface for Nutrition Awareness (MINA)', headText: 'Bachelor Thesis Media Informatics', description: 'What is a healthy meal? - A research based design approach to comprehensible in-app rating of meals.', bgColor: '#d2ff77', textColor: '#3b3b3b', imgUrl: 'screen_mina.png', url: './projects/mina', isAvailable: true },
+        { title: 'AID-Simulation for people with type 1 diabetes mellitus', headText: 'Masters project media informatics', description: 'An interactive simulator with the aim to make the functionality of closed-loop systems more comprehensible.', bgColor: '#e3ecff', textColor: '#001E4B', imgUrl: 'screen_aid.png', url: './', isAvailable: false },
+        { title: 'MariData: A comprehensive interface for ship energy management', headText: 'Funded research project', description: 'The MariData decision support system helps vessel crews to not only reduce financial costs, but also the emissions and therefore minimize the negative impact on our environment.', bgColor: '#d6dde3', textColor: '#3E484E', imgUrl: 'screen_maridata.png', url: './', isAvailable: false }
       ]
     }
   },
@@ -143,7 +143,7 @@ export default {
           const type = Math.floor(Math.random() * 3) + 1
           const particleImg = document.createElement("img")
           particleImg.classList.add("particle")
-          particleImg.src = `/img/pigs/pig${type}.svg`
+          particleImg.src = `../assets/img/pigs/pig${type}.svg`
           particleImg.style.width = ((offset * window.innerWidth / 10)) + "px"
           particleImg.style.height = "auto"
           const delay = Math.max(0, offset)
@@ -172,7 +172,7 @@ export default {
 
   .brushCursor{
     user-select: none;
-    cursor: url('/img/pigs/pig1.svg'), auto;
+    cursor: url('../assets/img/pigs/pig1.svg'), auto;
   }
 
   .toolIcon{
