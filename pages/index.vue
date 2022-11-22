@@ -143,7 +143,7 @@ export default {
           const type = Math.floor(Math.random() * 3) + 1
           const particleImg = document.createElement("img")
           particleImg.classList.add("particle")
-          particleImg.src = `../assets/img/pigs/pig${type}.svg`
+          particleImg.src =  require(`~/assets/img/pigs/pig${type}.svg`) //"~/assets/img/pigs/pig${type}.svg"
           particleImg.style.width = ((offset * window.innerWidth / 10)) + "px"
           particleImg.style.height = "auto"
           const delay = Math.max(0, offset)

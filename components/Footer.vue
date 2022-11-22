@@ -24,25 +24,25 @@
         <div>
           <h1>Sitemap</h1>
           <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/tools">Tools</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/contact">Contact</a></li>
+            <li><a href="./">Home</a></li>
+            <li><a href="./tools">Tools</a></li>
+            <li><a href="./about">About</a></li>
+            <li><a href="./contact">Contact</a></li>
           </ul>
         </div>
         <div class="mx-12">
           <h1>Projects</h1>
           <ul>
-            <li><a href="/projects/mina">MINA</a></li>
-            <li><a href="/imprint">AID-Simulation</a></li>
-            <li><a href="/imprint">MariData</a></li>
+            <li><a href="./projects/mina">MINA</a></li>
+            <li><a href="./imprint">AID-Simulation</a></li>
+            <li><a href="./imprint">MariData</a></li>
           </ul>
         </div>
         <div>
           <h1>Legal</h1>
           <ul>
-            <li><a href="/imprint">Imprint</a></li>
-            <li><a href="/privacy">Privacy</a></li>
+            <li><a href="./imprint">Imprint</a></li>
+            <li><a href="./privacy">Privacy</a></li>
           </ul>
         </div>
       </div>

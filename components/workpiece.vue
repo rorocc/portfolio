@@ -13,7 +13,7 @@
             <div v-if="isAvailable">
               <span>View case study</span>
               <span class="chevron float-right">
-                <img src="/img/chevron_right.svg" class="h-8" />
+                <img src="~assets/img/chevron_right.svg" class="h-8" />
               </span>
             </div>
             <div v-else >
