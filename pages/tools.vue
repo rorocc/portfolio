@@ -10,7 +10,7 @@
           <cursor-chat text="Did you mean 'Tool the band'?" name="Clippy 📎" />
         </div>
       </div>
-      <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-6 md:gap-3 gap-6">
+      <div class="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 lg:gap-12 md:gap-3 gap-6">
         <ToolBlock title="Figma & FigJam"
                    descr="It's not only about the functionalities of Figma, but also the community - there are virtually an endless amount of community plugins and files. That's why I love Figma since quite a few years now."
                    short="Fg"

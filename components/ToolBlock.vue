@@ -2,7 +2,7 @@
   <div class="h-64 relative rounded-xl p-6 bg-white shadow-md overflow-clip">
     <div class="w-full h-4 absolute left-0 right-0 bottom-0" :style="{backgroundColor: color}" />
     <h1 class="font-bold text-lg mb-2">{{ title }}</h1>
-    <p class="leading-relaxed opacity-60">{{ descr }}</p>
+    <p class="leading-relaxed opacity-70">{{ descr }}</p>
     <p class="short" :style="{color: color, opacity: opacity}">{{ short }}</p>
   </div>
 </template>

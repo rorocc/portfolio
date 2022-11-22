@@ -1,7 +1,7 @@
 <template>
   <div ref="mainDiv" class="m-auto">
     <section class="container">
-      <div class="grid grid-rows-2 md:grid-cols-2 md:grid-rows-none my-28">
+      <div class="grid grid-rows-2 md:grid-cols-2 md:grid-rows-none my-20">
         <div>
           <h1 class="text-6xl display-font">
             Well, hello there.

@@ -37,7 +37,7 @@ export default {
   }
 
   .dalek p{
-    @apply text-3xl absolute -bottom-1/4 -right-1/3;
+    @apply absolute bottom-0 right-0;
     font-family: IndieFlower, "Comic Sans MS", sans-serif;
     animation-name: shake;
     animation-iteration-count: infinite;
