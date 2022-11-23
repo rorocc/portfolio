@@ -1,10 +1,11 @@
 <template>
   <div class="md:w-2/3 w-full m-auto p-6 text-center mx-auto">
     <div class="grid lg:grid-flow-col-dense lg:grid-cols-0 grid-cols-1  mb-12 justify-around mx-auto content-center">
-      <div id="contact" class="self-center">
-        <div class="max-w-fit mx-auto">
+      <div id="contact" class="self-center relative">
+        <img src="~assets/img/pigeon.svg" class="absolute w-1/2 left-0 -top-1/2 opacity-10">
+        <div class="max-w-fit mx-auto relative">
           <div class="my-4">
-            <h3>Let's connect</h3>
+            <h2><span class="underlined">Let's connect</span></h2>
             <p>Send me a mail pigeon</p>
           </div>
           <div class="w-1/3 m-auto grid grid-cols-2 text-center auto-cols-min space-x-2">
@@ -15,7 +16,8 @@
             </div>
             <div>
               <a href="#">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><path d="M6.5 33.75q-1.458 0-2.5-1.042-1.042-1.041-1.042-2.5V9.792q0-1.459 1.042-2.5Q5.042 6.25 6.5 6.25h27q1.5 0 2.542 1.042 1.041 1.041 1.041 2.5v20.416q0 1.459-1.041 2.5Q35 33.75 33.5 33.75ZM20 21.792l13.5-8.917V9.792L20 18.542 6.5 9.792v3.083Z"/></svg>        </a>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><path d="M6.5 33.75q-1.458 0-2.5-1.042-1.042-1.041-1.042-2.5V9.792q0-1.459 1.042-2.5Q5.042 6.25 6.5 6.25h27q1.5 0 2.542 1.042 1.041 1.041 1.041 2.5v20.416q0 1.459-1.041 2.5Q35 33.75 33.5 33.75ZM20 21.792l13.5-8.917V9.792L20 18.542 6.5 9.792v3.083Z"/></svg>
+              </a>
             </div>
           </div>
         </div>
@@ -36,13 +38,6 @@
             <li><a href="./projects/mina">MINA</a></li>
             <li><a href="./imprint">AID-Simulation</a></li>
             <li><a href="./imprint">MariData</a></li>
-          </ul>
-        </div>
-        <div>
-          <h1>Legal</h1>
-          <ul>
-            <li><a href="./imprint">Imprint</a></li>
-            <li><a href="./privacy">Privacy</a></li>
           </ul>
         </div>
       </div>
@@ -83,10 +78,10 @@ export default {
   }
 
   svg path{
-    fill: #af53ff;
+    fill: #c187e5;
   }
 
   svg:hover path{
-    fill: #7902ee;
+    fill: var(--pink-light);
   }
 </style>

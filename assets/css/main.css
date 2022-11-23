@@ -33,13 +33,13 @@
 @font-face {
   font-family: "Inter";
   src: local("Inter"), url("~assets/fonts/Inter-Regular.ttf") format("truetype");
-  font-weight: normal;
+  font-weight: 100;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Inter";
-  src: local("Inter"), url("~assets/fonts/Inter-Medium.ttf") format("truetype");
+  src: local("Inter"), url("~assets/fonts/Inter-SemiBold.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
@@ -47,20 +47,13 @@
 @font-face {
   font-family: "Inter";
   src: local("Inter"), url("~assets/fonts/Inter-Medium.ttf") format("truetype");
-  font-weight: 100;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  src: local("Inter"), url("~assets/fonts/Inter-Medium.ttf") format("truetype");
-  font-weight: 600;
+  font-weight: 400;
   font-style: normal;
 }
 
 *{
   --link-color: #6f6f6f;
-  --link-color-active: #af53ff;
+  --link-color-active: #b27fc0;
   --subheading-gray: #949494;
   --pink-light: #F0DAFF;
   scroll-behavior: smooth;
@@ -69,7 +62,7 @@
 body{
   /*background-image: url("~assets/img/bg.png");*/
   font-family: 'Inter', sans-serif;
-
+  font-weight: 100;
 }
 
 .display-font{
@@ -95,5 +88,23 @@ h3{
 
 .shadow-custom{
   box-shadow: 0 0 5px 0 rgba(0,0,0,0.1);
+}
+
+.underlined{
+  position: relative;
+  overflow: visible;
+}
+
+.underlined::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  left: 0;
+  bottom: -10px;
+  background-image: url("~assets/line.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: -1;
 }
 

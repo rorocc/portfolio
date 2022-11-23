@@ -4,7 +4,7 @@
       <div class="grid grid-rows-2 md:grid-cols-2 md:grid-rows-none my-20">
         <div>
           <h1 class="landing-heading text-5xl display-font leading-normal">
-            Lorem ipsum dolor sit and <span>UX Design.</span>
+            Lorem ipsum dolor sit and <span class="underlined">UX Design.</span>
           </h1>
           <div class="py-8">
             <p class="leading-8 descr">
@@ -272,23 +272,5 @@ export default {
   .toolbox.close{
     transition: .75s;
     transform: translateY(110%);
-  }
-
-  .landing-heading span{
-    position: relative;
-    overflow: visible;
-  }
-
-  .landing-heading span::after{
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 20px;
-    left: 0;
-    bottom: -10px;
-    background-image: url("~assets/line.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    z-index: -1;
   }
 </style>
