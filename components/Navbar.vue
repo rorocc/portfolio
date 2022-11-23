@@ -6,7 +6,7 @@
           <div>
             <!-- Website Logo -->
             <a href="#" class="flex items-center py-4">
-              <span class="font-semibold text-gray-500 text-lg">Portfolio</span>
+              <span class="logo">chrisr°</span>
             </a>
           </div>
         </div>
@@ -120,6 +120,12 @@ a:hover{
 a.nuxt-link-exact-active{
   position: relative;
   z-index: 1;
+}
+
+.logo{
+  font-family: "DM Sans", sans-serif;
+  font-weight: bold;
+  @apply uppercase text-black text-5xl;
 }
 
 

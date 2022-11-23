@@ -81,11 +81,11 @@ a:hover .chevron{
   @apply h-full w-6 absolute right-0 top-0 bottom-0;
 }
 
-.workpiece:hover .bar{
+.opacity-100:hover .bar{
   opacity: 1;
 }
 
-.workpiece:hover{
+.opacity-100:hover{
   @apply shadow-xl;
 }
 

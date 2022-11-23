@@ -10,6 +10,20 @@
 }
 
 @font-face {
+  font-family: "DM Sans";
+  src: local("DM Sans"), url("~assets/fonts/DM_Sans/DMSans-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: local("DM Sans"), url("~assets/fonts/DM_Sans/DMSans-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "IndieFlower";
   src: local("IndieFlower"), url("~assets/fonts/IndieFlower-Regular.ttf") format("truetype");
   font-weight: normal;
@@ -53,14 +67,14 @@
 }
 
 body{
-  background-image: url("~assets/img/bg.png");
+  /*background-image: url("~assets/img/bg.png");*/
   font-family: 'Inter', sans-serif;
 
 }
 
 .display-font{
-  font-family: 'Inter', sans-serif;
-  font-weight: 600;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: bold;
 }
 
 .container{

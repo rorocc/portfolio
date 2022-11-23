@@ -3,8 +3,8 @@
     <section class="container">
       <div class="grid grid-rows-2 md:grid-cols-2 md:grid-rows-none my-20">
         <div>
-          <h1 class="text-6xl display-font">
-            Well, hello there.
+          <h1 class="landing-heading text-5xl display-font leading-normal">
+            Lorem ipsum dolor sit and <span>UX Design.</span>
           </h1>
           <div class="py-8">
             <p class="leading-8 descr">
@@ -19,8 +19,11 @@
           </div>
         </div>
         <div class="relative">
-          <img src="../assets/Chris_Doodle.png" class="w-3/4 m-auto" />
-          <img src="../assets/sticker/star.png" class="top-0 absolute right-1/4 w-1/6 sticker-star" />
+          <img src="../assets/doodle.svg" class="w-3/4 m-auto z-10" />
+          <stylistic-circle class="absolute top-0 -z-10 w-1/2" />
+          <stylistic-circle class="absolute top-1/4 -right-1/4 -z-10 w-3/4" />
+          <stylistic-circle class="absolute top-2/3 left-0 -z-10 w-1/4" />
+<!--          <img src="../assets/sticker/star.png" class="top-0 absolute right-1/4 w-1/6 sticker-star" />-->
         </div>
       </div>
     </section>
@@ -83,7 +86,7 @@ export default {
       vueCanvas: null,
       pos: { x: 0, y: 0 },
       works: [
-        { title: 'Mobile Interface for Nutrition Awareness (MINA)', headText: 'Bachelor Thesis Media Informatics', description: 'What is a healthy meal? - A research based design approach to comprehensible in-app rating of meals.', bgColor: '#d2ff77', textColor: '#3b3b3b', imgUrl: 'screen_mina.png', url: './projects/mina', isAvailable: true },
+        { title: 'Mobile Interface for Nutrition Awareness (MINA)', headText: 'Bachelor Thesis Media Informatics', description: 'What is a healthy meal? - A research based design approach to comprehensible in-app rating of meals.', bgColor: '#edff96', textColor: '#3b3b3b', imgUrl: 'screen_mina.png', url: './projects/mina', isAvailable: true },
         { title: 'AID-Simulation for people with type 1 diabetes mellitus', headText: 'Masters project media informatics', description: 'An interactive simulator with the aim to make the functionality of closed-loop systems more comprehensible.', bgColor: '#e3ecff', textColor: '#001E4B', imgUrl: 'screen_aid.png', url: './', isAvailable: false },
         { title: 'MariData: A comprehensive interface for ship energy management', headText: 'Funded research project', description: 'The MariData decision support system helps vessel crews to not only reduce financial costs, but also the emissions and therefore minimize the negative impact on our environment.', bgColor: '#d6dde3', textColor: '#3E484E', imgUrl: 'screen_maridata.png', url: './', isAvailable: false }
       ]
@@ -269,5 +272,23 @@ export default {
   .toolbox.close{
     transition: .75s;
     transform: translateY(110%);
+  }
+
+  .landing-heading span{
+    position: relative;
+    overflow: visible;
+  }
+
+  .landing-heading span::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    left: 0;
+    bottom: -10px;
+    background-image: url("~assets/line.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1;
   }
 </style>

@@ -6,7 +6,7 @@
           Since this page is work in progress, it has not yet been optimized for mobile screens. I am aware of this and will fix it soon™.
         </p>
       </div>
-      <Navbar class="container m-auto p-10" />
+      <Navbar class="container m-auto p-4" />
       <div id="pinkBar"></div>
     </div>
     <div class="mx-auto m-auto">
