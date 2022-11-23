@@ -75,6 +75,8 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           path: ./dist
+      - name: Create CNAME
+        run: echo chrisrocks.rocks > CNAME
 
   # Deployment job
   deploy:
