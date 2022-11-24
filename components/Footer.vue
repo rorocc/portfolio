@@ -1,7 +1,7 @@
 <template>
   <div class="md:w-2/3 w-full m-auto p-6 text-center mx-auto" id="footer">
-    <div class="grid lg:grid-flow-col-dense lg:grid-cols-0 grid-cols-1  mb-12 justify-around mx-auto content-center">
-      <div id="contact" class="self-center relative">
+    <div class="grid lg:grid-flow-col-dense lg:grid-cols-0 grid-cols-1 gap-8  mb-12 justify-around mx-auto content-center">
+      <div id="contact" class="self-center relative lg:my-0 my-8">
         <img src="~assets/img/pigeon.svg" class="absolute w-1/2 -left-1/3 md:-top-1/2 top-0 opacity-10" id="pigeon">
         <div class="max-w-fit mx-auto relative">
           <div class="my-4">
@@ -66,7 +66,7 @@ export default {
             trigger: '#footer',
             end: 'bottom',
             scrub: true,
-            markers: true
+            markers: false
           },
         }
       )

@@ -27,7 +27,7 @@
         </div>
       </div>
     </section>
-      <section class="bg-white py-8">
+      <section class="second py-8 shadow-custom">
         <div class="container">
           <section-heading class="my-12 py-8" heading="My recent projects" descr="Feel free to have a look" />
           <div class="grid auto-rows-auto">
@@ -169,7 +169,11 @@ export default {
 </script>
 
 <style>
-  .descr span{
+.second{
+  background-color: rgba(246, 235, 255, 0.25);
+}
+
+.descr span{
     font-weight: 600;
   }
 
@@ -266,7 +270,13 @@ export default {
   }
 
   .pigButton{
-    @apply p-4 z-10 rounded-3xl bg-white fixed bottom-0 shadow-xl mx-auto left-0 mx-6 my-6;
+    transition-duration: .2s;
+    @apply p-4 z-10 rounded-3xl bg-white fixed bottom-0 shadow-lg mx-auto left-0 mx-6 my-6;
+  }
+
+  .pigButton:hover{
+    background-color: rgba(246, 235, 255, 0.62);
+    @apply shadow-2xl;
   }
 
   .toolbox.close{
