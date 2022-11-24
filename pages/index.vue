@@ -1,7 +1,7 @@
 <template>
   <div ref="mainDiv" class="m-auto">
     <section class="container">
-      <div class="grid grid-rows-2 md:grid-cols-2 md:grid-rows-none my-20">
+      <div class="grid grid-flow-row grid-cols-none md:grid-cols-2 md:grid-rows-none my-20">
         <div>
           <h1 class="landing-heading text-5xl display-font leading-normal">
             Lorem ipsum dolor sit and <span class="underlined">UX Design.</span>
@@ -73,7 +73,7 @@
       </div>
     </div>
     <div ref="particlesBox" class="particlesBox" />
-    <canvas ref="canvas" id="canvas" />
+    <canvas ref="canvas" id="canvas" class="hidden" />
   </div>
 </template>
 

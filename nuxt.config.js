@@ -7,9 +7,9 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Christopher Rock - UX Portfolio',
+    title: 'Christopher Rock - Portfolio',
     htmlAttrs: {
-      lang: 'de'
+      lang: 'en'
     },
     meta: [
       { charset: 'utf-8' },
@@ -18,8 +18,7 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: './favicon.png' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Inter:wght@200;400&family=Playfair+Display&display=swap'}
+      { rel: 'icon', type: 'image/x-icon', href: './favicon.png' }
     ]
   },
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -39,21 +38,14 @@ export default {
     // https://go.nuxtjs.dev/eslint
     //'@nuxtjs/eslint-module',
     '@nuxt/postcss8',
-    '@nuxtjs/google-fonts',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    'nuxt-gsap-module'
   ],
 
-  googleFonts: {
-    families: {
-      Inter: true,
-      'Josefin+Sans': true,
-      'Playfair+Display': [400],
-      Lato: true,
-      Raleway: {
-        wght: [100, 400],
-        ital: [100]
-      }
+  gsap: {
+    extraPlugins: {
+      scrollTrigger: true
     }
   },
 

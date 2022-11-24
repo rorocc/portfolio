@@ -1,8 +1,8 @@
 <template>
-  <div class="md:w-2/3 w-full m-auto p-6 text-center mx-auto">
+  <div class="md:w-2/3 w-full m-auto p-6 text-center mx-auto" id="footer">
     <div class="grid lg:grid-flow-col-dense lg:grid-cols-0 grid-cols-1  mb-12 justify-around mx-auto content-center">
       <div id="contact" class="self-center relative">
-        <img src="~assets/img/pigeon.svg" class="absolute w-1/2 left-0 -top-1/2 opacity-10">
+        <img src="~assets/img/pigeon.svg" class="absolute w-1/2 -left-1/3 md:-top-1/2 top-0 opacity-10" id="pigeon">
         <div class="max-w-fit mx-auto relative">
           <div class="my-4">
             <h2><span class="underlined">Let's connect</span></h2>
@@ -52,7 +52,26 @@
 
 <script>
 export default {
-  name: "Footer"
+  name: "Footer",
+  mounted() {
+    this.onScrollPigeon()
+  },
+
+  methods: {
+    onScrollPigeon() {
+      this.$gsap.to('#pigeon', {
+        xPercent: 150,
+        ease: "none",
+          scrollTrigger: {
+            trigger: '#footer',
+            end: 'bottom',
+            scrub: true,
+            markers: true
+          },
+        }
+      )
+    },
+  }
 }
 </script>
 

@@ -59,6 +59,10 @@
   scroll-behavior: smooth;
 }
 
+html{
+  overflow-x: clip;
+}
+
 body{
   /*background-image: url("~assets/img/bg.png");*/
   font-family: 'Inter', sans-serif;
