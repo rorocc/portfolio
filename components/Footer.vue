@@ -29,7 +29,6 @@
             <li><a href="./">Home</a></li>
             <li><a href="./tools">Tools</a></li>
             <li><a href="./about">About</a></li>
-            <li><a href="./contact">Contact</a></li>
           </ul>
         </div>
         <div class="mx-12">
@@ -52,26 +51,7 @@
 
 <script>
 export default {
-  name: "Footer",
-  mounted() {
-    this.onScrollPigeon()
-  },
-
-  methods: {
-    onScrollPigeon() {
-      this.$gsap.to('#pigeon', {
-        xPercent: 150,
-        ease: "none",
-          scrollTrigger: {
-            trigger: '#footer',
-            end: 'bottom',
-            scrub: true,
-            markers: false
-          },
-        }
-      )
-    },
-  }
+  name: "Footer"
 }
 </script>
 

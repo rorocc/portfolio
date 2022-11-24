@@ -83,7 +83,25 @@
 
 <script>
 export default {
-  name: "Navbar"
+  name: "Navbar",
+  mounted() {
+    this.onScrollPigeon()
+  },
+  methods: {
+    onScrollPigeon() {
+      this.$gsap.to('#pigeon', {
+          xPercent: 150,
+          ease: "none",
+          scrollTrigger: {
+            trigger: '#footer',
+            end: 'bottom',
+            scrub: true,
+            markers: false
+          },
+        }
+      )
+    },
+  }
 }
 </script>
 

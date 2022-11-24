@@ -112,3 +112,10 @@ h3{
   z-index: -1;
 }
 
+.bg-pinkLight{
+  background-color: rgba(246, 235, 255, 0.25);
+}
+
+.bg-pinkDark{
+  background-color: #b27fc0;
+}

@@ -27,7 +27,7 @@
         </div>
       </div>
     </section>
-      <section class="second py-8 shadow-custom">
+      <section class="bg-pinkLight py-8 shadow-custom">
         <div class="container">
           <section-heading class="my-12 py-8" heading="My recent projects" descr="Feel free to have a look" />
           <div class="grid auto-rows-auto">
@@ -169,9 +169,6 @@ export default {
 </script>
 
 <style>
-.second{
-  background-color: rgba(246, 235, 255, 0.25);
-}
 
 .descr span{
     font-weight: 600;
