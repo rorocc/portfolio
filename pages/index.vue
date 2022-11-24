@@ -4,16 +4,16 @@
       <div class="grid grid-flow-row grid-cols-none md:grid-cols-2 md:grid-rows-none my-20">
         <div>
           <h1 class="landing-heading text-5xl display-font leading-normal">
-            Lorem ipsum dolor sit and <span class="underlined">UX Design.</span>
+            User experience isn't just <span class="underlined">lorem ipsum.</span>
           </h1>
-          <div class="py-8">
+          <div class="py-8 max-w-prose">
             <p class="leading-8 descr">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus scelerisque sapien justo, sed egestas urna ornare eu.
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus scelerisque sapien justo, sed egestas urna ornare eu.
+              Hi there! I'm Chris, a UX Designer from northern Germany. I'm currently studying Media Informatics (M.Sc.) at the University of Lübeck.
             </p>
             <br />
             <p class="leading-8 descr">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus scelerisque sapien justo, sed egestas urna ornare eu.
+              <span class="font-bold">"Ehh, you forgot to remove lorem ipsum from the heading."</span><br/>
+              Actually, no! I believe that you can leverage not only your system's success, but also equality and accessibility for a variation of user groups through human-centered design, for example.
             </p>
             <CursorChat text="Let's get creative" duration="20" />
           </div>

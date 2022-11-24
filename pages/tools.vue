@@ -18,11 +18,11 @@
                    colorText="#E0E0E0FF"
                    opacity="0.08" />
         <ToolBlock title="Affinity Suite" descr="After ending subscribing to a big creative software company, I'm now transitioning to the underdog. Creating illustrations for leveling up my designs? Sure. Editing my photographs? Oh yeah." short="Af" color="#85C9DAFF" colorText="#fff"></ToolBlock>
-        <ToolBlock title="ProtoPie" descr="I feel like with ProtoPie, there are no limits to prototyping. Just perfect for user testing or modelling interactions for design purposes." short="Pi" color="#FF674CFF" colorText="#fff" />
-        <ToolBlock title="WebStorm" descr="Sometimes I get to do some frontend (web) development, too. I mean, you're looking at the result of it right now!" short="Ws" color="#85C9DAFF" colorText="#fff" />
-        <ToolBlock title="Panasonic Lumix GH5" descr="While my first DSLR was a Canon camera, I'm glad I switched to the GH5 a few years later. But you gotta be careful - this cinematograph will capture every single wrinkle." short="Gh" color="#2CB29DFF" colorText="#fff" />
+        <ToolBlock title="ProtoPie" descr="I feel like with ProtoPie, there are no limits to prototyping. Just perfect for user testing or modelling interactions for design purposes. For the future, I hope there will be a software that combines these functionalities with a design environment." short="Pi" color="#FF674CFF" colorText="#fff" />
+        <ToolBlock title="WebStorm" descr="Sometimes I get to do some frontend (web) development, too. Of course, one result of it is this little portfolio page. For that, WebStorm is a very convenient and easy to use development environment." short="Ws" color="#85C9DAFF" colorText="#fff" />
+        <ToolBlock title="Panasonic Lumix GH5" descr="While my first DSLR was a Canon camera, I'm glad I switched to the GH5 a few years later. Its images are so sharp, it'll capture every single of your wrinkles! Since I got it, I brought it to quite a few adventures so far - hopefully more to come." short="Gh" color="#2CB29DFF" colorText="#fff" />
         <ToolBlock title="DaVinci Resolve"
-                   descr="Aaaand action! Sometimes I like to get creative on motion pictures as well. I like to document travel adventures, events or participate in short film competitions."
+                   descr="Aaaand action! What's better than one image? 24+ images per second. Sometimes I like create some motion pictures as well. I like to document travel adventures, events or participate in short film competitions."
                    short="Rv"
                    color="#2a2a2a"
                    colorText="#E0E0E0FF"
