@@ -1,14 +1,12 @@
 <template>
-  <section class="pb-8 bg-white bg-opacity-50">
-    <div class="container">
-      <div class="flex">
-        <div class="my-8 inline-block">
-          <SectionHeading heading="What's my favorite tool?" />
+  <section class="bg-white bg-opacity-50">
+    <div class="container pb-24">
+      <div class="flex relative">
+        <div class="inline-block my-16">
+          <SectionHeading heading="My daily tools" descr="#ToolStack"/>
           <p class="mt-4 mb-12">Let me show you some of my favorite tools that I use to be creative.</p>
         </div>
-        <div class="inline-block my-auto mx-auto">
-          <cursor-chat text="Did you mean 'Tool the band'?" name="Clippy 📎" />
-        </div>
+        <cursor-chat text="Were you looking for the band Tool?" name="Clippy 📎" class="absolute right-0 top-1/3 hidden md:block"/>
       </div>
       <div class="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 lg:gap-12 md:gap-3 gap-6">
         <ToolBlock title="Figma & FigJam"
@@ -22,7 +20,7 @@
         <ToolBlock title="WebStorm" descr="Sometimes I get to do some frontend (web) development, too. Of course, one result of it is this little portfolio page. For that, WebStorm is a very convenient and easy to use development environment." short="Ws" color="#85C9DAFF" colorText="#fff" />
         <ToolBlock title="Panasonic Lumix GH5" descr="While my first DSLR was a Canon camera, I'm glad I switched to the GH5 a few years later. Its images are so sharp, it'll capture every single of your wrinkles! Since I got it, I brought it to quite a few adventures so far - hopefully more to come." short="Gh" color="#2CB29DFF" colorText="#fff" />
         <ToolBlock title="DaVinci Resolve"
-                   descr="Aaaand action! What's better than one image? 24+ images per second. Sometimes I like create some motion pictures as well. I like to document travel adventures, events or participate in short film competitions."
+                   descr="Aaaand action! What's better than one image? 24+ images per second. Sometimes I create some motion pictures as well. I like to document travel adventures, events or participate in short film competitions."
                    short="Rv"
                    color="#2a2a2a"
                    colorText="#E0E0E0FF"
@@ -39,6 +37,10 @@ export default {
 </script>
 
 <style scoped>
+section{
+  background-image: url("~assets/img/bg.png");
+}
+
 ul{
   color: #85c9da;
 }

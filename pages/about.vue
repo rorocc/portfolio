@@ -9,17 +9,10 @@
             <about-dalek class="w-24 p-6 text-lg" />
           </stickynote>
         </div>
-        <div class="md:col-span-2 col-span-1 bg-white aboutBlock w-full">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus scelerisque sapien justo, sed egestas urna ornare eu.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus scelerisque sapien justo, sed egestas urna ornare eu.
-          </p>
-        </div>
-        <div class="md:col-span-2 col-span-1 bg-white aboutBlock w-full">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus scelerisque sapien justo, sed egestas urna ornare eu.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus scelerisque sapien justo, sed egestas urna ornare eu.
-          </p>
+        <div class="md:col-span-1 col-span-2 bg-white aboutBlock w-full aspect-square leading-relaxed">
+          <p>I'm a media informatics student, aspiring to become a UX Designer.</p>
+          <br/><p>Through some projects, I also have some background knowledge and skills in frontend web development. Therefore, I can assess whether designs are feasible to implement, for example.</p>
+          <br/><p class="font-semibold uppercase opacity-20 tracking-wider">wireframing • workshops • prototyping • user testing • human-centered design</p>
         </div>
         <div class="md:col-span-1 col-span-2 p-6 bg-pinkDark aspect-square display-font text-white lg:text-2xl rounded text-xl min-w-fit">
           <img src="~assets/img/about/uzl.svg"  class="w-1/4" />
@@ -53,11 +46,9 @@
           </div>
 
           <div class="col-span-2 md:col-span-1 aurora">
-            b
+            <div class="bg-teal-700 text-white font-bold w-fit py-2 px-4 tracking-wide uppercase"> I like taking photos 📷</div>
           </div>
-
           <div class="col-span-2 md:col-span-1 spooky relative">
-            a
             <about-nadu class="absolute h-1/2 -bottom-8 -right-12"/>
           </div>
         </div>

@@ -1,24 +1,24 @@
 <template>
-  <div ref="mainDiv" class="m-auto">
+  <div ref="mainDiv" class="m-auto overflow-x-hidden">
     <section class="container">
-      <div class="grid grid-flow-row grid-cols-none md:grid-cols-2 md:grid-rows-none my-20">
+      <div class="grid grid-flow-row grid-cols-none md:grid-cols-2 md:grid-rows-none my-20 md:gap-0 gap-16">
         <div>
           <h1 class="landing-heading text-5xl display-font leading-normal">
-            User experience isn't just <span class="underlined">lorem ipsum.</span>
+            User experience isn't just <span class="underlined whitespace-nowrap">lorem ipsum.</span>
           </h1>
-          <div class="py-8 max-w-prose">
+          <div class="py-8 max-w-prose relative">
             <p class="leading-8 descr">
-              Hi there! I'm Chris, a UX Designer from northern Germany. I'm currently studying Media Informatics (M.Sc.) at the University of Lübeck.
+              Hi there! I'm Chris, a UX Designer (to be) from northern Germany. I'm currently studying Media Informatics (M.Sc.) at the University of Lübeck.
             </p>
             <br />
             <p class="leading-8 descr">
-              <span class="font-bold">"Ehh, you forgot to remove lorem ipsum from the heading."</span><br/>
-              Actually, no! I believe that you can leverage not only your system's success, but also equality and accessibility for a variation of user groups through human-centered design, for example.
+              « <span class="italic">You forgot to remove lorem ipsum from the heading!</span> »<br/>
+              Nope! While there also might be a lot of meaningless discussions about design out there, I believe UX Design can actually make a change in the users lives, especially if it is commited to accessibility and empowerment of specific target groups.
             </p>
             <CursorChat text="Let's get creative" duration="20" />
           </div>
         </div>
-        <div class="relative">
+        <div class="relative md:overflow-x-visible">
           <img src="../assets/doodle.svg" class="w-3/4 m-auto z-10" />
           <stylistic-circle class="absolute top-0 -z-10 w-1/2" />
           <stylistic-circle class="absolute top-1/4 -right-1/4 -z-10 w-3/4" />
@@ -86,7 +86,7 @@ export default {
       vueCanvas: null,
       pos: { x: 0, y: 0 },
       works: [
-        { title: 'Mobile Interface for Nutrition Awareness (MINA)', headText: 'Bachelor Thesis Media Informatics', description: 'What is a healthy meal? - A research based design approach to comprehensible in-app rating of meals.', bgColor: '#edff96', textColor: '#3b3b3b', imgUrl: 'screen_mina.png', url: './projects/mina', isAvailable: true },
+        { title: 'Mobile Interface for Nutrition Awareness (MINA)', headText: 'Bachelor Thesis Media Informatics', description: 'What is a healthy meal? - A research based design approach to comprehensible in-app rating of meals.', bgColor: '#edff96', textColor: '#3b3b3b', imgUrl: 'screen_mina.png', url: './', isAvailable: false },
         { title: 'AID-Simulation for people with type 1 diabetes mellitus', headText: 'Masters project media informatics', description: 'An interactive simulator with the aim to make the functionality of closed-loop systems more comprehensible.', bgColor: '#e3ecff', textColor: '#001E4B', imgUrl: 'screen_aid.png', url: './', isAvailable: false },
         { title: 'MariData: A comprehensive interface for ship energy management', headText: 'Funded research project', description: 'The MariData decision support system helps vessel crews to not only reduce financial costs, but also the emissions and therefore minimize the negative impact on our environment.', bgColor: '#d6dde3', textColor: '#3E484E', imgUrl: 'screen_maridata.png', url: './', isAvailable: false }
       ]
@@ -170,9 +170,6 @@ export default {
 
 <style>
 
-.descr span{
-    font-weight: 600;
-  }
 
   .brushCursor{
     user-select: none;
