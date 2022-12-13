@@ -80,6 +80,17 @@
 <script>
 export default {
   name: 'IndexPage',
+  head() {
+    return {
+      link: [
+        {
+          hid: 'canonical',
+          rel: 'canonical',
+          href: 'https://chrisrock.rocks/'
+        }
+      ]
+    }
+  },
   data () {
     return {
       tool: "mouse",

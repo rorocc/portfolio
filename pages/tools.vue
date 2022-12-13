@@ -32,7 +32,18 @@
 
 <script>
 export default {
-  name: "tools"
+  name: "tools",
+  head() {
+    return {
+      link: [
+        {
+          hid: 'canonical',
+          rel: 'canonical',
+          href: 'https://chrisrock.rocks/tools'
+        }
+      ]
+    }
+  },
 }
 </script>
 

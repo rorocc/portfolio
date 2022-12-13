@@ -59,7 +59,18 @@
 
 <script>
 export default {
-  name: "About"
+  name: "About",
+  head() {
+    return {
+      link: [
+        {
+          hid: 'canonical',
+          rel: 'canonical',
+          href: 'https://chrisrock.rocks/about'
+        }
+      ]
+    }
+  },
 }
 </script>
 
