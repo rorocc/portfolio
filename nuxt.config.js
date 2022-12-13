@@ -18,6 +18,8 @@ export default {
       { hid: 'og:description', name: 'og:description', content: 'Hi, I\'m Chris, a UX Designer based in Northern Germany. I\'m interested in Human-centered design solutions and creativity of all kinds.' },
       { hid: 'og:locale', property:'og:locale', content:'en_US' },
       { hid: 'og:image', property:'og:image', content:'/seo_ogimage.png' },
+      { hid: 'og:image:width', property:'og:image:width', content:'1200' },
+      { hid: 'og:image:height', property:'og:image:height', content:'630' },
       { hid: 'og:site_name', name: 'og:site_name', content:'Christopher Rock - Portfolio'},
       { hid: 'og:type', name: 'og:type', content:'website'},
       { name: 'format-detection', content: 'telephone=no' }
