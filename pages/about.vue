@@ -1,9 +1,9 @@
 <template>
-  <div class="bg-pinkLight">
+  <div >
     <div class="container py-12 grid md:grid-cols-2 grid-cols-none md:grid-rows-none grid-rows-2 leading-loose">
       <div>
-        <img src="../assets/me.jpeg" class="w-3/4 m-auto my-20" />
-        <img src="../assets/img/about/sticky_snow.png" class="w-1/2 m-auto z-10 mr-6 hidden md:block" />
+        <img src="../assets/img/about/min/me-min.jpeg" class="w-3/4 m-auto my-20" />
+        <img src="../assets/img/about/min/sticky_snow-min.png" class="w-1/2 m-auto z-10 ml-6 hidden md:block" />
       </div>
       <div>
         <h1>Yep, <span class="underlined whitespace-nowrap">that's me.</span></h1>
@@ -21,11 +21,11 @@
           <br>
           Oh, and I love <a class="inline-link" href="https://rorocc.github.io/cinnanom">cinnamon buns</a>.
         </p>
-        <img src="../assets/img/about/sticky_hovedoya.png" class="w-1/2 m-auto z-10 mr-0 hidden md:block" />
+        <img src="../assets/img/about/min/sticky_hovedoya-min.png" class="w-1/2 m-auto z-10 mr-0 hidden md:block" />
       </div>
       <div class="block md:hidden">
-        <img src="../assets/img/about/sticky_snow.png" class="w-1/2 m-auto z-10 ml-0" />
-        <img src="../assets/img/about/sticky_hovedoya.png" class="w-1/2 m-auto z-10 mr-0" />
+        <img src="../assets/img/about/min/sticky_snow-min.png" class="w-1/2 m-auto z-10 ml-0" />
+        <img src="../assets/img/about/min/sticky_hovedoya-min.png" class="w-1/2 m-auto z-10 mr-0" />
       </div>
     </div>
   </div>

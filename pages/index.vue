@@ -8,7 +8,7 @@
           </h1>
           <div class="py-8 max-w-prose relative">
             <p class="leading-8 descr">
-              Hi there! I'm Chris, a UX Designer (to be) from northern Germany. I'm currently studying Media Informatics (M.Sc.) at the University of Lübeck.
+              Hi there! I'm Chris, a UX Designer (to be) from northern Germany. <br> I'm currently studying Media Informatics (M.Sc.) at the University of Lübeck.
             </p>
             <CursorChat text="Let's get creative" duration="20" />
           </div>
