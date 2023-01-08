@@ -15,9 +15,6 @@
           <NuxtLink to="/" class="menu__link" exact>
             Home
           </NuxtLink>
-          <NuxtLink to="/tools" class="menu__link">
-            Tools
-          </NuxtLink>
           <NuxtLink to="/about" class="menu__link">
             About
           </NuxtLink>

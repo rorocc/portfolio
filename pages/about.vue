@@ -6,7 +6,7 @@
         <img src="../assets/img/about/min/sticky_snow-min.png" class="w-1/2 m-auto z-10 ml-6 hidden md:block" />
       </div>
       <div>
-        <h1>Yep, <span class="underlined whitespace-nowrap">that's me.</span></h1>
+        <h1>Yep, <span class="underlined whitespace-nowrap">that's me</span></h1>
         <p>I'm currently student of the Media Informatics masters program and research assistant at the <a class="inline-link" href="https://www.imis.uni-luebeck.de/de/institut/team/christopher-rock">Institute for Multimedia and Interactive Systems</a> at the University of Lübeck.
           <br>
           <br>

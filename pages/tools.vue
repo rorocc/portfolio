@@ -48,9 +48,6 @@ export default {
 </script>
 
 <style scoped>
-section{
-  background-image: url("~assets/img/bg.png");
-}
 
 ul{
   color: #85c9da;

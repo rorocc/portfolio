@@ -2,9 +2,16 @@
   <div ref="mainDiv" class="m-auto overflow-x-hidden">
     <section class="container">
       <div class="grid grid-flow-row grid-cols-none md:grid-cols-2 md:grid-rows-none my-20 md:gap-0 gap-16">
+        <div class="relative md:overflow-x-visible">
+          <img src="../assets/doodle.svg" class="w-3/4 m-auto z-10" />
+          <stylistic-circle class="absolute top-0 -z-10 w-1/2" />
+          <stylistic-circle class="absolute top-1/4 -right-1/4 -z-10 w-3/4" />
+          <stylistic-circle class="absolute top-2/3 left-0 -z-10 w-1/4" />
+<!--          <img src="../assets/sticker/star.png" class="top-0 absolute right-1/4 w-1/6 sticker-star" />-->
+        </div>
         <div>
-          <h1 class="landing-heading text-5xl display-font leading-normal">
-            User experience isn't just <span class="underlined whitespace-nowrap">lorem ipsum.</span>
+          <h1 class="landing-heading text-5xl leading-normal">
+            User experience isn't just <span class="underlined whitespace-nowrap">lorem ipsum</span>
           </h1>
           <div class="py-8 max-w-prose relative">
             <p class="leading-8 descr">
@@ -13,18 +20,11 @@
             <CursorChat text="Let's get creative" duration="20" />
           </div>
         </div>
-        <div class="relative md:overflow-x-visible">
-          <img src="../assets/doodle.svg" class="w-3/4 m-auto z-10" />
-          <stylistic-circle class="absolute top-0 -z-10 w-1/2" />
-          <stylistic-circle class="absolute top-1/4 -right-1/4 -z-10 w-3/4" />
-          <stylistic-circle class="absolute top-2/3 left-0 -z-10 w-1/4" />
-<!--          <img src="../assets/sticker/star.png" class="top-0 absolute right-1/4 w-1/6 sticker-star" />-->
-        </div>
       </div>
     </section>
       <section class="bg-pinkLight py-8 shadow-custom">
         <div class="container">
-          <section-heading class="my-12 py-8" heading="My recent projects" descr="Feel free to have a look" />
+          <h1 class="my-12">My recent projects</h1>
           <div class="grid auto-rows-auto">
             <div v-for="work in works" :key="work.id" class="mb-10">
               <workpiece :head-text="work.headText"

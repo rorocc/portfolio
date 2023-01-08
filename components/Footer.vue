@@ -27,16 +27,15 @@
           <h1>Sitemap</h1>
           <ul>
             <li><a href="./">Home</a></li>
-            <li><a href="./tools">Tools</a></li>
             <li><a href="./about">About</a></li>
           </ul>
         </div>
         <div class="mx-12">
           <h1>Projects</h1>
           <ul>
-            <li><a href="./">MINA</a></li>
-            <li><a href="./">AID-Simulation</a></li>
-            <li><a href="./">MariData</a></li>
+            <li><a href="#">MINA</a></li>
+            <li><a href="#">AID-Simulation</a></li>
+            <li><a href="#">MariData</a></li>
           </ul>
         </div>
       </div>
