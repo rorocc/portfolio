@@ -1,11 +1,11 @@
 <template>
   <a :href="url" :class="[isAvailable ? 'cursor-pointer' : 'cursor-default']">
     <div class="workpiece overflow-hidden" :class="[isAvailable ? 'opacity-100' : 'opacity-50']">
-      <div class="grid lg:grid-cols-12 grid-cols-1 lg:h-96 place-items-center gap-4" :style="{backgroundColor: bgColor, color: textColor}">
-        <div class="col-span-5 h-96 w-full" >
+      <div class="grid lg:grid-cols-12 grid-cols-1 lg:h-96 place-items-center lg:gap-4" :style="{backgroundColor: bgColor, color: textColor}">
+        <div class="lg:col-span-5 col-span-1 h-96 w-full" >
           <img class="w-full object-cover h-full" :src="require(`~/assets/img/work/${imgUrl}`)" />
         </div>
-        <div class="col-span-7 w-2/3 ml-0">
+        <div class="col-span-7 w-2/3 ml-0 py-4">
           <p class="headText">{{ headText }}</p>
           <h1>{{ title }}</h1>
           <div class="bottom-0 w-full mt-8">
@@ -22,7 +22,7 @@
           </div>
         </div>
       </div>
-      <div class="bar" :style="{backgroundColor: textColor}" >
+      <div class="bar hidden lg:block" :style="{backgroundColor: textColor}" >
       </div>
     </div>
   </a>

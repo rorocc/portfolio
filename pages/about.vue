@@ -1,6 +1,6 @@
 <template>
   <div >
-    <div class="container py-12 grid md:grid-cols-2 grid-cols-none md:grid-rows-none grid-rows-2 leading-loose">
+    <div class="container py-12 grid md:grid-cols-2 grid-cols-none md:grid-rows-none leading-loose">
       <div>
         <img src="../assets/img/about/min/me-min.jpeg" class="w-3/4 m-auto my-20" />
         <img src="../assets/img/about/min/sticky_snow-min.png" class="w-1/2 m-auto z-10 ml-6 hidden md:block" />
