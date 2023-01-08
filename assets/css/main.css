@@ -119,3 +119,7 @@ h3{
 .bg-pinkDark{
   background-color: #b27fc0;
 }
+
+.inline-link{
+  text-decoration: underline;
+}

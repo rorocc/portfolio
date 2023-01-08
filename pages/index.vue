@@ -10,11 +10,6 @@
             <p class="leading-8 descr">
               Hi there! I'm Chris, a UX Designer (to be) from northern Germany. I'm currently studying Media Informatics (M.Sc.) at the University of Lübeck.
             </p>
-            <br />
-            <p class="leading-8 descr">
-              « <span class="italic">You forgot to remove lorem ipsum from the heading!</span> »<br/>
-              Nope! While there also might be a lot of meaningless discussions about design out there, I believe UX Design can actually make a change in the users lives, especially if it is commited to accessibility and empowerment of specific target groups.
-            </p>
             <CursorChat text="Let's get creative" duration="20" />
           </div>
         </div>
