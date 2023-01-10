@@ -15,7 +15,7 @@
     <div class="w-full bg-white shadow-custom">
       <Footer />
     </div>
-
+    <scroll-top-button />
   </div>
 </template>
 
