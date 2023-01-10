@@ -92,6 +92,19 @@ body{
   @apply lg:w-3/4 lg:px-0 md:w-full w-full px-4 mx-auto;
 }
 
+.contact-btn{
+  background-color: var(--pink-light);
+  @apply p-2 rounded-full;
+}
+
+.contact-btn:hover{
+  background-color: #bd9ad7;
+}
+
+.contact-btn svg{
+  @apply w-6 fill-white;
+}
+
 h1{
   font-family: 'PPMori', sans-serif;
   font-weight: 500;
@@ -104,11 +117,13 @@ h1:after{
 }
 
 h2{
-  @apply text-xl display-font my-2;
+  font-family: 'PPMori', sans-serif;
+  @apply text-xl my-2;
 }
 
 h3{
-  @apply text-xl display-font my-2;
+  font-family: 'PPMori', sans-serif;
+  @apply font-bold my-2;
 }
 
 .shadow-custom{
@@ -143,4 +158,26 @@ h3{
 
 .inline-link{
   text-decoration: underline;
+}
+
+ol.challenges li{
+  counter-increment: challenges;
+  @apply mb-6;
+}
+
+ol.challenges li:before{
+  content: "#" counter(challenges) " ";
+  font-weight: 500;
+  @apply text-4xl italic font-serif;
+}
+
+.fade-in-left{
+  animation: fadeInLeft 1s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+}
+
+@keyframes fadeInLeft {
+  from{opacity: 0; transform: translateX(-5%)}
+  to{opacity: 1; transform: translateX(0)}
 }

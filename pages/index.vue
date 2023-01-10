@@ -10,7 +10,7 @@
 <!--          <img src="../assets/sticker/star.png" class="top-0 absolute right-1/4 w-1/6 sticker-star" />-->
         </div>
         <div>
-          <h1 class="landing-heading text-5xl leading-normal">
+          <h1 class="fade-in-left md:leading-normal leading-normal md:text-5xl text-4xl text-center md:text-left">
             User experience isn't just <span class="underlined whitespace-nowrap">lorem ipsum</span>
           </h1>
           <div class="py-8 max-w-prose relative">
@@ -43,32 +43,16 @@
     <div ref="toolbox" class="pigButton md:block hidden">
       <div class="grid-flow-col grid text-center">
         <div @click="startPiggies">
-          <img src="../assets/img/pigs/pig3.svg" class="pigIcon">
+          <img src="../assets/img/pigs/pig3.svg" class="pigIcon" role="presentation">
         </div>
       </div>
-    </div>
-    <div ref="toolbox" class="toolbox hidden">
-      <div class="grid-flow-col grid text-center">
-        <div>
-          <a @click="() => { setTool('mouse') }">
-            <img src="../assets/img/pigs/pig3.svg" class="toolIcon">
-          </a>
-        </div>
-        <div>
-          <a @click="() =>{ setTool('brush') }">
-            <img src="../assets/brush.png" class="toolIcon">
-          </a>
-        </div>
-        <div @click="startPiggies">
-          <img src="../assets/img/pigs/pig3.svg" class="toolIcon">
-        </div>
-        <div @click="toggleTools('close')">
-          <img src="../assets/img/pigs/pig3.svg" class="toolIcon">
-        </div>
+      <div v-if="pigDisclaimerActive" class="pigLicense">
+        <p>Copyright 2020 Twitter, Inc and other contributors |
+          Code licensed under the MIT License: http://opensource.org/licenses/MIT |
+          Graphics licensed under CC-BY 4.0: https://creativecommons.org/licenses/by/4.0/</p>
       </div>
     </div>
     <div ref="particlesBox" class="particlesBox" />
-    <canvas ref="canvas" id="canvas" class="hidden" />
   </div>
 </template>
 
@@ -90,61 +74,23 @@ export default {
     return {
       tool: "mouse",
       vueCanvas: null,
+      pigDisclaimerActive: false,
       pos: { x: 0, y: 0 },
       works: [
-        { title: 'Mobile Interface for Nutrition Awareness (MINA)', headText: 'Bachelor Thesis Media Informatics', description: 'What is a healthy meal? - A research based design approach to comprehensible in-app rating of meals.', bgColor: '#edff96', textColor: '#3b3b3b', imgUrl: 'screen_mina.png', url: './', isAvailable: false },
+        { title: 'Mobile Interface for Nutrition Awareness (MINA)', headText: 'Bachelor Thesis Media Informatics', description: 'What is a healthy meal? - A research based design approach to comprehensible in-app rating of meals.', bgColor: '#edff96', textColor: '#3b3b3b', imgUrl: 'screen_mina.png', url: './projects/mina', isAvailable: true },
         { title: 'AID-Simulation for people with type 1 diabetes mellitus', headText: 'Masters project media informatics', description: 'An interactive simulator with the aim to make the functionality of closed-loop systems more comprehensible.', bgColor: '#e3ecff', textColor: '#001E4B', imgUrl: 'screen_aid.png', url: './', isAvailable: false },
         { title: 'MariData: A comprehensive interface for ship energy management', headText: 'Funded research project', description: 'The MariData decision support system helps vessel crews to not only reduce financial costs, but also the emissions and therefore minimize the negative impact on our environment.', bgColor: '#d6dde3', textColor: '#3E484E', imgUrl: 'screen_maridata.png', url: './', isAvailable: false }
       ]
     }
   },
   mounted () {
-    const c = this.$refs.canvas
-    const ctx = c.getContext("2d")
-    this.vueCanvas = ctx
-    this.resize()
-    document.addEventListener('mousemove', this.drawOnCanvas)
-    document.addEventListener('mousedown', this.setPosition)
-    document.addEventListener('mouseenter', this.setPosition)
   },
   methods: {
-    toggleTools (state) {
-      this.$refs.toolbox.classList.add(state)
-    },
-    setTool (tool) {
-      this.tool = tool
-      if (tool === "brush") {
-        this.$refs.mainDiv.classList.add("brushCursor")
-      } else {
-        this.$refs.mainDiv.classList.remove("brushCursor")
-      }
-    },
-    setPosition (e) {
-      this.pos.x = e.clientX
-      this.pos.y = e.clientY
-    },
-    resize () {
-      this.vueCanvas.canvas.height = window.innerHeight
-      this.vueCanvas.canvas.width = window.innerWidth
-    },
-    drawOnCanvas (e) {
-      // if not left mouse button OR tool is not brush
-      if (e.buttons !== 1 || this.tool !== 'brush') {
-        return
-      }
-      this.vueCanvas.beginPath()
-      this.vueCanvas.lineWidth = 5
-      this.vueCanvas.lineCap = 'round'
-      this.vueCanvas.strokeStyle = 'red'
-      this.vueCanvas.moveTo(this.pos.x, this.pos.y)
-      this.setPosition(e)
-      this.vueCanvas.lineTo(this.pos.x, this.pos.y)
-      this.vueCanvas.stroke()
-    },
     startPiggies () {
       const container = document.createElement("div")
       container.classList.add("particlesContainer")
       this.$refs.particlesBox.appendChild(container)
+      this.pigDisclaimerActive = true;
 
       for (let j = 0; j < 2; j++) {
         for (let i = 0; i < 25; i++) {
@@ -152,6 +98,7 @@ export default {
           const type = Math.floor(Math.random() * 3) + 1
           const particleImg = document.createElement("img")
           particleImg.classList.add("particle")
+          particleImg.ariaRoleDescription = "presentation"
           particleImg.src =  require(`~/assets/img/pigs/pig${type}.svg`) //"~/assets/img/pigs/pig${type}.svg"
           particleImg.style.width = ((offset * window.innerWidth / 10)) + "px"
           particleImg.style.height = "auto"
@@ -168,6 +115,7 @@ export default {
         }
       }
       const deleteChildren = setTimeout(() => { this.$refs.particlesBox.firstChild.remove() }, 3000)
+      setTimeout(()=>{this.pigDisclaimerActive = false}, 3000)
       console.log(deleteChildren)
     }
   }
@@ -175,29 +123,6 @@ export default {
 </script>
 
 <style>
-
-
-  .brushCursor{
-    user-select: none;
-    cursor: url('../assets/img/pigs/pig1.svg'), auto;
-  }
-
-  .toolIcon{
-    transition: .25s;
-    transition-timing-function: ease-in-out;
-    @apply w-16 m-auto;
-  }
-
-  .toolIcon:hover{
-    transform: translateY(-20%);
-    cursor: pointer;
-  }
-
-  canvas{
-    background-image: url("/img/bg.png");
-    background-repeat: repeat;
-    @apply top-0 bottom-0 left-0 right-0 fixed -z-50 p-0 m-0;
-  }
 
   .particlesContainer{
     @apply fixed left-0 right-0 m-auto justify-center items-center -bottom-1/4 grid grid-flow-col;
@@ -207,6 +132,7 @@ export default {
     animation-name: piggies;
     animation-duration: 1.75s;
     animation-timing-function: ease-in;
+    @apply z-20;
   }
 
   @keyframes piggies{
@@ -267,6 +193,25 @@ export default {
 
   .toolbox{
     @apply w-2/3 p-6 z-10 rounded-3xl bg-white mb-4 fixed bottom-0 shadow-xl mx-auto right-0 left-0;
+  }
+
+  .pigLicense{
+    animation: fadeInOut 3s ease-in-out;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 16px;
+    backdrop-filter: blur(8.2px);
+    -webkit-backdrop-filter: blur(8.2px);
+    border: 1px solid rgba(255, 255, 255, 0.36);
+    color: rgba(0,0,0,0.35);
+    font-size: 10px;
+    @apply p-2 rounded-3xl fixed bottom-0 mx-auto left-0 right-0 w-fit ml-auto mr-auto -z-10 mx-6 my-6 ;
+  }
+
+  @keyframes fadeInOut {
+    0%{opacity: 0}
+    25%{opacity: 1}
+    75%{opacity: 1}
+    100%{opacity: 0}
   }
 
   .pigButton{

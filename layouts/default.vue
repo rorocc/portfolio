@@ -22,7 +22,7 @@
 <style scoped>
 #mobileWarning{
   background-color: var(--link-color-active);
-  @apply w-full p-10 text-center text-white block md:hidden;
+  @apply w-full p-10 text-center text-white block hidden;
 }
 
 #pinkBar{

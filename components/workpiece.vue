@@ -90,7 +90,8 @@ a:hover .chevron{
 }
 
 h1{
-  font-weight: 500;
-  @apply text-lg md:text-3xl pt-2 pb-4;
+  font-family: 'PPMori', sans-serif;
+  font-weight: 100;
+  @apply text-2xl md:text-3xl pt-2 pb-4 md:leading-normal;
 }
 </style>

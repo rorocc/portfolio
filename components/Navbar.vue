@@ -18,7 +18,7 @@
           <NuxtLink to="/about" class="menu__link">
             About
           </NuxtLink>
-          <NuxtLink to="#contact" class="cta">
+          <NuxtLink to="#contact" class="contact-btn">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><path d="M6.5 33.75q-1.458 0-2.5-1.042-1.042-1.041-1.042-2.5V9.792q0-1.459 1.042-2.5Q5.042 6.25 6.5 6.25h27q1.5 0 2.542 1.042 1.041 1.041 1.041 2.5v20.416q0 1.459-1.041 2.5Q35 33.75 33.5 33.75ZM20 21.792l13.5-8.917V9.792L20 18.542 6.5 9.792v3.083Z"/></svg>
           </NuxtLink>
         </div>
@@ -44,9 +44,8 @@
     <div class="hidden mobile-menu">
       <ul class="leading-loose">
         <li><NuxtLink to="/">Home</NuxtLink></li>
-        <li><NuxtLink to="/tools">Tools</NuxtLink></li>
         <li><NuxtLink to="/about">About</NuxtLink></li>
-        <li><NuxtLink to="/contact" class="rounded-3xl">Contact</NuxtLink></li>
+        <li><NuxtLink to="#contact" class="rounded-3xl">Contact</NuxtLink></li>
       </ul>
     </div>
     <script>
@@ -107,17 +106,8 @@ li{
   @apply my-2;
 }
 
-.cta{
-  background-color: var(--pink-light);
-  @apply p-2 rounded-full;
-}
-
 .cta:hover{
   background-color: var(--link-color-active);
-}
-
-.cta svg{
-  @apply w-6 fill-white;
 }
 
 a.menu__link.nuxt-link-active{
