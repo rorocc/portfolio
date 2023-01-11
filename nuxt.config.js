@@ -22,10 +22,19 @@ export default {
       { hid: 'og:image:height', property:'og:image:height', content:'630' },
       { hid: 'og:site_name', name: 'og:site_name', content:'Christopher Rock - Portfolio'},
       { hid: 'og:type', name: 'og:type', content:'website'},
-      { name: 'format-detection', content: 'telephone=no' }
+      { name: 'format-detection', content: 'telephone=no' },
+      { name: 'apple-mobile-web-app-title', content: 'Chris Ro. - Portfolio'},
+      { name: 'application-name', content: 'Chris Ro. - Portfolio'},
+      { name: 'msapplication-TileColor', content: '#ffffff'},
+      { name: 'theme-color', content: '#ffffff'}
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: './favicon.png' }
+      { rel: 'icon', type: 'image/x-icon', href: './favicon.png' },
+      { rel: 'apple-touch-icon', sizes: '180x180', href: './apple-touch-icon.png' },
+      { rel: 'icon', sizes: '32x32', href: './favicon-32x32.png' },
+      { rel: 'icon', sizes: '16x16', href: './favicon-16x16.png' },
+      { rel: 'manifest', href: './site.webmanifest' },
+      { rel: 'manifest', href: './safari-pinned-tab.svg', color: '#ffffff' },
     ]
   },
   // Global CSS: https://go.nuxtjs.dev/config-css
