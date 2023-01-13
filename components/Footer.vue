@@ -1,5 +1,5 @@
 <template>
-  <div class="md:w-2/3 w-full m-auto p-6 text-center mx-auto" id="footer">
+  <div class="md:w-2/3 w-full m-auto p-6 pt-12 text-center mx-auto" id="footer">
     <div class="grid lg:grid-cols-2 grid-cols-1 gap-8  mb-12 justify-around mx-auto content-center">
       <div id="contact" class="relative lg:my-0 my-8">
 <!--        <img src="~assets/img/pigeon.svg" class="absolute w-1/2 -left-1/3 md:-top-1/2 top-0 opacity-10" id="pigeon">-->

@@ -47,7 +47,7 @@
       <p class="text-3xl mx-auto italic font-serif my-4 max-w-prose">In 2016, more than 1.9 billion adults, 18 years and older, were overweight. <br> Of these over 650 million were obese.</p>
       <p>— <WebLink url="https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight" style="color: black">World Health Organization</WebLink></p>
     </section>
-    <section class="sectionShort w-full">
+    <section>
       <div class="section-m">
         <h1>The motivation</h1>
         <p>More and more people from all over the world are suffering from obesity, which is associated with
