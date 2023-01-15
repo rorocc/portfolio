@@ -12,7 +12,7 @@
     <div class="mx-auto m-auto">
       <Nuxt />
     </div>
-    <div class="w-full bg-white shadow-custom-top">
+    <div class="w-full bg-white">
       <Footer />
     </div>
     <scroll-top-button />

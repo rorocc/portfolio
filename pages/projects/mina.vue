@@ -36,16 +36,12 @@
             </ul>
         </div>
       </div>
-      <div class="bg-gray-100 rounded-3xl shadow-lg py-6 px-12 bg-bubbles">
+      <div class="bg-gray-100 rounded-3xl py-6 px-12 mt-12">
         <description-element title="Role" text="UX & Visual Design, Researcher, Developer" />
         <description-element title="Context" text="Media informatics - Bachelor thesis" />
         <description-element title="timespan" text="April - October 2021" />
         <description-element title="Keywords" text="Design research, Workshops, Prototyping, Frontend development, User tests, Evaluation" />
       </div>
-    </section>
-    <section class="bg-mina text-center py-28">
-      <p class="text-3xl mx-auto italic font-serif my-4 max-w-prose">In 2016, more than 1.9 billion adults, 18 years and older, were overweight. <br> Of these over 650 million were obese.</p>
-      <p>— <WebLink url="https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight" style="color: black">World Health Organization</WebLink></p>
     </section>
     <section>
       <div class="section-m">
@@ -60,6 +56,10 @@
           <br>
           To overcome these barriers and fully exploit the proven potential of nutrition apps, I elaborated a prototype of such an interface using the human-centered design process.      </p>
       </div>
+      <section class="bg-mina text-center py-28 md:w-2/3 w-full mx-auto rounded-2xl px-12">
+        <p class="text-2xl mx-auto italic font-serif my-4 max-w-prose">In 2016, more than 1.9 billion adults, 18 years and older, were overweight. <br /> Of these over 650 million were obese.</p>
+        <p>— <WebLink url="https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight" style="color: black">World Health Organization</WebLink></p>
+      </section>
       <div class="section-m">
         <h1>The challenges</h1>
         <ol class="challenges">
@@ -322,14 +322,6 @@ p{
   background-blend-mode: difference;
 }
 
-.section{
-  @apply mb-20;
-}
-
-section{
-  @apply my-28;
-}
-
 h1.mina-title{
   @apply text-6xl font-bold py-2;
 }
@@ -339,6 +331,10 @@ h2.mina-title{
 
 .section-m{
   @apply max-w-prose m-auto py-12 md:px-0 px-4;
+}
+
+.section{
+  @apply my-12;
 }
 
 .caps{

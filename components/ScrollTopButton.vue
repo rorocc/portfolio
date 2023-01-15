@@ -1,5 +1,5 @@
 <template>
-  <div ref="scrollTopButton" class="sticky w-full flex justify-end bottom-0 pb-3 pr-5 transition invisible">
+  <div ref="scrollTopButton" class="sticky w-full flex justify-end bottom-0 pb-6 pr-6 invisible">
     <div class="text-gray-400 hover:text-blue-400 transition">
       <button @click="scrollToTop" role="button" aria-label="scroll to top of the page">
         <svg viewBox="0 0 115 66" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -42,7 +42,7 @@ export default {
 
 button{
   background-color: var(--pink-light);
-  @apply aspect-square rounded-full p-3 shadow-lg;
+  @apply aspect-square rounded-full p-3;
 }
 
 button svg{
