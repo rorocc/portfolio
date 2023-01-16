@@ -1,6 +1,6 @@
 <template>
-  <div class="mb-4">
-    <h1 class="mb-2">{{ title }}</h1>
+  <div>
+    <p class="title">{{ title }}</p>
     <p class="leading-relaxed">{{ text }}</p>
   </div>
 </template>
@@ -16,7 +16,7 @@ export default {
 </script>
 
 <style scoped>
-h1{
-  @apply text-gray-400 uppercase tracking-widest font-light text-sm;
+.title{
+  @apply text-black  uppercase tracking-widest font-normal text-sm;
 }
 </style>

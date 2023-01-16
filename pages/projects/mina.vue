@@ -1,48 +1,18 @@
 <template>
   <div class="h-full">
-    <div class="header md:py-32 py-6">
-      <div class="container fade-in-left grid md:grid-cols-2 grid-cols-none md:grid-rows-none grid-rows-2 items-center">
-        <div class="text-center md:text-left">
-          <h1 class="mina-title">
-            MINA
-          </h1>
-          <h2 class="mina-title">
-            Mobile Interface for Nutrition Awareness
-          </h2>
-        </div>
-        <div>
-          <img src="../../assets/img/work/mina/header.png" />
-        </div>
-      </div>
-    </div>
-    <section class="section-m">
-      <div class="section mx-auto">
-        <div>
-          <p><span class="caps">What the health.</span> There are plenty of nutritional applications in the app stores out there.
-          Yet, there are numerous of reasons why users discontinue the usage of such — unsatisfactory usability or lack of traceability, for example.
-          <br>
-            The goal of this project was to develop an interface that comprehensibly evaluates the healthiness of a meal with a human-centered approach.
-          </p>
-        </div>
-      </div>
-      <div class="section mx-auto">
-        <div>
-          <p><span class="caps">Key learnings.</span></p>
-            <ul>
-              <li>How to conduct a design studio workshop with potential users. The results should be handled thoughtfully and critically reviewed.</li>
-              <li>How to plan and carry out a user test with real users. </li>
-              <li>Don't underestimate the complexity of the human-centered design process.</li>
-              <li>It's mostly impossible to get the perfect design in the first iteration. Don't get frustrated but analyze your mistakes.</li>
-            </ul>
-        </div>
-      </div>
-      <div class="bg-gray-100 rounded-3xl py-6 px-12 mt-12">
-        <description-element title="Role" text="UX & Visual Design, Researcher, Developer" />
-        <description-element title="Context" text="Media informatics - Bachelor thesis" />
-        <description-element title="timespan" text="April - October 2021" />
-        <description-element title="Keywords" text="Design research, Workshops, Prototyping, Frontend development, User tests, Evaluation" />
-      </div>
-    </section>
+    <work-header
+      color="#CFF382"
+      color-light="rgba(207, 243, 130, 0.3)"
+      title="MINA"
+      subtitle="Mobile Interface for Nutrition Awareness"
+      description="There are plenty of nutritional applications in the app stores out there.
+      Yet, there are numerous of reasons why users discontinue the usage of such — unsatisfactory usability or lack of traceability, for example.
+      The goal of this project was to develop an interface that comprehensibly evaluates the healthiness of a meal with a human-centered approach."
+      role="UX & Visual Designer, Developer"
+      timespan="April - October 2021"
+      context="Media informatics bachelor thesis"
+      keywords="Design research, Workshops, Prototyping, Frontend development, User tests, Evaluation"
+    />
     <section>
       <div class="section-m">
         <h1>The motivation</h1>
@@ -69,7 +39,7 @@
         </ol>
       </div>
     </section>
-      <section class="sectionDisplay py-24 shadow-lg bg-gray-100">
+      <section class="sectionDisplay py-24 bg-mina-lighter">
         <div class="section-m">
           <h1>The human-centered design process</h1>
           <p class="max-w-prose">In this project, I used the human-centered design approach according to DIN EN ISO 9241-210. It helped me keeping a clear focus on the user's needs throughout the whole development process.</p>
@@ -153,7 +123,7 @@
           <p>Most of the participants designs suggested meals into their nutrients, then rating each nutrient and placing them in a color coded 4-level scale.
           This reminded me of the popular <web-link url="https://www.bmel.de/DE/themen/ernaehrung/lebensmittel-kennzeichnung/freiwillige-angaben-und-label/nutri-score/nutri-score_node.html">NutriScore</web-link> very much. The NutriScore is printed on the packaging of some food products in Germany, giving an indication on the healthiness of the product.</p>
           <br>
-          <div class="bg-gray-100 rounded-lg p-4">
+          <div class="bg-mina-light rounded-2xl p-8">
             <p class="mb-4"><span class="caps">Takeaways.</span></p>
             <ul>
               <li>Color coded rating can give a quick insight</li>
@@ -234,14 +204,27 @@ details-on-demand</span> introduces the concept of giving a general information 
       <img class="md:w-3/4 mx-auto w-full" src="~assets/img/work/mina/evaluation_scheme.svg">
     </section>
     <section class="section-m">
-      <h1>Conclusion</h1>
-      <p>
-        The concept of the MINA interface works fundamentally. By dividing the information into different levels, the amount of information could be conveyed in a more structured and understandable way. The color coding also proved to be easy to understand.
-        <br>
-        Nevertheless, the evaluation showed that there is still room for improvement in terms of usability and comprehensibility of the calculation of the score.
-        <br>
-        These findings can now be addressed and re-evaluated in further iterations.
-      </p>
+      <div class="section">
+        <h1>Conclusion</h1>
+        <p>
+          The concept of the MINA interface works fundamentally. By dividing the information into different levels, the amount of information could be conveyed in a more structured and understandable way. The color coding also proved to be easy to understand.
+          <br>
+          Nevertheless, the evaluation showed that there is still room for improvement in terms of usability and comprehensibility of the calculation of the score.
+          <br>
+          These findings can now be addressed and re-evaluated in further iterations.
+        </p>
+      </div>
+      <div class="section mx-auto">
+        <div>
+          <p><span class="caps">Key learnings.</span></p>
+          <ul>
+            <li>How to conduct a design studio workshop with potential users. The results should be handled thoughtfully and critically reviewed.</li>
+            <li>How to plan and carry out a user test with real users. </li>
+            <li>Don't underestimate the complexity of the human-centered design process.</li>
+            <li>It's mostly impossible to get the perfect design in the first iteration. Don't get frustrated but analyze your mistakes.</li>
+          </ul>
+        </div>
+      </div>
     </section>
   </div>
 </template>
@@ -308,11 +291,16 @@ p{
   @apply leading-8;
 }
 
-.header, .bg-mina{
+.bg-mina{
   background-color: #CFF382;
-  background-image: url("~assets/img/work/mina/header_bg.png");
-  background-repeat: no-repeat;
-  background-size: cover;
+}
+
+.bg-mina-light{
+  background-color: rgba(207, 243, 130, 0.3);
+}
+
+.bg-mina-lighter{
+  background-color: rgba(207, 243, 130, 0.15);
 }
 
 .bg-bubbles{
@@ -320,13 +308,6 @@ p{
   background-repeat: no-repeat;
   background-size: cover;
   background-blend-mode: difference;
-}
-
-h1.mina-title{
-  @apply text-6xl font-bold py-2;
-}
-h2.mina-title{
-  @apply text-xl font-light;
 }
 
 .section-m{

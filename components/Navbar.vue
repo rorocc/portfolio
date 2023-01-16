@@ -116,7 +116,7 @@ a.menu__link.nuxt-link-active{
 }
 
 a{
-  font-weight: 100;
+  font-weight: 300;
   color: var(--link-color);
 }
 
