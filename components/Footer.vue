@@ -5,7 +5,7 @@
 <!--        <img src="~assets/img/pigeon.svg" class="absolute w-1/2 -left-1/3 md:-top-1/2 top-0 opacity-10" id="pigeon">-->
         <div class="max-w-fit mx-auto relative">
           <div class="my-4">
-            <h1 class="mb-0"><span class="underlined">Let's connect</span></h1>
+            <div class="mb-0 footer-title"><span class="underlined">Let's connect</span></div>
             <p>Send me a mail pigeon</p>
           </div>
           <div class="m-auto flex space-x-6 justify-center text-center auto-cols-min">
@@ -24,14 +24,14 @@
       </div>
       <div class="grid grid-cols-2 justify-items-center">
         <div class="w-fit text-left ">
-          <h1>Sitemap</h1>
+          <span class="footer-title">Sitemap</span>
           <ul>
             <li><a href="./">Home</a></li>
             <li><a href="./about">About</a></li>
           </ul>
         </div>
         <div class="w-fit text-left">
-          <h1>Projects</h1>
+          <span class="footer-title">Projects</span>
           <ul>
             <li><a href="/projects/mina">MINA</a></li>
             <li><a href="#">AID-Simulation</a></li>
@@ -55,7 +55,8 @@ export default {
 </script>
 
 <style scoped>
-  h1{
+  .footer-title{
+    font-family: 'PPMori', sans-serif;
     @apply font-medium text-lg mb-0;
   }
 

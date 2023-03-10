@@ -1,15 +1,15 @@
 <template>
   <div>
     <div class="header">
-      <div class="grid md:grid-cols-2 grid-cols-1 items-center header-grid place-items-center">
+      <div class="grid lg:grid-cols-2 grid-cols-1 items-center header-grid place-items-center">
         <div class="text-left grid-first justify-center" :style="{backgroundColor: color}">
           <div class="fade-in-left">
-            <h1 class="work-title" :style="{color: textColor}">
+            <span class="work-title" :style="{color: textColor}">
               {{ title }}
-            </h1>
-            <h2 class="work-subtitle" :style="{color: textColor}">
+            </span>
+            <span class="work-subtitle" :style="{color: textColor}">
               {{ subtitle }}
-            </h2>
+            </span>
           </div>
         </div>
         <div class="grid-second bg-mina-light w-full" :style="{backgroundColor: colorLight}">
@@ -70,15 +70,17 @@ export default {
     @apply leading-loose text-2xl;
   }
 
-  h1.work-title{
-    @apply text-6xl m-0;
+  .work-title, .work-subtitle{
+    font-family: 'PPMori', sans-serif;
+    @apply text-4xl md:text-6xl;
   }
 
-  h1:after{
-    content: '';
+
+  .work-title{
+    @apply m-0 font-bold;
   }
 
-  h2.work-subtitle{
-    @apply text-6xl opacity-50 leading-normal;
+  .work-subtitle{
+    @apply opacity-50 leading-normal;
   }
 </style>

@@ -13,9 +13,10 @@
       context="Media informatics bachelor thesis"
       keywords="Design research, Workshops, Prototyping, Frontend development, User tests, Evaluation"
     />
+    <toc></toc>
     <section>
       <div class="section-m">
-        <h1>The motivation</h1>
+        <h1 id="the-motivation">The motivation</h1>
         <p>More and more people from all over the world are suffering from obesity, which is associated with
           a low level of the ability to find and understand basic information about nutrition, called Nutrition
           Literacy. Mobile health applications can already effectively convey information about nutrition and
@@ -31,7 +32,7 @@
         <p>— <WebLink url="https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight" style="color: black">World Health Organization</WebLink></p>
       </section>
       <div class="section-m">
-        <h1>The challenges</h1>
+        <h1 id="the-challenges">The challenges</h1>
         <ol class="challenges">
           <li>Handling the amount and complexity of nutritional data but avoiding information overload at the same time.</li>
           <li>Creating and maintaining the comprehensability and explainability of the system's information and processes.</li>
@@ -41,7 +42,7 @@
     </section>
       <section class="sectionDisplay py-24 bg-mina-lighter">
         <div class="section-m">
-          <h1>The human-centered design process</h1>
+          <h1 id="the-human-centered-design-process">The human-centered design process</h1>
           <p class="max-w-prose">In this project, I used the human-centered design approach according to DIN EN ISO 9241-210. It helped me keeping a clear focus on the user's needs throughout the whole development process.</p>
         </div>
         <div class="container">
@@ -105,7 +106,7 @@
 
       <section id="understand">
         <div class="section-m">
-          <h1>Understand & specify context of use</h1>
+          <h1 id="understand-specify-context-of-use">Understand & specify context of use</h1>
           <p><span class="caps">Dive into the context.</span> Before I could outline concrete design solutions, the application context had to be analyzed and understood. To learn more about the context of nutrition apps, their target audience, and initial usage requirements, I performed the following steps.</p>
           <StatBlock heading="Review of existing nutrition apps" bubble-int="16" description="In order to get a better understanding of state-of-the-art of the context of use, I conducted a review of 16 nutrition apps. By that I was able to find out about the most popular features." />
           <StatBlock heading="Workshop with potential users" bubble-int="21" description="Through a Design Studio Workshop with 21 participants, I got a lot of insight on the expectations and needs of potential users." />
@@ -136,7 +137,7 @@
       </section>
       <section id="requirements">
         <div class="section-m">
-          <h1>User requirements</h1>
+          <h1 id="user-requirements">User requirements</h1>
           <p>From the context analysis I then have derived the systems requirements.</p>
           <ul class="mt-4">
             <li>List ingredients of the meal</li>
@@ -151,7 +152,7 @@
       </section>
       <section>
         <div class="section-m" id="solutions">
-          <h1>Development</h1>
+          <h1 id="development">Development</h1>
           <h2>Wireframing & design iterations</h2>
           <p>One of the main challenges in designing the interface was the amount of relevant data in the nutritional context, since there are many different types of nutrients in a meal.
           To handle this challenge, I looked at scientific literature and their approach on avoiding information overload in information visualization. For example, Ben Shneiderman's approach of <span class="italic">Overview first, zoom and filter, then
@@ -180,7 +181,7 @@ details-on-demand</span> introduces the concept of giving a general information 
     </section>
     <section>
       <div class="section-m">
-        <h1>Web prototype</h1>
+        <h1 id="web-prototype">Web prototype</h1>
         <p>Besides designing the interface, I also implemented it as a web-based prototype. For the information visualization I used the Javascript framework  <web-link url="https://d3js.org/">D3.js</web-link>, through which the bubble structure can be generated dynamically based on a JSON dataset.
          </p>
       </div>
@@ -188,7 +189,7 @@ details-on-demand</span> introduces the concept of giving a general information 
     </section>
     <section id="evaluation">
       <div class="section-m">
-        <h1>User testing & evaluation</h1>
+        <h1 id="user-testing-evaluation">User testing & evaluation</h1>
         <p>For my evaluation I got 15 participants that carried out different tasks in a randomized order.
           They not only interacted with the developed MINA interface, but also with an existing nutrition app, which used tabular visualization for the information display.
           Through that I was able to distinguish whether the design solution was any better in terms of comprehensibility and understanding of healthy nutrition.
@@ -205,7 +206,7 @@ details-on-demand</span> introduces the concept of giving a general information 
     </section>
     <section class="section-m">
       <div class="section">
-        <h1>Conclusion</h1>
+        <h1 id="conclusion">Conclusion</h1>
         <p>
           The concept of the MINA interface works fundamentally. By dividing the information into different levels, the amount of information could be conveyed in a more structured and understandable way. The color coding also proved to be easy to understand.
           <br>

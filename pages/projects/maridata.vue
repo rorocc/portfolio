@@ -12,29 +12,33 @@
       timespan="January 2021 - now"
       keywords="Workshops, Prototyping, Design documentation"
     />
-    <section class="section-m leading-loose">
-      <div class="bg-gray-100 rounded-2xl py-6 px-12 my-12">
-        <p>
-          The MariData project is not finished yet and currently under development. If you like to receive more information, feel free to contact me or take a look at the <web-link url="https://maridata.org">MariData webpage</web-link>.
+    <div>
+      <toc></toc>
+
+      <section class="section-m leading-loose">
+        <div class="bg-gray-100 rounded-2xl py-6 px-12 my-12">
+          <p>
+            The MariData project is not finished yet and currently under development. If you like to receive more information, feel free to contact me or take a look at the <web-link url="https://maridata.org">MariData webpage</web-link>.
+          </p>
+        </div>
+        <h1 id="description-of--the-project">Description of the project</h1>
+        <p>Energy efficiency has always been a key concern for shipbuilding and shipping. Whereas in the past it was mainly economic reasons that motivated the search for a low power requirement for a ship, today ecological reasons and compliance with statutory regulations to reduce emissions are coming strongly to the fore with at least equal weight. These call for a consistent strategy of energy efficiency as well as a significant reduction of exhaust emissions not only in the construction but also substantially in the operation of ships.
+          <br><br>
+          As with any human-technology system, the actual benefit of the system depends on the technical potential and user behavior. Thus, in addition to the technical challenges, factors such as acceptance and trust must also be considered. To this end, prototypes of the MariData front end are being developed in the spirit of user-centered development and evaluated through user studies.
         </p>
-      </div>
-      <h1>Description of the project</h1>
-      <p>Energy efficiency has always been a key concern for shipbuilding and shipping. Whereas in the past it was mainly economic reasons that motivated the search for a low power requirement for a ship, today ecological reasons and compliance with statutory regulations to reduce emissions are coming strongly to the fore with at least equal weight. These call for a consistent strategy of energy efficiency as well as a significant reduction of exhaust emissions not only in the construction but also substantially in the operation of ships.
-        <br><br>
-        As with any human-technology system, the actual benefit of the system depends on the technical potential and user behavior. Thus, in addition to the technical challenges, factors such as acceptance and trust must also be considered. To this end, prototypes of the MariData front end are being developed in the spirit of user-centered development and evaluated through user studies.
-      </p>
-    </section>
-    <section class="leading-loose mb-56">
-      <div class="section-m">
-        <h1>The MariData design process</h1>
-        <p>
-          The Maridata design process is characterized by communication with project partners and navigators based on publications, existing system solutions and regulations.
-        <br><br>
-          To be able to validate the design solutions, the development runs in close cooperation with experts from the maritime context and goes through several evaluations during the iterations.
-        </p>
-      </div>
-      <img class="md:w-3/4 w-full mx-auto" src="~assets/img/work/maridata/md_process.png" alt="The MariData design process includes discussions with the project partners and navigational experts based on publications, guidelines and existing design solutions before prototyping and evaluation the design." />
-    </section>
+      </section>
+      <section class="leading-loose mb-56">
+        <div class="section-m">
+          <h1 id="the-maridata-design-process">The MariData design process</h1>
+          <p>
+            The Maridata design process is characterized by communication with project partners and navigators based on publications, existing system solutions and regulations.
+            <br><br>
+            To be able to validate the design solutions, the development runs in close cooperation with experts from the maritime context and goes through several evaluations during the iterations.
+          </p>
+        </div>
+        <img class="md:w-3/4 w-full mx-auto" src="~assets/img/work/maridata/md_process.png" alt="The MariData design process includes discussions with the project partners and navigational experts based on publications, guidelines and existing design solutions before prototyping and evaluation the design." />
+      </section>
+    </div>
   </div>
 </template>
 
