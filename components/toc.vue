@@ -8,7 +8,12 @@
           <svg v-if="isOpen" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636z"/></svg>
         </div>
         <div ref="toc" class="p-2" v-show="isOpen" @click="() => {this.isOpen = !isOpen}">
-      </div>
+          <ul>
+            <NuxtLink v-for="heading in headings" :to="'#' + heading.id">
+              <li>{{heading.title}}</li>
+            </NuxtLink>
+          </ul>
+        </div>
     </div>
   </div>
 </template>
@@ -18,24 +23,16 @@ export default {
   name: "toc",
   data() {
     return{
-      isOpen: false
+      isOpen: false,
+      headings: []
     }
   },
   mounted() {
-    this.$nextTick(() => {
-      const toc = this.$refs.toc;
-      const headings = document.querySelectorAll("h1");
-      const ul = document.createElement('ul');
-      headings.forEach(heading => {
-        let a = document.createElement('a');
-        let li = document.createElement('li')
-        a.innerHTML = heading.textContent;
-        a.href = `#${heading.id}`
-        li.appendChild(a)
-        ul.appendChild(li)
+      const headingElements = document.querySelectorAll("h1");
+      console.log(headingElements)
+      headingElements.forEach(heading => {
+        this.headings.push({title: heading.textContent, id: heading.id})
       })
-      toc.appendChild(ul);
-    })
   }
 }
 </script>
