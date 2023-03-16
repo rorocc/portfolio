@@ -46,7 +46,7 @@
           <img src="../assets/img/pigs/pig3.svg" class="pigIcon" role="presentation">
         </div>
       </div>
-      <div v-if="false" class="pigLicense">
+      <div class="hidden">
 
         <p>Pig emoji license: Copyright 2020 Twitter, Inc and other contributors |
           Code licensed under the MIT License: http://opensource.org/licenses/MIT |
