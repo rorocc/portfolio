@@ -27,7 +27,7 @@
           As with any human-technology system, the actual benefit of the system depends on the technical potential and user behavior. Thus, in addition to the technical challenges, factors such as acceptance and trust must also be considered. To this end, prototypes of the MariData front end are being developed in the spirit of user-centered development and evaluated through user studies.
         </p>
       </section>
-      <section class="leading-loose mb-56">
+      <section class="leading-loose">
         <div class="section-m">
           <h1 id="the-maridata-design-process">The MariData design process</h1>
           <p>
@@ -37,6 +37,17 @@
           </p>
         </div>
         <img class="md:w-3/4 w-full mx-auto" src="~assets/img/work/maridata/md_process.png" alt="The MariData design process includes discussions with the project partners and navigational experts based on publications, guidelines and existing design solutions before prototyping and evaluation the design." />
+      </section>
+      <section class="mb-56 leading-loose">
+        <div class="section-m">
+          <h1 id="the-maridata-design-system">The MariData design system</h1>
+          <p>To ensure a consistent design, we developed the MariData Design System, which not only actively supports team design, but also allows developers to independently dive deeper into designs and derive styling requirements.
+          <br><br>
+            As a member of the project from the beginning, it was my responsibility to build and maintain this design system. I used the Figma Library functionality so that other team members could access the styles and push updates.
+            Thanks to the linked components, the interactive Figma prototype could also be kept up to date at all times with little effort.
+          </p>
+        </div>
+        <img class="md:w-1/2 w-3/4 mx-auto rounded-lg" src="~assets/img/work/maridata/components.png" alt="The MariData design system." />
       </section>
     </div>
   </div>

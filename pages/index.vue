@@ -22,7 +22,7 @@
         </div>
       </div>
     </section>
-      <section class="bg-pinkLight py-8 shadow-custom">
+      <section class="bg-gray-100 py-8">
         <div class="container">
           <h1 class="my-12">My recent projects</h1>
           <div class="grid auto-rows-auto">
@@ -40,14 +40,15 @@
           </div>
         </div>
       </section>
-    <div ref="toolbox" class="pigButton md:block hidden">
+    <div ref="toolbox" @click="startPiggies" class="pigButton md:block hidden">
       <div class="grid-flow-col grid text-center">
-        <div @click="startPiggies">
+        <div>
           <img src="../assets/img/pigs/pig3.svg" class="pigIcon" role="presentation">
         </div>
       </div>
-      <div v-if="pigDisclaimerActive" class="pigLicense">
-        <p>Copyright 2020 Twitter, Inc and other contributors |
+      <div v-if="false" class="pigLicense">
+
+        <p>Pig emoji license: Copyright 2020 Twitter, Inc and other contributors |
           Code licensed under the MIT License: http://opensource.org/licenses/MIT |
           Graphics licensed under CC-BY 4.0: https://creativecommons.org/licenses/by/4.0/</p>
       </div>
@@ -153,10 +154,6 @@ export default {
     animation-iteration-count: infinite;
   }
 
-  .pigIcon:hover{
-    cursor: pointer;
-  }
-
   .sticker-star{
     animation-name: star;
     animation-duration: 20s;
@@ -221,7 +218,7 @@ export default {
 
   .pigButton:hover{
     background-color: rgba(246, 235, 255, 0.62);
-    @apply shadow-2xl;
+    @apply cursor-pointer;
   }
 
   .toolbox.close{
