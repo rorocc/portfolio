@@ -3,6 +3,7 @@
     <section class="container">
       <div class="grid grid-flow-row grid-cols-none md:grid-cols-2 md:grid-rows-none my-20 md:gap-0 gap-16">
         <div class="relative md:overflow-x-visible">
+          <BobbleHead v-if="false" class="w-3/4"></BobbleHead>
           <img src="../assets/doodle.svg" class="w-3/4 m-auto z-10" />
           <stylistic-circle class="absolute top-0 -z-10 w-1/2" />
           <stylistic-circle class="absolute top-1/4 -right-1/4 -z-10 w-3/4" />
@@ -58,11 +59,13 @@
 </template>
 
 <script>
+import BobbleHead from "~/components/BobbleHead";
 export default {
   name: 'IndexPage',
+  components: {BobbleHead},
   head() {
     return {
-      link: [
+      meta: [
         {
           hid: 'canonical',
           rel: 'canonical',

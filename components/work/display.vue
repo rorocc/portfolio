@@ -2,7 +2,7 @@
   <div>
     <div class="header">
       <div class="grid lg:grid-cols-2 grid-cols-1 items-center header-grid place-items-center">
-        <div class="text-left grid-first justify-center" :style="{backgroundColor: color}">
+        <div class="text-left grid-first justify-center header-w" :style="{backgroundColor: color}">
           <div class="fade-in-left">
             <span class="work-title" :style="{color: textColor}">
               {{ title }}
@@ -32,7 +32,7 @@
 <script>
 import DescriptionElement from "~/components/work/descriptionElement";
 export default {
-  name: "header",
+  name: "display",
   components: {DescriptionElement},
   props: {
     title: String,

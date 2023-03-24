@@ -1,5 +1,5 @@
 <template>
-  <a :href="url" :class="[isAvailable ? 'cursor-pointer' : 'cursor-default']">
+  <a :href="url" :class="[isAvailable ? 'cursor-pointer' : 'cursor-not-allowed']">
     <div class="workpiece overflow-hidden" :class="[isAvailable ? 'opacity-100' : 'opacity-50']">
       <div class="grid lg:grid-cols-12 grid-cols-1 lg:h-80 place-items-center lg:gap-4" :style="{backgroundColor: bgColor, color: textColor}">
         <div class="lg:col-span-5 col-span-1 h-80 w-full" :style="{backgroundColor: textColor}">
@@ -49,13 +49,13 @@ export default {
 }
 
 .workpiece{
-  transition-duration: .25s;
+  transition-duration: .15s;
   transition-timing-function: ease-in-out;
   @apply rounded-2xl m-auto w-full;
 }
 
 .opacity-100:hover{
-  transform: scale(102%);
+  transform: scale(101%);
 }
 
 h1{

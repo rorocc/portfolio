@@ -1,6 +1,6 @@
 <template>
   <div class="h-full">
-    <work-header
+    <work-display
       color="#CFF382"
       color-light="rgba(207, 243, 130, 0.3)"
       title="MINA"

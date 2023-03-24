@@ -23,8 +23,8 @@ export default {
       { hid: 'og:site_name', name: 'og:site_name', content:'Christopher Rock - Portfolio'},
       { hid: 'og:type', name: 'og:type', content:'website'},
       { name: 'format-detection', content: 'telephone=no' },
-      { name: 'apple-mobile-web-app-title', content: 'Chris Ro. - Portfolio'},
-      { name: 'application-name', content: 'Chris Ro. - Portfolio'},
+      { name: 'apple-mobile-web-app-title', content: 'Chris Ro.'},
+      { name: 'application-name', content: 'Chris Ro.'},
       { name: 'msapplication-TileColor', content: '#ffffff'},
       { name: 'theme-color', content: '#ffffff'}
     ],
@@ -61,7 +61,8 @@ export default {
 
   gsap: {
     extraPlugins: {
-      scrollTrigger: true
+      scrollTrigger: true,
+      draggable: true
     }
   },
 

@@ -33,9 +33,9 @@
         <div class="w-fit text-left">
           <span class="footer-title">Projects</span>
           <ul>
+            <li><a href="/projects/maridata">MariData</a></li>
             <li><a href="/projects/mina">MINA</a></li>
             <li><a href="#">AID-Simulation</a></li>
-            <li><a href="#">MariData</a></li>
           </ul>
         </div>
       </div>
