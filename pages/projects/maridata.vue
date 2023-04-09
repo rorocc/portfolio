@@ -5,6 +5,7 @@
       color-light="rgba(76, 91, 99, 0.15)"
       text-color="#FFFFFFFF"
       title="MariData"
+      imgUrl="aid/header_texture.jpeg"
       subtitle="Comprehensive technologies for ship energy management"
       description="In the MariData project, a future-oriented energy management and decision support system based on rational methods is to be developed, taking into account current operational status data as well as geoinformation."
       role="UX & UI Design, Design research"

@@ -8,8 +8,7 @@
 export default {
   name: "WebLink",
   props: {
-    url: String,
-    text: String
+    url: String
   }
 }
 </script>

@@ -2,7 +2,7 @@
   <div>
     <div class="header">
       <div class="grid lg:grid-cols-2 grid-cols-1 items-center header-grid place-items-center">
-        <div class="text-left grid-first justify-center header-w" :style="{backgroundColor: color}">
+        <div class="text-left grid-first justify-center relative overflow-hidden" :style="{backgroundColor: color}">
           <div class="fade-in-left">
             <span class="work-title" :style="{color: textColor}">
               {{ title }}
@@ -47,7 +47,11 @@ export default {
     role: String,
     timespan: String,
     context: String,
-    keywords: String
+    keywords: String,
+    imgUrl: {
+      type: String,
+      default: "aid/header_texture.jpeg"
+    },
   }
 }
 </script>
@@ -59,15 +63,15 @@ export default {
   }
 
   .header .grid-first{
-    @apply h-full px-12 pt-24 pb-12;
+    @apply h-full md:px-12 px-6 pt-24 pb-12;
   }
 
   .header .grid-second{
-    @apply h-full font-light px-12 pt-24 pb-24 leading-relaxed;
+    @apply h-full font-light md:px-24 px-6 md:py-24 py-12 md:leading-relaxed  leading-relaxed;
   }
 
   .header .grid-second p.description{
-    @apply leading-loose text-2xl;
+    @apply md:leading-relaxed md:text-2xl text-lg;
   }
 
   .work-title, .work-subtitle{
