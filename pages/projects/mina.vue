@@ -243,12 +243,12 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: 'Case study about the human-centered design of a mobile nutrition awareness interface. It\'s all about the nutrients!',
+        content: 'Case study about the human-centered design of a mobile nutrition awareness interface. Facilitating nutrition literacy through concepts known from explainable artificial intelligence.',
       },
       {
         hid: 'og:image',
         name: 'og:image',
-        content: '../../seo/projects/mina.png'
+        content: 'https://chrisrock.rocks/seo/projects/mina.png'
       },
       {
         hid: 'keywords',

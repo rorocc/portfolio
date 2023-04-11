@@ -92,7 +92,7 @@ export default {
         {
           hid: 'og:image',
           name: 'og:image',
-          content: '../../seo/projects/maridata.png'
+          content: 'https://chrisrock.rocks/seo/projects/maridata.png'
         },
         {
           hid: 'keywords',
