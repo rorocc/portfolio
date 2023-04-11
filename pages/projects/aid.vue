@@ -200,7 +200,7 @@ export default {
       {
         hid: 'og:image',
         name: 'og:image',
-        content: '/seo/projects/aid.png'
+        content: 'https://chrisrock.rocks/seo/projects/aid.png'
       },
       {
         hid: 'keywords',
