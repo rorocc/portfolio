@@ -236,7 +236,27 @@ import StatBlock from "~/components/work/StatBlock";
 export default {
   name: "Mina",
   components: {StatBlock, DescriptionElement },
-  layout: 'default'
+  layout: 'default',
+  head: {
+    title: 'MINA -',
+    meta: [
+      {
+        hid: 'og:description',
+        name: 'og:description',
+        content: 'Case study about the human-centered design of a mobile nutrition awareness interface. It\'s all about the nutrients!",
+      },
+      {
+        hid: 'og:image',
+        name: 'og:image',
+        content: '../../seo/projects/mina.png'
+      },
+      {
+        hid: 'keywords',
+        name: 'keywords',
+        keywords: "nutrition, health, e-health, meals, food, healthiness, m-health, evaluation, user tests, user experience, user interface, app design, ux, ui, macro nutrients, micro nutrients"
+      }
+    ]
+  },
 }
 </script>
 

@@ -81,8 +81,7 @@ import DescriptionElement from "~/components/work/descriptionElement";
 export default {
   name: "maridata",
   components: {DescriptionElement},
-  head() {
-    return {
+  head: {
       title: 'MariData -',
       meta: [
         {
@@ -101,7 +100,6 @@ export default {
           keywords: "maridata, ship energy efficiency, environment protection, vessel energy management, engineering psychology, university of lübeck, research, energy interface, human centered design"
         }
       ]
-    }
   },
 }
 </script>
