@@ -190,7 +190,6 @@ export default {
   name: "aid",
   components: {FigureComponent, WebLink, Display},
   head: {
-    title: this.title + " - AID Simulator",
     meta: [
       {
         hid: 'description',
