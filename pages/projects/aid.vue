@@ -188,7 +188,17 @@ import WebLink from "~/components/webLink";
 import FigureComponent from "~/components/figureComponent";
 export default {
   name: "aid",
-  components: {FigureComponent, WebLink, Display}
+  components: {FigureComponent, WebLink, Display},
+  head: {
+    title: this.title + " - AID Simulator",
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'This UX case study is about the redesign of an automated insulin delivery (AID) system simulator. The goal is to give insights into the functionality of closed-loop systems for the management of diabetes.'
+      }
+    ]
+  }
 }
 </script>
 
