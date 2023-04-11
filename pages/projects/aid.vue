@@ -190,7 +190,7 @@ export default {
   name: "aid",
   components: {FigureComponent, WebLink, Display},
   head: {
-    title: 'AID Simulator UX Rework',
+    title: 'AID Simulator UX Rework -',
     meta: [
       {
         hid: 'description',

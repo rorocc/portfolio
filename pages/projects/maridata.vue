@@ -83,7 +83,7 @@ export default {
   components: {DescriptionElement},
   head() {
     return {
-      title: 'MariData',
+      title: 'MariData -',
       meta: [
         {
           hid: 'og:description',

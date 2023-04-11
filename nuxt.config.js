@@ -1,13 +1,13 @@
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
-  ssr: false,
+  ssr: true,
 
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - Christopher Rock - UX Design Portfolio',
+    titleTemplate: '%s Christopher Rock - UX Design Portfolio',
     htmlAttrs: {
       lang: 'en'
     },
