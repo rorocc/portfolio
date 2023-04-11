@@ -83,22 +83,22 @@ export default {
   components: {DescriptionElement},
   head() {
     return {
-      title: 'Chris Ro. - Portfolio - MariData',
+      title: 'MariData',
       meta: [
         {
-          hid: 'og:site_name',
-          name: 'og:site_name',
-          content: 'Chris Ro. - Portfolio - MariData'
-        },
-        {
-          hid: 'description',
-          name: 'description',
+          hid: 'og:description',
+          name: 'og:description',
           content: 'In the MariData project, a future-oriented energy management and decision support system based on rational methods is to be developed, taking into account current operational status data as well as geoinformation.'
         },
         {
           hid: 'og:image',
           name: 'og:image',
-          content: '/seo/maridata.png'
+          content: '/seo/projects/maridata.png'
+        },
+        {
+          hid: 'keywords',
+          name: 'keywords',
+          keywords: "maridata, ship energy efficiency, environment protection, vessel energy management, engineering psychology, university of lübeck, research, energy interface, human centered design"
         }
       ]
     }

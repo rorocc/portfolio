@@ -190,11 +190,22 @@ export default {
   name: "aid",
   components: {FigureComponent, WebLink, Display},
   head: {
+    title: 'AID Simulator UX Rework',
     meta: [
       {
         hid: 'description',
         name: 'description',
         content: 'This UX case study is about the redesign of an automated insulin delivery (AID) system simulator. The goal is to give insights into the functionality of closed-loop systems for the management of diabetes.'
+      },
+      {
+        hid: 'og:image',
+        name: 'og:image',
+        content: '/seo/projects/aid.png'
+      },
+      {
+        hid: 'keywords',
+        name: 'keywords',
+        keywords: "diabetic, t1dm, diabetes mellitus, automation, explainable artificial intelligence, engineering psychology, lübeck, user interface, user experience, virtual patient, OpenAPS, insulin therapy, human-machine interaction, understandability"
       }
     ]
   }
