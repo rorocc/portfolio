@@ -241,8 +241,8 @@ export default {
     title: 'MINA -',
     meta: [
       {
-        hid: 'og:description',
-        name: 'og:description',
+        hid: 'description',
+        name: 'description',
         content: 'Case study about the human-centered design of a mobile nutrition awareness interface. It\'s all about the nutrients!',
       },
       {

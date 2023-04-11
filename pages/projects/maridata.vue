@@ -85,8 +85,8 @@ export default {
       title: 'MariData -',
       meta: [
         {
-          hid: 'og:description',
-          name: 'og:description',
+          hid: 'description',
+          name: 'description',
           content: 'In the MariData project, a future-oriented energy management and decision support system based on rational methods is to be developed, taking into account current operational status data as well as geoinformation.'
         },
         {
@@ -100,7 +100,7 @@ export default {
           keywords: "maridata, ship energy efficiency, environment protection, vessel energy management, engineering psychology, university of lübeck, research, energy interface, human centered design"
         }
       ]
-  },
+  }
 }
 </script>
 

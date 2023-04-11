@@ -14,8 +14,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Hi, I\'m Chris, a UX Designer based in Northern Germany. I\'m interested in Human-centered design solutions and creativity of all kinds.' },
-      { hid: 'og:description', name: 'og:description', content: 'Hi, I\'m Chris, a UX Designer based in Northern Germany. I\'m interested in Human-centered design solutions and creativity of all kinds.' },
+      { hid: 'description', name: 'description', content: 'Hi, I\'m Chris, a UX Designer based in Lübeck, Northern Germany. I\'m interested in Human-centered design solutions and creativity of all kinds.' },
       { hid: 'og:locale', property:'og:locale', content:'en_US' },
       { hid: 'og:image', property:'og:image', content:'/seo_ogimage.png' },
       { hid: 'og:image:width', property:'og:image:width', content:'1200' },
