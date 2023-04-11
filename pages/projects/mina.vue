@@ -243,7 +243,7 @@ export default {
       {
         hid: 'og:description',
         name: 'og:description',
-        content: 'Case study about the human-centered design of a mobile nutrition awareness interface. It\'s all about the nutrients!",
+        content: 'Case study about the human-centered design of a mobile nutrition awareness interface. It\'s all about the nutrients!',
       },
       {
         hid: 'og:image',
