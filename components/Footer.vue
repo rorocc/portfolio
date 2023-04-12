@@ -5,7 +5,7 @@
 <!--        <img src="~assets/img/pigeon.svg" class="absolute w-1/2 -left-1/3 md:-top-1/2 top-0 opacity-10" id="pigeon">-->
         <div class="max-w-fit mx-auto relative">
           <div class="my-4">
-            <div class="mb-0 footer-title"><span class="underlined">Let's connect</span></div>
+            <div class="mb-0 footer-title">Let's connect</div>
             <p>Send me a mail pigeon</p>
           </div>
           <div class="m-auto flex space-x-6 justify-center text-center auto-cols-min">

@@ -23,7 +23,7 @@
         </div>
       </div>
     </section>
-      <section class="bg-gray-100 py-8">
+      <section class="bg-gray-50 py-8">
         <div class="container">
           <h1 class="my-12">My recent projects</h1>
           <div class="grid auto-rows-auto">
