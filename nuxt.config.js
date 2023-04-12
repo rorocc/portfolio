@@ -2,6 +2,9 @@ export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: true,
 
+  // generate 404 error fallback page
+  generate: { fallback: '404.html' },
+
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
