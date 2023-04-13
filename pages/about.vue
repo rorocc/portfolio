@@ -41,8 +41,11 @@
 </template>
 
 <script>
+import WebLink from "~/components/structuralComponents/webLink";
+
 export default {
   name: "About",
+  components: {WebLink},
   head() {
     return {
       link: [

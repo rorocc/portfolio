@@ -78,9 +78,11 @@
 
 <script>
 import DescriptionElement from "~/components/work/descriptionElement";
+import WebLink from "~/components/structuralComponents/webLink";
+
 export default {
   name: "maridata",
-  components: {DescriptionElement},
+  components: {DescriptionElement, WebLink},
   head: {
       title: 'MariData -',
       meta: [

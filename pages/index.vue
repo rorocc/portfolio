@@ -28,7 +28,7 @@
           <h1 class="my-12">My recent projects</h1>
           <div class="grid auto-rows-auto">
             <div v-for="work in works" :key="work.id" class="mb-10">
-              <workpiece :head-text="work.headText"
+              <Workpiece :head-text="work.headText"
                          :title="work.title"
                          :description="work.description"
                          :bg-color="work.bgColor"
@@ -59,10 +59,13 @@
 </template>
 
 <script>
-import BobbleHead from "~/components/BobbleHead";
+import BobbleHead from "~/components/pages/index/BobbleHead";
+import Workpiece from "~/components/pages/index/workpiece";
+import CursorChat from "~/components/pages/index/CursorChat";
+
 export default {
   name: 'IndexPage',
-  components: {BobbleHead},
+  components: {BobbleHead, Workpiece, CursorChat},
   head() {
     return {
       meta: [

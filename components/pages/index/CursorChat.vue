@@ -1,6 +1,6 @@
 <template>
   <div class="chatCursor" :style="{animationDuration: duration + 's'}">
-    <img src="../assets/cursor.svg" class="w-8 -translate-x-7" />
+    <img src="../../../assets/cursor.svg" class="w-8 -translate-x-7" />
     <div class="chat">
       <span class="font-bold">{{ name }}</span> <br/>
       <span>{{ text }}</span>

@@ -184,7 +184,7 @@
 
 <script>
 import Display from "~/components/work/display";
-import WebLink from "~/components/webLink";
+import WebLink from "~/components/structuralComponents/webLink";
 import FigureComponent from "~/components/figureComponent";
 export default {
   name: "aid",

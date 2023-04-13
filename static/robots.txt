@@ -1,4 +1,5 @@
 User-agent: *
+Disallow: /imprint
 Allow: /
 
 Sitemap: https://www.chrisrock.rocks/sitemap.xml

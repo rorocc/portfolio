@@ -233,9 +233,11 @@ details-on-demand</span> introduces the concept of giving a general information 
 <script>
 import DescriptionElement from "~/components/work/descriptionElement"
 import StatBlock from "~/components/work/StatBlock";
+import WebLink from "~/components/structuralComponents/webLink";
+
 export default {
   name: "Mina",
-  components: {StatBlock, DescriptionElement },
+  components: {StatBlock, DescriptionElement, WebLink},
   layout: 'default',
   head: {
     title: 'MINA -',

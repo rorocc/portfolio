@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import BobbleHead from "~/components/BobbleHead";
+import BobbleHead from "~/components/pages/index/BobbleHead";
 export default {
   name: "tools",
   components: {BobbleHead},

@@ -28,6 +28,7 @@
           <ul>
             <li><NuxtLink to="/" >Home</NuxtLink></li>
             <li><NuxtLink to="/about" >About</NuxtLink></li>
+            <li><NuxtLink to="/imprint" >Imprint</NuxtLink></li>
           </ul>
         </div>
         <div class="w-fit text-left">

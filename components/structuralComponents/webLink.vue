@@ -17,7 +17,7 @@ export default {
 
 a{
   text-decoration: underline;
-  background-image: url("../assets/newtab.svg");
+  background-image: url("../../assets/newtab.svg");
   background-position: center right;
   background-repeat: no-repeat;
   padding-right: 22px;
