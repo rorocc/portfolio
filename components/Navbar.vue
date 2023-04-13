@@ -52,14 +52,6 @@
         <li><NuxtLink to="#contact" class="rounded-3xl">Contact</NuxtLink></li>
       </ul>
     </div>
-    <script>
-      const btn = document.querySelector("button.mobile-menu-button");
-      const menu = document.querySelector(".mobile-menu");
-
-      btn.addEventListener("click", () => {
-        menu.classList.toggle("hidden");
-      });
-    </script>
   </nav>
 <!--  <nav  >
     <div class="mx-auto">
@@ -85,22 +77,12 @@
 export default {
   name: "Navbar",
   mounted() {
-    this.onScrollPigeon()
-  },
-  methods: {
-    onScrollPigeon() {
-      this.$gsap.to('#pigeon', {
-          xPercent: 150,
-          ease: "none",
-          scrollTrigger: {
-            trigger: '#footer',
-            end: 'bottom',
-            scrub: true,
-            markers: false
-          },
-        }
-      )
-    },
+    const btn = document.querySelector('button.mobile-menu-button');
+    const menu = document.querySelector('.mobile-menu');
+
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
   }
 }
 </script>

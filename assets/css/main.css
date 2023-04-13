@@ -23,19 +23,6 @@ body{
   @apply lg:w-3/4 lg:px-0 md:w-full w-full px-4 mx-auto;
 }
 
-.contact-btn{
-  background-color: var(--pink-light);
-  @apply p-2 rounded-full;
-}
-
-.contact-btn:hover{
-  background-color: #bd9ad7;
-}
-
-.contact-btn svg{
-  @apply w-6 fill-white;
-}
-
 .shadow-custom{
   box-shadow: 0 0 3px 0 rgba(0,0,0,0.1);
 }
@@ -83,4 +70,19 @@ ol.challenges li:before{
   content: "#" counter(challenges) " ";
   font-weight: 500;
   @apply text-4xl italic font-serif;
+}
+
+.contact-btn{
+  background-color: var(--pink-light);
+  color: #a267b0;
+  @apply py-2 px-4 rounded-full flex gap-2;
+}
+
+.contact-btn:hover{
+  background-color: #bd9ad7;
+  @apply text-white;
+}
+
+.contact-btn svg{
+  @apply w-6 fill-white;
 }

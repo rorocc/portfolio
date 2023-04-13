@@ -5,9 +5,9 @@
         <div class="relative md:overflow-x-visible">
           <BobbleHead v-if="false" class="w-3/4"></BobbleHead>
           <img src="../assets/doodle.svg" class="w-3/4 m-auto z-10" />
-          <stylistic-circle class="absolute top-0 -z-10 w-1/2" />
-          <stylistic-circle class="absolute top-1/4 -right-1/4 -z-10 w-3/4" />
-          <stylistic-circle class="absolute top-2/3 left-0 -z-10 w-1/4" />
+          <CircleDecoration class="absolute top-0 -z-10 w-1/2" />
+          <CircleDecoration class="absolute top-1/4 -right-1/4 -z-10 w-3/4" />
+          <CircleDecoration class="absolute top-2/3 left-0 -z-10 w-1/4" />
 <!--          <img src="../assets/sticker/star.png" class="top-0 absolute right-1/4 w-1/6 sticker-star" />-->
         </div>
         <div>
@@ -62,10 +62,11 @@
 import BobbleHead from "~/components/pages/index/BobbleHead";
 import Workpiece from "~/components/pages/index/workpiece";
 import CursorChat from "~/components/pages/index/CursorChat";
+import CircleDecoration from "~/components/stylistic/DecorationCircle";
 
 export default {
   name: 'IndexPage',
-  components: {BobbleHead, Workpiece, CursorChat},
+  components: {BobbleHead, Workpiece, CursorChat, CircleDecoration},
   head() {
     return {
       meta: [

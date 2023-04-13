@@ -1,7 +1,7 @@
 <template>
   <div ref="scrollTopButton" class="sticky w-full flex justify-end bottom-0 pb-6 pr-6 invisible">
     <div class="text-gray-400 hover:text-blue-400 transition">
-      <button :style="{backgroundColor: color}" @click="scrollToTop" role="button" aria-label="scroll to top of the page">
+      <button class="scrollTopButton" @click="scrollToTop" role="button" aria-label="scroll to top of the page">
         <svg viewBox="0 0 115 66" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M7.5 58L57.5 8L107.5 58" stroke="white" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>

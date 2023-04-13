@@ -254,6 +254,10 @@ b{
   color: #1E4165;
 }
 
+.scrollTopButton{
+  background-color: #1E4165;
+}
+
 .quote{
   border-left: 10px solid rgba(30, 65, 101, 0.1);
   @apply pl-4;

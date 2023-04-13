@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: "circle"
+  name: "decorationCircle"
 }
 </script>
 
