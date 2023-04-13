@@ -11,7 +11,7 @@
 <!--          <img src="../assets/sticker/star.png" class="top-0 absolute right-1/4 w-1/6 sticker-star" />-->
         </div>
         <div>
-          <h1 class="fade-in-left md:leading-normal leading-normal md:text-5xl text-4xl text-center md:text-left">
+          <h1 class="dot fade-in-left md:leading-normal leading-normal md:text-5xl text-4xl text-center md:text-left">
             User experience isn't just <span class="underlined whitespace-nowrap">lorem ipsum</span>
           </h1>
           <div class="py-8 max-w-prose relative">

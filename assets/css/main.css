@@ -2,83 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: "Cyrene";
-  src: local("Cyrene"), url("~assets/fonts/Cyrene+Regular+Advanced.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "DM Sans";
-  src: local("DM Sans"), url("~assets/fonts/DM_Sans/DMSans-Bold.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "DM Sans";
-  src: local("DM Sans"), url("~assets/fonts/DM_Sans/DMSans-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "IndieFlower";
-  src: local("IndieFlower"), url("~assets/fonts/IndieFlower-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "PPMori";
-  src: local("PPMori"), url("~assets/fonts/PPMori/PPMori-Regular.otf") format("opentype");
-  font-weight: 100;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "PPMori";
-  src: local("PPMori"), url("~assets/fonts/PPMori/PPMori-SemiBold.otf") format("opentype");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  src: local("Inter"), url("~assets/fonts/Inter-Thin.ttf") format("truetype");
-  font-weight: 100;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  src: local("Inter"), url("~assets/fonts/Inter-Light.ttf") format("truetype");
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  src: local("Inter"), url("~assets/fonts/Inter-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  src: local("Inter"), url("~assets/fonts/Inter-SemiBold.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Inter";
-  src: local("Inter"), url("~assets/fonts/Inter-Medium.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-}
-
 *{
   --link-color: #6f6f6f;
   --link-color-active: #b27fc0;
@@ -92,14 +15,8 @@ html{
 }
 
 body{
-  /*background-image: url("~assets/img/bg.png");*/
   font-family: 'Inter', sans-serif;
   font-weight: 300;
-}
-
-.display-font{
-  font-family: 'DM Sans', sans-serif;
-  font-weight: bold;
 }
 
 .container{
@@ -117,27 +34,6 @@ body{
 
 .contact-btn svg{
   @apply w-6 fill-white;
-}
-
-h1{
-  font-family: 'PPMori', sans-serif;
-  font-weight: 500;
-  @apply text-3xl my-6 text-gray-800;
-}
-
-h1:after{
-  content: ".";
-  color: var(--pink-light);
-}
-
-h2{
-  font-family: 'PPMori', sans-serif;
-  @apply text-xl my-2;
-}
-
-h3{
-  font-family: 'PPMori', sans-serif;
-  @apply font-bold my-2;
 }
 
 .shadow-custom{
@@ -187,15 +83,4 @@ ol.challenges li:before{
   content: "#" counter(challenges) " ";
   font-weight: 500;
   @apply text-4xl italic font-serif;
-}
-
-.fade-in-left{
-  animation: fadeInLeft 1s;
-  animation-timing-function: ease-out;
-  animation-iteration-count: 1;
-}
-
-@keyframes fadeInLeft {
-  from{opacity: 0; transform: translateX(-5%)}
-  to{opacity: 1; transform: translateX(0)}
 }

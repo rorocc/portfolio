@@ -1,0 +1,104 @@
+@font-face {
+  font-family: "DM Sans";
+  src: local("DM Sans"), url("~assets/fonts/DM_Sans/DMSans-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: local("DM Sans"), url("~assets/fonts/DM_Sans/DMSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "IndieFlower";
+  src: local("IndieFlower"), url("~assets/fonts/IndieFlower-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PPMori";
+  src: local("PPMori"), url("~assets/fonts/PPMori/PPMori-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PPMori";
+  src: local("PPMori"), url("~assets/fonts/PPMori/PPMori-SemiBold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: local("Inter"), url("~assets/fonts/Inter-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: local("Inter"), url("~assets/fonts/Inter-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: local("Inter"), url("~assets/fonts/Inter-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: local("Inter"), url("~assets/fonts/Inter-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: local("Inter"), url("~assets/fonts/Inter-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+.display-font{
+  font-family: 'DM Sans', sans-serif;
+  font-weight: bold;
+}
+
+
+.display-font{
+  font-family: 'DM Sans', sans-serif;
+  font-weight: bold;
+}
+
+h1{
+  font-family: 'PPMori', sans-serif;
+  font-weight: 600;
+  @apply text-3xl my-6 text-gray-800;
+}
+
+h1.dot:after{
+  content: ".";
+  color: var(--pink-light);
+}
+
+h2{
+  font-family: 'PPMori', sans-serif;
+  @apply text-xl my-2;
+}
+
+h3{
+  font-family: 'PPMori', sans-serif;
+  @apply font-bold my-2;
+}
+
+
+
