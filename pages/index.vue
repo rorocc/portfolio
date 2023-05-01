@@ -5,11 +5,11 @@
         <div class="relative w-full md:overflow-x-visible">
           <div class="grid grid-cols-2 block md:hidden">
             <img src="../assets/3d-waving.png" class="w-full m-auto z-10" alt="3D character of Chris wearing a purple cap, grey hoodie and black pants. The model is waving at you." />
-            <h1 class="dot fade-in-left md:leading-normal leading-normal  text-5xl text-left">
+            <h1 class="dot fade-in-left md:leading-normal leading-normal text-3xl text-left">
               User experience isn't just <span class="underlined whitespace-nowrap">lorem ipsum</span>
             </h1>
           </div>
-          <img src="../assets/3d-waving.png" class="md:w-full w-1/2 m-auto z-10 hidden md:block" />
+          <img src="../assets/3d-waving.png" class="md:w-full w-1/2 m-auto z-10 hidden md:block"  alt="3D character of Chris wearing a purple cap, grey hoodie and black pants. The model is waving at you." />
           <CircleDecoration class="absolute top-0 -z-10 w-1/2" />
           <CircleDecoration class="absolute top-1/4 -right-1/4 -z-10 w-3/4" />
           <CircleDecoration class="absolute top-2/3 left-0 -z-10 w-1/4" />
