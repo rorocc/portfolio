@@ -27,8 +27,8 @@ export default {
 
 <style scoped>
   .chat{
-    background-color: var(--pink-light);
-    @apply text-sm w-40 px-3 py-3 rounded-lg;
+    background-color: var(--primary-color);
+    @apply text-sm w-40 px-3 py-3 rounded-lg text-white;
   }
 
   .chatCursor{

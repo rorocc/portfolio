@@ -102,7 +102,7 @@ a.menu__link.nuxt-link-active{
 }
 
 .menu__link span{
-  border-color: var(--pink-light);
+  border-color: var(--primary-color);
   @apply border py-2 px-6 rounded-full;
 }
 
@@ -122,7 +122,7 @@ a:hover{
 }
 
 .logo span{
-  color: var(--pink-light);
+  color: var(--primary-color);
 }
 
 

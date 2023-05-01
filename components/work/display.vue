@@ -2,8 +2,8 @@
   <div>
     <div class="header">
       <div class="grid lg:grid-cols-2 grid-cols-1 items-center header-grid place-items-center">
-        <div class="text-left grid-first justify-center relative overflow-hidden" :style="{backgroundColor: color}">
-          <div class="fade-in-left">
+        <div class="text-left grid-first relative overflow-hidden w-full" :style="{backgroundColor: color}">
+          <div class="fade-in-left max-w-prose mr-0 ml-auto">
             <span class="work-title" :style="{color: textColor}">
               {{ title }}
             </span>
@@ -13,15 +13,17 @@
           </div>
         </div>
         <div class="grid-second bg-mina-light w-full" :style="{backgroundColor: colorLight}">
-          <p class="description">
-            {{ description }}
-          </p>
-          <hr class="my-12 border-gray-200" />
-          <div class="grid md:grid-cols-2 grid-cols-1 gap-8">
-            <description-element v-if="role"  title="Role" :text="role"/>
-            <description-element v-if="timespan" title="Timespan" :text="timespan"/>
-            <description-element v-if="context" title="Context" :text="context"/>
-            <description-element v-if="keywords" title="Keywords" :text="keywords" />
+          <div class="max-w-prose">
+            <p class="description">
+              {{ description }}
+            </p>
+            <hr class="my-12 border-gray-200" />
+            <div class="grid md:grid-cols-2 grid-cols-1 gap-8">
+              <description-element v-if="role"  title="Role" :text="role"/>
+              <description-element v-if="timespan" title="Timespan" :text="timespan"/>
+              <description-element v-if="context" title="Context" :text="context"/>
+              <description-element v-if="keywords" title="Keywords" :text="keywords" />
+            </div>
           </div>
         </div>
       </div>

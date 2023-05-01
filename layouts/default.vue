@@ -21,7 +21,7 @@
 }
 
 #pinkBar{
-  background-color: var(--pink-light);
+  background-color: var(--primary-color);
   @apply absolute bottom-0 w-full h-4;
 }
 </style>

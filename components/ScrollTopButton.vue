@@ -47,7 +47,7 @@ export default {
 <style scoped>
 
 button{
-  background-color: var(--pink-light);
+  background-color: var(--primary-color);
   @apply aspect-square rounded-full p-3;
 }
 

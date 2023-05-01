@@ -4,9 +4,11 @@
 
 *{
   --link-color: #6f6f6f;
-  --link-color-active: #b27fc0;
+  --link-color-active: #9b90c8;
   --subheading-gray: #949494;
-  --pink-light: #F0DAFF;
+  /*Primary: PANTONE 16-3823 TPX Violet Tulip*/
+  --primary-color: #9b90c8;
+  --primary-bright: #eae5fd;
   scroll-behavior: smooth;
 }
 
@@ -49,14 +51,6 @@ body{
   z-index: 0;
 }
 
-.bg-pinkLight{
-  background-color: rgba(246, 235, 255, 0.25);
-}
-
-.bg-pinkDark{
-  background-color: #b27fc0;
-}
-
 .inline-link{
   text-decoration: underline;
 }
@@ -73,14 +67,18 @@ ol.challenges li:before{
 }
 
 .contact-btn{
-  background-color: var(--pink-light);
-  color: #a267b0;
+  background-color: var(--primary-color);
+  color: var(--primary-bright);
   @apply py-2 px-4 rounded-full flex gap-2;
 }
 
 .contact-btn:hover{
-  background-color: #bd9ad7;
-  @apply text-white;
+  background-color: var(--primary-bright);
+  color: var(--primary-color);
+}
+
+.contact-btn:hover svg{
+  fill: var(--primary-color);
 }
 
 .contact-btn svg{

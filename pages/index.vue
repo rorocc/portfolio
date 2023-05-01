@@ -1,21 +1,26 @@
 <template>
   <div ref="mainDiv" class="m-auto overflow-x-hidden">
     <section class="container">
-      <div class="grid grid-flow-row grid-cols-none md:grid-cols-2 md:grid-rows-none my-20 md:gap-0 gap-16">
-        <div class="relative md:overflow-x-visible">
-          <BobbleHead v-if="false" class="w-3/4"></BobbleHead>
-          <img src="../assets/doodle.svg" class="w-3/4 m-auto z-10" />
+      <div class="grid grid-flow-row grid-cols-none md:grid-cols-3 md:grid-rows-none my-20 md:gap-0 gap-16">
+        <div class="relative w-full md:overflow-x-visible">
+          <div class="grid grid-cols-2 block md:hidden">
+            <img src="../assets/3d-waving.png" class="w-full m-auto z-10" alt="3D character of Chris wearing a purple cap, grey hoodie and black pants. The model is waving at you." />
+            <h1 class="dot fade-in-left md:leading-normal leading-normal  text-5xl text-left">
+              User experience isn't just <span class="underlined whitespace-nowrap">lorem ipsum</span>
+            </h1>
+          </div>
+          <img src="../assets/3d-waving.png" class="md:w-full w-1/2 m-auto z-10 hidden md:block" />
           <CircleDecoration class="absolute top-0 -z-10 w-1/2" />
           <CircleDecoration class="absolute top-1/4 -right-1/4 -z-10 w-3/4" />
           <CircleDecoration class="absolute top-2/3 left-0 -z-10 w-1/4" />
 <!--          <img src="../assets/sticker/star.png" class="top-0 absolute right-1/4 w-1/6 sticker-star" />-->
         </div>
-        <div>
-          <h1 class="dot fade-in-left md:leading-normal leading-normal md:text-5xl text-4xl text-center md:text-left">
+        <div class="col-span-2">
+          <h1 class="hidden md:block dot fade-in-left md:leading-normal leading-normal md:text-5xl text-4xl text-center md:text-left">
             User experience isn't just <span class="underlined whitespace-nowrap">lorem ipsum</span>
           </h1>
           <div class="py-8 max-w-prose relative">
-            <p class="leading-8 descr">
+            <p class="leading-8 descr max-w-prose">
               Hi there! I'm Christopher Rock and currently a User Interface Designer (Internship) @ OTTO in Hamburg. I'm also studying Media Informatics (M.Sc.) at the University of Lübeck.
             </p>
             <CursorChat text="Let's get creative" duration="20" />
