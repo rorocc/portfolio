@@ -23,7 +23,7 @@
             <p class="leading-8 descr max-w-prose">
               Hi there! I'm Christopher Rock and currently a User Interface Designer (Internship) @ OTTO in Hamburg. I'm also studying Media Informatics (M.Sc.) at the University of Lübeck.
             </p>
-            <CursorChat text="Let's get creative" duration="20" />
+            <CursorChat text="Design to empower" duration="20" />
           </div>
         </div>
       </div>

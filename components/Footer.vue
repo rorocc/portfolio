@@ -6,7 +6,7 @@
           <span class="footer-title">Sitemap</span>
           <ul>
             <li><NuxtLink to="/" >Home</NuxtLink></li>
-            <li><NuxtLink to="/about" >About</NuxtLink></li>
+            <li><NuxtLink to="/about" >About me</NuxtLink></li>
             <li><NuxtLink to="/imprint" >Imprint</NuxtLink></li>
           </ul>
         </div>

@@ -19,7 +19,7 @@
           </NuxtLink>
           <NuxtLink to="/about" class="menu__link">
             <span>
-              About
+              About me
             </span>
           </NuxtLink>
           <NuxtLink to="#contact" class="contact-btn">
@@ -48,7 +48,7 @@
     <div class="hidden mobile-menu">
       <ul class="leading-loose">
         <li><NuxtLink to="/">Home</NuxtLink></li>
-        <li><NuxtLink to="/about">About</NuxtLink></li>
+        <li><NuxtLink to="/about">About me</NuxtLink></li>
         <li><NuxtLink to="#contact" class="rounded-3xl">Contact</NuxtLink></li>
       </ul>
     </div>
