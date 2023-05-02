@@ -35,12 +35,14 @@
         <h1 id="the-challenges">The challenges</h1>
         <ol class="challenges">
           <li>Handling the amount and complexity of nutritional data but avoiding information overload at the same time.</li>
+          <hr>
           <li>Creating and maintaining the comprehensability and explainability of the system's information and processes.</li>
+          <hr>
           <li>Facilitating the user's nutrition literacy and overall understanding of healthy nutrition by the usage of the interface.</li>
         </ol>
       </div>
     </section>
-      <section class="sectionDisplay py-24 bg-mina-lighter">
+      <section class="sectionDisplay pb-24 bg-gray-50">
         <div class="section-m">
           <h1 id="the-human-centered-design-process">The human-centered design process</h1>
           <p class="max-w-prose">In this project, I used the human-centered design approach according to DIN EN ISO 9241-210. It helped me keeping a clear focus on the user's needs throughout the whole development process.</p>
@@ -124,8 +126,8 @@
           <p>Most of the participants designs suggested meals into their nutrients, then rating each nutrient and placing them in a color coded 4-level scale.
           This reminded me of the popular <web-link url="https://www.bmel.de/DE/themen/ernaehrung/lebensmittel-kennzeichnung/freiwillige-angaben-und-label/nutri-score/nutri-score_node.html">NutriScore</web-link> very much. The NutriScore is printed on the packaging of some food products in Germany, giving an indication on the healthiness of the product.</p>
           <br>
-          <div class="bg-mina-light rounded-2xl p-8">
-            <p class="mb-4"><span class="caps">Takeaways.</span></p>
+          <div class="bg-gray-50 rounded-2xl p-8">
+            <p class="mb-4"><span class="caps">Takeaways</span></p>
             <ul>
               <li>Color coded rating can give a quick insight</li>
               <li>Rating on different levels of detail (e.g., overall healthiness and rating of individual nutrients)</li>
@@ -290,17 +292,20 @@ export default {
 }
 
 ul{
-  list-style: none;
   @apply leading-relaxed;
 }
 
-ul li{
-  @apply mb-4;
+li{
+  list-style: none;
+  @apply my-2;
 }
 
-ul li::before{
-  content: "— ";
+li::before{
+  content: '\276F';
+  color: #1E4165;
+  @apply mr-2;
 }
+
 
 section h1{
   @apply text-2xl;
