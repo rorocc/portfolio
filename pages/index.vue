@@ -1,22 +1,16 @@
 <template>
   <div ref="mainDiv" class="m-auto overflow-x-hidden">
     <section class="container">
-      <div class="grid grid-flow-row grid-cols-none md:grid-cols-3 md:grid-rows-none my-20 md:gap-0 gap-16">
+      <div class="grid grid-cols-1 md:grid-cols-3 md:my-20 my-4 md:gap-0">
         <div class="relative w-full md:overflow-x-visible">
-          <div class="grid grid-cols-2 block md:hidden">
-            <img src="../assets/3d-waving.png" class="w-full m-auto z-10" alt="3D character of Chris wearing a purple cap, grey hoodie and black pants. The model is waving at you." />
-            <h1 class="dot fade-in-left md:leading-normal leading-normal text-3xl text-left">
-              User experience isn't just <span class="underlined whitespace-nowrap">lorem ipsum</span>
-            </h1>
-          </div>
-          <img src="../assets/3d-waving.png" class="md:w-full w-1/2 m-auto z-10 hidden md:block"  alt="3D character of Chris wearing a purple cap, grey hoodie and black pants. The model is waving at you." />
+          <img src="../assets/3d-waving.png" class="md:w-full m-auto self-center"  alt="3D character of Chris wearing a purple cap, grey hoodie and black pants. The model is waving at you." />
           <CircleDecoration class="absolute top-0 -z-10 w-1/2" />
           <CircleDecoration class="absolute top-1/4 -right-1/4 -z-10 w-3/4" />
           <CircleDecoration class="absolute top-2/3 left-0 -z-10 w-1/4" />
 <!--          <img src="../assets/sticker/star.png" class="top-0 absolute right-1/4 w-1/6 sticker-star" />-->
         </div>
         <div class="col-span-2">
-          <h1 class="hidden md:block dot fade-in-left md:leading-normal leading-normal md:text-5xl text-4xl text-center md:text-left">
+          <h1 class="dot fade-in-left md:leading-normal leading-tight md:text-5xl text-4xl text-center md:text-left">
             User experience isn't just <span class="underlined whitespace-nowrap">lorem ipsum</span>
           </h1>
           <div class="py-8 max-w-prose relative">
@@ -68,6 +62,9 @@ import BobbleHead from "~/components/pages/index/BobbleHead";
 import Workpiece from "~/components/pages/index/workpiece";
 import CursorChat from "~/components/pages/index/CursorChat";
 import CircleDecoration from "~/components/stylistic/DecorationCircle";
+//import * as THREE from 'three';
+//import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+
 
 export default {
   name: 'IndexPage',
@@ -97,6 +94,7 @@ export default {
     }
   },
   mounted () {
+    //this.initScene();
   },
   methods: {
     startPiggies () {
@@ -130,6 +128,27 @@ export default {
       const deleteChildren = setTimeout(() => { this.$refs.particlesBox.firstChild.remove() }, 3000)
       setTimeout(()=>{this.pigDisclaimerActive = false}, 3000)
       console.log(deleteChildren)
+    },
+    initScene(){
+      const canvas = this.$refs.vueCanvas;
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+      const renderer = new THREE.WebGLRenderer();
+      const loader = new GLTFLoader();
+
+      loader.load( 'model/cros.glb', function ( gltf ) {
+
+        scene.add( gltf.scene );
+
+      }, undefined, function ( error ) {
+
+        console.error( error );
+
+      } );
+
+
+      renderer.setSize( window.innerWidth, window.innerHeight );
+      renderer.render(scene, camera);
     }
   }
 }
@@ -225,11 +244,12 @@ export default {
 
   .pigButton{
     transition-duration: .2s;
-    @apply p-4 z-10 rounded-3xl bg-white fixed bottom-0 shadow-lg mx-auto left-0 mx-6 my-6;
+    background-color: var(--primary-bright);
+    @apply p-4 z-10 rounded-3xl fixed bottom-0 mx-auto left-0 mx-6 my-6;
   }
 
   .pigButton:hover{
-    background-color: rgba(246, 235, 255, 0.62);
+    background-color: var(--primary-color);
     @apply cursor-pointer;
   }
 

@@ -3,7 +3,7 @@
     <div class="container py-12 grid md:grid-cols-2 grid-cols-none md:grid-rows-none leading-loose">
       <div>
         <img src="../assets/img/about/min/me-min.jpeg" alt="Chris on an island at the Oslo area" class="w-3/4 m-auto my-20 fade-in-left" />
-        <img src="../assets/img/about/min/snow.jpg" alt="Chris somewhere in a snowy landscape in Norway taking a photo of a sign" class="w-1/2 m-auto z-10 ml-6 hidden md:block" />
+        <img src="../assets/img/about/min/hovedoya.jpg" alt="Chris outside in the winter wearing a pink beanie hat and a black hoodie with yellow letters on it" class="w-1/2 m-auto z-10 ml-6 hidden md:block" />
       </div>
       <div>
         <h1>Yep, <span class="underlined whitespace-nowrap">that's me.</span></h1>
@@ -20,8 +20,10 @@
           <br>
           Oh, and I love cinnamon buns. I even tried to find the best cinnamon bun in Oslo. <web-link url="https://rorocc.github.io/cinnanom">Check out my cinnamon bun ranking here</web-link>.
         </p>
-        <img src="../assets/img/about/min/hovedoya.jpg" alt="Chris outside in the winter wearing a pink beanie hat and a black hoodie with yellow letters on it" class="w-1/2 m-auto z-10 mt-12 hidden md:block" />
       </div>
+    </div>
+    <div class="block md:hidden my-16 mx-auto">
+      <img src="../assets/img/about/min/hovedoya.jpg" class="w-1/2 mx-auto " />
     </div>
     <div class="bg-gray-50 py-16">
       <div class="container grid md:grid-cols-2 md:grid-rows-1 grid-rows-2 md:gap-8 gap-16">
@@ -63,9 +65,24 @@
         </div>
       </div>
     </div>
-    <div class="block md:hidden">
-      <img src="../assets/img/about/min/snow.jpg" class="w-1/2 m-auto z-10 ml-0" />
-      <img src="../assets/img/about/min/hovedoya.jpg" class="w-1/2 m-auto z-10 mr-0" />
+    <div class="container leading-loose py-16 gap-16 grid md:grid-cols-2 grid-cols-1 justify-evenly items-end">
+      <div>
+        <p>Find me outside, <span class="font-bold">running around with my camera</span> and taking photos.
+          Ever since I was a child, I have found fun in depicting the world around me through the lens and thus being able to express my creativity.
+        </p>
+        <img src="../assets/img/about/min/snow.jpg" class="m-auto ml-0" />
+      </div>
+      <div>
+        <p>Over the last few years I have come to <span class="font-bold">love walks and hikes in nature</span>. It's the perfect balance to digital work for me and a way to let my thoughts run free. By the way, here I have dug out a few of my photographs:</p>
+        <div class="slider">
+          <div class="slides rounded-2xl">
+            <div class="slide" id="slide-2" :style="{ 'background-image': 'url(' + require(`../assets/img/about/gallery/slide-2.jpg`) + ')' }" />
+            <div class="slide" id="slide-1" :style="{ 'background-image': 'url(' + require(`../assets/img/about/gallery/slide-1.jpg`) + ')' }" />
+            <div class="slide" id="slide-3" :style="{ 'background-image': 'url(' + require(`../assets/img/about/gallery/slide-3.jpg`) + ')' }" />
+            <div class="slide" id="slide-4" :style="{ 'background-image': 'url(' + require(`../assets/img/about/gallery/slide-4.jpg`) + ')' }" />
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -147,4 +164,57 @@ export default {
    transform: skew(30deg);
    z-index: -1;
  }
+
+ .slide{
+   background-size: cover;
+   background-position: center;
+ }
+
+  .slider {
+    text-align: center;
+    overflow: hidden;
+    @apply w-full;
+  }
+
+  .slides {
+    display: flex;
+
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+
+    /*
+    scroll-snap-points-x: repeat(300px);
+    scroll-snap-type: mandatory;
+    */
+  }
+  .slides::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  .slides::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 10px;
+  }
+  .slides::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .slides > div {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    margin-right: 50px;
+    border-radius: 10px;
+    transform-origin: center center;
+    transform: scale(1);
+    transition: transform 0.5s;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+
+    @apply w-full aspect-square;
+  }
 </style>
