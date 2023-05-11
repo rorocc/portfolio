@@ -23,4 +23,8 @@ a{
   padding-right: 22px;
 }
 
+a:hover{
+  color: var(--primary-color);
+}
+
 </style>
