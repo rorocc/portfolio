@@ -1,12 +1,12 @@
 <template>
   <a :href="url" :class="[isAvailable ? 'cursor-pointer' : 'cursor-not-allowed']">
     <div class="workpiece overflow-hidden" :class="[isAvailable ? 'opacity-100' : 'opacity-50']">
-      <div class="grid lg:grid-cols-12 grid-cols-1 lg:h-80 place-items-center lg:gap-4" :style="{backgroundColor: bgColor, color: textColor}">
-        <div class="lg:col-span-5 col-span-1 h-80 w-full" :style="{backgroundColor: textColor}">
+      <div class="grid lg:grid-cols-12 grid-cols-1 lg:h-80 place-items-center lg:gap-4 bg-white " :style="{backgroundColor: bgColor, color: textColor}">
+        <div class="lg:col-span-5 col-span-1 h-80 w-full bg-white" :style="{backgroundColor: textColor}">
           <img class="w-full object-cover h-full" :src="require(`~/assets/img/work/${imgUrl}`)" />
         </div>
         <div class="col-span-7 md:w-2/3 w-3/4 ml-0 pt-16 pb-6">
-          <p class="headText text-gray-800">{{ headText }}</p>
+          <p class="headText">{{ headText }}</p>
           <h1 class="py-0 mt-0">{{ title }}</h1>
         </div>
       </div>
@@ -55,7 +55,8 @@ export default {
 }
 
 .opacity-100:hover{
-  transform: scale(101%);
+  transform: scale(100.5%);
+  @apply drop-shadow-xl;
 }
 
 h1{

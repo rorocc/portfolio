@@ -77,6 +77,10 @@ export default {
     color: var(--link-color);
   }
 
+  a:hover{
+    color: var(--primary-color)
+  }
+
   li{
     @apply leading-loose;
   }

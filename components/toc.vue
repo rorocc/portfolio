@@ -48,7 +48,7 @@ export default {
 }
 
 .toc li{
-  @apply p-2;
+  @apply p-2 select-none;
 }
 
 .toc li:hover{

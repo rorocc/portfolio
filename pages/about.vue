@@ -3,27 +3,23 @@
     <div class="container py-12 grid md:grid-cols-2 grid-cols-none md:grid-rows-none leading-loose">
       <div>
         <img src="../assets/img/about/min/me-min.jpeg" alt="Chris on an island at the Oslo area" class="w-3/4 m-auto my-20 fade-in-left" />
-        <img src="../assets/img/about/min/hovedoya.jpg" alt="Chris outside in the winter wearing a pink beanie hat and a black hoodie with yellow letters on it" class="w-1/2 m-auto z-10 ml-6 hidden md:block" />
       </div>
       <div>
         <h1>Yep, <span class="underlined whitespace-nowrap">that's me.</span></h1>
         <p>
-          With product design comes great responsibility — it can support people in their everyday lives, empower them or entertain them. But the opposite can also happen if the user perspective is left out of the development process.
-          <br> <br>
-          It is precisely this potential influence that motivates me to design better and more inclusive interfaces.
+          With product design comes great responsibility — it can support, empower or entertain people in their everyday lives. But the opposite can also happen if the user perspective is left out of the design process.
+          It is this potential impact that motivates me to design better and more inclusive interfaces.
           <br>
           <br>
+          I'm currently <b>student</b> of the Media Informatics masters program and a <b>design research assistant</b> at the <web-link url="https://maridata.app/">MariData</web-link> project at the University of Lübeck.
+          Also, I am working as a <b>UX/UI intern</b> at <web-link url="https://www.linkedin.com/company/otto/">OTTO</web-link> for the pattern library team in Hamburg.
           <br>
-          I'm currently student of the Media Informatics masters program and a design research assistant at the <web-link url="https://maridata.app/">MariData</web-link> project at the University of Lübeck.
-          Also, I am working as a UX/UI intern at OTTO for the pattern library team in Hamburg.
           <br>
+          One of the things I learnt there was how simple but effective accessible system design can be when you consider all people in the design process. Since then, accessibility has been an integral part of my design work.          <br>
           <br>
           Oh, and I love cinnamon buns. I even tried to find the best cinnamon bun in Oslo. <web-link url="https://rorocc.github.io/cinnanom">Check out my cinnamon bun ranking here</web-link>.
         </p>
       </div>
-    </div>
-    <div class="block md:hidden my-16 mx-auto">
-      <img src="../assets/img/about/min/hovedoya.jpg" class="w-1/2 mx-auto " />
     </div>
     <div class="bg-gray-50 py-16">
       <div class="container grid md:grid-cols-2 md:grid-rows-1 grid-rows-2 md:gap-8 gap-16">
@@ -35,11 +31,13 @@
               <br>
               2021 - now — <span class="italic">Universität zu Lübeck, Germany</span>
             </p>
+            <hr class="w-3/4 mb-2" />
             <p class="expPoint">
               <span class="head">ERASMUS exchange semester</span>
               <br>
               August - December 2022 — <span class="italic">Universitetet i Oslo, Norway</span>
             </p>
+            <hr class="w-3/4 mb-2" />
             <p class="expPoint">
               <span class="head">Bachelor of Science - Media informatics</span>
               <br>
@@ -70,11 +68,12 @@
         <p>Find me outside, <span class="font-bold">running around with my camera</span> and taking photos.
           Ever since I was a child, I have found fun in depicting the world around me through the lens and thus being able to express my creativity.
         </p>
-        <img src="../assets/img/about/min/snow.jpg" class="m-auto ml-0" />
+        <img src="../assets/img/about/min/sticky_snow-min.png" class="md:w-2/3 w-full m-auto" />
       </div>
       <div>
-        <p>Over the last few years I have come to <span class="font-bold">love walks and hikes in nature</span>. It's the perfect balance to digital work for me and a way to let my thoughts run free. By the way, here I have dug out a few of my photographs:</p>
-        <div class="slider">
+        <p>Over the last few years I have come to <span class="font-bold">love walks and hikes in nature</span>. It's the perfect balance to digital work for me and a way to let my thoughts run free.</p>
+        <img src="../assets/img/about/min/hovedoya.jpg" alt="Chris outside in the winter wearing a pink beanie hat and a black hoodie with yellow letters on it" class="md:w-2/3 w-full m-auto" />
+        <div class="slider hidden">
           <div class="slides rounded-2xl">
             <div class="slide" id="slide-2" :style="{ 'background-image': 'url(' + require(`../assets/img/about/gallery/slide-2.jpg`) + ')' }" />
             <div class="slide" id="slide-1" :style="{ 'background-image': 'url(' + require(`../assets/img/about/gallery/slide-1.jpg`) + ')' }" />
@@ -129,12 +128,6 @@ export default {
 
   .expPoint{
     @apply leading-loose;
-  }
-
-  .expPoint::before{
-    content: '\276F';
-    color: var(--primary-color);
-    @apply mr-2;
   }
 
  p{

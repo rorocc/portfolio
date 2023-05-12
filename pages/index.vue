@@ -1,7 +1,7 @@
 <template>
   <div ref="mainDiv" class="m-auto overflow-x-hidden">
     <section class="container">
-      <div class="grid grid-cols-1 md:grid-cols-3 md:my-20 mb-16 mt-4 md:gap-0">
+      <div class="grid grid-cols-1 md:grid-cols-2 md:my-20 mb-16 mt-4 md:gap-0">
         <div class="relative w-full md:overflow-x-visible">
           <img src="../assets/3d-waving.png" class="md:w-full m-auto self-center"  alt="3D character of Chris wearing a purple cap, grey hoodie and black pants. The model is waving at you." />
           <CircleDecoration class="absolute top-0 -z-10 w-1/2" />
@@ -9,13 +9,13 @@
           <CircleDecoration class="absolute top-2/3 left-0 -z-10 w-1/4" />
 <!--          <img src="../assets/sticker/star.png" class="top-0 absolute right-1/4 w-1/6 sticker-star" />-->
         </div>
-        <div class="col-span-2">
+        <div>
           <h1 class="dot max-w-prose fade-in-left md:leading-normal leading-tight md:text-5xl text-4xl text-center md:text-left">
             User experience isn't just <span class="underlined whitespace-nowrap">lorem ipsum</span>
           </h1>
           <div class="py-8 max-w-prose relative">
             <p class="leading-8 descr max-w-prose">
-              Hi there! I'm Christopher Rock and currently a User Interface Designer (Internship) @ OTTO in Hamburg. I'm also studying Media Informatics (M.Sc.) at the University of Lübeck.
+              Hi there! I'm Christopher Rock and I'm currently working as a User Interface Designer (Intern) at <web-link url="https://www.linkedin.com/company/otto/">OTTO</web-link> in Hamburg. I'm also studying Media Informatics (M.Sc.) at the University of Lübeck, where I've been able to build up not only my design skills but also frontend development skills.
             </p>
             <CursorChat text="Design to empower" duration="20" />
           </div>
@@ -62,13 +62,14 @@ import BobbleHead from "~/components/pages/index/BobbleHead";
 import Workpiece from "~/components/pages/index/workpiece";
 import CursorChat from "~/components/pages/index/CursorChat";
 import CircleDecoration from "~/components/stylistic/DecorationCircle";
+import WebLink from "~/components/structuralComponents/webLink";
 //import * as THREE from 'three';
 //import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 
 
 export default {
   name: 'IndexPage',
-  components: {BobbleHead, Workpiece, CursorChat, CircleDecoration},
+  components: {WebLink, BobbleHead, Workpiece, CursorChat, CircleDecoration},
   head() {
     return {
       meta: [
