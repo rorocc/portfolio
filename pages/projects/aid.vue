@@ -48,26 +48,38 @@
         <h1 id="research">Research</h1>
         <p>
           To be able to dive deeper into the context, we have worked intensively with the <web-link url="https://lt1.org/">LoopInsight1 (LT1)</web-link> simulator. LT1 is an open source project from the University of Applied Sciences Ulm, which simulates the <b>interaction between a person with type 1 diabetes and an AID system</b>.
-          The simulator of LT1 forms the algorithmic basis for this project. Accordingly, only the user interface is adapted.
+          The simulator of LT1 forms the algorithmic basis for this project. Therefore, we took the functional basis of this simulator and adapted the user interface to our findings, e.g. to strengthen the promotion of trust in the system.
         </p>
-        <figure-component
-          src="img/work/aid/aid-lt1-screen.png"
-          alt=""
-          figcaption="AID simulator by LoopInsight1"
-        />
-        <h2>Challenges</h2>
-        <p>The following challenges can be identified in the development and design of AID systems:</p>
-        <ul>
-          <li><b>Mental workload</b> — In diabetes management, there are a variety of (numerical) factors to consider that demand cognitive resources from users. </li>
-          <li><b>Skill degredation</b> — If tasks are completely automated without involving users, they may lose the skills to perform them by themselves. This also leads to them being more insensitive to possible error conditions of the automation.</li>
-          <li><b>Trust</b> — The administration of insulin can cause health-critical conditions. Therefore, it is even more important that users can trust the capabilities of the system.</li>
-          <li><b>Situation awareness</b> — Users can understand the system's states and even anticipate them. This in turn has an impact on trust and can influence the extent to which the skills are degredated.</li>
-        </ul>
         <figure-component
           src="img/work/aid/aid-figure-reality.png"
           alt="The closed loop process contains the insulin pump, the real patient, the glucose sensor and the algorithm."
           figcaption="Process of a closed-loop system in reality"
         />
+
+        <figure-component v-if="false"
+          src="img/work/aid/aid-lt1-screen.png"
+          alt=""
+          figcaption="AID simulator by LoopInsight1"
+        />
+        <h2>Challenges</h2>
+        <p>We identified the following challenges in the development and design of AID systems:</p>
+        <card tagline="Challenge #1"
+              headline="Mental workload"
+              text="In diabetes management, there are a variety of (numerical) factors to consider that demand cognitive resources from users."
+        />
+        <card tagline="Challenge #2"
+              headline="Skill degredation"
+              text="If tasks are completely automated without involving users, they may lose the skills to perform them by themselves. This also leads to them being more insensitive to possible error conditions of the automation."
+        />
+        <card tagline="Challenge #3"
+              headline="Trust"
+              text="The administration of insulin can cause health-critical conditions. Therefore, it is even more important that users can trust the capabilities of the system."
+        />
+        <card tagline="Challenge #4"
+              headline="Situation awareness"
+              text="Users can understand the system's states and even anticipate them. This in turn has an impact on trust and can influence the extent to which the skills are degredated."
+        />
+
         <h2>Interviews</h2>
         <p>
           To learn more about the context, we conducted interviews with three people with type 1 diabetes. The goals of the interviews were to find out <b>what data</b> are necessary for diabetes management and what <b>problems or challenges</b> are encountered in this process. These interviews were also a content entry point to learn more about the context of use.
@@ -179,6 +191,23 @@
         </div>
       </section>
     </div>
+    <section class="section-m">
+      <h1 id="conclusion">Conclusion</h1>
+      <p>As part of this project, the LoopInsight1 AID simulator was considered and a revision of the user interface was carried out.
+        In order to find out to what extent the simulator can be optimised for patients, we conducted interviews with those affected and derived goals for the design.
+        <br> <br>
+        Unfortunately, due to a lack of capacity, the design approach could not be finally evaluated with potential users.
+      </p>
+      <h2>Learnings</h2>
+      <card tagline="Learning #1"
+            headline="Involve users. Do it."
+            text="I gained so much insight from talking to people - not just about requirements, but also about the emotional impact of the system on users. Involve users wherever possible."
+      />
+      <card tagline="Learning #2"
+            headline="Do your research."
+            text="With this topic in particular, I had to realise that the market is very difficult to analyse, whether because of a lack of products or because of proprietary content. This makes it all the more important to consult research literature, for example, to build a solid foundation."
+      />
+    </section>
   </div>
 </template>
 
@@ -186,9 +215,10 @@
 import Display from "~/components/work/display";
 import WebLink from "~/components/structuralComponents/webLink";
 import FigureComponent from "~/components/figureComponent";
+import Card from "~/components/work/card";
 export default {
   name: "aid",
-  components: {FigureComponent, WebLink, Display},
+  components: {Card, FigureComponent, WebLink, Display},
   head: {
     title: 'AID Simulator UX Rework -',
     meta: [
