@@ -33,13 +33,18 @@
       </section>
       <div class="section-m">
         <h1 id="the-challenges">The challenges</h1>
-        <ol class="challenges">
-          <li>Handling the amount and complexity of nutritional data but avoiding information overload at the same time.</li>
-          <hr>
-          <li>Creating and maintaining the comprehensability and explainability of the system's information and processes.</li>
-          <hr>
-          <li>Facilitating the user's nutrition literacy and overall understanding of healthy nutrition by the usage of the interface.</li>
-        </ol>
+        <card tagline="Challenge #1"
+              headline="Information overload"
+              text="Handling the amount and complexity of nutritional data but avoiding information overload at the same time."
+        />
+        <card tagline="Challenge #2"
+              headline="Avoiding the black box"
+              text="Creating and maintaining the comprehensability and explainability of the system's information and processes."
+        />
+        <card tagline="Challenge #3"
+              headline="Nutrition literacy"
+              text="Facilitating the user's nutrition literacy and overall understanding of healthy nutrition by the usage of the interface."
+        />
       </div>
     </section>
       <section class="sectionDisplay pb-24 bg-gray-50">
@@ -218,15 +223,19 @@ details-on-demand</span> introduces the concept of giving a general information 
         </p>
       </div>
       <div class="section mx-auto">
-        <div>
-          <p><span class="caps">Key learnings.</span></p>
-          <ul>
-            <li>How to conduct a design studio workshop with potential users. The results should be handled thoughtfully and critically reviewed.</li>
-            <li>How to plan and carry out a user test with real users. </li>
-            <li>Don't underestimate the complexity of the human-centered design process.</li>
-            <li>It's mostly impossible to get the perfect design in the first iteration. Don't get frustrated but analyze your mistakes.</li>
-          </ul>
-        </div>
+        <h2>Key learnings</h2>
+        <card tagline="Learning #1"
+              headline="Review test results critically"
+              text="Analyse the qualitative results of the user tests on a meta level and try to draw more conclusions about the basic needs of the users."
+        />
+        <card tagline="Learning #2"
+              headline="Don't underestimate the HCD process"
+              text="The human-centred design process is a complex and elaborate procedure. This has its good reasons, of course, and should therefore be planned through realistically and generously from the beginning."
+        />
+        <card tagline="Learning #3"
+              headline="Don't. Get. Frustrated."
+              text="It's mostly impossible to get the perfect design in the first iteration. Don't get frustrated but analyze your mistakes and go on."
+        />
       </div>
     </section>
   </div>
@@ -236,10 +245,11 @@ details-on-demand</span> introduces the concept of giving a general information 
 import DescriptionElement from "~/components/work/descriptionElement"
 import StatBlock from "~/components/work/StatBlock";
 import WebLink from "~/components/structuralComponents/webLink";
+import Card from "~/components/work/card";
 
 export default {
   name: "Mina",
-  components: {StatBlock, DescriptionElement, WebLink},
+  components: {Card, StatBlock, DescriptionElement, WebLink},
   layout: 'default',
   head: {
     title: 'MINA -',

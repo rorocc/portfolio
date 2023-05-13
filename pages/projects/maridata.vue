@@ -64,10 +64,13 @@
       <section class="mb-56 leading-loose">
         <div class="section-m">
           <h1 id="the-maridata-design-system">The MariData design system</h1>
-          <p>To ensure a consistent design, we developed the MariData Design System, which not only actively supports team design, but also allows developers to independently dive deeper into designs and derive styling requirements.
-          <br><br>
-            As a member of the project from the beginning, it was my responsibility to build and maintain this design system. I used the Figma Library functionality so that other team members could access the styles and push updates.
-            Thanks to the linked components, the interactive Figma prototype could also be kept up to date at all times with little effort.
+          <p>
+            As one of the main UX/UI designers on the project, I built and developed the MariData design from the beginning.
+            This not only ensured that the design was consistent across the team, but also allowed the developers to dive deeper into the design and derive styling requirements.
+            <br>
+            <br>
+            In order to promote quick entry into the system and ease of learning, we have chosen to adopt common standards from existing maritime interfaces (e.g. ECDIS) where appropriate.
+            We have also integrated the <web-link url="https://www.openbridge.no/">OpenBridge</web-link> design in some places, which aims to establish a design standard in shipping.
           </p>
         </div>
         <img class="md:w-1/2 w-4/5 mx-auto rounded-lg" src="~assets/img/work/maridata/components.png" alt="The MariData design system." />
