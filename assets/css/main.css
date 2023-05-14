@@ -71,6 +71,28 @@ ol.challenges li:before{
   @apply text-4xl italic font-serif;
 }
 
+.contact-btn-inverted{
+  background-color: white;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  @apply py-2 px-4 rounded-full flex gap-2;
+}
+
+.contact-btn-inverted:hover{
+  background-color: var(--primary-color);
+  color: var(--primary-bright);
+  border: 1px solid var(--primary-bright);
+}
+
+.contact-btn-inverted svg{
+  fill: var(--primary-color);
+  @apply w-6;
+}
+
+.contact-btn-inverted:hover svg{
+  fill: var(--primary-bright);
+}
+
 .contact-btn{
   background-color: var(--primary-color);
   color: var(--primary-bright);

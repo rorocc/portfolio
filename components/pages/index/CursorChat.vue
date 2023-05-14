@@ -42,13 +42,13 @@ export default {
     0%{ transform: translate(10%, 0)}
     10%{ transform: translate(30%, 15%)}
     20%{ transform: translate(30%, 15%)}
-    30%{ transform: translate(15%, 50%)}
-    40%{ transform: translate(15%, 50%)}
+    30%{ transform: translate(45%, 50%)}
+    40%{ transform: translate(45%, 50%)}
     50%{ transform: translate(25%, 100%)}
     60%{ transform: translate(25%, 100%)}
-    70%{ transform: translate(55%, 20%)}
-    80%{ transform: translate(55%, 20%)}
-    90%{ transform: translate(20%, 55%)}
+    70%{ transform: translate(70%, 20%)}
+    80%{ transform: translate(70%, 20%)}
+    90%{ transform: translate(40%, 55%)}
     100%{ transform: translate(10%, 0%)}
   }
 </style>

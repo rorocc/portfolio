@@ -1,9 +1,14 @@
 <template>
   <div ref="mainDiv" class="m-auto overflow-x-hidden">
     <section class="container">
-      <div class="grid grid-cols-1 md:grid-cols-2 md:my-20 mb-16 mt-4 md:gap-0">
+      <div class="grid grid-cols-1 md:grid-cols-2 md:my-20 mb-16 mt-4 md:gap-0 gap-6">
         <div class="relative w-full md:overflow-x-visible">
-          <img src="../assets/3d-waving.png" class="md:w-full m-auto self-center"  alt="3D character of Chris wearing a purple cap, grey hoodie and black pants. The model is waving at you." />
+          <video class="w-2/3 m-auto" autoplay loop muted playsinline>
+            <source src="3d.webm" type="video/webm">
+          </video>
+          <CursorChat text="Design to empower" duration="20" class="absolute bottom-16 md:left-1/4 left-16" />
+          <model-canvas v-if="false" ></model-canvas>
+          <img v-if="false" src="../assets/3d-waving.png" class="md:w-full m-auto self-center"  alt="3D character of Chris wearing a purple cap, grey hoodie and black pants. The model is waving at you." />
           <CircleDecoration class="absolute top-0 -z-10 w-1/2" />
           <CircleDecoration class="absolute top-1/4 -right-1/4 -z-10 w-3/4" />
           <CircleDecoration class="absolute top-2/3 left-0 -z-10 w-1/4" />
@@ -17,8 +22,12 @@
             <p class="leading-8 descr max-w-prose">
               Hi there! I'm Christopher Rock and I'm currently working as a User Interface Designer (Intern) at <web-link url="https://www.linkedin.com/company/otto/">OTTO</web-link> in Hamburg. I'm also studying Media Informatics (M.Sc.) at the University of Lübeck, where I've been able to build up not only my design skills but also frontend development skills.
             </p>
-            <CursorChat text="Design to empower" duration="20" />
           </div>
+          <NuxtLink class="w-full" to="#contact">
+            <div class="cta-btn w-full md:m-0 m-auto">
+              Contact me
+            </div>
+          </NuxtLink>
         </div>
       </div>
     </section>
@@ -63,13 +72,11 @@ import Workpiece from "~/components/pages/index/workpiece";
 import CursorChat from "~/components/pages/index/CursorChat";
 import CircleDecoration from "~/components/stylistic/DecorationCircle";
 import WebLink from "~/components/structuralComponents/webLink";
-//import * as THREE from 'three';
-//import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
-
+import ModelCanvas from "~/components/pages/index/ModelCanvas";
 
 export default {
   name: 'IndexPage',
-  components: {WebLink, BobbleHead, Workpiece, CursorChat, CircleDecoration},
+  components: {ModelCanvas, WebLink, BobbleHead, Workpiece, CursorChat, CircleDecoration},
   head() {
     return {
       meta: [
@@ -84,7 +91,6 @@ export default {
   data () {
     return {
       tool: "mouse",
-      vueCanvas: null,
       pigDisclaimerActive: false,
       pos: { x: 0, y: 0 },
       works: [
@@ -93,9 +99,6 @@ export default {
         { title: 'Mobile Interface for Nutrition Awareness (MINA)', headText: 'Bachelor Thesis Media Informatics', description: 'What is a healthy meal? - A research based design approach to comprehensible in-app rating of meals.', bgColor: '#eeffa1', textColor: '#3b3b3b', imgUrl: 'screen_mina.png', url: './projects/mina', isAvailable: true }
       ]
     }
-  },
-  mounted () {
-    //this.initScene();
   },
   methods: {
     startPiggies () {
@@ -129,27 +132,6 @@ export default {
       const deleteChildren = setTimeout(() => { this.$refs.particlesBox.firstChild.remove() }, 3000)
       setTimeout(()=>{this.pigDisclaimerActive = false}, 3000)
       console.log(deleteChildren)
-    },
-    initScene(){
-      const canvas = this.$refs.vueCanvas;
-      const scene = new THREE.Scene();
-      const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
-      const renderer = new THREE.WebGLRenderer();
-      const loader = new GLTFLoader();
-
-      loader.load( 'model/cros.glb', function ( gltf ) {
-
-        scene.add( gltf.scene );
-
-      }, undefined, function ( error ) {
-
-        console.error( error );
-
-      } );
-
-
-      renderer.setSize( window.innerWidth, window.innerHeight );
-      renderer.render(scene, camera);
     }
   }
 }
@@ -214,6 +196,17 @@ export default {
     width: 167px;
     height: 167px;
     transform: scale(0.15);
+  }
+
+  .cta-btn{
+    background-color: var(--primary-color);
+    color: white;
+    @apply py-4 px-6 md:w-1/2 w-2/3 rounded-full text-center font-bold tracking-wide;
+  }
+
+  .cta-btn:hover{
+    background-color: var(--primary-bright);
+    color: var(--primary-color);
   }
 
   #mouse_chatbox{
