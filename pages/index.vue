@@ -3,10 +3,11 @@
     <section class="container">
       <div class="grid grid-cols-1 md:grid-cols-2 md:my-20 mb-16 mt-4 md:gap-0 gap-6">
         <div class="relative w-full md:overflow-x-visible">
-          <video class="w-2/3 m-auto" autoplay loop muted playsinline>
+          <video class="w-2/3 m-auto md:translate-x-0 -translate-x-1/4" autoplay loop muted playsinline>
+            <source v-if="supportsHEVC()" src="3d-hevc.mov" type="video/webm">
             <source src="3d.webm" type="video/webm">
           </video>
-          <CursorChat text="Design to empower" duration="20" class="absolute bottom-16 md:left-1/4 left-16" />
+          <CursorChat text="Design to empower" duration="20" class="absolute md:top-1/2 bottom-16 md:left-1/3 left-1/4" />
           <model-canvas v-if="false" ></model-canvas>
           <img v-if="false" src="../assets/3d-waving.png" class="md:w-full m-auto self-center"  alt="3D character of Chris wearing a purple cap, grey hoodie and black pants. The model is waving at you." />
           <CircleDecoration class="absolute top-0 -z-10 w-1/2" />
@@ -97,10 +98,21 @@ export default {
         { title: 'AID-Simulation — Diabetes type 1 closed-loop simulator', headText: 'Masters project media informatics', description: 'An interactive simulator with the aim to make the functionality of closed-loop systems more comprehensible.', bgColor: '#e3ecff', textColor: '#001E4B', imgUrl: 'screen_aid.png', url: './projects/aid', isAvailable: true },
         { title: 'MariData: A comprehensive interface for ship energy management', headText: 'Funded research project', description: 'The MariData decision support system helps vessel crews to not only reduce financial costs, but also the emissions and therefore minimize the negative impact on our environment.', bgColor: '#d6dde3', textColor: '#3E484E', imgUrl: 'screen_maridata.png', url: './projects/maridata', isAvailable: true },
         { title: 'Mobile Interface for Nutrition Awareness (MINA)', headText: 'Bachelor Thesis Media Informatics', description: 'What is a healthy meal? - A research based design approach to comprehensible in-app rating of meals.', bgColor: '#eeffa1', textColor: '#3b3b3b', imgUrl: 'screen_mina.png', url: './projects/mina', isAvailable: true }
-      ]
+      ],
+      navigator: null
     }
   },
+  mounted() {
+    this.navigator = window.navigator;
+  },
   methods: {
+    supportsHEVC(){
+      if(!this.navigator) return
+      const ua = this.navigator.userAgent.toLowerCase()
+      const hasMediaCapabilities = !!(navigator.mediaCapabilities && navigator.mediaCapabilities.decodingInfo)
+      const isSafari = ((ua.indexOf('safari') !== -1) && (!(ua.indexOf('chrome')!== -1) && (ua.indexOf('version/')!== -1)))
+      return isSafari && hasMediaCapabilities
+    },
     startPiggies () {
       const container = document.createElement("div")
       container.classList.add("particlesContainer")
