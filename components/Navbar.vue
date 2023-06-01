@@ -28,24 +28,16 @@
         </div>
         <!-- Mobile menu button -->
         <div class="md:hidden flex items-center">
-          <button class="outline-none mobile-menu-button">
-            <svg class=" w-6 h-6 text-gray-500 hover:text-fuchsia-500 "
-                 x-show="!showMenu"
-                 fill="none"
-                 stroke-linecap="round"
-                 stroke-linejoin="round"
-                 stroke-width="2"
-                 viewBox="0 0 24 24"
-                 stroke="currentColor"
-            >
-              <path d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
+          <button class="outline-none mobile-menu-button menu__link">
+            <span>
+              MENU
+            </span>
           </button>
         </div>
       </div>
     </div>
     <!-- mobile menu -->
-    <div class="hidden mobile-menu">
+    <div class="hidden mobile-menu duration-500 opacity-0">
       <ul class="leading-loose">
         <li><NuxtLink to="/">Home</NuxtLink></li>
         <li><NuxtLink to="/about">About me</NuxtLink></li>
@@ -82,6 +74,11 @@ export default {
 
     btn.addEventListener('click', () => {
       menu.classList.toggle('hidden');
+      if(menu.classList.contains('hidden')){
+        menu.classList.replace("opacity-100","opacity-0")
+      }else{
+        menu.classList.replace('opacity-0', 'opacity-100');
+      }
     });
   }
 }
@@ -114,6 +111,12 @@ a{
 a:hover{
   color: var(--link-color-active)
 }
+
+.mobile-menu-button{
+  color: var(--primary-color);
+  @apply font-bold;
+}
+
 
 .logo{
   font-family: "DM Sans", sans-serif;
