@@ -11,8 +11,8 @@
           It is this potential impact that motivates me to design better and more inclusive interfaces.
           <br>
           <br>
-          I'm currently <b>student</b> of the Media Informatics masters program and a <b>design research assistant</b> at the <web-link url="https://maridata.app/">MariData</web-link> project at the University of Lübeck.
-          Also, I am working as a <b>UX/UI intern</b> at <web-link url="https://www.linkedin.com/company/otto/">OTTO</web-link> for the pattern library team in Hamburg.
+          I'm currently <b>student</b> of the Media Informatics masters program and an aspiring UX Designer. Previously, I was a <b>design research assistant</b> at the <web-link url="https://maridata.app/">MariData</web-link> project at the University of Lübeck.
+          Also, I worked as a <b>Working Student</b> at the Design System team of <web-link url="https://www.linkedin.com/company/otto/">OTTO</web-link> in Hamburg.
           <br>
           <br>
           One of the things I learnt there was how simple but effective accessible system design can be when you consider all people in the design process. Since then, accessibility has been an integral part of my design work.          <br>
@@ -44,21 +44,32 @@
               2017 - 2021 — <span class="italic">Universität zu Lübeck, Germany</span>
             </p>
           </div>
+          <div>
+            <a href="https://linkedin.com/in/rock-christopher" rel="noopener noreferrer" target="_blank">
+              <div class="contact-btn-inverted max-w-fit">
+                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>LinkedIn</title><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                <span>More details on LinkedIn</span>
+              </div>
+            </a>
+          </div>
         </div>
         <div>
           <h2 class="mb-4">Knowledge & Tools</h2>
           <div class="flex-wrap gap-2 flex">
             <span class="skilltag">Human-Centered Design</span>
             <span class="skilltag">Prototyping</span>
-            <span class="skilltag">Wireframing</span>
-            <span class="skilltag">User Research</span>
+            <span class="skilltag">Design Tokens</span>
+            <span class="skilltag">Design Research</span>
             <span class="skilltag">Web Accessibility</span>
+            <span class="skilltag">Design Systems</span>
             <span class="skilltag tool">Figma</span>
             <span class="skilltag tool">FigJam</span>
+            <span class="skilltag tool">ProtoPie</span>
             <span class="skilltag tool">VueJS</span>
             <span class="skilltag tool">Premiere</span>
             <span class="skilltag tool">Photoshop</span>
             <span class="skilltag tool">AfterEffects</span>
+            <span class="skilltag tool">DaVinci Resolve</span>
           </div>
         </div>
       </div>
