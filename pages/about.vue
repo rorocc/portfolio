@@ -29,7 +29,7 @@
             <p class="expPoint">
               <span class="head">Master of Science - Media informatics</span>
               <br>
-              2021 - now — <span class="italic">Universität zu Lübeck, Germany</span>
+              2021 - 09.2024 — <span class="italic">Universität zu Lübeck, Germany</span>
             </p>
             <hr class="w-3/4 mb-2" />
             <p class="expPoint">
@@ -64,7 +64,6 @@
             <span class="skilltag">Design Systems</span>
             <span class="skilltag tool">Figma</span>
             <span class="skilltag tool">FigJam</span>
-            <span class="skilltag tool">ProtoPie</span>
             <span class="skilltag tool">VueJS</span>
             <span class="skilltag tool">Premiere</span>
             <span class="skilltag tool">Photoshop</span>

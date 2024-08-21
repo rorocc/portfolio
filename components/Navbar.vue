@@ -1,17 +1,8 @@
 <template>
   <nav>
     <div class="mx-auto">
-      <div class="flex justify-between">
-        <div class="flex">
-          <div>
-            <!-- Website Logo -->
-            <a href="/" class="flex items-center py-4">
-              <span class="logo">chrisr<span>°</span></span>
-            </a>
-          </div>
-        </div>
         <!-- Primary Navbar items -->
-        <div class="hidden md:flex items-center lg:space-x-6 space-x-4">
+        <div class="hidden md:flex justify-center lg:space-x-6 space-x-4">
           <NuxtLink to="/" class="menu__link" exact>
             <span>
               Home
@@ -19,11 +10,13 @@
           </NuxtLink>
           <NuxtLink to="/about" class="menu__link">
             <span>
-              About me
+              About
             </span>
           </NuxtLink>
-          <NuxtLink to="#contact" class="contact-btn">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><path d="M6.5 33.75q-1.458 0-2.5-1.042-1.042-1.041-1.042-2.5V9.792q0-1.459 1.042-2.5Q5.042 6.25 6.5 6.25h27q1.5 0 2.542 1.042 1.041 1.041 1.041 2.5v20.416q0 1.459-1.041 2.5Q35 33.75 33.5 33.75ZM20 21.792l13.5-8.917V9.792L20 18.542 6.5 9.792v3.083Z"/></svg>
+          <NuxtLink to="#contact" class="menu__link">
+            <span>
+              Contact
+            </span>
           </NuxtLink>
         </div>
         <!-- Mobile menu button -->
@@ -34,7 +27,6 @@
             </span>
           </button>
         </div>
-      </div>
     </div>
     <!-- mobile menu -->
     <div class="hidden mobile-menu duration-500 opacity-0">
@@ -100,7 +92,21 @@ a.menu__link.nuxt-link-active{
 
 .menu__link span{
   border-color: var(--primary-color);
-  @apply border py-2 px-6 rounded-full;
+  position: relative;
+  @apply py-2 px-6;
+}
+
+.menu__link.nuxt-link-active :before,
+.menu__link:hover :before {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  height: 3px;
+  width: 25%;
+  left:40%;
+  content: "";
+  background-color: var(--link-color-active);
+  @apply rounded-2xl;
 }
 
 a{
@@ -108,7 +114,7 @@ a{
   color: var(--link-color);
 }
 
-a:hover{
+.menu__link :hover{
   color: var(--link-color-active)
 }
 

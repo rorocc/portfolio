@@ -23,7 +23,7 @@
     <hr />
     <div class="notes text-left py-4 opacity-25">
       <span>Made with Nuxt.js</span>
-      <span> © 2023 Christopher Rock</span>
+      <span> © 2024 Christopher Rock</span>
     </div>
   </div>
 </template>

@@ -1,8 +1,7 @@
 <template>
   <div>
-    <div class="w-full bg-white shadow-custom relative">
+    <div class="w-full bg-white relative">
       <Navbar class="container m-auto p-4" />
-      <div id="pinkBar"></div>
     </div>
     <div class="mx-auto m-auto">
       <Nuxt />
@@ -45,13 +44,10 @@
 }
 
 #contact{
-  background-color: var(--primary-color);
+  background-image: url("/gradient.jpeg");
+  background-size: cover;
   color: white;
   @apply py-32 text-center;
 }
 
-#pinkBar{
-  background-color: var(--primary-color);
-  @apply absolute bottom-0 w-full h-4;
-}
 </style>

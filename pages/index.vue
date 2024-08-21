@@ -21,7 +21,7 @@
           </h1>
           <div class="py-8 max-w-prose relative">
             <p class="leading-8 descr max-w-prose">
-              Hi there! I'm Christopher Rock, an aspiring User Interface Designer in the Hamburg area. I'm also studying Media Informatics (M.Sc.) at the University of Lübeck, where I've been able to build up not only my design skills but also frontend development skills.
+              Hi there! I'm Chris, a User Experience Designer with a special interest in Design Systems. I'm also studying Media Informatics (M.Sc.) at the University of Lübeck, where I've been able to build up not only my design skills but also frontend development skills.
             </p>
           </div>
           <NuxtLink class="w-full" to="#contact">
@@ -213,16 +213,12 @@ export default {
   .cta-btn{
     background-color: var(--primary-color);
     color: white;
-    @apply py-4 px-6 md:w-1/2 w-2/3 rounded-full text-center font-bold tracking-wide;
+    @apply py-4 px-6 md:w-1/2 w-2/3 rounded-lg text-center font-bold tracking-wide;
   }
 
   .cta-btn:hover{
     background-color: var(--primary-bright);
     color: var(--primary-color);
-  }
-
-  #mouse_chatbox{
-    background-color: #FF33D2;
   }
 
   .toolbox{
