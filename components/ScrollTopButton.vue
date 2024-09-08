@@ -47,7 +47,8 @@ export default {
 <style scoped>
 
 button{
-  background-color: var(--primary-color);
+  background-color: rgba(155, 144, 200, 0.64);
+  backdrop-filter: blur(20px);
   @apply aspect-square rounded-full p-3;
 }
 

@@ -5,9 +5,12 @@
         <div class="lg:col-span-5 col-span-1 h-80 w-full bg-white" :style="{backgroundColor: textColor}">
           <img class="w-full object-cover h-full" :src="require(`~/assets/img/work/${imgUrl}`)" />
         </div>
-        <div class="col-span-7 md:w-2/3 w-3/4 ml-0 pt-16 pb-6">
-          <p class="headText">{{ headText }}</p>
-          <h1 class="py-0 mt-0">{{ title }}</h1>
+        <div class="col-span-7 md:w-2/3 w-3/4 ml-0 pt-4 md:pt-0 pb-6">
+          <h1 class="py-0 my-0">{{ title }}</h1>
+          <p>{{ description }}</p>
+          <div class="flex flex-wrap gap-2 mt-4">
+            <div class="pill whitespace-nowrap" v-for="pill in pills">{{ pill }}</div>
+          </div>
         </div>
       </div>
     </div>
@@ -25,6 +28,7 @@ export default {
     textColor: String,
     imgUrl: String,
     url: String,
+    pills: Array,
     isAvailable: {
       type: Boolean,
       default: true
@@ -51,7 +55,7 @@ export default {
 .workpiece{
   transition-duration: .15s;
   transition-timing-function: ease-in-out;
-  @apply rounded-2xl m-auto w-full;
+  @apply rounded-3xl m-auto w-full;
 }
 
 .opacity-100:hover{
@@ -62,6 +66,16 @@ export default {
 h1{
   font-family: 'PPMori', sans-serif;
   font-weight: 100;
-  @apply text-2xl md:text-3xl pt-2 pb-4 md:leading-normal;
+  @apply text-2xl md:text-3xl pt-2 md:leading-normal;
 }
+
+.pill{
+  background-color: rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  font-size: 14px;
+  padding: 2px 8px;
+  line-break: strict;
+  @apply w-fit;
+}
+
 </style>

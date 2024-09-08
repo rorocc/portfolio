@@ -68,6 +68,34 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Inria Serif";
+  src: local("Inria Serif"), url("~assets/fonts/Inria-Serif/InriaSerif-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inria Serif";
+  src: local("Inria Serif"), url("~assets/fonts/Inria-Serif/InriaSerif-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inria Serif";
+  src: local("Inria Serif"), url("~assets/fonts/Inria-Serif/InriaSerif-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Inria Serif";
+  src: local("Inria Serif"), url("~assets/fonts/Inria-Serif/InriaSerif-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
 .display-font{
   font-family: 'DM Sans', sans-serif;
   font-weight: bold;
@@ -82,7 +110,7 @@
 h1{
   font-family: 'PPMori', sans-serif;
   font-weight: 600;
-  @apply text-3xl my-6 text-gray-800;
+  @apply text-3xl my-6 text-gray-800 w-fit;
 }
 
 h1.dot:after{
@@ -98,6 +126,27 @@ h2{
 h3{
   font-family: 'PPMori', sans-serif;
   @apply font-bold my-2;
+}
+
+h1.section-title{
+  font-family: "Inter", sans-serif;
+  position: relative;
+}
+
+h1.section-title :before{
+  position: absolute;
+  display: block;
+  right: -72px;
+  bottom: 45%;
+  height: 1px;
+  width: 56px;
+  content: "";
+  background-color: var(--link-color-active);
+}
+
+h1.section-title span{
+  font-family: "Inria Serif", serif;
+  font-style: italic;
 }
 
 

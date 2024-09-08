@@ -7,7 +7,7 @@
   --link-color-active: #65589d;
   --subheading-gray: #949494;
   /*Primary: PANTONE 16-3823 TPX Violet Tulip*/
-  --primary-color: #9b90c8;
+  --primary-color: rgb(155, 144, 200);
   --primary-bright: #eae5fd;
   scroll-behavior: smooth;
 }
@@ -72,25 +72,21 @@ ol.challenges li:before{
 }
 
 .contact-btn-inverted{
-  background-color: white;
-  color: var(--primary-color);
-  border: 1px solid var(--primary-color);
+  background-color:  rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(20px);
+  color: black;
+  border: 1px solid white;
   @apply py-2 px-4 rounded-full flex gap-2;
 }
 
 .contact-btn-inverted:hover{
-  background-color: var(--primary-color);
-  color: var(--primary-bright);
-  border: 1px solid var(--primary-bright);
+  background-color: rgba(0, 0, 0, 0.025);
+  color: black;
 }
 
 .contact-btn-inverted svg{
   fill: var(--primary-color);
   @apply w-6;
-}
-
-.contact-btn-inverted:hover svg{
-  fill: var(--primary-bright);
 }
 
 .contact-btn{
@@ -110,4 +106,14 @@ ol.challenges li:before{
 
 .contact-btn svg{
   @apply w-6 fill-white;
+}
+
+.no-select {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 }

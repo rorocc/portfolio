@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <div class="mx-auto">
+    <div class="mx-auto my-4">
         <!-- Primary Navbar items -->
         <div class="hidden md:flex justify-center lg:space-x-6 space-x-4">
           <NuxtLink to="/" class="menu__link" exact>

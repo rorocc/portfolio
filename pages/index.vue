@@ -1,43 +1,38 @@
 <template>
   <div ref="mainDiv" class="m-auto overflow-x-hidden">
     <section class="container">
-      <div class="grid grid-cols-1 md:grid-cols-2 md:my-20 mb-16 mt-4 md:gap-0 gap-6">
-        <div class="relative w-full md:overflow-x-visible">
-          <video class="w-2/3 m-auto md:translate-x-0 -translate-x-1/4" autoplay loop muted playsinline>
-            <source v-if="supportsHEVC()" src="3d-hevc.mov" type="video/webm">
-            <source src="3d.webm" type="video/webm">
-          </video>
-          <CursorChat text="Design to empower" duration="20" class="absolute md:top-1/2 bottom-16 md:left-1/3 left-1/4" />
-          <model-canvas v-if="false" ></model-canvas>
-          <img v-if="false" src="../assets/3d-waving.png" class="md:w-full m-auto self-center"  alt="3D character of Chris wearing a purple cap, grey hoodie and black pants. The model is waving at you." />
-          <CircleDecoration class="absolute top-0 -z-10 w-1/2" />
-          <CircleDecoration class="absolute top-1/4 -right-1/4 -z-10 w-3/4" />
-          <CircleDecoration class="absolute top-2/3 left-0 -z-10 w-1/4" />
-<!--          <img src="../assets/sticker/star.png" class="top-0 absolute right-1/4 w-1/6 sticker-star" />-->
-        </div>
-        <div>
-          <h1 class="dot max-w-prose fade-in-left md:leading-normal leading-tight md:text-5xl text-4xl text-center md:text-left">
-            User experience isn't just <span class="underlined whitespace-nowrap">lorem ipsum</span>
+      <div class="grid grid-cols-1 lg:grid-cols-2  mb-16 mt-4 md:gap-0 gap-6">
+        <div class="relative">
+          <h1 class="max-w-prose landing-title fade-in-left md:leading-normal leading-tight md:text-5xl text-4xl text-center md:text-left">
+            Hi, I'm Chris.
           </h1>
-          <div class="py-8 max-w-prose relative">
-            <p class="leading-8 descr max-w-prose">
-              Hi there! I'm Chris, a User Experience Designer with a special interest in Design Systems. I'm also studying Media Informatics (M.Sc.) at the University of Lübeck, where I've been able to build up not only my design skills but also frontend development skills.
+          <div class="max-w-prose relative">
+            <p class="leading-8 landing-description max-w-prose md:text-left text-center">
+              Designing Digital Experiences, Products & Emotions in Northern Germany.
             </p>
           </div>
-          <NuxtLink class="w-full" to="#contact">
-            <div class="cta-btn w-full md:m-0 m-auto">
-              Contact me
-            </div>
-          </NuxtLink>
+          <a href="#case-studies">
+            <pages-index-badge class="absolute md:bottom-0 translate-y-1/4 z-10 right-0 lg:left-0" />
+          </a>
+        </div>
+        <div class="relative w-full md:overflow-x-visible">
+
+          <pages-index-sims @simEvent="handleSimEvent" />
+
+          <CursorChat v-if="false" text="Design to empower" duration="20" class="absolute md:top-1/2 bottom-16 md:left-1/3 left-1/4" />
+          <img v-if="false" src="../assets/3d-waving.png" class="md:w-full m-auto self-center"  alt="3D character of Chris wearing a purple cap, grey hoodie and black pants. The model is waving at you." />
         </div>
       </div>
     </section>
+    <section>
+     <pages-index-ticker text="* UX is not just lorem ipsum " />
+    </section>
       <section class="bg-gray-50 py-8">
-        <div class="container">
-          <h1 class="my-12">My recent projects</h1>
+        <div id="case-studies" class="container">
+          <h1 class="my-12 section-title">Some <span class="emph">Case</span> Studies</h1>
           <div class="grid auto-rows-auto">
             <div v-for="work in works" :key="work.id" class="mb-10">
-              <Workpiece :head-text="work.headText"
+              <lazy-pages-index-workpiece :head-text="work.headText"
                          :title="work.title"
                          :description="work.description"
                          :bg-color="work.bgColor"
@@ -45,6 +40,7 @@
                          :img-url="work.imgUrl"
                          :url="work.url"
                          :is-available="work.isAvailable"
+                         :pills="work.pills"
               />
             </div>
           </div>
@@ -74,10 +70,13 @@ import CursorChat from "~/components/pages/index/CursorChat";
 import CircleDecoration from "~/components/stylistic/DecorationCircle";
 import WebLink from "~/components/structuralComponents/webLink";
 import ModelCanvas from "~/components/pages/index/ModelCanvas";
+import Ticker from "~/components/pages/index/Ticker";
+import ActionTag from "~/components/structuralComponents/actionTag";
+import Badge from "~/components/pages/index/badge";
 
 export default {
   name: 'IndexPage',
-  components: {ModelCanvas, WebLink, BobbleHead, Workpiece, CursorChat, CircleDecoration},
+  components: {Badge, ActionTag, ModelCanvas, WebLink, BobbleHead, Workpiece, CursorChat, CircleDecoration},
   head() {
     return {
       meta: [
@@ -95,9 +94,10 @@ export default {
       pigDisclaimerActive: false,
       pos: { x: 0, y: 0 },
       works: [
-        { title: 'AID-Simulation — Diabetes type 1 closed-loop simulator', headText: 'Masters project media informatics', description: 'An interactive simulator with the aim to make the functionality of closed-loop systems more comprehensible.', bgColor: '#e3ecff', textColor: '#001E4B', imgUrl: 'screen_aid.png', url: './projects/aid', isAvailable: true },
-        { title: 'MariData: A comprehensive interface for ship energy management', headText: 'Funded research project', description: 'The MariData decision support system helps vessel crews to not only reduce financial costs, but also the emissions and therefore minimize the negative impact on our environment.', bgColor: '#d6dde3', textColor: '#3E484E', imgUrl: 'screen_maridata.png', url: './projects/maridata', isAvailable: true },
-        { title: 'Mobile Interface for Nutrition Awareness (MINA)', headText: 'Bachelor Thesis Media Informatics', description: 'What is a healthy meal? - A research based design approach to comprehensible in-app rating of meals.', bgColor: '#eeffa1', textColor: '#3b3b3b', imgUrl: 'screen_mina.png', url: './projects/mina', isAvailable: true }
+        { title: 'The Traceable Design System', description: 'An approach to making design decisions more traceable by integrating the concept of design rationale into design systems.', bgColor: '#e5e5e5', textColor: '#000000', imgUrl: 'screen_ds.png', url: '#case-studies', isAvailable: false, pills: ["Desktop", "Prototyping", "Master Thesis"] },
+        { title: 'AID-Simulation — Diabetes type 1 closed-loop simulator', headText: 'Masters project media informatics', description: 'An interactive simulator with the aim to make the functionality of closed-loop systems more comprehensible.', bgColor: '#e3ecff', textColor: '#001E4B', imgUrl: 'screen_aid.png', url: './projects/aid', isAvailable: true, pills: ["Mobile", "Desktop", "Web Development"] },
+        { title: 'MariData: Interface for ship energy management', headText: 'Funded research project', description: 'The MariData decision support system helps vessel crews to not only reduce financial costs, but also the emissions and therefore minimize the negative impact on our environment.', bgColor: '#d6dde3', textColor: '#3E484E', imgUrl: 'screen_maridata.png', url: './projects/maridata', isAvailable: true,  pills: ["Tablet", "Research", "Prototyping"] },
+        { title: 'Mobile Interface for Nutrition Awareness (MINA)', headText: 'Bachelor Thesis Media Informatics', description: 'What is a healthy meal? - A research based design approach to comprehensible in-app rating of meals.', bgColor: '#eeffa1', textColor: '#3b3b3b', imgUrl: 'screen_mina.png', url: './projects/mina', isAvailable: true,  pills: ["Mobile", "Web Development", "Bachelor Thesis"] }
       ],
       navigator: null
     }
@@ -106,12 +106,8 @@ export default {
     this.navigator = window.navigator;
   },
   methods: {
-    supportsHEVC(){
-      if(!this.navigator) return
-      const ua = this.navigator.userAgent.toLowerCase()
-      const hasMediaCapabilities = !!(navigator.mediaCapabilities && navigator.mediaCapabilities.decodingInfo)
-      const isSafari = ((ua.indexOf('safari') !== -1) && (!(ua.indexOf('chrome')!== -1) && (ua.indexOf('version/')!== -1)))
-      return isSafari && hasMediaCapabilities
+    handleSimEvent(event){
+      console.log(event)
     },
     startPiggies () {
       const container = document.createElement("div")
@@ -261,5 +257,16 @@ export default {
   .toolbox.close{
     transition: .75s;
     transform: translateY(110%);
+  }
+
+  .landing-description{
+    font-family: "Inter", sans-serif;
+    font-weight: 100;
+    font-size: 24px;
+  }
+
+  .landing-title{
+    font-family: "Inter", sans-serif;
+    font-size: 64px;
   }
 </style>
