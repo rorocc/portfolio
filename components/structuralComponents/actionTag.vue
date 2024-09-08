@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div :class="getClasses()">
+    <div :class="classes">
       <p>
       <span>
         {{ icon }}
@@ -33,8 +33,7 @@ export default {
       type: Boolean
     },
   },
-  methods:{
-    getClasses(){
+  mounted(){
       if(this.cta){
         this.classes = this.classes + " actionTag-cta"
       }else{
@@ -44,10 +43,7 @@ export default {
       if(this.state === "disabled"){
         this.classes = this.classes + " disabled"
       }
-
-      return this.classes;
     }
-  }
 }
 </script>
 
