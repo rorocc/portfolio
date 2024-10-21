@@ -5,13 +5,13 @@
         <img src="../assets/img/about/min/me-min.jpeg" alt="Chris on an island at the Oslo area" class="w-3/4 m-auto my-20 fade-in-left" />
       </div>
       <div>
-        <h1>Yep, <span class="underlined whitespace-nowrap">that's me.</span></h1>
+        <h1 class="my-12 section-title">Yep, that's <span class="emph">me</span></h1>
         <p>
           With product design comes great responsibility — it can support, empower or entertain people in their everyday lives. But the opposite can also happen if the user perspective is left out of the design process.
           It is this potential impact that motivates me to design better and more inclusive interfaces.
           <br>
           <br>
-          I'm currently <b>student</b> of the Media Informatics masters program and an aspiring UX Designer. Previously, I was a <b>design research assistant</b> at the <web-link url="https://maridata.app/">MariData</web-link> project at the University of Lübeck.
+          I just got my Masters degree in the field of the Media Informatics in September 2024. Previously, I was a <b>design research assistant</b> at the <web-link url="https://maridata.app/">MariData</web-link> project at the University of Lübeck.
           Also, I worked as a <b>Working Student</b> at the Design System team of <web-link url="https://www.linkedin.com/company/otto/">OTTO</web-link> in Hamburg.
           <br>
           <br>

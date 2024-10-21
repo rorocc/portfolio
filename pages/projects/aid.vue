@@ -56,11 +56,6 @@
           figcaption="Process of a closed-loop system in reality"
         />
 
-        <figure-component v-if="false"
-          src="img/work/aid/aid-lt1-screen.png"
-          alt=""
-          figcaption="AID simulator by LoopInsight1"
-        />
         <h2>Challenges</h2>
         <p>We identified the following challenges in the development and design of AID systems:</p>
         <card tagline="Challenge #1"

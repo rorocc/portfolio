@@ -12,6 +12,7 @@
     "lintfix": "npm run lint:js -- --fix"
   },
   "dependencies": {
+    "@egjs/vue-flicking": "^4.11.4",
     "core-js": "^3.19.3",
     "nuxt": "^2.15.8",
     "nuxt-gsap-module": "^1.7.2",

@@ -18,9 +18,10 @@ export default {
 a{
   text-decoration: underline;
   background-image: url("../../assets/newtab.svg");
+  background-size: 12px;
   background-position: center right;
   background-repeat: no-repeat;
-  padding-right: 22px;
+  padding-right: 16px;
 }
 
 a:hover{

@@ -8,7 +8,7 @@
           </h1>
           <div class="max-w-prose relative">
             <p class="leading-8 landing-description max-w-prose md:text-left text-center">
-              Designing Digital Experiences, Products & Emotions in Northern Germany.
+              Designing Digital Experiences, Products & Emotions for Everyone.
             </p>
           </div>
           <a href="#case-studies">
@@ -31,7 +31,7 @@
         <div id="case-studies" class="container">
           <h1 class="my-12 section-title">Some <span class="emph">Case</span> Studies</h1>
           <div class="grid auto-rows-auto">
-            <div v-for="work in works" :key="work.id" class="mb-10">
+            <div v-for="work in works" :key="work.id" class="mb-10 piece">
               <lazy-pages-index-workpiece :head-text="work.headText"
                          :title="work.title"
                          :description="work.description"
@@ -104,8 +104,24 @@ export default {
   },
   mounted() {
     this.navigator = window.navigator;
+    this.animateOnScroll()
   },
   methods: {
+    animateOnScroll() {
+      this.$gsap.to('.piece', {
+        x: 0,
+        ease: 'Power1.easeInOut',
+        stagger: 0.01,
+        duration: 0.1,
+        scrollTrigger: {
+          trigger: '#case-studies',
+          end: 'top -20%',
+          scrub: true,
+          markers: true
+        }
+      })
+    },
+
     handleSimEvent(event){
       console.log(event)
     },
@@ -268,5 +284,9 @@ export default {
   .landing-title{
     font-family: "Inter", sans-serif;
     font-size: 64px;
+  }
+
+  .piece{
+    transform: translateX(-150px);
   }
 </style>
