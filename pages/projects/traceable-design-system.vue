@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="relative">
     <display
       color="rgba(255, 0, 92, 1)"
       color-light="#EFF3FA"
@@ -51,7 +51,7 @@
       <h1 id="firstiteration">First Iteration</h1>
       <h2>Conception Phase</h2>
     </section>
-    <section class="flex gap-8 overflow-x-scroll snap-center scroll-smooth snap-x snap-proximity">
+    <section class="cinema">
       <figure-component
         class="mx-auto md:w-1/3 w-5/6 flex-shrink-0"
         src="img/work/traceable-ds/it1-main.jpg"
@@ -140,6 +140,11 @@ export default {
 </script>
 
 <style scoped>
+.cinema{
+  background-color: #EFF3FA;
+  @apply ml-8 md:ml-32 px-8 md:px-16 rounded-lg flex gap-8 overflow-x-scroll snap-center scroll-smooth snap-x snap-proximity;
+}
+
 .section-m{
   @apply max-w-prose m-auto py-12 md:px-0 px-4 leading-loose;
 }

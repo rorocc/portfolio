@@ -18,10 +18,32 @@ export default {
       type: String,
       default: ""
     }
+  },
+  mounted() {
+    this.animate()
+  },
+  methods: {
+    animate(){
+      this.$gsap.to('figure', {
+        opacity: 1,
+        x: 0,
+        ease: 'Power1.easeInOut',
+        duration: 0.5,
+        scrollTrigger: {
+          trigger: 'figure',
+          scrub: false,
+          markers: false
+        }
+      })
+    }
   }
 }
 </script>
 
 <style scoped>
-
+figure{
+  position: relative;
+  opacity: 0;
+  transform: translateX(-5vw);
+}
 </style>

@@ -117,7 +117,7 @@ export default {
           trigger: '#case-studies',
           end: 'top -20%',
           scrub: true,
-          markers: true
+          markers: false
         }
       })
     },
