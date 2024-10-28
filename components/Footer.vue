@@ -22,7 +22,7 @@
     </div>
     <hr />
     <div class="notes text-left py-4 opacity-25">
-      <span>Made with Nuxt.js</span>
+      <span>Made with Vue.js and Nuxt.js</span>
       <span> © 2024 Christopher Rock</span>
     </div>
   </div>

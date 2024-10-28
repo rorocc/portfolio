@@ -7,6 +7,9 @@
       <Nuxt />
     </div>
     <div id="contact">
+      <svg class="pinkysnake" viewBox="0 0 974 324" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path id="snakepath" d="M-210.683 233.426C-183.429 79.5087 55.6333 52.0897 238.597 122.465C421.56 192.841 548.346 349.428 888.19 110.322" stroke="#A763B3" stroke-opacity="0.2" stroke-width="171" stroke-linecap="round"/>
+      </svg>
       <div class="container space-y-8">
         <p>
           <span class="opacity-75 text-xl">Gurr gurr...</span><br>
@@ -38,17 +41,16 @@
 </template>
 
 <style scoped>
-#mobileWarning{
-  background-color: var(--link-color-active);
-  @apply w-full p-10 text-center text-white block hidden;
+#contact{
+  color: black;
+  @apply md:py-28 py-24;
 }
 
-#contact{
-  background-image: url("/contact-bg.png");
-  background-size: cover;
-  color: black;
-  @apply py-32;
+.pinkysnake{
+  position: absolute;
+  @apply max-w-full md:max-w-4xl -z-10;
 }
+
 
 .h-italic{
   font-family: "Inria Serif", sans-serif;
@@ -56,3 +58,27 @@
 }
 
 </style>
+
+<script>
+export default {
+  mounted() {
+    const path = document.querySelector("#snakepath");
+    const length = path.getTotalLength();
+
+    path.style.strokeDasharray = length + " " + length;
+    path.style.strokeDashoffset = length;
+    path.getBoundingClientRect();
+
+    const tl = this.$gsap.timeline({
+      scrollTrigger: {
+        trigger: "#contact",
+        start: 0,
+        end: "max",
+        scrub: 0.5
+      }
+    })
+
+    tl.to("#snakepath", { strokeDashoffset: 0, ease: "none", duration: 1.5 }, "start");
+  }
+}
+</script>
