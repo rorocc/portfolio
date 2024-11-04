@@ -12,10 +12,11 @@
       </svg>
       <div class="container space-y-8">
         <p>
-          <span class="opacity-75 text-xl">Gurr gurr...</span><br>
-          <span class="font-bold text-5xl">
-            Send me a <span class="h-italic">mail</span> pigeon 🐦
+          <span class="font-bold md:text-5xl text-4xl">
+            Send me a carrier <span class="h-italic">pigeon</span> 🐦
           </span>
+          <br />
+          <span class="opacity-75 md:text-xl text-lgç">… or at least a short message</span>
         </p>
         <div class="m-auto flex space-x-6 auto-cols-min">
           <a href="https://linkedin.com/in/rock-christopher" rel="noopener noreferrer" target="_blank">

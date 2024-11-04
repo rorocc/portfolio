@@ -6,8 +6,7 @@
       title="The Traceable Design System"
       text-color="#fff"
       subtitle="Integrating Design Rationale into Design Systems"
-      description="Closed-loop systems can already positively influence the treatment of diabetes.
-      Nevertheless, these systems have a health-critical influence on the users, which is why trust and comprehensive knowledge about them are essential. In this project, a closed-loop simulator was redesigned so that patients have exactly these insights into the algorithms."
+      description="The documentation of design decisions is a common practice across various disciplines to capture the decision-making process and promote reflection on the decisions made. Design systems are becoming an increasingly prominent tool for documenting design decisions. This research project explores the extent to which the incorporation of design rationale into design systems can facilitate the traceability of design decisions."
       role="UX & Visual Designer, Researcher"
       timespan="February - August 2024"
       context="Master Thesis"
@@ -105,7 +104,35 @@
 
     <section class="section-m">
       <h1 id="seconditeration">Second Iteration</h1>
-      <h2>Design Concept</h2>
+      <h2>Design Changes</h2>
+    </section>
+    <section class="cinema">
+      <figure-component
+        class="mx-auto md:w-1/3 w-5/6 flex-shrink-0"
+        src="img/work/traceable-ds/it2-ds-button-rationale1.png"
+        alt=""
+        figcaption="The design of the rationale detail provides a stronger visual hierarchy."
+      />
+      <figure-component
+        class="mx-auto md:w-1/3 w-5/6 flex-shrink-0"
+        src="img/work/traceable-ds/it2-ar-graph.png"
+        alt=""
+        figcaption="The artifact repository graph provides additional labels and filtering options."
+      />
+      <figure-component
+        class="mx-auto md:w-1/3 w-5/6 flex-shrink-0"
+        src="img/work/traceable-ds/it2-ar-overview.png"
+        alt=""
+        figcaption="The navigational structure of the artifact repository was modified in order to make the available views more salient."
+      />
+      <figure-component
+        class="mx-auto md:w-1/3 w-5/6 flex-shrink-0"
+        src="img/work/traceable-ds/it2-dialog-rationale.png"
+        alt=""
+        figcaption="The new rationale dialogue is structured as a step-by-step process to guide designers and show only relevant information."
+      />
+    </section>
+    <section class="section-m">
       <h2>Interview Study</h2>
       <h3>Participants</h3>
       For the final interview study, designers from the academic and industrial context were invited to interact with the prototype of the design system.
@@ -136,6 +163,26 @@ import WebLink from "~/components/structuralComponents/webLink";
 export default {
   name: "traceable-design-system",
   components: {Card, FigureComponent, WebLink, Display},
+  head: {
+    title: 'Traceable Design System –',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'The documentation of design decisions is a common practice across various disciplines to capture the decision-making process and promote reflection on the decisions made. Design systems are becoming an increasingly prominent tool for documenting design decisions. This research project explores the extent to which the incorporation of design rationale into design systems can facilitate the traceability of design decisions.'
+      },
+      {
+        hid: 'og:image',
+        name: 'og:image',
+        content: 'https://chrisrock.rocks/seo/projects/aid.png'
+      },
+      {
+        hid: 'keywords',
+        name: 'keywords',
+        keywords: "hci, interaction design, design rationale, design decisions, design system, ux design, user experience, chi"
+      }
+    ]
+  }
 }
 </script>
 

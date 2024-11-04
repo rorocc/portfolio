@@ -10,23 +10,23 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s Christopher Rock - UX Design Portfolio',
+    titleTemplate: '%s Christopher Rock – UX Designer',
     htmlAttrs: {
       lang: 'en'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Hi, I\'m Chris, a UX Designer based in Lübeck, Northern Germany. I\'m interested in Human-centered design solutions and creativity of all kinds.' },
+      { hid: 'description', name: 'description', content: 'Hi, I\'m Chris, a UX Designer based in Leipzig, Germany. I\'m interested in Human-centered design solutions and creativity of all kinds.' },
       { hid: 'og:locale', property:'og:locale', content:'en_US' },
       { hid: 'og:image', property:'og:image', content:'/seo_ogimage.png' },
       { hid: 'og:image:width', property:'og:image:width', content:'1200' },
       { hid: 'og:image:height', property:'og:image:height', content:'630' },
-      { hid: 'og:site_name', name: 'og:site_name', content:'Christopher Rock - UX Portfolio'},
+      { hid: 'og:site_name', name: 'og:site_name', content:'Christopher Rock – UX Design'},
       { hid: 'og:type', name: 'og:type', content:'website'},
       { name: 'format-detection', content: 'telephone=no' },
-      { name: 'apple-mobile-web-app-title', content: 'Chris Ro. Portfolio'},
-      { name: 'application-name', content: 'Chris Ro. Portfolio'},
+      { name: 'apple-mobile-web-app-title', content: 'Christopher Ro. – UX Designer'},
+      { name: 'application-name', content: 'Christopher Ro. – UX Designer'},
       { name: 'msapplication-TileColor', content: '#ffffff'},
       { name: 'theme-color', content: '#ffffff'}
     ],

@@ -29,7 +29,7 @@
             <p class="expPoint">
               <span class="head">Master of Science - Media informatics</span>
               <br>
-              2021 - 09.2024 — <span class="italic">Universität zu Lübeck, Germany</span>
+              2021 - 09/2024 — <span class="italic">Universität zu Lübeck, Germany</span>
             </p>
             <hr class="w-3/4 mb-2" />
             <p class="expPoint">
@@ -54,21 +54,29 @@
           </div>
         </div>
         <div>
-          <h2 class="mb-4">Knowledge & Tools</h2>
+          <h2 class="mb-4">Knowledge</h2>
           <div class="flex-wrap gap-2 flex">
             <span class="skilltag">Human-Centered Design</span>
+            <span class="skilltag">Design Systems</span>
             <span class="skilltag">Prototyping</span>
             <span class="skilltag">Design Tokens</span>
-            <span class="skilltag">Design Research</span>
             <span class="skilltag">Web Accessibility</span>
-            <span class="skilltag">Design Systems</span>
-            <span class="skilltag tool">Figma</span>
-            <span class="skilltag tool">FigJam</span>
-            <span class="skilltag tool">VueJS</span>
-            <span class="skilltag tool">Premiere</span>
-            <span class="skilltag tool">Photoshop</span>
-            <span class="skilltag tool">AfterEffects</span>
-            <span class="skilltag tool">DaVinci Resolve</span>
+            <span class="skilltag">Design Research</span>
+          </div>
+          <div>
+            <h2 class="mt-6 mb-4">My Tech Stack</h2>
+            <div class="flex-wrap gap-2 flex">
+              <span class="skilltag tool">Figma</span>
+              <span class="skilltag tool">FigJam</span>
+              <span class="skilltag tool">Miro</span>
+              <span class="skilltag tool">Office 365</span>
+              <span class="skilltag tool">WebStorm</span>
+              <span class="skilltag tool">VueJS</span>
+              <span class="skilltag tool">Premiere</span>
+              <span class="skilltag tool">Photoshop</span>
+              <span class="skilltag tool">AfterEffects</span>
+              <span class="skilltag tool">DaVinci Resolve</span>
+            </div>
           </div>
         </div>
       </div>
