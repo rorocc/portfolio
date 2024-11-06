@@ -69,14 +69,13 @@ import Workpiece from "~/components/pages/index/workpiece";
 import CursorChat from "~/components/pages/index/CursorChat";
 import CircleDecoration from "~/components/stylistic/DecorationCircle";
 import WebLink from "~/components/structuralComponents/webLink";
-import ModelCanvas from "~/components/pages/index/ModelCanvas";
 import Ticker from "~/components/pages/index/Ticker";
 import ActionTag from "~/components/structuralComponents/actionTag";
 import Badge from "~/components/pages/index/badge";
 
 export default {
   name: 'IndexPage',
-  components: {Badge, ActionTag, ModelCanvas, WebLink, BobbleHead, Workpiece, CursorChat, CircleDecoration},
+  components: {Badge, ActionTag, WebLink, BobbleHead, Workpiece, CursorChat, CircleDecoration},
   head() {
     return {
       meta: [
@@ -273,17 +272,6 @@ export default {
   .toolbox.close{
     transition: .75s;
     transform: translateY(110%);
-  }
-
-  .landing-description{
-    font-family: "Inter", sans-serif;
-    font-weight: 100;
-    font-size: 24px;
-  }
-
-  .landing-title{
-    font-family: "Inter", sans-serif;
-    font-size: 64px;
   }
 
   .piece{

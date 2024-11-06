@@ -16,16 +16,18 @@ export default {
 <style scoped>
 
 a{
-  text-decoration: underline;
+  text-decoration: none;
+  border-bottom: 2px dotted var(--primary-color);
   background-image: url("../../assets/newtab.svg");
   background-size: 12px;
   background-position: center right;
   background-repeat: no-repeat;
   padding-right: 16px;
+  font-weight: 500;
 }
 
 a:hover{
-  color: var(--primary-color);
+  border-bottom: 2px dotted var(--link-color-active);
 }
 
 </style>

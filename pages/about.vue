@@ -1,13 +1,13 @@
 <template>
   <div class="block">
-    <div class="container py-12 grid md:grid-cols-2 grid-cols-none md:grid-rows-none leading-loose">
-      <div>
+    <div class="container grid md:grid-cols-2 grid-cols-none md:grid-rows-none leading-loose">
+      <div class="h-fit">
         <div class="relative">
-          <img role="presentation" id="svg-cursor" class="absolute -bottom-4 right-8 z-10 w-24" src="../assets/cursor.svg" />
-          <img src="../assets/img/about/min/me-min.jpeg" alt="Chris on an island at the Oslo area" class="w-2/3 m-auto my-20 rounded-2xl passfoto" />
+          <img role="presentation" id="svg-cursor" class="absolute -bottom-4 right-8 z-10 w-24 origin-top-left" src="../assets/cursor.svg" />
+          <img src="../assets/img/about/min/me-min.jpeg" alt="Chris on an island at the Oslo area" class="md:w-2/3 w-3/4 m-auto my-20 rounded-2xl passfoto translate-y-0" />
         </div>
       </div>
-      <div>
+      <div class="pb-12">
         <h1 class="my-12 section-title">Yep, that's <span class="emph">me</span></h1>
         <p>
           With product design comes great responsibility — it can support, empower or entertain people in their everyday lives. But the opposite can also happen if the user perspective is left out of the design process.
@@ -89,11 +89,11 @@
         <p>Find me outside, <span class="font-bold">running around with my camera</span> and taking photos.
           Ever since I was a child, I have found fun in depicting the world around me through the lens and thus being able to express my creativity.
         </p>
-        <img src="../assets/img/about/min/sticky_snow-min.png" class="md:w-2/3 w-full m-auto" />
+        <img src="../assets/img/about/min/sticky_snow-min.png" class="md:w-2/3 w-full m-auto rounded-2xl" />
       </div>
       <div>
         <p>Over the last few years I have come to <span class="font-bold">love walks and hikes in nature</span>. It's the perfect balance to digital work for me and a way to let my thoughts run free.</p>
-        <img src="../assets/img/about/min/hovedoya.jpg" alt="Chris outside in the winter wearing a pink beanie hat and a black hoodie with yellow letters on it" class="md:w-2/3 w-full m-auto" />
+        <img src="../assets/img/about/min/hovedoya.jpg" alt="Chris outside in the winter wearing a pink beanie hat and a black hoodie with yellow letters on it" class="md:w-2/3 w-full m-auto rounded-2xl" />
       </div>
     </div>
   </div>
@@ -117,25 +117,26 @@ export default {
     }
   },
   mounted() {
+
     this.$gsap.to('#svg-cursor', {
       y: 50,
-      x: -20,
+      x: -50,
       rotation: 0,
       ease: 'Power1.easeInOut',
-      stagger: 0.01,
+      stagger: 1,
       duration: 1,
       scrollTrigger: {
         trigger: '.passfoto',
         start: 'top 50%',
         end: 'bottom',
         scrub: true,
-        markers: true
+        markers: false
       }
     })
 
     this.$gsap.to('#svg-cursor', {
       rotation: 20,
-      ease: 'none',
+      ease: 'Power1.easeInOut',
       duration: 5,
       scrollTrigger: {
         trigger: '.passfoto',
