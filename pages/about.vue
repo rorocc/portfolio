@@ -2,7 +2,10 @@
   <div class="block">
     <div class="container py-12 grid md:grid-cols-2 grid-cols-none md:grid-rows-none leading-loose">
       <div>
-        <img src="../assets/img/about/min/me-min.jpeg" alt="Chris on an island at the Oslo area" class="w-3/4 m-auto my-20 fade-in-left" />
+        <div class="relative">
+          <img role="presentation" id="svg-cursor" class="absolute -bottom-4 right-8 z-10 w-24" src="../assets/cursor.svg" />
+          <img src="../assets/img/about/min/me-min.jpeg" alt="Chris on an island at the Oslo area" class="w-2/3 m-auto my-20 rounded-2xl passfoto" />
+        </div>
       </div>
       <div>
         <h1 class="my-12 section-title">Yep, that's <span class="emph">me</span></h1>
@@ -71,7 +74,7 @@
               <span class="skilltag tool">Miro</span>
               <span class="skilltag tool">Office 365</span>
               <span class="skilltag tool">WebStorm</span>
-              <span class="skilltag tool">VueJS</span>
+              <span class="skilltag tool">Vue.js</span>
               <span class="skilltag tool">Premiere</span>
               <span class="skilltag tool">Photoshop</span>
               <span class="skilltag tool">AfterEffects</span>
@@ -91,14 +94,6 @@
       <div>
         <p>Over the last few years I have come to <span class="font-bold">love walks and hikes in nature</span>. It's the perfect balance to digital work for me and a way to let my thoughts run free.</p>
         <img src="../assets/img/about/min/hovedoya.jpg" alt="Chris outside in the winter wearing a pink beanie hat and a black hoodie with yellow letters on it" class="md:w-2/3 w-full m-auto" />
-        <div class="slider hidden">
-          <div class="slides rounded-2xl">
-            <div class="slide" id="slide-2" :style="{ 'background-image': 'url(' + require(`../assets/img/about/gallery/slide-2.jpg`) + ')' }" />
-            <div class="slide" id="slide-1" :style="{ 'background-image': 'url(' + require(`../assets/img/about/gallery/slide-1.jpg`) + ')' }" />
-            <div class="slide" id="slide-3" :style="{ 'background-image': 'url(' + require(`../assets/img/about/gallery/slide-3.jpg`) + ')' }" />
-            <div class="slide" id="slide-4" :style="{ 'background-image': 'url(' + require(`../assets/img/about/gallery/slide-4.jpg`) + ')' }" />
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -121,6 +116,35 @@ export default {
       ]
     }
   },
+  mounted() {
+    this.$gsap.to('#svg-cursor', {
+      y: 50,
+      x: -20,
+      rotation: 0,
+      ease: 'Power1.easeInOut',
+      stagger: 0.01,
+      duration: 1,
+      scrollTrigger: {
+        trigger: '.passfoto',
+        start: 'top 50%',
+        end: 'bottom',
+        scrub: true,
+        markers: true
+      }
+    })
+
+    this.$gsap.to('#svg-cursor', {
+      rotation: 20,
+      ease: 'none',
+      duration: 5,
+      scrollTrigger: {
+        trigger: '.passfoto',
+        start: 'top 50%',
+        end: 'bottom',
+        scrub: true,
+      }
+    })
+  }
 }
 </script>
 
@@ -131,13 +155,9 @@ export default {
   }
 
   .skilltag.tool{
-    background-color: var(--primary-color);
-    color: white;
-  }
-
-  .cvMore{
-    background-image: linear-gradient(to top, rgb(249 250 251), rgb(249 250 251), rgb(249 250 251), rgb(249 250 251), rgba(255, 255, 255, 0));
-    @apply bottom-0 py-16 w-full text-center;
+    background-color: var(--primary-bright);
+    color: black;
+    @apply border-0;
   }
 
   .expPoint .head{
@@ -151,81 +171,4 @@ export default {
  p{
    @apply pb-4;
  }
-
- img{
-   @apply rounded-2xl;
- }
-
- .prev-work-info{
-   position: relative;
-   z-index: 1;
-   overflow: hidden;
-   background: none;
-   @apply py-12;
- }
-
- .prev-work-info:after{
-   content: '';
-   position: absolute;
-   top: 0;
-   right: 182px;
-   bottom: 0;
-   left: -9999px;
-   background: rgba(240, 218, 255, 0.25);
-   transform: skew(30deg);
-   z-index: -1;
- }
-
- .slide{
-   background-size: cover;
-   background-position: center;
- }
-
-  .slider {
-    text-align: center;
-    overflow: hidden;
-    @apply w-full;
-  }
-
-  .slides {
-    display: flex;
-
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-
-    /*
-    scroll-snap-points-x: repeat(300px);
-    scroll-snap-type: mandatory;
-    */
-  }
-  .slides::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
-  }
-  .slides::-webkit-scrollbar-thumb {
-    background: var(--primary-color);
-    border-radius: 10px;
-  }
-  .slides::-webkit-scrollbar-track {
-    background: transparent;
-  }
-  .slides > div {
-    scroll-snap-align: start;
-    flex-shrink: 0;
-    margin-right: 50px;
-    border-radius: 10px;
-    transform-origin: center center;
-    transform: scale(1);
-    transition: transform 0.5s;
-    position: relative;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 100px;
-
-    @apply w-full aspect-square;
-  }
 </style>

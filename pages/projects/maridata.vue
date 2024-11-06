@@ -10,7 +10,7 @@
       description="In the MariData project, a future-oriented energy management and decision support system based on rational methods is to be developed, taking into account current operational status data as well as geoinformation."
       role="UX & UI Design, Design research"
       context="Funded research project"
-      timespan="January 2021 - now"
+      timespan="January 2021 - May 2024"
       keywords="Workshops, Prototyping, Design documentation"
     />
     <div>
