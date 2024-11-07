@@ -8,7 +8,7 @@
           </h1>
           <div class="max-w-prose relative">
             <p class="leading-8 landing-description max-w-prose md:text-left text-center">
-              Designing Digital Experiences, Products & Emotions for Everyone.
+              Creative human-being with a passion for accessible digital products & motion pictures.
             </p>
           </div>
           <a href="#case-studies">
@@ -46,6 +46,16 @@
           </div>
         </div>
       </section>
+    <section class="container">
+      <h1 class="my-12 section-title">Other <span class="emph">creative</span> works</h1>
+      <div class="cinema">
+        <div class="cinema-item" style="background-image: url('/visual/rainbow.jpg')" />
+        <div class="cinema-item" style="background-image: url('/visual/party.jpg')" />
+        <div class="cinema-item" style="background-image: url('/visual/girl_1.jpg')" />
+        <div class="cinema-item" style="background-image: url('/visual/waterfall.jpg')" />
+        <div class="cinema-item" style="background-image: url('/visual/muellmorty-hd.jpg')" />
+      </div>
+    </section>
     <div ref="toolbox" @click="startPiggies" class="pigButton md:block hidden">
       <div class="grid-flow-col grid text-center">
         <div>
@@ -191,13 +201,6 @@ export default {
     animation-iteration-count: infinite;
   }
 
-  .sticker-star{
-    animation-name: star;
-    animation-duration: 20s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-  }
-
   @keyframes star {
     0%{transform: rotate(0deg)}
     5%{transform: rotate(20deg)}
@@ -213,23 +216,6 @@ export default {
     23%{transform: rotate(-3deg)}
     26%{transform: rotate(0deg)}
 
-  }
-
-  #chris_mouse{
-    width: 167px;
-    height: 167px;
-    transform: scale(0.15);
-  }
-
-  .cta-btn{
-    background-color: var(--primary-color);
-    color: white;
-    @apply py-4 px-6 md:w-1/2 w-2/3 rounded-lg text-center font-bold tracking-wide;
-  }
-
-  .cta-btn:hover{
-    background-color: var(--primary-bright);
-    color: var(--primary-color);
   }
 
   .toolbox{
@@ -269,12 +255,18 @@ export default {
     @apply opacity-90;
   }
 
-  .toolbox.close{
-    transition: .75s;
-    transform: translateY(110%);
-  }
-
   .piece{
     transform: translateX(-150px);
+  }
+
+  .cinema{
+    @apply flex flex-nowrap md:h-96 h-80 gap-8 overflow-x-scroll snap-x snap-mandatory scroll-smooth;
+  }
+
+  .cinema-item{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    @apply rounded-2xl md:w-96 w-2/3 h-full snap-center flex-shrink-0;
   }
 </style>
