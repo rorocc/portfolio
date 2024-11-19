@@ -139,6 +139,7 @@ h1.section-title :before{
 h1.section-title span{
   font-family: "Inria Serif", serif;
   font-style: italic;
+  @apply text-4xl;
 }
 
 .landing-description{

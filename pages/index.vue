@@ -29,7 +29,7 @@
     </section>
       <section class="bg-gray-50 py-8">
         <div id="case-studies" class="container">
-          <h1 class="my-12 section-title">Some <span class="emph">Case</span> Studies</h1>
+          <h1 class="my-12 section-title">Some UX <span class="emph">Case</span> Studies</h1>
           <div class="grid auto-rows-auto">
             <div v-for="work in works" :key="work.id" class="mb-10 piece">
               <lazy-pages-index-workpiece :head-text="work.headText"
@@ -170,7 +170,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
   .particlesContainer{
     @apply fixed left-0 right-0 m-auto justify-center items-center -bottom-1/4 grid grid-flow-col;
@@ -260,7 +260,13 @@ export default {
   }
 
   .cinema{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
     @apply flex flex-nowrap md:h-96 h-80 gap-8 overflow-x-scroll snap-x snap-mandatory scroll-smooth;
+  }
+
+  .cinema::-webkit-scrollbar {
+    display: none;
   }
 
   .cinema-item{

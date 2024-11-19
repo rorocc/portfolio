@@ -23,14 +23,23 @@
     <hr />
     <div class="notes text-left py-4 opacity-25">
       <span>Made with Vue.js and Nuxt.js</span>
-      <span> © 2024 Christopher Rock</span>
+      <span> © {{ year }} Christopher Rock</span>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Footer"
+  name: "Footer",
+  data () {
+    return {
+      year: "",
+    }
+  },
+  mounted() {
+    let d = new Date();
+    this.year = d.getFullYear();
+  }
 }
 </script>
 

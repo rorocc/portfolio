@@ -56,7 +56,6 @@ export default {
 }
 
 .toc{
-  transition-duration: .5s;
   @apply inline-block rounded border right-0 absolute bg-white z-50;
 }
 </style>
