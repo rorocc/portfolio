@@ -48,15 +48,15 @@
       </section>
     <section class="container">
       <h1 class="my-12 section-title">Other <span class="emph">creative</span> works</h1>
-      <div class="cinema">
-        <div class="cinema-item" style="background-image: url('/visual/rainbow.jpg')" />
-        <div class="cinema-item" style="background-image: url('/visual/party.jpg')" />
-        <div class="cinema-item" style="background-image: url('/visual/girl_1.jpg')" />
-        <div class="cinema-item" style="background-image: url('/visual/waterfall.jpg')" />
-        <div class="cinema-item" style="background-image: url('/visual/muellmorty-hd.jpg')" />
+      <div class="img-cinema">
+        <div class="img-cinema-item" style="background-image: url('/visual/rainbow.jpg')" />
+        <div class="img-cinema-item" style="background-image: url('/visual/party.jpg')" />
+        <div class="img-cinema-item" style="background-image: url('/visual/girl_1.jpg')" />
+        <div class="img-cinema-item" style="background-image: url('/visual/waterfall.jpg')" />
+        <div class="img-cinema-item" style="background-image: url('/visual/muellmorty-hd.jpg')" />
       </div>
     </section>
-    <div ref="toolbox" @click="startPiggies" class="pigButton md:block hidden">
+    <div role="none" ref="toolbox" @click="startPiggies" class="pigButton block">
       <div class="grid-flow-col grid text-center">
         <div>
           <img src="../assets/img/pigs/pig3.svg" class="pigIcon" role="presentation">
@@ -148,11 +148,10 @@ export default {
           particleImg.classList.add("particle")
           particleImg.ariaRoleDescription = "presentation"
           particleImg.src =  require(`~/assets/img/pigs/pig${type}.svg`) //"~/assets/img/pigs/pig${type}.svg"
-          particleImg.style.width = ((offset * window.innerWidth / 10)) + "px"
+          particleImg.style.width = ((offset * window.innerWidth / (window.innerWidth < 500 ? 2 : 10))) + "px"
           particleImg.style.height = "auto"
           const delay = Math.max(0, offset)
           particleImg.style.animationDelay = delay + "s"
-          console.log("delay", delay)
 
           if (j === 0) {
             this.$refs.particlesBox.lastChild.appendChild(particleImg)
@@ -164,13 +163,12 @@ export default {
       }
       const deleteChildren = setTimeout(() => { this.$refs.particlesBox.firstChild.remove() }, 3000)
       setTimeout(()=>{this.pigDisclaimerActive = false}, 3000)
-      console.log(deleteChildren)
     }
   }
 }
 </script>
 
-<style scoped>
+<style>
 
   .particlesContainer{
     @apply fixed left-0 right-0 m-auto justify-center items-center -bottom-1/4 grid grid-flow-col;
@@ -234,13 +232,6 @@ export default {
     @apply p-2 rounded-3xl fixed bottom-0 mx-auto left-0 right-0 w-fit ml-auto mr-auto -z-10 mx-6 my-6 ;
   }
 
-  @keyframes fadeInOut {
-    0%{opacity: 0}
-    25%{opacity: 1}
-    75%{opacity: 1}
-    100%{opacity: 0}
-  }
-
   .pigButton{
     background-color: var(--primary-color);
     @apply p-4 z-10 rounded-full fixed bottom-0 mx-auto left-0 mx-6 my-6;
@@ -259,17 +250,13 @@ export default {
     transform: translateX(-150px);
   }
 
-  .cinema{
+  .img-cinema{
     -ms-overflow-style: none;
     scrollbar-width: none;
     @apply flex flex-nowrap md:h-96 h-80 gap-8 overflow-x-scroll snap-x snap-mandatory scroll-smooth;
   }
 
-  .cinema::-webkit-scrollbar {
-    display: none;
-  }
-
-  .cinema-item{
+  .img-cinema-item{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

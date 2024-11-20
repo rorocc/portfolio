@@ -1,7 +1,7 @@
 <template>
   <div class="relative">
     <display
-      color="rgba(255, 0, 92, 1)"
+      color="#B0114B"
       color-light="#EFF3FA"
       title="The Traceable Design System"
       text-color="#fff"
