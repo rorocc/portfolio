@@ -4,7 +4,7 @@
       <div class="h-fit">
         <div class="relative">
           <img role="presentation" id="svg-cursor" class="absolute -bottom-4 right-8 z-10 w-24 origin-top-left" src="../assets/cursor.svg" />
-          <img src="../assets/img/about/min/me-min.jpeg" alt="Chris on an island at the Oslo area" class="md:w-2/3 w-3/4 m-auto my-20 rounded-2xl passfoto translate-y-0" />
+          <img src="../assets/img/about/me-2.jpeg" alt="Portrait of Chris, wearing a base cap and glasses" class="md:w-2/3 w-3/4 m-auto my-20 rounded-2xl passfoto translate-y-0" />
         </div>
       </div>
       <div class="pb-12">

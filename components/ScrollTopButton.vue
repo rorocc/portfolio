@@ -1,9 +1,10 @@
 <template>
   <div ref="scrollTopButton" class="sticky w-full flex justify-end bottom-0 pb-6 pr-6 invisible">
-    <div class="cursor-pointer text-gray-400 hover:text-blue-400 transition">
-      <button class="scrollTopButton" @click="scrollToTop" role="button" aria-label="scroll to top of the page">
+    <div class="cursor-pointer hover:text-blue-400 transition">
+      <button class="scrollTopButton no-select" @click="scrollToTop" role="button" aria-label="scroll to top of the page">
+        Back to Top
         <svg viewBox="0 0 115 66" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M7.5 58L57.5 8L107.5 58" stroke="white" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M7.5 58L57.5 8L107.5 58" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </button>
     </div>
@@ -47,21 +48,17 @@ export default {
 <style scoped>
 
 button{
-  background-color: rgba(155, 144, 200, 0.64);
+  background: rgba(255, 255, 255, 0.75);
   backdrop-filter: blur(20px);
-  @apply aspect-square rounded-full p-3;
+  @apply rounded-3xl py-2 px-3 flex border border-gray-100 text-gray-400 stroke-gray-400 items-center gap-2;
 }
 
 button:hover{
-  background-color: var(--primary-bright);
-}
-
-button:hover svg path{
-  stroke: var(--primary-color);
+  @apply bg-gray-100 border-gray-200;
 }
 
 button svg{
-  @apply w-8;
+  @apply w-4;
 }
 
 </style>

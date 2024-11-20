@@ -233,12 +233,13 @@ export default {
   }
 
   .pigButton{
-    background-color: var(--primary-color);
+    background-image: linear-gradient(#E9D8EC, #E2B6E9);
     @apply p-4 z-10 rounded-full fixed bottom-0 mx-auto left-0 mx-6 my-6;
   }
 
   .pigButton:hover{
-    background-color: var(--primary-bright);
+    background-image: none;
+    background-color: #E9D8EC;
     @apply cursor-pointer;
   }
 
