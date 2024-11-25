@@ -43,7 +43,55 @@
       <h1 id="research">Research</h1>
       <h2>Design Systems</h2>
       <h2>Design Rationale</h2>
+        <p>
+          Documentation often only represents the description of the final outcome of the process
+          itself, rather than including the thoughts and decisions that were considered throughout
+          the decision-making process (<web-link url="https:
+//doi.org/10.1007/978-94-011-4154-3_30">Burge & Brown, 2000</web-link>). In response to this need, the concept
+          of Design Rationale (DR) has received considerable attention within the field of engineering.
+          DR can be defined as a historical record of the decision-making process that resulted
+          in the selection of a particular option (<web-link url="https://dl.acm.org/doi/abs/10.1207/s15327051hci0603%25264_3">Lee & Lai, 1991</web-link>).
+        </p>
+        <p>
+          <br />
+          <web-link url="https://www.taylorfrancis.com/chapters/edit/10.1201/9781003064053-4/questions-options-criteria-elements-design-space-analysis-allan-maclean-richard-young-victoria-bellotti-thomas-moran"> MacLean et al. (1991)</web-link> introduced a semi-formal structure with the Questions, Options,
+          and Criteria (QOC) notation, which represents design rationale by capturing the
+          design space. As the name implies, it consists of three components: (1) questions, which
+          reproduce the problem statement, (2) options, which comprise design alternatives, that
+          were considered to answer the questions, and (3) criteria that help choose the final option.
+        </p>
+        <figure-component
+          class="mx-auto w-full"
+          src="img/work/traceable-ds/r-qoc-diagram.png"
+          alt=""
+          figcaption="Questions, Options & Criteria (QOC) notation by MacLean et al. (1991) represented as a diagram"
+        />
       <h2>Architectural Decision Record</h2>
+      <p>
+        Architectural Decision Records (ADR) are becoming a standard practice in the software
+        industry to make design decisions accessible. Through offering a template for the capturing of design decisions, ADRs provide structure
+        and guidance to authors in the process of creating documentation (<web-link url="https://doi.org/10.1109/MS.2022.3166266">Keeling, 2022</web-link>).
+        Additionally, it allows for decision socialization,
+        where the entire team collectively reflects and agrees upon the decision made, rather than
+        individuals acting in isolation (<web-link url="https:
+//github.blog/engineering/architecture-optimization/why-write-adrs/">Perkins, 2020</web-link>).
+      </p>
+      <p>
+        <br />
+        <web-link url="https://www.cognitect.com/blog/2011/11/15/documenting-architecture-decisions">Nygard (2011)</web-link> suggests a five-part template for ADRs:
+      </p>
+      <ul>
+        <li><span>Title</span> - A short document name</li>
+        <li><span>Context</span> - A description of the context the decision is located in. This might be
+          articulated as a problem statement</li>
+        <li><span>Decision</span> - This part includes a description of the final decision that was made and
+          chosen</li>
+        <li><span>Status</span> - This indicates the status of a decision. For example, proposed, accepted or
+          deprecated</li>
+        <li><span>Consequences</span> -In this section, the resulting changes to the context through the
+          decision must be stated. This includes both positive and neutral consequences, as
+          well as those with negative tendencies</li>
+      </ul>
       <h2>Design Reflection</h2>
     </section>
 
@@ -305,6 +353,20 @@ export default {
 .quote{
   border-left: 16px solid rgba(255, 0, 92, 1);
   @apply pl-4 my-6;
+}
+
+ul{
+  list-style-type: circle;
+  list-style-position: inside;
+  @apply indent-4;
+}
+
+ul li{
+  @apply py-1;
+}
+
+ul li span{
+  @apply font-bold;
 }
 
 h3{

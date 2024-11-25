@@ -23,7 +23,7 @@ a{
   background-position: center right;
   background-repeat: no-repeat;
   padding-right: 16px;
-  font-weight: 500;
+  @apply text-gray-800;
 }
 
 a:hover{
