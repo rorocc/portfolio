@@ -6,7 +6,7 @@
       title="The Traceable Design System"
       text-color="#fff"
       subtitle="Integrating Design Rationale into Design Systems"
-      description="The documentation of design decisions is a common practice across various disciplines to capture the decision-making process and promote reflection on the decisions made. Design systems are becoming an increasingly prominent tool for documenting design decisions. This research project explores the extent to which the incorporation of design rationale into design systems can facilitate the traceability of design decisions."
+      description="The documentation of design decisions is a common practice across various disciplines to capture the decision-making process and promote reflection on the decisions made. Design systems are becoming an increasingly prominent tool for documenting such design decisions. This research project explores the extent to which the incorporation of design rationale into design systems can facilitate the traceability of design decisions."
       role="UX & Visual Designer, Researcher"
       timespan="February - August 2024"
       context="Master Thesis"
@@ -197,10 +197,63 @@
       <p>The structure follows that of the initial pilot interview study, with the addition of the processing of the <web-link url="https://www.ueq-online.org/">User Experience Questionnaire</web-link> (short version).</p>
       <p>Furthermore, detailed scenarios were added to the tasks to enable participants to gain a deeper understanding of the context.</p>
       <h3>Results</h3>
-    </section>
+      <p>For the data analysis, the same procedure as in the pilot interview study was used, utilizing the affinity diagramming method.</p>
+      <p></p>
 
-    <section class="section-m">
-      <h1 id="conclusion">Conclusion</h1>
+      <p class="quote">
+        <span class="text-lg">"The documents I can link make sense, but I think I need more space to say 'I decided this because...' and who decided it? They had that opinion and they had this opinion and we agreed on it."</span>
+        <br>
+        <span class="opacity-50">Participant I6 in the final interview study</span>
+      </p>
+
+      <p class="quote">
+        <span class="text-lg">"I'm telling you, the case is 90% of users no longer go to the documentation page, they just stay in Figma. And it can happen that such things become outdated. And outdated content is always the beginning of the end of the design system. So I think it's nice to have something like this, but I think it places demands on design system teams that probably not many can fulfill.”</span>
+        <br>
+        <span class="opacity-50">Participant I3 in the final interview study</span>
+      </p>
+      <figure-component
+        class="mx-auto w-full"
+        src="img/work/traceable-ds/it2-quant-diagram.png"
+        alt="The pragmatic quality results of the prototype are below average, but the hedonic quality is excellent in comparison to the benchmark data set. The prototype showed overall excellent results on average."
+        figcaption="Relation of the scale scores from the study results to the benchmark categories offered by the UEQ authors"
+      />
+      <h2>Key Insights & Discussion</h2>
+      <p class="pb-4">
+        The findings of the study and the extent of perceived traceability and guidance in the rationale documentation process can be summarized as follows:
+      </p>
+      <collapse headline="Design System as a Centralized Design Knowledge Repository" text="The interface was perceived as a centralized knowledge repository that stores design
+      rationales and is accessible for all parties involved in design. Rasmussen et al. (2020)
+      have found that designers are frustrated by having to search for relevant information from
+      a variety of tools, as there are no standardized tools for the purpose of design documentation.
+      As the participants stated that they work with design systems anyway, the concept
+      of extending design systems is therefore not an additional tool that might cause further
+      frustration, but rather combines different tools." />
+      <collapse headline="Documentation Templates Guide through the Process" text="With regard to the degree of guidance provided by the process, it can be summarized that the participants perceived guidance
+      in the Rationale Documentation Process, in particular through the predefined structure
+      of the template and the interactive process. Additionally, the participants believed that they would be able to navigate
+      the system more flawlessly after a short period of using the system through the structured
+      process. In combination with the on average positive quantitative results and qualitative
+      comments, it can be assumed that the designers acknowledged the novelty of the concept
+      as one of the reasons for the initial comprehension issues" />
+      <collapse headline="Additional Effort Inhibits the Documentation Practice" text="The most controversial topic was the applicability of the concept in terms of the cost-benefit
+        ratio in the context of everyday design work. One of the key concerns was the
+        effort needed to document design rationales, as some decisions can be defined in arbitrarily
+        small steps, which may reduce the level of productivity rather than saving time in the long
+        term. This observation cannot be validated by the results of the UEQ-S, as the evaluation
+        of the system tends more towards “efficient”. On the contrary, the qualitative results show that the tool requires too much effort.
+        It is unclear whether this is due to the template itself or the implementation in the interface." />
+      <br />
+
+      <h2>Limitations</h2>
+        <p>The results of the study must be interpreted with caution and cannot easily be generalized.
+          This is due to the fact that the study was only conducted with a small sample, which must be taken into account for both the qualitative and quantitative results.
+          Thus, the results of the UEQ-S were not used to generate generally valid findings, but rather to compare the statements of the participants with the quantitative tendencies.</p>
+        <p>
+          It is also important to acknowledge that the tasks that were solved in the study only represent a hypothetical scenario that can hardly reflect the challenges of day-to-day design
+          practice. Furthermore, the interactive prototype with its limited range of functions cannot fully represent a design system into which the concept would be integrated.
+        </p>
+      <h1>Learnings</h1>
+
     </section>
   </div>
 </template>
@@ -210,11 +263,12 @@ import Display from "~/components/work/display";
 import Card from "~/components/work/card";
 import FigureComponent from "~/components/figureComponent";
 import WebLink from "~/components/structuralComponents/webLink";
+import Collapse from "~/components/structuralComponents/collapse.vue";
 
 
 export default {
   name: "traceable-design-system",
-  components: {Card, FigureComponent, WebLink, Display},
+  components: {Collapse, Card, FigureComponent, WebLink, Display},
   head: {
     title: 'Traceable Design System –',
     meta: [

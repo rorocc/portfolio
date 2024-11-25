@@ -50,7 +50,7 @@ export default {
 button{
   background: rgba(255, 255, 255, 0.75);
   backdrop-filter: blur(20px);
-  @apply rounded-3xl py-2 px-3 flex border border-gray-100 text-gray-400 stroke-gray-400 items-center gap-2;
+  @apply rounded-3xl py-2 px-3 flex border border-gray-100 text-gray-600 stroke-gray-600 items-center gap-2;
 }
 
 button:hover{
