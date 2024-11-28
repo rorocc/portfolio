@@ -1,7 +1,7 @@
 <template>
-  <figure class="my-16">
-    <img :class="classes" :src="require(`../assets/${src}`)" :alt="alt">
-    <figcaption v-if="figcaption" class="opacity-50 text-center pt-4">
+  <figure class="my-12">
+    <img ref="img" :src="require(`../assets/${src}`)" :class="classes" :alt="alt">
+    <figcaption v-if="figcaption" class="opacity-50 text-center pt-4 max-w-prose mx-auto">
       {{ figcaption }}
     </figcaption>
   </figure>
@@ -19,31 +19,10 @@ export default {
       default: ""
     }
   },
-  mounted() {
-    this.animate()
-  },
   methods: {
-    animate(){
-      this.$gsap.to('figure', {
-        opacity: 1,
-        x: 0,
-        ease: 'Power1.easeInOut',
-        duration: 0.5,
-        scrollTrigger: {
-          trigger: 'figure',
-          scrub: false,
-          markers: false
-        }
-      })
-    }
   }
 }
 </script>
 
 <style scoped>
-figure{
-  position: relative;
-  opacity: 0;
-  transform: translateX(-5vw);
-}
 </style>

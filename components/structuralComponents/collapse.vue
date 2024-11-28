@@ -2,9 +2,7 @@
   <div>
     <button type="button" id="collapsible" ref="collapsible" class="collapsible"> {{ headline }}</button>
     <div class="content">
-      <p>
-        {{ text }}
-      </p>
+      <slot />
     </div>
   </div>
 </template>
@@ -13,7 +11,6 @@
   export default {
     props: {
       headline: String,
-      text: String
     },
     mounted() {
       //let collapsible = document.getElementById("collapsible");
