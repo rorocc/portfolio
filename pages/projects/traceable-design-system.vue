@@ -67,7 +67,7 @@ systematic way?</span>
 designers in documenting design decision rationales, but also presents those rationales
           and the design process in a <b>traceable</b> way?</span>
         <br/>
-        <a class="text-sm" href="#">Jump to Section</a>
+        <a class="text-sm" href="#firstiteration">Jump to Section</a>
       </p>
 
       <p>
@@ -374,7 +374,7 @@ designers in documenting design decision rationales, but also presents those rat
 
       <h3>System Structure</h3>
       <p>
-        As demonstrated by the findings of Sterman et al. (2023) and Gutierrez Lopez et al. (2018), the integration of
+        As demonstrated by the findings of <web-link url="https://doi.org/10.1145/3544548.3581255">Sterman et al., 2023</web-link> and <web-link url="https://doi.org/10.1145/3148330.3148334">Gutierrez Lopez et al. (2018)</web-link>, the integration of
         a space for the purpose of exploring design artifacts has been shown positive effects on the
         facilitation of reflection of design processes. The structure of the developed documentation
         interface follows that proposal and is divided into two subsystems. <br/>
@@ -521,7 +521,19 @@ designers in documenting design decision rationales, but also presents those rat
 
     <section class="section-m">
       <h1 id="seconditeration">Second Iteration</h1>
-      <h2>Design Changes</h2>
+      <p>
+        The first iteration has already led to initial insights into how design rationale can be
+        integrated into the structure of a design system in order to increase the traceability of
+        design decisions. The second iteration will build on these findings in order to refine the
+        concept with regard to these objectives.
+      </p>
+      <h2 class="mt-6">Design Changes</h2>
+      <p>
+        The pilot interview study with experts from the user experience design field generated
+        preliminary insights into the usability of the interface regarding the task of documenting
+        and tracing design decisions. Based on these findings, design adjustments were made to
+        the concept, which are described in the following sections.
+      </p>
       <h3>Rationale Capturing Process</h3>
       <p>Although the system offered guidance through the automatic step-by-step opening and
         closing of documentation steps, the participants seemed overwhelmed by the structure.
@@ -598,7 +610,9 @@ designers in documenting design decision rationales, but also presents those rat
       <p>Furthermore, detailed scenarios were added to the tasks to enable participants to gain a deeper understanding of the context.</p>
       <h3>Results</h3>
       <p>For the data analysis, the same procedure as in the pilot interview study was used, utilizing the affinity diagramming method.</p>
-      <p></p>
+      <p>The tightly defined structure limits the flexibility to incorporate individual capturing practices.
+        However, participants stated that design decisions are far more complex than what can be covered
+        by the proposed interface.</p>
 
       <p class="quote">
         <span class="text-lg">"The documents I can link make sense, but I think I need more space to say 'I decided this because...' and who decided it? They had that opinion and they had this opinion and we agreed on it."</span>
@@ -606,11 +620,31 @@ designers in documenting design decision rationales, but also presents those rat
         <span class="opacity-50">Participant I6 in the final interview study</span>
       </p>
 
+      <p>A designer stated that a certain degree of effort might be needed when initially creating the design
+        system with additional design rationales. However, they thought that the <b>guided process
+        provides a supportive basis</b> for this task to reduce the effort required. I3 pointed out that
+        design systems are usually a side-project, managed by a small team and thus the required
+        effort to document rationales cannot be invested. Similarly, R2 raised the question,
+        to which level of detail the <b>documentation is consuming more time compared to what it
+        would save in the long term</b>.
+        Nevertheless, the interviewees also reported that available documentation is not always actively
+        used in the daily work life, further reducing the value of documentation. I4 claimed to have created detailed design documentation before, but experienced that other design
+        colleagues still did not want to read it. If this leads to documentation scarcely being
+        updated, it could cause a vicious cycle:</p>
+
       <p class="quote">
         <span class="text-lg">"I'm telling you, the case is 90% of users no longer go to the documentation page, they just stay in Figma. And it can happen that such things become outdated. And outdated content is always the beginning of the end of the design system. So I think it's nice to have something like this, but I think it places demands on design system teams that probably not many can fulfill.”</span>
         <br>
         <span class="opacity-50">Participant I3 in the final interview study</span>
       </p>
+
+      <p>
+        Additionally to the qualitative interview, the interviewees were asked to fill out the short
+        version of the User Experience Questionnaire. The pragmatic quality scale scores on average one point lower than the hedonic quality
+        scale. Nevertheless, the scales show a positive trend both individually
+        and overall.
+      </p>
+
       <figure-component
         class="mx-auto w-full"
         src="img/work/traceable-ds/it2-quant-diagram.png"
