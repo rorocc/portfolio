@@ -56,7 +56,7 @@
         <div class="img-cinema-item" style="background-image: url('/visual/muellmorty-hd.jpg')" />
       </div>
     </section>
-    <div role="none" ref="toolbox" @click="startPiggies" class="pigButton block">
+    <div role="none" ref="toolbox" @click="startPiggies" class="pigButton block no-select">
       <div class="grid-flow-col grid text-center">
         <div>
           <img src="../assets/img/pigs/pig3.svg" class="pigIcon" role="presentation">
