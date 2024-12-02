@@ -27,16 +27,16 @@
         <h2>Companies and projects I worked for</h2>
         <div class="grid md:grid-cols-4 grid-cols-2 gap-8">
           <div class="logo-tile">
-            <img src="../assets/img/about/logos/imis.svg">
+            <img alt="Institut für Multimediale und Interaktive Systeme an der Universität zu Lübeck" src="../assets/img/about/logos/imis.svg">
           </div>
           <div class="logo-tile">
-            <img src="../assets/img/about/logos/otto.svg">
+            <img alt="Otto" src="../assets/img/about/logos/otto.svg">
           </div>
           <div class="logo-tile">
-            <img src="../assets/img/about/logos/maridata.png">
+            <img alt="MariData" src="../assets/img/about/logos/maridata.png">
           </div>
           <div class="logo-tile">
-            <img src="../assets/img/about/logos/lynes.png">
+            <img alt="Lynes" src="../assets/img/about/logos/lynes.png">
           </div>
         </div>
       </div>
@@ -49,7 +49,7 @@
             <span class="skilltag tool">Figma</span>
             <span class="skilltag tool">FigJam</span>
             <span class="skilltag tool">Miro</span>
-            <span class="skilltag tool">Office 365</span>
+            <span class="skilltag tool">Microsoft 365</span>
             <span class="skilltag tool">WebStorm</span>
             <span class="skilltag tool">Vue.js</span>
             <span class="skilltag tool">Premiere</span>

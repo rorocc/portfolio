@@ -21,7 +21,11 @@
     </section>
     <toc />
     <section class="section-m">
-      <p class="text-gray-400">Last updated: 28.11.2024</p>
+      <div class="bg-gray-100 py-4 px-6 rounded-xl my-4">
+        <p class="text-xl font-bold opacity-80 my-1">There's more to it</p>
+        <p>This article only scratches the surface of the thoughts and actions behind what was realised in the project. <a class="decoration-dotted underline-offset-4 underline" href="#contact">Let's talk</a> if you're interested in more details!</p>
+      </div>
+      <p class="text-gray-400">Last updated: 02.12.2024</p>
       <h1 id="motivation">Motivation</h1>
       <p>
         In the field of user experience design, the utilization of Design Systems is a commonly
@@ -367,38 +371,82 @@ designers in documenting design decision rationales, but also presents those rat
         into the <b>interactive prototype</b>, which acts as the main source for the evaluation
         phase.
       </p>
+
+      <h3>System Structure</h3>
+      <p>
+        As demonstrated by the findings of Sterman et al. (2023) and Gutierrez Lopez et al. (2018), the integration of
+        a space for the purpose of exploring design artifacts has been shown positive effects on the
+        facilitation of reflection of design processes. The structure of the developed documentation
+        interface follows that proposal and is divided into two subsystems. <br/>
+        The first subsystem is the <b>Design System</b>. It not only covers the documentation process
+        itself but also the design outcome, typical design system features and the design rationale.
+      </p>
+      <figure-component
+        class="mx-auto w-full"
+        src="img/work/traceable-ds/it1-overview-page.png"
+        alt=""
+        figcaption="The traceable design systems comprises elements like versioning, feedback features, annotations, and status insights to facilitate traceability of documented decisions."
+      />
+      <p>
+        Secondly, the <b>Artifact Repository</b> consists of the overview page, presenting all available
+        design artifacts. These artifacts can be examined in further detail on the individual artifact
+        detail pages.
+      </p>
     </section>
     <div class="cinema">
-      <figure-component
-        class="mx-auto lg:w-1/3 w-5/6 flex-shrink-0"
-        src="img/work/traceable-ds/it1-main.jpg"
-        alt=""
-        figcaption="Start page of the design system"
-      />
-      <figure-component
-        class="mx-auto lg:w-1/3 w-5/6 flex-shrink-0"
-        src="img/work/traceable-ds/it1-comp-main.jpg"
-        alt=""
-        figcaption="Component detail page with annotations marking the design rationales"
-      />
-      <figure-component
-        class="mx-auto lg:w-1/3 w-5/6 flex-shrink-0"
-        src="img/work/traceable-ds/it1-ar-overview.jpg"
-        alt=""
-        figcaption="Overview of the artifact repository containing all design artifacts"
-      />
-      <figure-component
-        class="mx-auto lg:w-1/3 w-5/6 flex-shrink-0"
-        src="img/work/traceable-ds/it1-ar-graph.jpg"
-        alt=""
-        figcaption="Graph view of the design artifacts visualizing clusters and relationships between artifacts"
-      />
-      <figure-component
-        class="mx-auto lg:w-1/3 w-5/6 flex-shrink-0"
-        src="img/work/traceable-ds/it1-create-dialog.jpg"
-        alt=""
-        figcaption="Guided process of documenting design rationale"
-      />
+      <div class="cinema-head -mb-8">
+        <p>Views of the <span class="font-inria italic">Traceable Design System</span> (It. 1)</p>
+      </div>
+      <div class="cinema-slider">
+        <figure-component
+          class="mx-auto lg:w-1/3 w-5/6 flex-shrink-0"
+          src="img/work/traceable-ds/it1-main.jpg"
+          alt=""
+          figcaption="Start page of the design system"
+        />
+        <figure-component
+          class="mx-auto lg:w-1/3 w-5/6 flex-shrink-0"
+          src="img/work/traceable-ds/it1-comp-main.jpg"
+          alt=""
+          figcaption="Component detail page with annotations marking the design rationales"
+        />
+        <figure-component
+          class="mx-auto lg:w-1/3 w-5/6 flex-shrink-0"
+          src="img/work/traceable-ds/it1-rationale-details.png"
+          alt=""
+          figcaption="Detailed rationale information in a sidebar view"
+        />
+        <figure-component
+          class="mx-auto lg:w-1/3 w-5/6 flex-shrink-0"
+          src="img/work/traceable-ds/it1-version-history.png"
+          alt=""
+          figcaption="History of all versions of the component or decision"
+        />
+        <figure-component
+          class="mx-auto lg:w-1/3 w-5/6 flex-shrink-0"
+          src="img/work/traceable-ds/it1-version-comparison.png"
+          alt=""
+          figcaption="Comparison view of two different version entries"
+        />
+        <figure-component
+          class="mx-auto lg:w-1/3 w-5/6 flex-shrink-0"
+          src="img/work/traceable-ds/it1-ar-overview.jpg"
+          alt=""
+          figcaption="Overview of the artifact repository containing all design artifacts"
+        />
+        <figure-component
+          class="mx-auto lg:w-1/3 w-5/6 flex-shrink-0"
+          src="img/work/traceable-ds/it1-ar-graph.jpg"
+          alt=""
+          figcaption="Graph view of the design artifacts visualizing clusters and relationships between artifacts"
+        />
+        <figure-component
+          class="mx-auto lg:w-1/3 w-5/6 flex-shrink-0"
+          src="img/work/traceable-ds/it1-create-dialog.jpg"
+          alt=""
+          figcaption="Guided process of documenting design rationale"
+        />
+      </div>
     </div>
     <section class="section-m">
       <h2>Pilot Interview Study</h2>
@@ -474,8 +522,42 @@ designers in documenting design decision rationales, but also presents those rat
     <section class="section-m">
       <h1 id="seconditeration">Second Iteration</h1>
       <h2>Design Changes</h2>
+      <h3>Rationale Capturing Process</h3>
+      <p>Although the system offered guidance through the automatic step-by-step opening and
+        closing of documentation steps, the participants seemed overwhelmed by the structure.
+        This is partly due to the fact that it was not clear to them why blocks were suddenly
+        minimized, and partly because the prototype had bugs with regard to this function.
+        The functionality of the process dialog has therefore been completely redesigned to provide
+        a step-by-step process, adopting the format of a wizard dialog. Wizards can be used to
+        route through complex processes, while reducing the cognitive effort needed to complete it
+        (<web-link url="https://www.nngroup.com/articles/wizards/">Budiu, 2017</web-link>).</p>
+
+      <figure class="my-4">
+        <video class="rounded-xl" autoplay muted loop src="~/assets/img/work/traceable-ds/it2-dialog-video.mp4" />
+        <figcaption class="opacity-50 text-center pt-4 max-w-prose mx-auto">The wizard structure offers guidance through the individual steps and instant validation</figcaption>
+      </figure>
+      <h3>Miscellaneous</h3>
+      <p>It was observed that the implementation hardly allows the influence that the individual artifacts have on decisions or other
+        artifacts to be understood. Both in the design rationales and on the artifact detail
+        pages, the artifact card was modified so that it now allows free text for the <b>description of
+        the impact</b> on the design. Additionally, <b>avatars of the designers</b> who worked on the artifact have been
+        added to provide information about those responsible and to allow for follow-up questions.</p>
+      <p>
+        The Artifact Repository consists of two views, each designed to
+        address distinct tasks. The graph view allows for the inspection of artifact relations and
+        clusters, while the list serves as a quick overview of all artifacts and allows for in-depth
+        filtering. However, designers mostly interacted with the list view and <b>overlooked the tab
+        for the graph view</b> in the sidebar, as it was the default page when accessing the Artifact
+        Repository. To make the option of using two different view modes more salient, they were
+        merged onto the same page. For that, the switch to <b>toggle between the two view modes</b>
+        was moved to the top bar, where the filtering options are located, too.
+      </p>
     </section>
     <div class="cinema">
+      <div class="cinema-head -mb-8">
+        <p><span class="font-inria italic">Adjusted</span> Views after Iteration 2</p>
+      </div>
+      <div class="cinema-slider">
       <figure-component
         class="mx-auto lg:w-1/3 w-5/6 flex-shrink-0"
         src="img/work/traceable-ds/it2-ds-button-rationale1.png"
@@ -500,6 +582,7 @@ designers in documenting design decision rationales, but also presents those rat
         alt=""
         figcaption="The new rationale dialogue is structured as a step-by-step process to guide designers and show only relevant information."
       />
+      </div>
     </div>
     <section class="section-m">
       <h2>Interview Study</h2>
@@ -575,7 +658,33 @@ designers in documenting design decision rationales, but also presents those rat
           practice. Furthermore, the interactive prototype with its limited range of functions cannot fully represent a design system into which the concept would be integrated.
         </p>
       <h1>Learnings</h1>
+      <div class="flex border-gray-200 border p-4 rounded-xl gap-4 mb-4">
+        <work-traceable-ds-bubble class="flex-shrink-0" number="1" />
+        <div>
+          <p class="font-bold text-xl">Lack of task context might impact study result</p>
+          <p>Especially when confronting participants with complex tasks during a user study, a scenario description, for example, should be provided so that they can empathize with the context.</p>
+        </div>
+      </div>
 
+      <div class="flex border-gray-200 border p-4 rounded-xl gap-4 mb-4">
+        <work-traceable-ds-bubble class="flex-shrink-0" number="2" />
+        <div>
+          <p class="font-bold text-xl">Diversify the sample</p>
+          <p>It was noticeable that the views and statements varied greatly depending on how much professional experience the participants had. While more experienced designers tended to argue pragmatically, novices were more easily enthused by the topic.</p>
+        </div>
+      </div>
+
+      <div class="flex border-gray-200 border p-4 rounded-xl gap-4">
+        <work-traceable-ds-bubble class="flex-shrink-0" number="3" />
+        <div>
+          <p class="font-bold text-xl">Do not pre-fill input fields</p>
+          <p>At the moment it is not possible to integrate interactive input fields in Figma without further ado. One attempt was to pre-fill the fields with one click. However, this resulted in the participants focussing too much on the predefined content and losing focus on their own points.</p>
+        </div>
+      </div>
+      <div class="bg-gray-100 py-4 px-6 rounded-xl mt-16 my-8">
+        <p class="text-xl font-bold opacity-80 my-1">There's more to it</p>
+        <p>This article only scratches the surface of the thoughts and actions behind what was realised in the project. <a class="decoration-dotted underline-offset-4 underline" href="#contact">Let's talk</a> if you're interested in more details!</p>
+      </div>
     </section>
   </div>
 </template>
@@ -621,7 +730,16 @@ b{
 
 .cinema{
   background-color: #EFF3FA;
-  @apply ml-8 lg:ml-32 px-8 md:px-16 rounded-lg flex gap-8 overflow-x-scroll snap-center scroll-smooth snap-x snap-proximity;
+  @apply ml-8 lg:ml-32 rounded-lg px-8 md:px-16;
+}
+
+.cinema-head{
+  @apply pt-8 text-xl;
+}
+
+.cinema-slider{
+
+  @apply flex gap-8 overflow-x-scroll snap-center scroll-smooth snap-x snap-proximity;
 }
 
 .section-m{
@@ -648,7 +766,6 @@ ol li::before {
   color: rgba(255, 0, 92, 1);
   @apply text-4xl mr-4;
 }
-
 
 h3{
   @apply mt-6;
