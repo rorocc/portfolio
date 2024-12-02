@@ -15,7 +15,7 @@
           While I love an aesthetic interface design, I love digital product design that put the users needs in focus even more.
         </p>
         <p>
-          My Masters degree in the field of the Media Informatics, that I finished in September 2024, did not only teach my how to do design research but also sparked my interest in web development. I love to develop Vue apps ever since.
+          My Masters degree in the field of the Media Informatics, that I finished in September 2024, did not only teach my how to do design research but also sparked my interest in web development. I enjoy to develop Vue apps ever since.
         </p>
         <p>
           You might also find me while taking photos, playing around with Photoshop or simply eating <web-link url="https://rorocc.github.io/cinnanom">cinnamon buns</web-link>.
