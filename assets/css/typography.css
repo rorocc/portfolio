@@ -96,6 +96,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Gonzaga";
+  src: local("Gonzaga"), url("~assets/fonts/Gonzaga/Gonzaga-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
 .display-font{
   font-family: 'DM Sans', sans-serif;
   font-weight: bold;
