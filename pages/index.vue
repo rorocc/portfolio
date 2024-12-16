@@ -49,6 +49,7 @@
     <section class="container">
       <h1 class="my-12 section-title">Other <span class="emph">creative</span> works</h1>
       <div class="img-cinema">
+        <div class="img-cinema-item" style="background-image: url('/visual/odt.jpeg')" />
         <div class="img-cinema-item" style="background-image: url('/visual/rainbow.jpg')" />
         <div class="img-cinema-item" style="background-image: url('/visual/party.jpg')" />
         <div class="img-cinema-item" style="background-image: url('/visual/girl_1.jpg')" />
