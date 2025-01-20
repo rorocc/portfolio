@@ -4,7 +4,7 @@
       <div class="grid grid-cols-1 lg:grid-cols-2  mb-16 mt-4 md:gap-0 gap-6">
         <div class="relative md:order-1 order-2">
           <h1 class="max-w-prose landing-title fade-in-left md:leading-snug leading-tight md:text-5xl text-4xl text-center md:text-left">
-            Hello <span class="title-gradient">JustWatch</span>, I'm Chris.
+            Hello <span class="title-gradient">JustWatch</span>, <br> I'm Chris.
           </h1>
           <div class="max-w-prose relative">
             <p class="leading-8 landing-description max-w-prose md:text-left text-center">
