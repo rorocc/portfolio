@@ -13,6 +13,13 @@
       context="Media informatics project"
       keywords="Design research, Interviews, Prototyping, Frontend development"
     />
+    <section class="md:px-12 px-6">
+      <figure-component
+        classes="mx-auto w-full"
+        src="img/work/aid/showcase-display.png"
+        alt=""
+      />
+    </section>
     <div>
       <toc />
       <section class="section-m">

@@ -24,7 +24,7 @@
 
 <script>
 export default {
-  name: "sims",
+  name: "Sims",
   methods: {
     supportsHEVC(){
       if(!this.navigator) return

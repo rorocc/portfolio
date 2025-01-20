@@ -13,6 +13,13 @@
       context="Media informatics bachelor thesis"
       keywords="Design research, Workshops, Prototyping, Frontend development, User tests, Evaluation"
     />
+    <section class="md:px-12 px-6">
+      <figure-component
+        classes="mx-auto w-full"
+        src="img/work/mina/showcase-display.png"
+        alt=""
+      />
+    </section>
     <toc></toc>
     <section>
       <div class="section-m">

@@ -51,6 +51,7 @@
             <span class="skilltag tool">Miro</span>
             <span class="skilltag tool">Microsoft 365</span>
             <span class="skilltag tool">WebStorm</span>
+            <span class="skilltag tool">Node.js</span>
             <span class="skilltag tool">Vue.js</span>
             <span class="skilltag tool">Premiere</span>
             <span class="skilltag tool">Photoshop</span>
@@ -67,7 +68,10 @@
           <span class="skilltag">Prototyping</span>
           <span class="skilltag">Design Tokens</span>
           <span class="skilltag">Web Accessibility</span>
-          <span class="skilltag">Design Research</span>
+          <span class="skilltag">Web Development</span>
+          <span class="skilltag">User Research & Testing</span>
+          <span class="skilltag">Photography</span>
+          <span class="skilltag">Videography</span>
         </div>
       </div>
 
