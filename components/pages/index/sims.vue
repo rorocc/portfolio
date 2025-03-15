@@ -7,14 +7,14 @@
       </video>
     </div>
     <div class="hidden md:block">
-      <structural-components-action-tag icon="📷" text="Take a Photo" class="intro-left absolute top-1/3 -left-4 z-1" state="disabled"/>
-      <structural-components-action-tag icon="✏️" text="Draw Wireframe" class="intro-left absolute top-1/2 -left-6 z-1" state="disabled"/>
-      <structural-components-action-tag icon="👨‍🍳" text="Bake a Cinnamon Bun" class="intro-left absolute top-2/3 -left-12 z-1" state="disabled"/>
-
-      <structural-components-action-tag icon="👥" text="Design to Empower" class="intro-right absolute top-1/3 -right-12 z-1" state="disabled"/>
-      <structural-components-action-tag icon="⛓️" text="Add Auto Layout" class="intro-right absolute top-1/2 -right-4 z-1" state="disabled"/>
-      <structural-components-action-tag  state="disabled" icon="🐷" text="Hug some Pigs" class="intro-right absolute top-2/3 right-0 z-1"/>
-
+      <div class="hidden">
+        <structural-components-action-tag icon="📷" text="Take a Photo" class="intro-left absolute top-1/3 -left-4 z-1" state="disabled"/>
+        <structural-components-action-tag icon="✏️" text="Draw Wireframe" class="intro-left absolute top-1/2 -left-6 z-1" state="disabled"/>
+        <structural-components-action-tag icon="👨‍🍳" text="Bake a Cinnamon Bun" class="intro-left absolute top-2/3 -left-12 z-1" state="disabled"/>
+      </div>
+        <structural-components-action-tag icon="⛓️" text="Build Design System" class="intro-right absolute top-1/3 -right-16 z-1" state="disabled"/>
+        <structural-components-action-tag icon="👥" text="Design to Empower" class="intro-right absolute top-1/2 -right-12 z-1" state="disabled"/>
+        <structural-components-action-tag state="disabled" icon="🐷" text="Hug some Pigs" class="intro-right absolute top-2/3 right-0 z-1"/>
       <a href="#contact">
         <structural-components-action-tag icon="✉️" text="Contact Me" :cta="true" class="absolute -bottom-4 left-1/3"/>
       </a>
