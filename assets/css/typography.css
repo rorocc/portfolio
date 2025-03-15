@@ -174,7 +174,7 @@ h1.section-title span{
 .landing-title{
   font-family: "GeistSans", sans-serif;
   font-variation-settings: 'wght' 700;
-  @apply md:text-6xl text-4xl py-12;
+  @apply md:text-6xl text-4xl py-8;
 }
 
 .landing-title >.playful{

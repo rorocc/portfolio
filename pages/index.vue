@@ -8,7 +8,7 @@
               class="md:max-w-prose w-full landing-title fade-in-left md:leading-relaxed leading-tight text-center md:text-left" >
               Hello, I am <br /> <span class="playful">Christopher</span>
             </h1>
-            <a href="#case-studies" class="right-0 top-12 absolute visible lg:invisible">
+            <a href="#case-studies" class="right-0 top-12 absolute invisible md:visible lg:invisible">
               <pages-index-badge class="translate-y-1/4 z-10" />
             </a>
             <div class="relative">
