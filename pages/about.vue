@@ -24,7 +24,7 @@
     </div>
     <div class="bg-gray-50 py-16">
       <div class="container">
-        <h2>Companies and projects I worked for</h2>
+        <h2 class="my-12 section-title">Companies and Projects I participated at</h2>
         <div class="grid md:grid-cols-4 grid-cols-2 gap-8">
           <div class="logo-tile">
             <img alt="Institut für Multimediale und Interaktive Systeme an der Universität zu Lübeck" src="../assets/img/about/logos/imis.svg">
@@ -44,7 +44,7 @@
     <div class="container py-16 grid md:grid-cols-2 md:grid-rows-1 grid-rows-2 md:gap-8 gap-16">
       <div>
         <div>
-          <h2>My Tech Stack</h2>
+          <h2 class="my-12 section-title">Tech Stack</h2>
           <div class="flex-wrap gap-2 flex">
             <span class="skilltag tool">Figma</span>
             <span class="skilltag tool">FigJam</span>
@@ -61,7 +61,7 @@
         </div>
       </div>
       <div>
-        <h2>Knowledge</h2>
+        <h2 class="my-12 section-title">Knowledge</h2>
         <div class="flex-wrap gap-2 flex">
           <span class="skilltag">Human-Centered Design</span>
           <span class="skilltag">Design Systems</span>
@@ -130,6 +130,10 @@ export default {
 </script>
 
 <style scoped>
+  h2{
+    @apply text-2xl;
+  }
+
   .skilltag{
     border-color: var(--primary-color);
     @apply rounded-md border py-2 px-4;

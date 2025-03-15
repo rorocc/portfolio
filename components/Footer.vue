@@ -22,7 +22,7 @@
       </div>
     </div>
     <hr />
-    <div class="notes text-left py-4 opacity-25">
+    <div class="notes text-left py-4 opacity-50">
       <span>Made with Vue.js and Nuxt.js</span>
       <span> © {{ year }} Christopher Rock</span>
     </div>
@@ -46,7 +46,6 @@ export default {
 
 <style scoped>
   .footer-title{
-    font-family: 'PPMori', sans-serif;
     @apply text-lg mb-0 font-semibold;
   }
 

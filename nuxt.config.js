@@ -3,7 +3,14 @@ export default {
   ssr: true,
 
   // generate 404 error fallback page
-  generate: { fallback: '404.html' },
+  generate: {
+    fallback: '404.html',
+    exclude: [
+      '/hello/*',
+      '/pg',
+      '/work'
+    ]
+  },
 
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',

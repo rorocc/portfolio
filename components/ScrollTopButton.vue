@@ -21,25 +21,25 @@ export default {
     }
   },
   mounted() {
-    window.addEventListener("scroll", this.handleScroll);
+    window.addEventListener("scroll", this.handleScroll)
   },
 
   beforeUnmount() {
-    window.removeEventListener("scroll", this.handleScroll);
+    window.removeEventListener("scroll", this.handleScroll)
   },
 
   methods: {
     handleScroll() {
-      const scrollBtn = this.$refs.scrollTopButton;
+      const scrollBtn = this.$refs.scrollTopButton
 
       if (window.scrollY > 0) {
-        scrollBtn.classList.remove("invisible");
+        scrollBtn.classList.remove("invisible")
       } else {
-        scrollBtn.classList.add("invisible");
+        scrollBtn.classList.add("invisible")
       }
     },
     scrollToTop() {
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      window.scrollTo({ top: 0, behavior: "smooth" })
     },
   },
 }
@@ -50,6 +50,7 @@ export default {
 button{
   background: rgba(255, 255, 255, 0.75);
   backdrop-filter: blur(20px);
+  font-weight: 400;
   @apply rounded-3xl py-2 px-3 flex border border-gray-100 text-gray-600 stroke-gray-600 items-center gap-2;
 }
 

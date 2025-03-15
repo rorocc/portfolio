@@ -103,6 +103,20 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Pacifico";
+  src: local("Pacifico"), url("~assets/fonts/Pacifico/Pacifico-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GeistSans";
+  src: local("GeistSans"), url("~assets/fonts/GeistSans/Geist[wght].ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
 .display-font{
   font-family: 'DM Sans', sans-serif;
   font-weight: bold;
@@ -113,6 +127,8 @@
   font-family: 'DM Sans', sans-serif;
   font-weight: bold;
 }
+
+
 
 h2{
   font-family: "Inter", sans-serif;
@@ -140,24 +156,33 @@ h1.section-title :before{
   height: 1px;
   width: 56px;
   content: "";
-  background-color: var(--link-color-active);
+  @apply bg-black;
 }
 
 h1.section-title span{
   font-family: "Inria Serif", serif;
   font-style: italic;
-  @apply text-4xl;
+  @apply text-3xl;
 }
 
 .landing-description{
   font-family: "Inter", sans-serif;
-  font-weight: 100;
+  font-weight: 300;
   font-size: 24px;
 }
 
 .landing-title{
-  font-family: "Inter", sans-serif;
-  font-size: 64px;
+  font-family: "GeistSans", sans-serif;
+  font-variation-settings: 'wght' 700;
+  @apply md:text-6xl text-4xl py-12;
+}
+
+.landing-title >.playful{
+  font-family: 'Pacifico', sans-serif;
+  background: -webkit-linear-gradient(#E2B6E9, #E9D8EC, #E2B6E9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  @apply md:text-8xl text-6xl;
 }
 
 .font-inria{
