@@ -1,9 +1,9 @@
 <template>
-  <div class="bg-white border border-gray-200 rounded-lg p-6 my-6">
+  <div class="bg-white border border-gray-200 rounded-lg p-6 my-6" :class="{'hover:border-gray-400' : hasHover}">
     <p v-if="tagline" class="text-sm opacity-40 tracking-widest uppercase leading-loose">
       {{ tagline }}
     </p>
-    <p v-if="headline" class="text-lg font-bold leading-loose">
+    <p v-if="headline" class="text-lg font-bold mb-2">
       {{ headline }}
     </p>
     <p v-if="text" class="text-sm leading-loose">
@@ -18,7 +18,11 @@ export default {
   props: {
     tagline: String,
     headline: String,
-    text: String
+    text: String,
+    hasHover: {
+      type: Boolean,
+      default: false
+    }
   }
 }
 </script>
