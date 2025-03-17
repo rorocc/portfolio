@@ -50,7 +50,7 @@
         <span>How are design processes <b>structured</b> and what <b>outcomes</b> should be documented
 to facilitate the traceability of design decisions?</span>
         <br />
-        <a class="text-sm" href="#research">Jump to Section</a>
+        <NuxtLink class="text-sm" to="#research">Jump to Section</NuxtLink>
       </p>
 
       <p class="rq-block">
@@ -58,7 +58,7 @@ to facilitate the traceability of design decisions?</span>
         <span>How can <b>design rationales</b> for interaction design decisions be <b>structured</b> in a
 systematic way?</span>
         <br />
-        <a class="text-sm" href="#designrationaleframework">Jump to Section</a>
+        <NuxtLink class="text-sm" to="#designrationaleframework">Jump to Section</NuxtLink>
       </p>
 
       <p class="rq-block">
@@ -67,7 +67,7 @@ systematic way?</span>
 designers in documenting design decision rationales, but also presents those rationales
           and the design process in a <b>traceable</b> way?</span>
         <br/>
-        <a class="text-sm" href="#firstiteration">Jump to Section</a>
+        <NuxtLink class="text-sm" to="#firstiteration">Jump to Section</NuxtLink>
       </p>
 
       <p>
