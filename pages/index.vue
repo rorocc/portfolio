@@ -125,17 +125,6 @@ export default {
           pills: ["Desktop", "Prototyping", "Master Thesis"]
         },
         {
-          title: 'AID-Simulation — Diabetes type 1 closed-loop simulator',
-          headText: 'Masters project media informatics',
-          description: 'An interactive simulator with the aim to make the functionality of closed-loop systems more comprehensible.',
-          bgColor: '#e3ecff',
-          textColor: '#001E4B',
-          imgUrl: 'screen_aid.png',
-          url: './projects/aid',
-          isAvailable: true,
-          pills: ["Mobile", "Desktop", "Web Development"]
-        },
-        {
           title: 'MariData: Interface for ship energy management',
           headText: 'Funded research project',
           description: 'The MariData decision support system helps vessel crews to not only reduce financial costs, but also the emissions and therefore minimize the negative impact on our environment.',
@@ -145,6 +134,17 @@ export default {
           url: './projects/maridata',
           isAvailable: true,
           pills: ["Tablet", "Research", "Prototyping"]
+        },
+        {
+          title: 'AID-Simulation — Diabetes type 1 closed-loop simulator',
+          headText: 'Masters project media informatics',
+          description: 'An interactive simulator with the aim to make the functionality of closed-loop systems more comprehensible.',
+          bgColor: '#e3ecff',
+          textColor: '#001E4B',
+          imgUrl: 'screen_aid.png',
+          url: './projects/aid',
+          isAvailable: true,
+          pills: ["Mobile", "Desktop", "Web Development"]
         },
         {
           title: 'Mobile Interface for Nutrition Awareness (MINA)',

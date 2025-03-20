@@ -10,12 +10,18 @@
       <div class="pb-12">
         <h1 class="my-12 section-title">Yep, that's <span class="emph">me</span></h1>
         <p>
-          I'm Chris and I have been gaining experience in designing digital products since 2017.
-          My skills include user experience and user interface design, as well as conducting user studies and workshops.
-          While I love an aesthetic interface design, I love digital product design that put the users needs in focus even more.
+          I'm Chris — designing digital products since 2017.
         </p>
         <p>
-          My Masters degree in the field of the Media Informatics, that I finished in September 2024, did not only teach my how to do design research but also sparked my interest in web development. I enjoy to develop Vue apps ever since.
+          While I love an aesthetic interface design, I love digital product design that put the users needs in focus even more.
+          Thus, involving users in my conceptual work through user research is essential in order to offer real added value.
+        </p>
+        <p>
+          I particularly enjoy building design systems and finding new workflows to efficiently create and communicate design work.
+          This ranges from the conception of design tokens and custom Figma plugins to the development of design documentation structures.
+        </p>
+        <p>
+          My Masters degree in the field of the Media Informatics did not only bring me closer to human-centered design but also sparked my interest in web development. I enjoy to develop web apps ever since.
         </p>
         <p>
           You might also find me while taking photos, playing around with Photoshop or simply eating <web-link url="https://rorocc.github.io/cinnanom">cinnamon buns</web-link>.

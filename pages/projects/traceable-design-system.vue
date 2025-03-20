@@ -691,7 +691,7 @@ designers in documenting design decision rationales, but also presents those rat
           It is also important to acknowledge that the tasks that were solved in the study only represent a hypothetical scenario that can hardly reflect the challenges of day-to-day design
           practice. Furthermore, the interactive prototype with its limited range of functions cannot fully represent a design system into which the concept would be integrated.
         </p>
-      <h1>Learnings</h1>
+      <h1 id="learnings">Learnings</h1>
       <div class="flex border-gray-200 border p-4 rounded-xl gap-4 mb-4">
         <work-traceable-ds-bubble class="flex-shrink-0" number="1" />
         <div>
