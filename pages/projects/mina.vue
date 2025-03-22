@@ -1,9 +1,10 @@
 <template>
   <div class="h-full">
     <work-display
-      color="#CFF382"
-      color-light="rgba(207, 243, 130, 0.3)"
+      color="#a7ca53"
+      color-light="rgba(207, 243, 130, 0.1)"
       title="MINA"
+      img-url="work/mina/showcase-display.png"
       subtitle="Mobile Interface for Nutrition Awareness"
       description="There are plenty of nutritional applications in the app stores out there.
       Yet, there are numerous of reasons why users discontinue the usage of such — unsatisfactory usability or lack of traceability, for example.
@@ -13,14 +14,7 @@
       context="Media informatics bachelor thesis"
       keywords="Design research, Workshops, Prototyping, Frontend development, User tests, Evaluation"
     />
-    <section class="md:px-12 px-6">
-      <figure-component
-        classes="mx-auto w-full"
-        src="img/work/mina/showcase-display.png"
-        alt=""
-      />
-    </section>
-    <toc></toc>
+    <toc />
     <section>
       <div class="section-m">
         <h1 id="the-motivation">The motivation</h1>

@@ -2,26 +2,19 @@
   <div class="w-full">
     <work-display
       color="#4C5B63"
-      color-light="rgba(76, 91, 99, 0.15)"
+      color-light="rgba(76, 91, 99, 0.05)"
       text-color="#FFFFFFFF"
       title="MariData"
-      imgUrl="aid/header_texture.jpeg"
-      subtitle="Comprehensive technologies for ship energy management"
+      img-url="work/maridata/showcase-display.png"
+      subtitle="Comprehensive Technologies for Ship Energy Management"
       description="In the MariData project, a future-oriented energy management and decision support system based on rational methods is to be developed, taking into account current operational status data as well as geoinformation."
       role="UX & UI Design, Design Research"
-      context="Funded research project"
+      context="Funded Research Project"
       timespan="December 2020 - March 2023"
-      keywords="Workshops, Prototyping, Design documentation"
+      keywords="Workshops, Prototyping, Design Documentation"
     />
     <div>
-      <section class="md:px-12 px-6">
-        <figure-component
-          classes="mx-auto w-full"
-          src="img/work/maridata/showcase-display.png"
-          alt=""
-        />
-      </section>
-      <toc></toc>
+      <toc />
 
       <section class="leading-loose">
         <div class="section-m">
@@ -382,29 +375,12 @@ export default {
 </script>
 
 <style scoped>
-.bg-ships {
-  background-image: url("~assets/img/work/maridata/header_bg.png");
-  background-repeat: repeat;
-  background-size: auto;
-  background-blend-mode: difference;
-}
-
 h1:after {
   content: none;
 }
 
 .section-m {
   @apply max-w-prose m-auto py-12 md:px-0 px-4;
-}
-
-.header {
-  color: white;
-  background-color: #4C5B63;
-}
-
-.header h1 {
-  color: white;
-  @apply text-6xl;
 }
 
 .section-stats {

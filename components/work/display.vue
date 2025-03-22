@@ -1,30 +1,28 @@
 <template>
   <div>
-    <div class="header">
-      <div class="grid lg:grid-cols-2 grid-cols-1 items-center header-grid place-items-center">
-        <div class="text-left grid-first relative overflow-hidden w-full" :style="{backgroundColor: color}">
-          <div class="fade-in-left max-w-prose mr-0 ml-auto">
-            <span class="work-title" :style="{color: textColor}">
-              {{ title }}
-            </span>
-            <span class="work-subtitle" :style="{color: textColor}">
-              {{ subtitle }}
-            </span>
-          </div>
+    <div class="header md:py-16 py-4" :style="{backgroundColor: colorLight}">
+      <div class="container max-w-prose m-auto fade-in-left mt-6 mb-10">
+        <h1 class="display-font work-title my-0" :style="{color: color}">
+          {{ title }}
+        </h1>
+        <h2 class="work-subtitle">
+          {{ subtitle }}
+        </h2>
+      </div>
+      <div class="md:px-12 px-2 my-12">
+        <img :src="require(`assets/img/${imgUrl}`)" />
+      </div>
+      <div class="container m-auto flex items-start justify-between my-16 md:flex-nowrap flex-wrap gap-6">
+        <div class="md:w-1/2">
+          <p class="description">
+            {{ description }}
+          </p>
         </div>
-        <div class="grid-second bg-mina-light w-full" :style="{backgroundColor: colorLight}">
-          <div class="max-w-prose">
-            <p class="description">
-              {{ description }}
-            </p>
-            <hr class="my-12 border-gray-200" />
-            <div class="grid md:grid-cols-2 grid-cols-1 gap-8">
-              <description-element v-if="role"  title="Role" :text="role"/>
-              <description-element v-if="timespan" title="Timespan" :text="timespan"/>
-              <description-element v-if="context" title="Context" :text="context"/>
-              <description-element v-if="keywords" title="Keywords" :text="keywords" />
-            </div>
-          </div>
+        <div class="flex flex-col gap-6">
+          <description-element v-if="role" title="Role" :text="role" />
+          <description-element v-if="timespan" title="Timespan" :text="timespan" />
+          <description-element v-if="context" title="Context" :text="context" />
+          <description-element v-if="keywords" title="Keywords" :text="keywords" />
         </div>
       </div>
     </div>
@@ -52,41 +50,23 @@ export default {
     keywords: String,
     imgUrl: {
       type: String,
-      default: "aid/header_texture.jpeg"
-    },
+      default: "work/maridata/showcase-display.png"
+    }
   }
 }
 </script>
 
 <style scoped>
-  .header-grid{
-    height: 600px;
-    @apply h-fit;
-  }
 
-  .header .grid-first{
-    @apply h-full md:px-12 px-6 pt-24 pb-12;
+ p.description{
+    @apply md:leading-loose md:text-xl text-lg;
   }
-
-  .header .grid-second{
-    @apply h-full font-light md:px-24 px-6 md:py-24 py-12 md:leading-relaxed  leading-relaxed;
-  }
-
-  .header .grid-second p.description{
-    @apply md:leading-relaxed md:text-2xl text-lg;
-  }
-
-  .work-title, .work-subtitle{
-    font-family: 'PPMori', sans-serif;
-    @apply text-4xl md:text-6xl;
-  }
-
 
   .work-title{
-    @apply m-0 font-bold;
+    @apply text-5xl md:text-6xl;
   }
 
   .work-subtitle{
-    @apply opacity-50 leading-normal;
+    @apply opacity-50 leading-relaxed text-xl md:text-2xl;
   }
 </style>

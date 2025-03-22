@@ -1,7 +1,11 @@
 <template>
-  <div>
-    <p class="title">{{ title }}</p>
-    <p class="leading-relaxed">{{ text }}</p>
+  <div class="w-96">
+    <p class="title">
+      {{ title }}
+    </p>
+    <p class="leading-relaxed">
+      {{ text }}
+    </p>
   </div>
 </template>
 
@@ -17,6 +21,6 @@ export default {
 
 <style scoped>
 .title{
-  @apply text-black  uppercase tracking-widest font-normal text-sm;
+  @apply text-black uppercase tracking-widest font-normal text-sm opacity-50;
 }
 </style>

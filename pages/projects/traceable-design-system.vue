@@ -2,8 +2,9 @@
   <div class="relative">
     <display
       color="#B0114B"
-      color-light="#EFF3FA"
+      color-light="rgba(76, 91, 99, 0.025)"
       title="The Traceable Design System"
+      img-url="work/traceable-ds/showcase-display.png"
       text-color="#fff"
       subtitle="Integrating Design Rationale into Design Systems"
       description="The documentation of design decisions is a common practice across various disciplines to capture the decision-making process and promote reflection on the decisions made. Design systems are becoming an increasingly prominent tool for documenting such design decisions. This research project explores the extent to which the incorporation of design rationale into design systems can facilitate the traceability of design decisions."
@@ -12,13 +13,6 @@
       context="Master Thesis"
       keywords="Design Systems, Design Research, Prototyping, Interview Study"
     />
-    <section>
-      <figure-component
-        classes="mx-auto w-full"
-        src="img/work/traceable-ds/showcase-display.png"
-        alt=""
-      />
-    </section>
     <toc />
     <section class="section-m">
       <div class="bg-gray-100 py-4 px-6 rounded-xl my-4">

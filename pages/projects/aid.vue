@@ -4,22 +4,16 @@
       color="rgba(0, 30, 75, 1)"
       color-light="#EFF3FA"
       title="AID Simulation"
+      img-url="work/aid/showcase-display.png"
       text-color="#fff"
-      subtitle="Diabetes type 1 closed-loop simulator"
+      subtitle="Diabetes Type 1 Closed-Loop Simulator"
       description="Closed-loop systems can already positively influence the treatment of diabetes.
       Nevertheless, these systems have a health-critical influence on the users, which is why trust and comprehensive knowledge about them are essential. In this project, a closed-loop simulator was redesigned so that patients have exactly these insights into the algorithms."
       role="UX & Visual Designer, Researcher"
       timespan="May - July 2022"
       context="Media informatics project"
-      keywords="Design research, Interviews, Prototyping, Frontend development"
+      keywords="Design Research, Interviews, Prototyping, Frontend Development"
     />
-    <section class="md:px-12 px-6">
-      <figure-component
-        classes="mx-auto w-full"
-        src="img/work/aid/showcase-display.png"
-        alt=""
-      />
-    </section>
     <div>
       <toc />
       <section class="section-m">
