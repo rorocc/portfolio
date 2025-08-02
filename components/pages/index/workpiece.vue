@@ -5,8 +5,8 @@
         <div class="lg:col-span-5 col-span-1 h-80 w-full bg-white" :style="{backgroundColor: textColor}">
           <img class="w-full object-cover h-full" :src="require(`~/assets/img/work/${imgUrl}`)" />
         </div>
-        <div class="col-span-7 md:w-2/3 w-3/4 ml-0 pt-4 md:pt-0 pb-6">
-          <h1 class="py-0 my-0">{{ title }}</h1>
+        <div class="col-span-7 w-full md:px-12 px-8 md:pt-4 md:pb-4 pt-8 pb-12 ml-0">
+          <h1 class="py-0 my-0" :style="{color: textColor}">{{ title }}</h1>
           <p>{{ description }}</p>
           <div class="flex flex-wrap gap-2 mt-4">
             <div class="pill whitespace-nowrap" v-for="pill in pills">{{ pill }}</div>
@@ -39,34 +39,16 @@ export default {
 
 <style scoped>
 
-.headText{
-  letter-spacing: 2px;
-  @apply uppercase text-sm opacity-50;
-}
-
-.description{
-  @apply hidden md:block opacity-75 tracking-wide;
-}
-
-.bg-img{
-  @apply drop-shadow-xl w-auto min-h-full mx-auto;
-}
-
 .workpiece{
   transition-duration: .15s;
   transition-timing-function: ease-in-out;
   @apply rounded-3xl m-auto w-full;
 }
 
-.opacity-100:hover{
-  transform: scale(100.5%);
-  @apply drop-shadow-xl;
-}
-
 h1{
   font-family: 'PPMori', sans-serif;
   font-weight: 100;
-  @apply text-2xl md:text-3xl pt-2 md:leading-normal;
+  @apply text-2xl md:text-3xl py-2 md:leading-tight;
 }
 
 .pill{

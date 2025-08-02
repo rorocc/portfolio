@@ -33,6 +33,12 @@
         <h2 class="my-12 section-title">Companies and Projects I participated at</h2>
         <div class="grid md:grid-cols-4 grid-cols-2 gap-8">
           <div class="logo-tile">
+            <img alt="UEBERSTUNDE" class="opacity-75" src="../assets/img/about/logos/ueberstunde.avif">
+          </div>
+          <div class="logo-tile">
+            <img class="invert opacity-75" alt="ventureon" src="../assets/img/about/logos/ventureon.svg">
+          </div>
+          <div class="logo-tile">
             <img alt="Institut für Multimediale und Interaktive Systeme an der Universität zu Lübeck" src="../assets/img/about/logos/imis.svg">
           </div>
           <div class="logo-tile">
@@ -44,6 +50,8 @@
           <div class="logo-tile">
             <img alt="Lynes" src="../assets/img/about/logos/lynes.png">
           </div>
+          <div class="bg-gray-200 rounded-xl items-center justify-center md:px-12 px-6 md:h-48 h-40 saturate-0 hidden md:flex" />
+          <div class="bg-gray-200 rounded-xl items-center justify-center md:px-12 px-6 md:h-48 h-40 saturate-0 hidden md:flex" />
         </div>
       </div>
     </div>
@@ -160,7 +168,7 @@ export default {
   }
 
   .logo-tile{
-    @apply bg-gray-200 bg-opacity-25 rounded-xl flex items-center justify-center md:px-12 px-6 md:h-48 h-40 saturate-0;
+    @apply bg-gray-200 rounded-xl flex items-center justify-center md:px-12 px-6 md:h-48 h-40 saturate-0;
   }
 
   h2{

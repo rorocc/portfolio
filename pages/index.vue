@@ -125,6 +125,16 @@ export default {
           pills: ["Desktop", "Prototyping", "Master Thesis"]
         },
         {
+          title: 'ÜBERSTUNDE Event Platform',
+          description: 'Relaunch of an event and community platform, including an individual content management system for handling users, events and newsletters.',
+          bgColor: '#222222',
+          textColor: '#ffffff',
+          imgUrl: 'screen_ueberstunde.png',
+          url: '#',
+          isAvailable: false,
+          pills: ["UX Design", "Low Code Development", "Backend"]
+        },
+        {
           title: 'MariData: Interface for ship energy management',
           headText: 'Funded research project',
           description: 'The MariData decision support system helps vessel crews to not only reduce financial costs, but also the emissions and therefore minimize the negative impact on our environment.',
