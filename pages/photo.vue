@@ -59,6 +59,10 @@ export default {
         {src: '/visual/c24-okdt-3.webp', label:'ok.danke.tschüss', category:'Festival'},
         {src: '/visual/c24-okdt-4.webp', label:'ok.danke.tschüss', category:'Festival'},
         {src: '/visual/c25-carla-ahad-1.webp', label:'Carla Ahad', category:'Festival'},
+        {src: '/visual/c25-carla-ahad-3.webp', label:'Carla Ahad', category:'Festival'},
+        {src: '/visual/c25-carla-ahad-2.webp', label:'Carla Ahad', category:'Festival'},
+        {src: '/visual/c25-carla-ahad-4.webp', label:'Carla Ahad', category:'Festival'},
+        {src: '/visual/c25-carla-ahad-5.webp', label:'Carla Ahad', category:'Festival'}
       ],
       peoplePhotos: [
         {src: '/visual/muellmorty-hd.jpg'},
