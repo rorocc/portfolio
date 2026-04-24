@@ -13,6 +13,11 @@
               About
             </span>
           </NuxtLink>
+          <NuxtLink to="/photo" class="menu__link">
+            <span>
+              Photo
+            </span>
+          </NuxtLink>
           <NuxtLink to="#contact" class="menu__link">
             <span>
               Contact
@@ -32,7 +37,8 @@
     <div class="hidden mobile-menu duration-500 opacity-0">
       <ul class="leading-loose">
         <li><NuxtLink to="/">Home</NuxtLink></li>
-        <li><NuxtLink to="/about">About me</NuxtLink></li>
+        <li><NuxtLink to="/about">About</NuxtLink></li>
+        <li><NuxtLink to="/photo">Photography</NuxtLink></li>
         <li><NuxtLink to="#contact" class="rounded-3xl">Contact</NuxtLink></li>
       </ul>
     </div>
