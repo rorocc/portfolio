@@ -62,7 +62,12 @@ export default {
         {src: '/visual/c25-carla-ahad-3.webp', label:'Carla Ahad', category:'Festival'},
         {src: '/visual/c25-carla-ahad-2.webp', label:'Carla Ahad', category:'Festival'},
         {src: '/visual/c25-carla-ahad-4.webp', label:'Carla Ahad', category:'Festival'},
-        {src: '/visual/c25-carla-ahad-5.webp', label:'Carla Ahad', category:'Festival'}
+        {src: '/visual/c25-carla-ahad-5.webp', label:'Carla Ahad', category:'Festival'},
+        {src: '/visual/cr24-bothmer-1.webp', label:'Marie Bothmer', category:'Festival'},
+        {src: '/visual/cr24-bothmer-2.webp', label:'Marie Bothmer', category:'Festival'},
+        {src: '/visual/cr24-bothmer-3.webp', label:'Marie Bothmer', category:'Festival'},
+        {src: '/visual/cr24-bothmer-4.webp', label:'Marie Bothmer', category:'Festival'},
+        {src: '/visual/cr24-bothmer-5.webp', label:'Marie Bothmer', category:'Festival'},
       ],
       peoplePhotos: [
         {src: '/visual/muellmorty-hd.jpg'},
