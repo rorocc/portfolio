@@ -7,7 +7,7 @@
   --link-color-active: #65589d;
   --subheading-gray: #949494;
   /*Primary: PANTONE 16-3823 TPX Violet Tulip*/
-  --primary-color: rgb(155, 144, 200);
+  --primary-color: rgb(252, 180, 237);
   --primary-bright: #eae5fd;
   scroll-behavior: smooth;
 }
@@ -72,7 +72,7 @@ ol.challenges li:before{
 }
 
 .contact-btn-inverted{
-  background-color:  rgba(255, 255, 255, 0.35);
+  background-color:  rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(20px);
   color: black;
   border: 1px solid white;
@@ -80,7 +80,7 @@ ol.challenges li:before{
 }
 
 .contact-btn-inverted:hover{
-  background-color: rgba(0, 0, 0, 0.025);
+  background-color: rgba(255, 255, 255, 0.35);
   color: black;
 }
 
