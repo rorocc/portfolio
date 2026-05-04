@@ -59,9 +59,9 @@
         <h1 class="my-12 section-title"><span class="emph pr-2">02</span> Photography</h1>
         <div class="img-cinema">
           <div class="img-cinema-item" style="background-image: url('/visual/odt.jpeg')"/>
-          <div class="img-cinema-item" style="background-image: url('/visual/rainbow.jpg')"/>
+          <!-- <div class="img-cinema-item" style="background-image: url('/visual/rainbow.jpg')"/> -->
           <div class="img-cinema-item" style="background-image: url('/visual/party.jpg')"/>
-          <div class="img-cinema-item" style="background-image: url('/visual/girl_1.jpg')"/>
+          <!-- <div class="img-cinema-item" style="background-image: url('/visual/girl_1.jpg')"/> -->
           <div class="img-cinema-item" style="background-image: url('/visual/waterfall.jpg')"/>
           <div class="img-cinema-item" style="background-image: url('/visual/muellmorty-hd.jpg')"/>
         </div>
