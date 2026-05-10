@@ -115,6 +115,26 @@ export default {
       pos: {x: 0, y: 0},
       works: [
         {
+          title: 'ÜBERSTUNDE Event Platform',
+          description: 'Further development of an event and community platform for a popular Afterwork Event organizer, including a dashboard for managing events, users, and newsletters',
+          bgColor: '#222222',
+          textColor: '#ffffff',
+          imgUrl: 'screen_ueberstunde.png',
+          url: '#',
+          isAvailable: false,
+          pills: ["UX Design", "Full Stack Development"]
+        },
+        {
+          title: 'SparkysBarn',
+          description: 'Building a friendly, inclusive brand that uses its products to stand up for human rights and gender equality while spreading joy.',
+          bgColor: '#F1F7FF',
+          textColor: '#000000',
+          imgUrl: 'screen_sparkysbarn.png',
+          url: '#',
+          isAvailable: false,
+          pills: ["Branding", "UX Design", "Web Development"]
+        },
+        {
           title: 'The Traceable Design System',
           description: 'An approach to making design decisions more traceable by integrating the concept of design rationale into design systems.',
           bgColor: '#e5e5e5',
@@ -123,16 +143,6 @@ export default {
           url: './projects/traceable-design-system',
           isAvailable: true,
           pills: ["Desktop", "Prototyping", "Master Thesis"]
-        },
-        {
-          title: 'ÜBERSTUNDE Event Platform',
-          description: 'Relaunch of an event and community platform, including an individual content management system for handling users, events and newsletters.',
-          bgColor: '#222222',
-          textColor: '#ffffff',
-          imgUrl: 'screen_ueberstunde.png',
-          url: '#',
-          isAvailable: false,
-          pills: ["UX Design", "Low Code Development", "Backend"]
         },
         {
           title: 'MariData: Interface for ship energy management',
@@ -155,17 +165,6 @@ export default {
           url: './projects/aid',
           isAvailable: true,
           pills: ["Mobile", "Desktop", "Web Development"]
-        },
-        {
-          title: 'Mobile Interface for Nutrition Awareness (MINA)',
-          headText: 'Bachelor Thesis Media Informatics',
-          description: 'What is a healthy meal? - A research based design approach to comprehensible in-app rating of meals.',
-          bgColor: '#eeffa1',
-          textColor: '#3b3b3b',
-          imgUrl: 'screen_mina.png',
-          url: './projects/mina',
-          isAvailable: true,
-          pills: ["Mobile", "Web Development", "Bachelor Thesis"]
         }
       ],
       navigator: null

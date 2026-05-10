@@ -4,7 +4,7 @@
       <div class="flex flex-row flex-wrap">
         <img src="../assets/3d-waving.png" class="h-64 w-auto self-center" alt="" />
         <div>
-          <h1 class="text-5xl landing-title py-0">Photography</h1>
+          <h1 class="text-5xl py-0 landing-title"><span class="playful">Photography</span></h1>
           <p class="leading-8 landing-description max-w-prose md:text-left opacity-50">
             Capturing special, fun and sometimes even stupid moments.
           </p>
