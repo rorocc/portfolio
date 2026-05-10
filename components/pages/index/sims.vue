@@ -2,8 +2,8 @@
   <div class="relative">
     <div class="relative video-container">
       <video class="w-2/3 m-auto z-1" autoplay loop muted playsinline>
-        <source v-if="supportsHEVC()" src="3d-hevc.mov" type="video/webm">
-        <source src="3d.webm" type="video/webm">
+        <source src="/3d-hevc.mov" type='video/mp4; codecs="hvc1"'>
+        <source src="/3d.webm" type="video/webm">
       </video>
     </div>
     <div class="hidden md:block">
@@ -24,16 +24,7 @@
 
 <script>
 export default {
-  name: "Sims",
-  methods: {
-    supportsHEVC(){
-      if(!this.navigator) return
-      const ua = this.navigator.userAgent.toLowerCase()
-      const hasMediaCapabilities = !!(navigator.mediaCapabilities && navigator.mediaCapabilities.decodingInfo)
-      const isSafari = ((ua.indexOf('safari') !== -1) && (!(ua.indexOf('chrome')!== -1) && (ua.indexOf('version/')!== -1)))
-      return isSafari && hasMediaCapabilities
-    },
-  }
+  name: "Sims"
 }
 </script>
 
