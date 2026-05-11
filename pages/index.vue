@@ -120,8 +120,8 @@ export default {
           bgColor: '#222222',
           textColor: '#ffffff',
           imgUrl: 'screen_ueberstunde.png',
-          url: '#',
-          isAvailable: false,
+          url: './projects/ueberstunde',
+          isAvailable: true,
           pills: ["UX Design", "Full Stack Development"]
         },
         {
