@@ -1,8 +1,6 @@
 <template>
   <div>
-    <div class="w-full bg-white relative">
-      <Navbar class="container m-auto md:p-4" />
-    </div>
+    <Navbar />
     <div class="mx-auto m-auto">
       <Nuxt />
     </div>
