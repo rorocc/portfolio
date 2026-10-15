@@ -2,7 +2,7 @@
   <div class="relative">
     <div class="relative video-container">
       <video class="w-2/3 m-auto z-1" autoplay loop muted playsinline>
-        <source src="/3d-hevc.mov" type='video/mp4; codecs="hvc1"'>
+        <source src="/3d-hevc.mov" :type="hevcType">
         <source src="/3d.webm" type="video/webm">
       </video>
     </div>
@@ -24,7 +24,13 @@
 
 <script>
 export default {
-  name: "Sims"
+  name: "Sims",
+  data() {
+    return {
+      // bound, not static: SSR writes static attribute values unescaped, which cuts the type off at the inner quote
+      hevcType: 'video/mp4; codecs="hvc1"'
+    }
+  }
 }
 </script>
 
