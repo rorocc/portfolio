@@ -32,6 +32,7 @@ export default {
       { hid: 'og:site_name', name: 'og:site_name', content:'Christopher Rock – UX Design'},
       { hid: 'og:type', name: 'og:type', content:'website'},
       { name: 'format-detection', content: 'telephone=no' },
+      { name: 'color-scheme', content: 'only light' },
       { name: 'apple-mobile-web-app-title', content: 'Christopher Ro. – UX Designer'},
       { name: 'application-name', content: 'Christopher Ro. – UX Designer'},
       { name: 'msapplication-TileColor', content: '#ffffff'},

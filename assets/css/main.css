@@ -19,6 +19,9 @@
 
 html{
   overflow-x: clip;
+  /* light only: without an explicit background, dark-themed webviews and forced dark modes show black behind the page */
+  background-color: #ffffff;
+  color-scheme: only light;
 }
 
 body{
