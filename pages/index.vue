@@ -56,16 +56,12 @@
     </section>
     <section class="bg-gray-50 py-8">
       <div class="container">
-        <h1 class="my-12 section-title"><span class="emph pr-2">02</span> Photography</h1>
-        <div class="img-cinema">
-          <div class="img-cinema-item" style="background-image: url('/visual/odt.jpeg')"/>
-          <!-- <div class="img-cinema-item" style="background-image: url('/visual/rainbow.jpg')"/> -->
-          <div class="img-cinema-item" style="background-image: url('/visual/party.jpg')"/>
-          <!-- <div class="img-cinema-item" style="background-image: url('/visual/girl_1.jpg')"/> -->
-          <div class="img-cinema-item" style="background-image: url('/visual/waterfall.jpg')"/>
-          <div class="img-cinema-item" style="background-image: url('/visual/muellmorty-hd.jpg')"/>
-        </div>
+        <h1 class="mt-12 mb-0 section-title"><span class="emph pr-2">02</span> Photography</h1>
       </div>
+      <pages-index-pill-carousel :photos="photos" class="md:h-72 h-48" />
+      <NuxtLink to="/photo" class="block w-fit mx-auto mt-6 mb-12">
+        <action-tag icon="📷" text="See all photos" :tinted="true" />
+      </NuxtLink>
     </section>
     <div role="none" ref="toolbox" @click="startPiggies" class="pigButton block no-select">
       <div class="grid-flow-col grid text-center">
@@ -176,6 +172,16 @@ export default {
           isAvailable: true,
           pills: ["Mobile", "Desktop", "Web Development"]
         }
+      ],
+      photos: [
+        {src: '/visual/cr-23-morty-boat-1.webp', alt: 'Morty on a boat'},
+        {src: '/visual/c24-okdt-1.webp', alt: 'ok.danke.tschüss festival', focus: [0.5, 0.4]},
+        {src: '/visual/cr-nature-1.webp', alt: 'Landscape'},
+        {src: '/visual/c25-carla-ahad-2.webp', alt: 'Carla Ahad live on stage'},
+        {src: '/visual/muellmorty-hd.jpg', alt: 'Müllmorty'},
+        {src: '/visual/party.jpg', alt: 'Birthday party', focus: [0.5, 0.45]},
+        {src: '/visual/cr-23-morty-splash-1.webp', alt: 'Morty making a splash'},
+        {src: '/visual/cr24-bothmer-1.webp', alt: 'Marie Bothmer live on stage', focus: [0.5, 0.4]}
       ],
       navigator: null
     }
@@ -381,19 +387,6 @@ export default {
 
 .piece {
   transform: translateX(-150px);
-}
-
-.img-cinema {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  @apply flex flex-nowrap md:h-96 h-80 gap-8 overflow-x-scroll snap-x snap-mandatory scroll-smooth;
-}
-
-.img-cinema-item {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  @apply rounded-2xl md:w-96 w-2/3 h-full snap-center flex-shrink-0;
 }
 
 .cursorCustom {

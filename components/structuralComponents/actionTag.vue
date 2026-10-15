@@ -32,10 +32,16 @@ export default {
       default: false,
       type: Boolean
     },
+    tinted: {
+      default: false,
+      type: Boolean
+    },
   },
   mounted(){
       if(this.cta){
         this.classes = this.classes + " actionTag-cta"
+      }else if(this.tinted){
+        this.classes = this.classes + " actionTag-tinted"
       }else{
         this.classes = this.classes + " backdrop"
       }
@@ -83,6 +89,15 @@ export default {
 
 .actionTag-cta:hover{
   background-color: #fbf2ff;
+}
+
+.actionTag-tinted {
+  background: #E9D8EC;
+  border-color: transparent;
+}
+
+.actionTag-tinted:hover{
+  background-color: #E2B6E9;
 }
 
 .actionTag-cta::before {
