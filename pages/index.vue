@@ -135,6 +135,16 @@ export default {
           pills: ["Branding", "UX Design", "Web Development"]
         },
         {
+          title: 'gamesding — Board game collection app',
+          description: 'A mobile-first app for keeping track of your board game collection: add games by title search or barcode scan, log plays and see what\'s new on your friends\' shelves.',
+          bgColor: '#fadff0',
+          textColor: '#1a1c20',
+          imgUrl: 'screen_gamesding.png',
+          url: '#',
+          isAvailable: false,
+          pills: ["PWA", "UX Design", "Full Stack Development"]
+        },
+        {
           title: 'The Traceable Design System',
           description: 'An approach to making design decisions more traceable by integrating the concept of design rationale into design systems.',
           bgColor: '#e5e5e5',
