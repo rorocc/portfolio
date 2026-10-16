@@ -140,7 +140,7 @@ export default {
           bgColor: '#fadff0',
           textColor: '#1a1c20',
           imgUrl: 'screen_gamesding.png',
-          url: '#',
+          url: './projects/gamesding',
           isAvailable: false,
           pills: ["PWA", "UX Design", "Full Stack Development"]
         },
