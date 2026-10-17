@@ -1,5 +1,5 @@
 <template>
-  <a :href="url" :class="[isAvailable ? 'cursor-pointer' : 'cursor-not-allowed']">
+  <a :href="url" :class="[isAvailable || hasLink ? 'cursor-pointer' : 'cursor-not-allowed']">
     <div class="workpiece overflow-hidden" :class="[isAvailable ? 'opacity-100' : 'opacity-50']">
       <div class="grid lg:grid-cols-12 grid-cols-1 lg:h-80 place-items-center lg:gap-4 bg-white " :style="{backgroundColor: bgColor, color: textColor}">
         <div class="lg:col-span-5 col-span-1 h-80 w-full bg-white" :style="{backgroundColor: textColor}">
@@ -32,6 +32,12 @@ export default {
     isAvailable: {
       type: Boolean,
       default: true
+    }
+  },
+  computed: {
+    // inactive cards may still link to a work-in-progress page
+    hasLink () {
+      return !!this.url && this.url !== '#'
     }
   }
 }
