@@ -1,7 +1,7 @@
 <template>
   <header>
     <!-- keeps the page content below the floating nav -->
-    <div class="h-14 md:h-[88px]" aria-hidden="true" />
+    <div class="h-[var(--nav-height)]" aria-hidden="true" />
 
     <div class="pill-wrapper">
       <nav aria-label="Main" class="pill">

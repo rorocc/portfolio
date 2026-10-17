@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div class="header md:py-16 py-4" :style="{backgroundColor: colorLight}">
-      <div class="container max-w-prose m-auto fade-in-left mt-6 mb-10">
+    <div class="header md:pb-16 pb-4" :style="{backgroundColor: colorLight}">
+      <div class="container m-auto fade-in-left mt-6 mb-10">
         <h1 class="display-font work-title my-0" :style="{color: color}">
           {{ title }}
         </h1>
@@ -58,15 +58,28 @@ export default {
 
 <style scoped>
 
+  /* pull the colored hero up behind the floating navbar, content stays where it was */
+  .header{
+    margin-top: calc(-1 * var(--nav-height));
+    padding-top: calc(var(--nav-height) + 1rem);
+  }
+
+  @screen md{
+    .header{
+      padding-top: calc(var(--nav-height) + 4rem);
+    }
+  }
+
  p.description{
     @apply md:leading-loose md:text-xl text-lg;
   }
 
   .work-title{
-    @apply text-5xl md:text-6xl;
+    text-wrap: balance;
+    @apply text-4xl md:text-5xl lg:text-6xl leading-[1.1];
   }
 
   .work-subtitle{
-    @apply opacity-50 leading-relaxed text-xl md:text-2xl;
+    @apply opacity-50 leading-relaxed text-xl md:text-2xl max-w-2xl mt-4;
   }
 </style>

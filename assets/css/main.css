@@ -12,6 +12,17 @@
   scroll-behavior: smooth;
 }
 
+:root{
+  /* space kept free at the top of every page for the floating navbar */
+  --nav-height: 3.5rem;
+}
+
+@screen md{
+  :root{
+    --nav-height: 88px;
+  }
+}
+
 ::selection {
   background: var(--primary-color);
   color: white;

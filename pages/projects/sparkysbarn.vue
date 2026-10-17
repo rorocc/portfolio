@@ -7,10 +7,10 @@
       img-url="work/screen_sparkysbarn.png"
       text-color="#222222"
       subtitle="Brand identity, illustration and website for a small sticker label from Leipzig"
-      description="SparkysBarn is a small sticker label that stands up for love, equality and inclusion. Every motif is drawn by hand – without AI – and printed, cut and shipped from Leipzig. The project covers the whole brand: from the mascot and the illustration style to the website that introduces the label and leads to the shop."
+      description="SparkysBarn is a small sticker label that stands up for love, equality and inclusion. Every design is drawn by hand and without AI. The final products are printed, cut and shipped from Leipzig. I'm involved in all parts of the brand, from coming up with the right language to building the website."
       role="Brand Designer, Illustrator, Web Designer & Developer"
-      timespan="XXXX – today"
-      context="Side project with Chici"
+      timespan="July 2025 – today"
+      context="Self-Employment Project"
       keywords="Brand Design, Illustration, Web Design, Next.js"
     />
     <toc />
@@ -196,7 +196,7 @@ export default {
         {name: 'Sparky Pink', hex: '#D972AA'},
         {name: 'Blush', hex: '#FFF1FB'},
         {name: 'Sky', hex: '#E1EFFF'},
-        {name: 'Sunflower', hex: '#F9B223'},
+        {name: 'Grass', hex: '#95C121'},
         {name: 'Charcoal', hex: '#3C3C3B'}
       ],
       stickers: [
