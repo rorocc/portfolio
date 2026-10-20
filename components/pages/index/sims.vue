@@ -15,7 +15,9 @@
       </div>
         <structural-components-action-tag icon="⛓️" text="Build Design System" class="intro-right absolute top-1/3 -right-16 z-1" state="disabled"/>
         <structural-components-action-tag icon="👥" text="Design to Empower" class="intro-right absolute top-1/2 -right-12 z-1" state="disabled"/>
-        <structural-components-action-tag state="disabled" icon="🐷" text="Hug some Pigs" class="intro-right absolute top-2/3 right-0 z-1"/>
+        <button type="button" class="intro-right absolute top-2/3 right-0 z-1" @click="$emit('simEvent', 'pigs')">
+          <structural-components-action-tag icon="🐷" text="Hug some Pigs"/>
+        </button>
       <a href="#contact">
         <structural-components-action-tag icon="✉️" text="Contact Me" :cta="true" class="absolute -bottom-4 left-1/3"/>
       </a>

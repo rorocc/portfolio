@@ -234,7 +234,9 @@ export default {
     },
 
     handleSimEvent (event) {
-      console.log(event)
+      if (event === 'pigs') {
+        this.startPiggies()
+      }
     },
     startPiggies () {
       const container = document.createElement("div")
