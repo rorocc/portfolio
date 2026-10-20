@@ -1,31 +1,34 @@
 <template>
   <div class="block">
-    <div class="container grid md:grid-cols-2 grid-cols-none md:grid-rows-none leading-loose">
-      <div class="h-fit">
+    <div class="container pb-12 leading-loose">
+      <div class="grid md:grid-cols-2 grid-cols-none md:gap-16 items-center">
         <div class="relative">
           <img role="presentation" id="svg-cursor" class="absolute -bottom-4 right-8 z-10 w-24 origin-top-left" src="../assets/cursor.svg" />
-          <img src="../assets/img/about/me-2.jpeg" alt="Portrait of Chris, wearing a base cap and glasses" class="md:w-2/3 w-3/4 m-auto my-20 rounded-2xl passfoto translate-y-0" />
+          <img src="../assets/img/about/me-2.jpeg" alt="Portrait of Chris, wearing a base cap and glasses" class="md:w-2/3 w-3/4 m-auto my-20 rounded-2xl passfoto -rotate-3" />
+        </div>
+        <div>
+          <h1 class="my-12 section-title">Yep, that's <span class="emph">me</span></h1>
+          <p>
+            I'm Chris — designing digital products since 2017.
+            While I love an aesthetic interface design, I love digital product design that put the users needs in focus even more.
+            Thus, involving users in my conceptual work through user research is essential in order to offer real added value.
+          </p>
+          <p>
+            I particularly enjoy building design systems and finding new workflows to efficiently create and communicate design work.
+            This ranges from the conception of design tokens and custom Figma plugins to the development of design documentation structures.
+          </p>
         </div>
       </div>
-      <div class="pb-12">
-        <h1 class="my-12 section-title">Yep, that's <span class="emph">me</span></h1>
-        <p>
-          I'm Chris — designing digital products since 2017.
-        </p>
-        <p>
-          While I love an aesthetic interface design, I love digital product design that put the users needs in focus even more.
-          Thus, involving users in my conceptual work through user research is essential in order to offer real added value.
-        </p>
-        <p>
-          I particularly enjoy building design systems and finding new workflows to efficiently create and communicate design work.
-          This ranges from the conception of design tokens and custom Figma plugins to the development of design documentation structures.
-        </p>
-        <p>
-          My Masters degree in the field of the Media Informatics did not only bring me closer to human-centered design but also sparked my interest in web development. I enjoy to develop web apps ever since.
-        </p>
-        <p>
-          You might also find me while taking photos, playing around with Photoshop or simply eating <web-link url="https://rorocc.github.io/cinnanom">cinnamon buns</web-link>.
-        </p>
+      <div class="grid md:grid-cols-2 grid-cols-none md:gap-16 items-center">
+        <div>
+          <p>
+            My Masters degree in the field of the Media Informatics did not only bring me closer to human-centered design but also sparked my interest in web development. I enjoy to develop web apps ever since.
+          </p>
+          <p>
+            You might also find me while taking photos, playing around with Photoshop or simply eating <web-link url="https://rorocc.github.io/cinnanom">cinnamon buns</web-link>.
+          </p>
+        </div>
+        <img src="../assets/img/about/pidgi.jpg" alt="Chris in a park with pigeons sitting on his shoulder and hands" class="md:w-2/3 w-3/4 m-auto md:my-20 my-12 rounded-2xl rotate-3 order-first md:order-none" />
       </div>
     </div>
     <div class="bg-gray-50 py-16">
