@@ -224,3 +224,12 @@ h1.section-title span{
 
 
 
+
+/* Gochi Hand: the handwritten "Deep dive" label in components/work/issue.vue */
+@font-face {
+  font-family: "Gochi Hand";
+  src: url("~assets/fonts/GochiHand/gochi-hand-latin-400-normal.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}

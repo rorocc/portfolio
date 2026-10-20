@@ -25,6 +25,10 @@
           <description-element v-if="keywords" title="Keywords" :text="keywords" />
         </div>
       </div>
+      <!-- optional extra content below description and facts, e.g. key results -->
+      <div v-if="$slots.default" class="container m-auto">
+        <slot />
+      </div>
     </div>
   </div>
 </template>
