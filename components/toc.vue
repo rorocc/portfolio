@@ -1,5 +1,5 @@
 <template>
-  <nav role="doc-toc" class="tocHelper z-100 m-auto my-8 h-0 overflow-visible sticky block relative max-w-prose top-12">
+  <nav role="doc-toc" class="tocHelper z-100 m-auto my-8 h-0 overflow-visible sticky hidden md:block relative max-w-prose top-12">
     <div class="toc">
       <div tabindex="0" role="button" aria-pressed="false" class="cursor-pointer py-2 px-4 flex justify-between border-b" @click="() => {this.isOpen = !isOpen}">
         <span class="toc-heading" v-show="isOpen">Table of contents</span>

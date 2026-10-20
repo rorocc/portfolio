@@ -13,10 +13,11 @@
         <div class="w-fit text-left">
           <span class="footer-title">Projects</span>
           <ul>
+            <li><NuxtLink to="/projects/ueberstunde" >ÜBERSTUNDE</NuxtLink></li>
+            <li><NuxtLink to="/projects/gamesding" >gamesding</NuxtLink></li>
             <li><NuxtLink to="/projects/traceable-design-system" >Traceable Design System</NuxtLink></li>
-            <li><NuxtLink to="/projects/aid" >AID-Simulation</NuxtLink></li>
             <li><NuxtLink to="/projects/maridata" >MariData</NuxtLink></li>
-            <li><NuxtLink to="/projects/mina" >MINA</NuxtLink></li>
+            <li><NuxtLink to="/projects/aid" >AID-Simulation</NuxtLink></li>
           </ul>
         </div>
       </div>

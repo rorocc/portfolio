@@ -121,23 +121,13 @@ export default {
           pills: ["UX Design", "Full Stack Development"]
         },
         {
-          title: 'SparkysBarn',
-          description: 'Building a friendly, inclusive brand that uses its products to stand up for human rights and gender equality while spreading joy.',
-          bgColor: '#F1F7FF',
-          textColor: '#000000',
-          imgUrl: 'screen_sparkysbarn.png',
-          url: '#',
-          isAvailable: false,
-          pills: ["Branding", "UX Design", "Web Development"]
-        },
-        {
           title: 'gamesding — Board game collection app',
           description: 'A mobile-first app for keeping track of your board game collection: add games by title search or barcode scan, log plays and see what\'s new on your friends\' shelves.',
           bgColor: '#fadff0',
           textColor: '#1a1c20',
           imgUrl: 'screen_gamesding.png',
           url: './projects/gamesding',
-          isAvailable: false,
+          isAvailable: true,
           pills: ["PWA", "UX Design", "Full Stack Development"]
         },
         {
@@ -149,6 +139,16 @@ export default {
           url: './projects/traceable-design-system',
           isAvailable: true,
           pills: ["Desktop", "Prototyping", "Master Thesis"]
+        },
+        {
+          title: 'SparkysBarn',
+          description: 'Building a friendly, inclusive brand that uses its products to stand up for human rights and gender equality while spreading joy.',
+          bgColor: '#F1F7FF',
+          textColor: '#000000',
+          imgUrl: 'screen_sparkysbarn.png',
+          url: '#',
+          isAvailable: false,
+          pills: ["Branding", "UX Design", "Web Development"]
         },
         {
           title: 'MariData: Interface for ship energy management',

@@ -4,8 +4,13 @@
     :aria-labelledby="`${id}-title`"
     class="bg-gray-50 pt-16 pb-2 leading-loose"
   >
-    <div class="column pb-10">
+    <div class="column relative pb-10">
       <span class="label">{{ label }}</span>
+      <!-- hand-drawn arrow from the label down to the headline, in the margin left of the column -->
+      <svg class="label-arrow" viewBox="0 0 48 64" aria-hidden="true">
+        <path d="M42 8C18 6 6 30 12 44c4 8 16 10 30 9" />
+        <path d="M34 46l8 7-9 6" />
+      </svg>
       <h2 :id="`${id}-title`" class="text-3xl font-semibold leading-tight mt-2 mb-4">
         {{ title }}
       </h2>
@@ -53,8 +58,26 @@ export default {
   @apply max-w-prose mx-auto px-4 md:px-0;
 }
 
+/* handwritten label, slightly tilted, in ÜBERSTUNDE orange */
 .label{
-  @apply block uppercase tracking-wider font-medium text-sm text-gray-500;
+  font-family: "Gochi Hand", cursive;
+  font-size: 30px;
+  line-height: 38px;
+  color: #E94F11;
+  transform: rotate(-7deg);
+  transform-origin: left bottom;
+  @apply inline-block;
+}
+
+.label-arrow{
+  top: 12px;
+  left: -57px;
+  fill: none;
+  stroke: #E94F11;
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  @apply absolute hidden md:block w-12 h-16;
 }
 
 .number{
