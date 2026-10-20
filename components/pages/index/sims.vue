@@ -1,7 +1,8 @@
 <template>
   <div class="relative">
     <div class="relative video-container">
-      <video class="w-2/3 m-auto z-1" autoplay loop muted playsinline>
+      <!-- fixed aspect ratio (video is 762×1080) so the hero doesn't grow once the video has loaded -->
+      <video class="w-2/3 aspect-[762/1080] m-auto z-1" autoplay loop muted playsinline>
         <source src="/3d-hevc.mov" :type="hevcType">
         <source src="/3d.webm" type="video/webm">
       </video>
