@@ -43,33 +43,31 @@
         </div>
       </section>
     </div>
-    <div class="bg-gray-50 py-16">
+    <section class="companies">
       <div class="container">
-        <h2 class="my-12 section-title">Companies and Projects I participated at</h2>
-        <div class="grid md:grid-cols-4 grid-cols-2 gap-8">
-          <div class="logo-tile">
-            <img alt="UEBERSTUNDE" class="opacity-75" src="../assets/img/about/logos/ueberstunde.avif">
-          </div>
-          <div class="logo-tile">
-            <img class="invert opacity-75" alt="ventureon" src="../assets/img/about/logos/ventureon.svg">
-          </div>
-          <div class="logo-tile">
-            <img alt="Institut für Multimediale und Interaktive Systeme an der Universität zu Lübeck" src="../assets/img/about/logos/imis.svg">
-          </div>
-          <div class="logo-tile">
-            <img alt="Otto" src="../assets/img/about/logos/otto.svg">
-          </div>
-          <div class="logo-tile">
-            <img alt="MariData" src="../assets/img/about/logos/maridata.png">
-          </div>
-          <div class="logo-tile">
-            <img alt="Lynes" src="../assets/img/about/logos/lynes.png">
-          </div>
-          <div class="bg-gray-200 rounded-xl items-center justify-center md:px-12 px-6 md:h-48 h-40 saturate-0 hidden md:flex" />
-          <div class="bg-gray-200 rounded-xl items-center justify-center md:px-12 px-6 md:h-48 h-40 saturate-0 hidden md:flex" />
+        <div class="about-text">
+          <span class="about-badge">Experience</span>
+          <h2 class="about-heading">Companies <span class="serif">&amp; projects</span></h2>
         </div>
       </div>
-    </div>
+      <!-- the logos run as an endless band; the second set only closes the loop and is hidden from screen readers -->
+      <div class="logo-band">
+        <div class="logo-track">
+          <img src="../assets/img/about/logos/violet/ueberstunde.png" alt="ÜBERSTUNDE" style="height: calc(48px * var(--logo-scale))" />
+          <img src="../assets/img/about/logos/violet/ventureon.png" alt="ventureon" style="height: calc(36px * var(--logo-scale))" />
+          <img src="../assets/img/about/logos/violet/imis.png" alt="Institute for Multimedia and Interactive Systems, University of Lübeck" style="height: calc(78px * var(--logo-scale))" />
+          <img src="../assets/img/about/logos/violet/otto.png" alt="Otto" style="height: calc(44px * var(--logo-scale))" />
+          <img src="../assets/img/about/logos/violet/maridata.png" alt="MariData" style="height: calc(38px * var(--logo-scale))" />
+          <img src="../assets/img/about/logos/violet/lynes.png" alt="Lynes" style="height: calc(54px * var(--logo-scale))" />
+          <img src="../assets/img/about/logos/violet/ueberstunde.png" alt="" style="height: calc(48px * var(--logo-scale))" />
+          <img src="../assets/img/about/logos/violet/ventureon.png" alt="" style="height: calc(36px * var(--logo-scale))" />
+          <img src="../assets/img/about/logos/violet/imis.png" alt="" style="height: calc(78px * var(--logo-scale))" />
+          <img src="../assets/img/about/logos/violet/otto.png" alt="" style="height: calc(44px * var(--logo-scale))" />
+          <img src="../assets/img/about/logos/violet/maridata.png" alt="" style="height: calc(38px * var(--logo-scale))" />
+          <img src="../assets/img/about/logos/violet/lynes.png" alt="" style="height: calc(54px * var(--logo-scale))" />
+        </div>
+      </div>
+    </section>
     <div class="container py-16 grid md:grid-cols-2 md:grid-rows-1 grid-rows-2 md:gap-8 gap-16">
       <div>
         <div>
@@ -199,6 +197,47 @@ export default {
 </script>
 
 <style scoped>
+  /* companies: dark violet logos running on a slightly tilted lavender band */
+  .companies{
+    @apply md:py-24 py-16 overflow-hidden;
+  }
+
+  /* logo heights are set so every logo covers about the same area (wide ones lower, compact ones taller,
+     heavy ones a touch smaller), which makes them look equally big; this scales them down on small screens */
+  .logo-band{
+    --logo-scale: 0.75;
+    background-color: var(--primary-bright);
+    transform: rotate(-2deg);
+    @apply md:mt-14 mt-10 -mx-10 md:py-14 py-10 overflow-hidden;
+  }
+
+  .logo-track{
+    animation: logo-band 30s linear infinite;
+    @apply flex items-center w-max;
+  }
+
+  /* spacing as a right margin, so both halves of the track are exactly as wide and the loop has no jump */
+  .logo-track img{
+    @apply w-auto max-w-none md:mr-24 mr-16;
+  }
+
+  @keyframes logo-band{
+    from{ transform: translateX(0); }
+    to{ transform: translateX(-50%); }
+  }
+
+  @screen md{
+    .logo-band{
+      --logo-scale: 1;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .logo-track{
+      animation: none;
+    }
+  }
+
   /* image + text blocks, alternating sides */
   .about-blocks{
     @apply pt-8 pb-12;
@@ -307,10 +346,6 @@ export default {
 
   .expPoint{
     @apply leading-loose;
-  }
-
-  .logo-tile{
-    @apply bg-gray-200 rounded-xl flex items-center justify-center md:px-12 px-6 md:h-48 h-40 saturate-0;
   }
 
   h2{
