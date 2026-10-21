@@ -1,5 +1,5 @@
 <template>
-  <nav role="doc-toc" class="tocHelper z-100 m-auto my-8 h-0 overflow-visible sticky hidden md:block relative max-w-prose top-12">
+  <nav role="doc-toc" class="tocHelper z-40 m-auto my-8 h-0 overflow-visible sticky hidden md:block relative max-w-prose top-12">
     <div class="toc">
       <div tabindex="0" role="button" aria-pressed="false" class="cursor-pointer py-2 px-4 flex justify-between border-b" @click="() => {this.isOpen = !isOpen}">
         <span class="toc-heading" v-show="isOpen">Table of contents</span>
@@ -9,9 +9,9 @@
         </div>
         <div ref="toc" class="p-2" v-show="isOpen" @click="() => {this.isOpen = !isOpen}">
           <ul>
-            <NuxtLink v-for="heading in headings" :to="'#' + heading.id">
-              <li>{{heading.title}}</li>
-            </NuxtLink>
+            <li v-for="heading in headings" :key="heading.id" :class="{ sub: heading.sub }">
+              <NuxtLink :to="'#' + heading.id">{{ heading.title }}</NuxtLink>
+            </li>
           </ul>
         </div>
     </div>
@@ -28,10 +28,16 @@ export default {
     }
   },
   mounted() {
-      const headingElements = document.querySelectorAll("h1");
-      console.log(headingElements)
+      // section headings that can be jumped to; the steps of a deep dive have their id on the
+      // surrounding block, so they link there and show indented below the deep dive's title
+      const headingElements = document.querySelectorAll("h1[id], h2[id], .step[id] h3");
       headingElements.forEach(heading => {
-        this.headings.push({title: heading.textContent, id: heading.id})
+        const step = heading.closest('.step[id]')
+        this.headings.push({
+          title: heading.textContent.trim(),
+          id: step ? step.id : heading.id,
+          sub: Boolean(step)
+        })
       })
   }
 }
@@ -47,8 +53,12 @@ export default {
   @apply flex flex-col;
 }
 
-.toc li{
-  @apply p-2 select-none;
+.toc li a{
+  @apply block p-2 select-none;
+}
+
+.toc li.sub a{
+  @apply pl-6 text-sm;
 }
 
 .toc li:hover{
