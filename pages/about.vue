@@ -1,35 +1,47 @@
 <template>
   <div class="block">
-    <div class="container pb-12 leading-loose">
-      <div class="grid md:grid-cols-2 grid-cols-none md:gap-16 items-center">
-        <div class="relative">
-          <img role="presentation" id="svg-cursor" class="absolute -bottom-4 right-8 z-10 w-24 origin-top-left" src="../assets/cursor.svg" />
-          <img src="../assets/img/about/me-2.jpeg" alt="Portrait of Chris, wearing a base cap and glasses" class="md:w-2/3 w-3/4 m-auto my-20 rounded-2xl passfoto -rotate-3" />
+    <div class="container about-blocks">
+      <section class="about-block">
+        <div class="about-media about-media--left">
+          <!-- one long doodle line per photo: it sweeps diagonally behind the photo, loops beside it and runs out to the page edge, never under the text -->
+          <svg class="doodle" viewBox="-100 -100 300 300" preserveAspectRatio="none" aria-hidden="true">
+            <path class="pink" d="M108 -64C100 -10 60 90 0 116C-25 126 -50 115 -44 100C-38 86 -12 92 -10 112C-8 134 -40 160 -83 173" />
+          </svg>
+          <img role="presentation" id="svg-cursor" class="absolute -bottom-4 right-8 z-20 w-24 origin-top-left" src="../assets/cursor.svg" />
+          <img src="../assets/img/about/me-2.jpeg" alt="Portrait of Chris, wearing a base cap and glasses" width="800" height="800" class="photo passfoto aspect-square" />
         </div>
-        <div>
-          <h1 class="my-12 section-title">Yep, that's <span class="emph">me</span></h1>
+        <div class="about-text">
+          <span class="about-badge">About me</span>
+          <h1 class="about-heading">Yep, that's <span class="serif">me</span></h1>
           <p>
-            I'm Chris — designing digital products since 2017.
-            While I love an aesthetic interface design, I love digital product design that put the users needs in focus even more.
-            Thus, involving users in my conceptual work through user research is essential in order to offer real added value.
+            I'm Chris, designing digital products since 2017.
+            While I love an aesthetic interface design, I love digital product design that puts the users' needs in focus even more.
+            That's why involving users in my conceptual work through user research is essential to offer real added value.
           </p>
           <p>
             I particularly enjoy building design systems and finding new workflows to efficiently create and communicate design work.
             This ranges from the conception of design tokens and custom Figma plugins to the development of design documentation structures.
           </p>
         </div>
-      </div>
-      <div class="grid md:grid-cols-2 grid-cols-none md:gap-16 items-center">
-        <div>
+      </section>
+      <section class="about-block">
+        <div class="about-text">
+          <span class="about-badge">Beyond the screen</span>
+          <h2 class="about-heading">From research <span class="serif">to code</span></h2>
           <p>
-            My Masters degree in the field of the Media Informatics did not only bring me closer to human-centered design but also sparked my interest in web development. I enjoy to develop web apps ever since.
+            My master's degree in Media Informatics did not only bring me closer to human-centered design but also sparked my interest in web development. I have enjoyed developing web apps ever since.
           </p>
           <p>
-            You might also find me while taking photos, playing around with Photoshop or simply eating <web-link url="https://rorocc.github.io/cinnanom">cinnamon buns</web-link>.
+            You might also find me taking photos, playing around with Photoshop or simply eating <web-link url="https://rorocc.github.io/cinnanom">cinnamon buns</web-link>.
           </p>
         </div>
-        <img src="../assets/img/about/pidgi.jpg" alt="Chris in a park with pigeons sitting on his shoulder and hands" class="md:w-2/3 w-3/4 m-auto md:my-20 my-12 rounded-2xl rotate-3 order-first md:order-none" />
-      </div>
+        <div class="about-media about-media--right">
+          <svg class="doodle" viewBox="-100 -100 300 300" preserveAspectRatio="none" aria-hidden="true">
+            <path class="lavender" d="M106 -18C80 -16 50 10 52 26C54 40 80 40 106 38C124 37 132 22 122 18C110 14 100 30 106 46C112 62 130 90 153 106" />
+          </svg>
+          <img src="../assets/img/about/pidgi.jpg" alt="Chris in a park with pigeons sitting on his shoulder and hands" width="1536" height="2048" class="photo aspect-[3/4]" />
+        </div>
+      </section>
     </div>
     <div class="bg-gray-50 py-16">
       <div class="container">
@@ -113,7 +125,47 @@ export default {
       ]
     }
   },
+  methods: {
+    screenLength(path) {
+      const matrix = path.getScreenCTM()
+      const total = path.getTotalLength()
+      let length = 0
+      let last = null
+      for (let i = 0; i <= 200; i++) {
+        const point = path.getPointAtLength(total * i / 200).matrixTransform(matrix)
+        if (last) length += Math.hypot(point.x - last.x, point.y - last.y)
+        last = point
+      }
+      return Math.ceil(length) + 2
+    },
+    // each photo's doodle line grows while its block scrolls through the viewport
+    drawDoodles() {
+      const paths = this.$el.querySelectorAll('.doodle path')
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+      paths.forEach((path, index) => {
+        // the svg stretches with the photo and the stroke does not scale, so the dash has to match
+        // the length on screen, not the length in the svg's own units – otherwise the line repeats in pieces
+        const length = this.screenLength(path)
+        path.style.strokeDasharray = `${length} ${length}`
+        // the portrait line starts a tenth drawn, so the top of the page is not empty
+        path.style.strokeDashoffset = index === 0 ? length * 0.9 : length
+        this.$gsap.to(path, {
+          strokeDashoffset: 0,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: path.closest('.about-block'),
+            // the portrait sits right at the top, so its line starts growing from the very first scroll
+            start: index === 0 ? 0 : 'top 90%',
+            // the portrait line gets a longer scroll range, so it grows at about the same pace as the second one
+            end: index === 0 ? 'bottom -20%' : 'bottom 35%',
+            scrub: true
+          }
+        })
+      })
+    }
+  },
   mounted() {
+    this.drawDoodles()
 
     this.$gsap.to('#svg-cursor', {
       y: 50,
@@ -147,6 +199,93 @@ export default {
 </script>
 
 <style scoped>
+  /* image + text blocks, alternating sides */
+  .about-blocks{
+    @apply pt-8 pb-12;
+  }
+
+
+  .about-block{
+    @apply grid md:grid-cols-2 grid-cols-1 md:gap-24 gap-10 items-center md:py-20 py-10;
+  }
+
+  .about-media{
+    @apply relative;
+  }
+
+  .about-media--left{
+    @apply md:w-4/5 w-3/4 mx-auto;
+  }
+
+  .about-media--right{
+    @apply md:w-3/4 w-3/4 mx-auto order-first md:order-none;
+  }
+
+  .photo{
+    @apply relative z-10 block w-full h-auto object-cover rounded-3xl;
+  }
+
+  /* the svg is three times the photo in each direction, so the line can reach far past it;
+     its coordinates are in photo units (0–100 = the photo) and the paths stay out of the text column */
+  .doodle{
+    position: absolute;
+    left: -100%;
+    top: -100%;
+    width: 300%;
+    height: 300%;
+    overflow: visible;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* on small screens photo and text stack, so a line around the photo would run into the text */
+  @media (max-width: 767px){
+    .doodle{
+      display: none;
+    }
+  }
+
+
+  .doodle path{
+    fill: none;
+    stroke-width: 10;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    vector-effect: non-scaling-stroke;
+  }
+
+  .doodle .pink{
+    stroke: var(--primary-color);
+  }
+
+  .doodle .lavender{
+    stroke: #b9a7f5;
+  }
+
+  .about-text{
+    @apply relative z-10 flex flex-col gap-5 leading-loose;
+  }
+
+  .about-badge{
+    background-color: var(--primary-color);
+    @apply self-start rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-wider text-black;
+  }
+
+  .about-heading{
+    font-family: "Inter", sans-serif;
+    letter-spacing: -0.02em;
+    @apply m-0 w-auto md:text-5xl text-4xl font-semibold leading-tight text-black;
+  }
+
+  .about-heading .serif{
+    font-family: "Inria Serif", serif;
+    @apply italic font-normal;
+  }
+
+  .about-text p{
+    @apply pb-0 text-lg;
+  }
+
   h2{
     @apply text-2xl;
   }

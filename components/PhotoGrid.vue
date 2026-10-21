@@ -10,6 +10,8 @@
         <img
           :src="photo.src"
           :alt="photo.alt || photo.label"
+          :width="photo.width"
+          :height="photo.height"
           loading="lazy"
         />
         <div class="overlay">
@@ -51,6 +53,7 @@ export default {
       // Expected shape per photo object:
       // {
       //   src: String (required) — image path or URL
+      //   width, height: Number  — pixel size, so the space is reserved before the lazy image loads
       //   alt: String           — accessibility description
       //   label: String         — caption shown on hover and in lightbox
       //   category: String      — badge text (e.g. "Portrait", "Landschaft")

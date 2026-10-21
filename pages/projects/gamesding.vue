@@ -22,7 +22,10 @@
     </section>
     <section class="section-m !pt-6">
       <h2 class="font-bold" id="idea">The idea</h2>
-      <p>Board game collections grow faster than anyone can remember what's on the shelf. gamesding puts that shelf in your pocket:</p>
+      <p>At the latest when my girlfriend took a photo of her board game shelf to show her friends which games she already owns, it was clear to me: there have to be far more elegant solutions than a picture of a dark shelf. So I started designing an app that lets you simply <b class="!font-semibold">scan your collection by barcode and share it</b> with your friends.</p>
+      <p class="mt-4">And when I first shared it with people who love board games, it became clear that the idea is really well received, and that there is so much room for more features. How about an activity feed, tracking your plays and your own profile to connect with others? And that is only the beginning of what is still to come.</p>
+      <p class="mt-4">My approach: talk to the people your product is made for, and they will love it. The app has <b class="!font-semibold">already started an internal test phase</b> as a web app and in the Google Play Store. In this phase, I want to find further room for improvement together with the small test group before moving on to a larger one.</p>
+      <p class="mt-4">The <b class="!font-semibold">current state is mainly a prototype</b>. Its structure, user flows and certainly also its brand design will need to be reworked for the "final" app.</p>
     </section>
     <div class="feature-cards">
       <div v-for="feature in features" :key="feature.title" class="feature-card" :style="{ backgroundColor: feature.color }">
@@ -34,7 +37,6 @@
           <img v-else :src="require(`~/assets/img/work/gamesding/${feature.image}`)" :alt="feature.alt">
         </div>
         <div class="feature-text">
-          <span v-if="feature.planned" class="planned-badge">Planned</span>
           <h3>{{ feature.title }}</h3>
           <p>{{ feature.text }}</p>
         </div>
@@ -65,31 +67,30 @@ export default {
       features: [
         {
           title: "Your game shelf in your pocket",
-          text: "Your friends want to give you a game but don't know which one? gamesding. You're standing in the shop and can't remember whether you already own it? gamesding.",
+          text: "You're standing in the shop and can't remember which games you own? Your friends want to give you a game but don't know whether you already have it? That's what your digital collection is perfect for.",
           color: "#fef3d5",
           video: "shelf",
           alt: "Animation: a phone shows a shelf of board games while titles are typed into the search field, and the matching game is highlighted."
         },
         {
           title: "Scan and ready to go",
-          text: "Hold the barcode on the box up to the camera and the game lands in your collection, or simply search for its title. The game data comes from BoardGameGeek.",
+          text: "Beep – feel like a game shop cashier! Scan the barcode on the box with your camera and the game is in your collection.",
           color: "#cff7f7",
           video: "scan",
           alt: "Animation: the back of a Catan box, a magnifier scans its barcode, and a card with the recognised game appears."
         },
         {
           title: "What your friends are playing",
-          text: "The feed shows what your geeks add to their shelves, rate and play. And you can put a sticker on it.",
+          text: "Your activity feed shows what your friends are playing and what's new on their lists. And most importantly: you can stick your reaction right on top as a sticker!",
           color: "#fadff0",
           image: "feature-feed.jpg",
           alt: "A feed card with three games a friend added, and a row of emoji stickers below it."
         },
         {
           title: "Stats and favourites at a glance",
-          text: "How often was which game on the table, how long did you play, and who keeps winning? gamesding keeps count for you.",
+          text: "You think Catan is your favourite game. But how often was it really on your table last year? You'll see all of that in your profile.",
           color: "#c9ebdd",
           video: "stats",
-          planned: true,
           alt: "Animation: a profile with play time, number of plays, win rate and a bar chart that switches between month, year and all time."
         }
       ]
@@ -149,10 +150,6 @@ export default {
 
 .feature-text p{
   @apply leading-relaxed;
-}
-
-.planned-badge{
-  @apply w-fit px-3 py-0.5 rounded-full bg-white text-xs font-semibold uppercase tracking-wider;
 }
 
 @screen md{

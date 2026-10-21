@@ -121,16 +121,6 @@ export default {
           pills: ["UX Design", "Full Stack Development"]
         },
         {
-          title: 'gamesding — Board game collection app',
-          description: 'A mobile-first app for keeping track of your board game collection: add games by title search or barcode scan, log plays and see what\'s new on your friends\' shelves.',
-          bgColor: '#fadff0',
-          textColor: '#1a1c20',
-          imgUrl: 'screen_gamesding.png',
-          url: './projects/gamesding',
-          isAvailable: true,
-          pills: ["PWA", "UX Design", "Full Stack Development"]
-        },
-        {
           title: 'The Traceable Design System',
           description: 'An approach to making design decisions more traceable by integrating the concept of design rationale into design systems.',
           bgColor: '#e5e5e5',
@@ -139,6 +129,16 @@ export default {
           url: './projects/traceable-design-system',
           isAvailable: true,
           pills: ["Desktop", "Prototyping", "Master Thesis"]
+        },
+        {
+          title: 'gamesding — Board game collection app',
+          description: 'A mobile-first app for keeping track of your board game collection: add games by title search or barcode scan, log plays and see what\'s new on your friends\' shelves.',
+          bgColor: '#fadff0',
+          textColor: '#1a1c20',
+          imgUrl: 'screen_gamesding.png',
+          url: './projects/gamesding',
+          isAvailable: true,
+          pills: ["PWA", "UX Design", "Full Stack Development"]
         },
         {
           title: 'SparkysBarn',

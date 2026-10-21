@@ -76,39 +76,39 @@ export default {
   data() {
     return {
       eventPhotos: [
-        { src: '/visual/c24-okdt-1.webp', label: 'ok.danke.tschüss', category: 'Festival' },
-        { src: '/visual/c24-okdt-2.webp', label: 'ok.danke.tschüss', category: 'Festival' },
-        { src: '/visual/c24-okdt-3.webp', label: 'ok.danke.tschüss', category: 'Festival' },
-        { src: '/visual/c24-okdt-4.webp', label: 'ok.danke.tschüss', category: 'Festival' },
-        { src: '/visual/c24-okdt-5.webp', label: 'ok.danke.tschüss', category: 'Festival' },
-        { src: '/visual/c24-okdt-6.webp', label: 'ok.danke.tschüss', category: 'Festival' },
-        { src: '/visual/c25-carla-ahad-1.webp', label: 'Carla Ahad', category: 'Festival' },
-        { src: '/visual/c25-carla-ahad-3.webp', label: 'Carla Ahad', category: 'Festival' },
-        { src: '/visual/c25-carla-ahad-2.webp', label: 'Carla Ahad', category: 'Festival' },
-        { src: '/visual/c25-carla-ahad-4.webp', label: 'Carla Ahad', category: 'Festival' },
-        { src: '/visual/c25-carla-ahad-5.webp', label: 'Carla Ahad', category: 'Festival' },
-        { src: '/visual/c25-carla-ahad-6.webp', label: 'Carla Ahad', category: 'Festival' },
-        { src: '/visual/c25-carla-ahad-7.webp', label: 'Carla Ahad', category: 'Festival' },
-        { src: '/visual/cr24-bothmer-1.webp', label: 'Marie Bothmer', category: 'Festival' },
-        { src: '/visual/cr24-bothmer-2.webp', label: 'Marie Bothmer', category: 'Festival' },
-        { src: '/visual/cr24-bothmer-3.webp', label: 'Marie Bothmer', category: 'Festival' },
-        { src: '/visual/cr24-bothmer-4.webp', label: 'Marie Bothmer', category: 'Festival' },
-        { src: '/visual/cr24-bothmer-5.webp', label: 'Marie Bothmer', category: 'Festival' },
-        { src: '/visual/c25-carla-ahad-8.webp', label: 'Carla Ahad', category: 'Festival' }
+        { src: '/visual/c24-okdt-1.webp', width: 1080, height: 1350, label: 'ok.danke.tschüss', category: 'Festival' },
+        { src: '/visual/c24-okdt-2.webp', width: 1080, height: 1350, label: 'ok.danke.tschüss', category: 'Festival' },
+        { src: '/visual/c24-okdt-3.webp', width: 1080, height: 1350, label: 'ok.danke.tschüss', category: 'Festival' },
+        { src: '/visual/c24-okdt-4.webp', width: 1080, height: 1350, label: 'ok.danke.tschüss', category: 'Festival' },
+        { src: '/visual/c24-okdt-5.webp', width: 1080, height: 1350, label: 'ok.danke.tschüss', category: 'Festival' },
+        { src: '/visual/c24-okdt-6.webp', width: 1080, height: 1350, label: 'ok.danke.tschüss', category: 'Festival' },
+        { src: '/visual/c25-carla-ahad-1.webp', width: 1080, height: 1440, label: 'Carla Ahad', category: 'Festival' },
+        { src: '/visual/c25-carla-ahad-3.webp', width: 1475, height: 2000, label: 'Carla Ahad', category: 'Festival' },
+        { src: '/visual/c25-carla-ahad-2.webp', width: 2000, height: 1309, label: 'Carla Ahad', category: 'Festival' },
+        { src: '/visual/c25-carla-ahad-4.webp', width: 1434, height: 2000, label: 'Carla Ahad', category: 'Festival' },
+        { src: '/visual/c25-carla-ahad-5.webp', width: 1080, height: 1440, label: 'Carla Ahad', category: 'Festival' },
+        { src: '/visual/c25-carla-ahad-6.webp', width: 1080, height: 1440, label: 'Carla Ahad', category: 'Festival' },
+        { src: '/visual/c25-carla-ahad-7.webp', width: 1080, height: 1440, label: 'Carla Ahad', category: 'Festival' },
+        { src: '/visual/cr24-bothmer-1.webp', width: 1080, height: 1350, label: 'Marie Bothmer', category: 'Festival' },
+        { src: '/visual/cr24-bothmer-2.webp', width: 1080, height: 1350, label: 'Marie Bothmer', category: 'Festival' },
+        { src: '/visual/cr24-bothmer-3.webp', width: 1080, height: 1350, label: 'Marie Bothmer', category: 'Festival' },
+        { src: '/visual/cr24-bothmer-4.webp', width: 1080, height: 1350, label: 'Marie Bothmer', category: 'Festival' },
+        { src: '/visual/cr24-bothmer-5.webp', width: 1080, height: 1350, label: 'Marie Bothmer', category: 'Festival' },
+        { src: '/visual/c25-carla-ahad-8.webp', width: 1080, height: 1440, label: 'Carla Ahad', category: 'Festival' }
       ],
       peoplePhotos: [
-        { src: '/visual/muellmorty-hd.jpg' },
-        { src: '/visual/party.jpg' },
-        { src: '/visual/cr-people-1.webp' },
-        { src: '/visual/cr-23-morty-underground-1.webp' },
-        { src: '/visual/cr-23-morty-boat-1.webp' },
-        { src: '/visual/cr-23-morty-splash-1.webp' },
-        { src: '/visual/cr-noise-collage.webp', label: 'Short Film Stills', category: 'Videography' }
+        { src: '/visual/muellmorty-hd.jpg', width: 1280, height: 721 },
+        { src: '/visual/party.jpg', width: 851, height: 1280 },
+        { src: '/visual/cr-people-1.webp', width: 1455, height: 2000 },
+        { src: '/visual/cr-23-morty-underground-1.webp', width: 2000, height: 1499 },
+        { src: '/visual/cr-23-morty-boat-1.webp', width: 2000, height: 1127 },
+        { src: '/visual/cr-23-morty-splash-1.webp', width: 2000, height: 1127 },
+        { src: '/visual/cr-noise-collage.webp', width: 1920, height: 2580, label: 'Short Film Stills', category: 'Videography' }
       ],
       landscapePhotos: [
-        { src: '/visual/waterfall.jpg' },
-        { src: '/visual/cr-nature-1.webp' },
-        { src: '/visual/cr-nature-2.webp' },
+        { src: '/visual/waterfall.jpg', width: 853, height: 1280 },
+        { src: '/visual/cr-nature-1.webp', width: 2000, height: 1499 },
+        { src: '/visual/cr-nature-2.webp', width: 2000, height: 1290 },
       ]
     }
   }
