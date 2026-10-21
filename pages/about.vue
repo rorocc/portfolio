@@ -40,6 +40,12 @@
             <path class="lavender" d="M106 -18C80 -16 50 10 52 26C54 40 80 40 106 38C124 37 132 22 122 18C110 14 100 30 106 46C112 62 130 90 153 106" />
           </svg>
           <img src="../assets/img/about/pidgi.jpg" alt="Chris in a park with pigeons sitting on his shoulder and hands" width="1536" height="2048" class="photo aspect-[3/4]" />
+          <svg class="sticker" viewBox="-4 -4 108 108" role="img" aria-label="U R living in their world">
+            <polygon points="50.0,2.0 56.8,11.6 66.4,4.9 69.5,16.2 80.9,13.2 79.9,24.9 91.6,26.0 86.6,36.7 97.3,41.7 89.0,50.0 97.3,58.3 86.6,63.3 91.6,74.0 79.9,75.1 80.9,86.8 69.5,83.8 66.4,95.1 56.8,88.4 50.0,98.0 43.2,88.4 33.6,95.1 30.5,83.8 19.1,86.8 20.1,75.1 8.4,74.0 13.4,63.3 2.7,58.3 11.0,50.0 2.7,41.7 13.4,36.7 8.4,26.0 20.1,24.9 19.1,13.2 30.5,16.2 33.6,4.9 43.2,11.6" />
+            <text x="50" y="42">U R LIVING</text>
+            <text x="50" y="54">IN THEIR</text>
+            <text x="50" y="66">WORLD</text>
+          </svg>
         </div>
       </section>
     </div>
@@ -68,50 +74,23 @@
         </div>
       </div>
     </section>
-    <div class="container py-16 grid md:grid-cols-2 md:grid-rows-1 grid-rows-2 md:gap-8 gap-16">
-      <div>
-        <div>
-          <h2 class="my-12 section-title">Tech Stack</h2>
-          <div class="flex-wrap gap-2 flex">
-            <span class="skilltag tool">Figma</span>
-            <span class="skilltag tool">FigJam</span>
-            <span class="skilltag tool">Miro</span>
-            <span class="skilltag tool">Microsoft 365</span>
-            <span class="skilltag tool">WebStorm</span>
-            <span class="skilltag tool">Node.js</span>
-            <span class="skilltag tool">Vue.js</span>
-            <span class="skilltag tool">Premiere</span>
-            <span class="skilltag tool">Photoshop</span>
-            <span class="skilltag tool">AfterEffects</span>
-            <span class="skilltag tool">DaVinci Resolve</span>
-          </div>
-        </div>
+    <section class="container skill-section">
+      <div class="about-text">
+        <span class="about-badge">Toolbox</span>
+        <h2 class="about-heading">Tech stack <span class="serif">&amp; knowledge</span></h2>
       </div>
-      <div>
-        <h2 class="my-12 section-title">Knowledge</h2>
-        <div class="flex-wrap gap-2 flex">
-          <span class="skilltag">Human-Centered Design</span>
-          <span class="skilltag">Design Systems</span>
-          <span class="skilltag">Prototyping</span>
-          <span class="skilltag">Design Tokens</span>
-          <span class="skilltag">Web Accessibility</span>
-          <span class="skilltag">Web Development</span>
-          <span class="skilltag">User Research & Testing</span>
-          <span class="skilltag">Photography</span>
-          <span class="skilltag">Videography</span>
-        </div>
-      </div>
-
-    </div>
+      <skill-loop class="skill-loop" />
+    </section>
   </div>
 </template>
 
 <script>
 import WebLink from "~/components/structuralComponents/webLink";
+import SkillLoop from "~/components/pages/about/skillLoop";
 
 export default {
   name: "About",
-  components: {WebLink},
+  components: {WebLink, SkillLoop},
   head() {
     return {
       link: [
@@ -165,6 +144,20 @@ export default {
   mounted() {
     this.drawDoodles()
 
+    // the sticker drifts up a little faster than the photo while it scrolls past
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      this.$gsap.fromTo('.sticker', { y: 40 }, {
+        y: -40,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: '.sticker',
+          start: 'top bottom',
+          end: 'bottom top',
+          scrub: true
+        }
+      })
+    }
+
     this.$gsap.to('#svg-cursor', {
       y: 50,
       x: -50,
@@ -203,9 +196,10 @@ export default {
   }
 
   /* logo heights are set so every logo covers about the same area (wide ones lower, compact ones taller,
-     heavy ones a touch smaller), which makes them look equally big; this scales them down on small screens */
+     heavy ones a touch smaller), which makes them look equally big; on phones they shrink to half,
+     so about two and a half logos fit on the screen */
   .logo-band{
-    --logo-scale: 0.75;
+    --logo-scale: 0.5;
     background-color: var(--primary-bright);
     transform: rotate(-2deg);
     @apply md:mt-14 mt-10 -mx-10 md:py-14 py-10 overflow-hidden;
@@ -218,7 +212,7 @@ export default {
 
   /* spacing as a right margin, so both halves of the track are exactly as wide and the loop has no jump */
   .logo-track img{
-    @apply w-auto max-w-none md:mr-24 mr-16;
+    @apply w-auto max-w-none md:mr-24 mr-10;
   }
 
   @keyframes logo-band{
@@ -262,6 +256,32 @@ export default {
 
   .photo{
     @apply relative z-10 block w-full h-auto object-cover rounded-3xl;
+  }
+
+  /* starburst sticker slapped onto the bottom right corner of the pigeon photo */
+  .sticker{
+    right: -8%;
+    bottom: -6%;
+    width: 38%;
+    transform: rotate(-8deg);
+    filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.18));
+    @apply absolute z-20 overflow-visible;
+  }
+
+  .sticker polygon{
+    fill: #3b63e0;
+    stroke: white;
+    stroke-width: 4;
+    stroke-linejoin: round;
+  }
+
+  .sticker text{
+    fill: white;
+    font-family: "Inter", sans-serif;
+    font-size: 10.5px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-anchor: middle;
   }
 
   /* the svg is three times the photo in each direction, so the line can reach far past it;
@@ -329,15 +349,12 @@ export default {
     @apply text-2xl;
   }
 
-  .skilltag{
-    border-color: var(--primary-color);
-    @apply rounded-md border py-2 px-4;
+  .skill-section{
+    @apply md:pt-12 pt-8 md:pb-24 pb-16;
   }
 
-  .skilltag.tool{
-    background-color: var(--primary-bright);
-    color: black;
-    @apply border-0;
+  .skill-loop{
+    @apply md:mt-16 mt-10;
   }
 
   .expPoint .head{
