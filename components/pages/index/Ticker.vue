@@ -43,7 +43,7 @@ export default {
   .ticker-tape span{
     font-family: "Inria Serif", serif;
     font-style: italic;
-    @apply md:text-[146pt] text-9xl py-8;
+    @apply md:text-[120px] text-7xl md:py-8 py-6 pr-[0.3em];
   }
 
   @keyframes marquee {

@@ -37,7 +37,8 @@
     </section>
     <section class="bg-gray-50 py-8">
       <div id="case-studies" class="container">
-        <h1 class="my-12 section-title"><span class="emph pr-2">01</span> User Experience Design</h1>
+        <!-- the number is decoration, so it sits outside the heading and is hidden from screen readers -->
+        <div class="home-heading my-12"><span class="serif" aria-hidden="true">01</span> <h2>UX Design Case Studies</h2></div>
         <div class="grid auto-rows-auto">
           <div v-for="work in works" :key="work.id" class="mb-10 piece">
             <lazy-pages-index-workpiece :head-text="work.headText"
@@ -56,7 +57,7 @@
     </section>
     <section class="bg-gray-50 py-8">
       <div class="container">
-        <h1 class="mt-12 mb-0 section-title"><span class="emph pr-2">02</span> Photography</h1>
+        <div class="home-heading mt-12 mb-0"><span class="serif" aria-hidden="true">02</span> <h2>Photography</h2></div>
       </div>
       <pages-index-pill-carousel :photos="photos" class="md:h-72 h-48" />
       <NuxtLink to="/photo" class="block w-fit mx-auto mt-6 mb-12">
@@ -277,6 +278,30 @@ export default {
 </script>
 
 <style>
+/* section headings in the about page style: large Inter, the number in serif italic and a short pink bar below */
+.home-heading{
+  font-family: "Inter", sans-serif;
+  letter-spacing: -0.02em;
+  @apply md:text-5xl text-4xl font-semibold leading-tight text-black;
+}
+
+.home-heading h2{
+  font: inherit;
+  letter-spacing: inherit;
+  @apply inline m-0 p-0;
+}
+
+.home-heading .serif{
+  font-family: "Inria Serif", serif;
+  @apply italic font-normal pr-1;
+}
+
+.home-heading::after{
+  content: "";
+  background-color: var(--primary-color);
+  @apply block w-12 h-2 rounded-full mt-5;
+}
+
 
 .particlesContainer {
   @apply fixed left-0 right-0 m-auto justify-center items-center -bottom-1/4 grid grid-flow-col;
