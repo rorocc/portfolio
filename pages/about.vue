@@ -11,7 +11,6 @@
           <img src="../assets/img/about/me-2.jpeg" alt="Portrait of Chris, wearing a base cap and glasses" width="800" height="800" class="photo passfoto aspect-square" />
         </div>
         <div class="about-text">
-          <span class="about-badge">About me</span>
           <h1 class="about-heading">Yep, that's <span class="serif">me</span></h1>
           <p>
             I'm Chris, designing digital products since 2017.
@@ -26,7 +25,6 @@
       </section>
       <section class="about-block">
         <div class="about-text">
-          <span class="about-badge">Beyond the screen</span>
           <h2 class="about-heading">From research <span class="serif">to code</span></h2>
           <p>
             My master's degree in Media Informatics did not only bring me closer to human-centered design but also sparked my interest in web development. I have enjoyed developing web apps ever since.
@@ -52,7 +50,6 @@
     <section class="companies">
       <div class="container">
         <div class="about-text">
-          <span class="about-badge">Experience</span>
           <h2 class="about-heading">Companies <span class="serif">&amp; projects</span></h2>
         </div>
       </div>
@@ -74,9 +71,38 @@
         </div>
       </div>
     </section>
+    <section class="container learnings">
+      <div class="about-text">
+        <h2 class="about-heading">What I <span class="serif">learned</span> along the way</h2>
+      </div>
+      <!-- three sticky notes side by side; below lg they become a row that snaps from note to note -->
+      <ul class="sticky-row">
+        <li v-for="(note, index) in learnings" :key="note.company" :class="['sticky', `sticky--${note.color}`]">
+          <!-- the paper is drawn as a shape: straight glued top edge, a bottom edge that lifts a little,
+               a darker adhesive strip at the top and a light curl in the bottom right corner -->
+          <svg class="sticky-paper" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+            <defs>
+              <linearGradient :id="`paper-${index}`" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" class="stop-top" />
+                <stop offset="0.14" class="stop-mid" />
+                <stop offset="1" class="stop-bottom" />
+              </linearGradient>
+              <linearGradient :id="`curl-${index}`" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" class="stop-curl-light" />
+                <stop offset="1" class="stop-curl-dark" />
+              </linearGradient>
+            </defs>
+            <path :fill="`url(#paper-${index})`" d="M0 0 H100 V95.6 C68 97.4 34 98.6 0 97.2 Z" />
+            <path class="sticky-curl" :fill="`url(#curl-${index})`" d="M80 97 C84.5 91 92 86.2 100 85 V95.6 C93.5 96.1 86.8 96.6 80 97 Z" />
+          </svg>
+          <img :src="note.logo" :alt="note.company" :style="{ height: `${note.logoHeight}px` }" />
+          <h3>{{ note.title }}</h3>
+          <p>{{ note.text }}</p>
+        </li>
+      </ul>
+    </section>
     <section class="container skill-section">
       <div class="about-text">
-        <span class="about-badge">Toolbox</span>
         <h2 class="about-heading">Tech stack <span class="serif">&amp; knowledge</span></h2>
       </div>
       <skill-loop class="skill-loop" />
@@ -91,6 +117,30 @@ import SkillLoop from "~/components/pages/about/skillLoop";
 export default {
   name: "About",
   components: {WebLink, SkillLoop},
+  data() {
+    return {
+      learnings: [
+        {
+          company: 'ÜBERSTUNDE', color: 'pink', logoHeight: 30,
+          logo: require('~/assets/img/about/logos/violet/ueberstunde.png'),
+          title: 'Support requests reveal potential',
+          text: 'Regular talks with the support team and the questions that reach the inbox most often show which problems pile up, and where the user journey hurts.'
+        },
+        {
+          company: 'Otto', color: 'lavender', logoHeight: 27,
+          logo: require('~/assets/img/about/logos/violet/otto.png'),
+          title: 'Accessibility benefits everyone',
+          text: 'A large share of people live with some kind of impairment. Designing for them gives everyone richer ways to interact.'
+        },
+        {
+          company: 'Institute for Multimedia and Interactive Systems, University of Lübeck', color: 'light', logoHeight: 48,
+          logo: require('~/assets/img/about/logos/violet/imis.png'),
+          title: 'User tests expose gaps in the concept',
+          text: 'Usability tests with real users show best where the interaction still fails, however sure you were that the concept was complete.'
+        }
+      ]
+    }
+  },
   head() {
     return {
       link: [
@@ -237,7 +287,6 @@ export default {
     @apply pt-8 pb-12;
   }
 
-
   .about-block{
     @apply grid md:grid-cols-2 grid-cols-1 md:gap-24 gap-10 items-center md:py-20 py-10;
   }
@@ -304,7 +353,6 @@ export default {
     }
   }
 
-
   .doodle path{
     fill: none;
     stroke-width: 10;
@@ -325,15 +373,17 @@ export default {
     @apply relative z-10 flex flex-col gap-5 leading-loose;
   }
 
-  .about-badge{
-    background-color: var(--primary-color);
-    @apply self-start rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-wider text-black;
-  }
-
   .about-heading{
     font-family: "Inter", sans-serif;
     letter-spacing: -0.02em;
     @apply m-0 w-auto md:text-5xl text-4xl font-semibold leading-tight text-black;
+  }
+
+  /* a short rounded pink bar under every heading, a small echo of the former badges */
+  .about-heading::after{
+    content: "";
+    background-color: var(--primary-color);
+    @apply block w-12 h-2 rounded-full mt-5;
   }
 
   .about-heading .serif{
@@ -347,6 +397,119 @@ export default {
 
   h2{
     @apply text-2xl;
+  }
+
+  /* learnings: square sticky notes, slightly tilted, each with the logo of where it was learned */
+  .learnings{
+    @apply md:pt-12 pt-8 md:pb-12 pb-8;
+  }
+
+  .sticky-row{
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 1rem;
+    scrollbar-width: none;
+    @apply flex gap-6 overflow-x-auto list-none -mx-4 px-4 md:mt-16 mt-10 pt-4 pb-10 m-0;
+  }
+
+  .sticky-row::-webkit-scrollbar{
+    display: none;
+  }
+
+  .sticky{
+    flex: 0 0 min(78vw, 340px);
+    aspect-ratio: 1 / 1;
+    scroll-snap-align: start;
+    @apply relative flex flex-col gap-3 box-border md:p-7 p-5 md:pt-7 pt-6 m-0;
+  }
+
+  /* the shadow follows the paper's shape and is stronger at the bottom, where the note lifts off */
+  .sticky-paper{
+    filter: drop-shadow(0 3px 3px rgba(54, 40, 110, 0.05)) drop-shadow(0 10px 10px rgba(54, 40, 110, 0.06));
+    @apply absolute inset-0 w-full h-full overflow-visible pointer-events-none;
+  }
+
+  .sticky-curl{
+    opacity: 0.45;
+    transform-box: fill-box;
+    transform-origin: bottom right;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+  }
+
+  /* hovering curls the corner a little further */
+  .sticky:hover .sticky-curl{
+    opacity: 0.7;
+    transform: scale(1.5);
+  }
+
+  .stop-top{ stop-color: var(--paper-top); }
+  .stop-mid{ stop-color: var(--paper-mid); }
+  .stop-bottom{ stop-color: var(--paper-bottom); }
+  .stop-curl-light{ stop-color: var(--curl-light); }
+  .stop-curl-dark{ stop-color: var(--curl-dark); }
+
+  .sticky img,
+  .sticky h3,
+  .sticky p{
+    @apply relative;
+  }
+
+  .sticky img{
+    @apply w-auto self-start md:mb-5 mb-4;
+  }
+
+  .sticky h3{
+    letter-spacing: -0.02em;
+    @apply m-0 text-xl font-semibold leading-tight text-black;
+  }
+
+  .sticky p{
+    color: #2b2340;
+    @apply m-0 p-0 md:text-[15px] text-sm leading-normal;
+  }
+
+  .sticky--pink{
+    --paper-top: #fad6f2;
+    --paper-mid: #fde0f5;
+    --paper-bottom: #fad0ef;
+    --curl-light: #fff3fc;
+    --curl-dark: #eba3d9;
+    transform: rotate(-2deg);
+  }
+
+  .sticky--lavender{
+    --paper-top: #e7e1fd;
+    --paper-mid: #f1edfe;
+    --paper-bottom: #e4ddfd;
+    --curl-light: #fbfaff;
+    --curl-dark: #c2b4f5;
+    transform: rotate(1.5deg);
+  }
+
+  .sticky--light{
+    --paper-top: #fce1f6;
+    --paper-mid: #fff0fb;
+    --paper-bottom: #fde1f6;
+    --curl-light: #ffffff;
+    --curl-dark: #f2b8e3;
+    transform: rotate(-1deg);
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .sticky-curl{
+      transition: none;
+    }
+  }
+
+  /* from lg all three fit next to each other, so the row turns into a plain grid */
+  @screen lg{
+    .sticky-row{
+      @apply grid grid-cols-3 gap-8 overflow-visible mx-0 px-0;
+    }
+
+    /* three in a row get narrow right above lg, so the padding shrinks a little to keep them square */
+    .sticky{
+      @apply p-6;
+    }
   }
 
   .skill-section{

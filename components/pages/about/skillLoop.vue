@@ -203,15 +203,6 @@ export default {
     @apply relative m-0 w-max text-base font-semibold leading-tight;
   }
 
-  /* underline as its own element, so it gets round ends */
-  .step-label::after{
-    content: "";
-    background-color: var(--primary-color);
-    height: 3px;
-    bottom: -7px;
-    @apply absolute left-0 right-0 rounded-full;
-  }
-
   .loop-stage .step-label,
   .loop-stage .pill-row{
     transform: translateX(-50%);
@@ -260,12 +251,13 @@ export default {
     @apply flex flex-col gap-12 lg:hidden;
   }
 
+  /* on small screens each phase is centred: label above, pill rows below */
   .loop-list .step-label{
-    @apply mb-6;
+    @apply mb-4 mx-auto;
   }
 
   .loop-list .pill-row{
-    @apply flex-wrap mb-2.5 whitespace-normal;
+    @apply flex-wrap justify-center mb-2.5 whitespace-normal;
   }
 
   .loop-list .pill-row:has(.tool){
