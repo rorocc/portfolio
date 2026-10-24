@@ -129,8 +129,8 @@ export default {
         {
           company: 'Otto', color: 'lavender', logoHeight: 27,
           logo: require('~/assets/img/about/logos/violet/otto.png'),
-          title: 'Accessibility benefits everyone',
-          text: 'A large share of people live with some kind of impairment. Designing for them gives everyone richer ways to interact.'
+          title: 'Designing for better accessibility benefits everyone',
+          text: 'A large share of people, your target group included, live with some kind of impairment. Countering it through design gives all users better ways to interact.'
         },
         {
           company: 'Institute for Multimedia and Interactive Systems, University of Lübeck', color: 'light', logoHeight: 48,
@@ -508,7 +508,7 @@ export default {
 
     /* three in a row get narrow right above lg, so the padding shrinks a little to keep them square */
     .sticky{
-      @apply p-6;
+      @apply p-6 px-5 gap-2;
     }
   }
 
